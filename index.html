@@ -3,23 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ScorePro | Aumente seu Score</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-<!-- META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '3346561375499401');
-fbq('track', 'PageView');
-</script>
 
 <style>
 html{scroll-behavior:smooth;}
@@ -31,11 +18,11 @@ body{
   margin:0;
 }
 
-/* ===== CONTAINER CENTRAL PREMIUM ===== */
+/* ===== CONTAINER ===== */
 .wrapper{
   max-width:720px;
   margin:auto;
-  padding:28px 18px 80px;
+  padding:28px 18px 100px;
 }
 
 /* ===== CARDS ===== */
@@ -45,32 +32,16 @@ section{
   padding:38px 28px;
   border-radius:18px;
   margin-bottom:22px;
-  box-shadow:0 6px 24px rgba(0,0,0,.4);
 }
 
 /* ===== TIPOGRAFIA ===== */
-h1{
-  font-size:28px;
-  text-align:center;
-  font-weight:700;
-  margin-bottom:10px;
-}
+h1,h2{text-align:center;}
+h1{font-size:28px;}
+h2{font-size:20px;color:#e5e5e5;}
 
-h2{
-  font-size:20px;
-  text-align:center;
-  font-weight:600;
-  margin-bottom:20px;
-  color:#e5e5e5;
-}
+p{color:#bdbdbd;text-align:center;line-height:1.6;}
 
-p{
-  text-align:center;
-  color:#bdbdbd;
-  line-height:1.6;
-}
-
-/* ===== BOTÃO PREMIUM ===== */
+/* ===== BOTÃO ===== */
 .btn{
   display:block;
   margin:25px auto 0;
@@ -82,54 +53,59 @@ p{
   border-radius:12px;
   font-weight:700;
   text-decoration:none;
-  transition:.2s;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 25px rgba(34,197,94,.35);
+/* ===== SELO SOCIAL ===== */
+.badge{
+  display:inline-block;
+  background:#101012;
+  border:1px solid #242424;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:14px;
+  margin:10px auto 0;
+  color:#22c55e;
 }
 
-/* ===== LISTA PREMIUM ===== */
+/* ===== LISTAS ===== */
 .benefits{
   list-style:none;
   padding:0;
   margin:20px auto;
 }
-
 .benefits li{
   background:#101012;
   border:1px solid #242424;
-  padding:14px 16px;
+  padding:14px;
   border-radius:10px;
   margin-bottom:10px;
-  display:flex;
-  gap:10px;
-  align-items:center;
-  font-size:16px;
 }
 
 /* ===== TIMER ===== */
 .timer{
   text-align:center;
-  margin-top:8px;
+  margin-top:10px;
   color:#ef4444;
   font-weight:600;
 }
 
-/* ===== CARROSSEL ===== */
-.carousel{overflow:hidden;}
-.track{display:flex;transition:transform .5s ease;}
-
-.testimonial{
-  min-width:100%;
-  text-align:center;
-  padding:10px;
+/* ===== FAQ ===== */
+.faq-item{
+  border-bottom:1px solid #222;
+  padding:12px 0;
+  cursor:pointer;
+  text-align:left;
 }
 
-.stars{
-  color:#facc15;
-  margin-bottom:6px;
+.faq-question{
+  font-weight:600;
+}
+
+.faq-answer{
+  display:none;
+  color:#aaa;
+  font-size:14px;
+  margin-top:8px;
 }
 
 /* ===== BOTÃO FIXO ===== */
@@ -144,7 +120,6 @@ p{
   border-radius:30px;
   font-weight:700;
   text-decoration:none;
-  box-shadow:0 0 20px rgba(34,197,94,.5);
 }
 </style>
 </head>
@@ -157,7 +132,12 @@ p{
 <section>
 <h1>Aumente seu Score e volte a ter crédito aprovado</h1>
 <p>Método simples, direto e comprovado.</p>
-<div class="timer">Oferta termina em <span id="countdown">10:00</span></div>
+
+<div class="badge">⭐ +1.000 alunos já aplicaram o método</div>
+
+<div class="timer">
+Oferta termina em <span id="countdown">10:00</span>
+</div>
 
 <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn">QUERO COMEÇAR AGORA</a>
 </section>
@@ -166,95 +146,98 @@ p{
 <!-- PROBLEMAS -->
 <section>
 <h2>Você já passou por isso?</h2>
-
 <ul class="benefits">
 <li>❌ Cartão recusado</li>
 <li>❌ Crédito negado</li>
 <li>❌ Limite baixo</li>
 <li>❌ Vergonha no caixa</li>
 </ul>
-
-<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn">QUERO RESOLVER AGORA</a>
 </section>
 
 
 <!-- BENEFÍCIOS -->
 <section>
 <h2>O que você vai aprender</h2>
-
 <ul class="benefits">
 <li>✅ Como subir seu score rápido</li>
 <li>✅ O que derruba sua pontuação</li>
 <li>✅ Passo a passo simples</li>
 <li>✅ Estratégias que realmente funcionam</li>
 </ul>
+
+<a href= "https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn">QUERO ESSES RESULTADOS</a>
 </section>
 
 
-<!-- DEPOIMENTOS -->
+<!-- FAQ -->
 <section>
-<h2>Resultados reais</h2>
+<h2>Perguntas Frequentes</h2>
 
-<div class="carousel">
-<div class="track" id="track">
-
-<div class="testimonial">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Meu score saiu de 400 pra 690 em 2 meses"</p>
+<div class="faq-item">
+<div class="faq-question">Funciona com score muito baixo?</div>
+<div class="faq-answer">Sim. O método foi criado exatamente para quem está começando do zero.</div>
 </div>
 
-<div class="testimonial">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Consegui cartão aprovado depois de anos tentando"</p>
+<div class="faq-item">
+<div class="faq-question">Em quanto tempo vejo resultado?</div>
+<div class="faq-answer">Muitos alunos relatam melhora nas primeiras semanas aplicando corretamente.</div>
 </div>
 
-<div class="testimonial">
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>"Funciona de verdade, método simples"</p>
+<div class="faq-item">
+<div class="faq-question">Como recebo acesso?</div>
+<div class="faq-answer">O acesso é liberado automaticamente por e-mail após o pagamento.</div>
 </div>
 
+<div class="faq-item">
+<div class="faq-question">Tem garantia?</div>
+<div class="faq-answer">Sim. 7 dias de garantia total ou seu dinheiro de volta.</div>
 </div>
-</div>
-
-<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn">QUERO ESSES RESULTADOS</a>
-</section>
-
-
-<!-- OFERTA -->
-<section>
-<h2>Hoje apenas</h2>
-<h1 style="color:#22c55e;text-align:center;">R$47</h1>
 
 <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn">GARANTIR ACESSO</a>
 </section>
 
 </div>
 
-
 <!-- BOTÃO FIXO -->
 <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="floating">🔥 Comprar agora</a>
 
 
-<!-- CONTADOR -->
+<!-- CONTADOR INDIVIDUAL -->
 <script>
-let t=600;
-setInterval(()=>{
- let m=Math.floor(t/60);
- let s=t%60;
- s=s<10?"0"+s:s;
- document.getElementById("countdown").innerHTML=m+":"+s;
- if(t>0)t--;
-},1000);
+const total = 600;
+
+let end = localStorage.getItem("endTime");
+
+if(!end){
+  end = Date.now() + total*1000;
+  localStorage.setItem("endTime", end);
+}
+
+function update(){
+  let diff = Math.floor((end - Date.now())/1000);
+  if(diff < 0) diff = 0;
+
+  let m = Math.floor(diff/60);
+  let s = diff%60;
+
+  document.getElementById("countdown").innerHTML =
+    m + ":" + (s<10?"0"+s:s);
+}
+
+setInterval(update,1000);
+update();
 </script>
 
-<!-- CARROSSEL -->
+
+<!-- FAQ ACCORDION -->
 <script>
-const track=document.getElementById('track');
-let i=0;
-setInterval(()=>{
- i=(i+1)%3;
- track.style.transform=`translateX(-${i*100}%)`;
-},3000);
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.onclick=()=>{
+    const answer=item.querySelector('.faq-answer');
+    answer.style.display=
+      answer.style.display==='block'?'none':'block';
+  }
+});
 </script>
 
 </body>
