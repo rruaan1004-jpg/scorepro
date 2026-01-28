@@ -26,7 +26,7 @@ fbq('track', 'PageView');
 body{
   font-family:'Montserrat',sans-serif;
   background:#0f0f0f;
-  color:#ffffff;
+  color:#fff;
   margin:0;
 }
 
@@ -37,43 +37,29 @@ body{
   padding:20px;
 }
 
-/* Cards */
+/* Seções */
 section{
   background:#181818;
   margin:30px 0;
   padding:50px 35px;
   border-radius:16px;
-  box-shadow:0 10px 35px rgba(0,0,0,0.6);
+  box-shadow:0 10px 35px rgba(0,0,0,.6);
   text-align:center;
 }
 
-/* Tipografia */
-h1{
-  font-size:34px;
-  font-weight:700;
-}
-
-h2{
-  font-size:26px;
-  font-weight:600;
-}
+h1{font-size:34px;font-weight:700;}
+h2{font-size:26px;font-weight:600;}
 
 p, li{
   font-size:18px;
-  line-height:1.6;
   color:#e5e5e5;
+  line-height:1.6;
 }
 
-ul{
-  list-style:none;
-  padding:0;
-}
+ul{list-style:none;padding:0;}
+li{margin:10px 0;}
 
-li{
-  margin:12px 0;
-}
-
-/* Botão */
+/* BOTÃO */
 .btn{
   display:inline-block;
   margin-top:30px;
@@ -84,27 +70,64 @@ li{
   font-weight:700;
   text-decoration:none;
   font-size:18px;
-  transition:.2s;
   box-shadow:0 6px 25px rgba(34,197,94,.4);
+  transition:.2s;
 }
 
 .btn:hover{
   transform:scale(1.05);
 }
 
-/* Preço */
+/* PREÇO */
 .price{
   font-size:42px;
   font-weight:700;
   color:#22c55e;
 }
 
-/* Timer */
+/* CONTADOR */
 .timer{
   font-size:28px;
   color:#ef4444;
   font-weight:bold;
   margin-top:10px;
+}
+
+/* ===== DEPOIMENTOS ===== */
+.testimonials{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  margin-top:30px;
+}
+
+.testimonial{
+  background:#111;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #222;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  text-align:left;
+}
+
+.testimonial img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.stars{
+  color:#facc15;
+  font-size:18px;
+  margin:4px 0;
+}
+
+.name{
+  font-weight:600;
+  color:#22c55e;
 }
 
 /* FAQ */
@@ -123,70 +146,17 @@ li{
   margin-top:6px;
   color:#bdbdbd;
 }
-</style>/* Depoimentos */
-.testimonials{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-  margin-top:30px;
-}
-
-.testimonial{
-  background:#111;
-  padding:25px;
-  border-radius:12px;
-  border:1px solid #222;
-  text-align:left;
-}
-
-.testimonial p{
-  font-style:italic;
-  margin-bottom:10px;
-  color:#e5e5e5;
-}
-
-.testimonial span{
-  font-weight:600;
-  color:#22c55e;
-}
-
+</style>
 </head>
 
 <body>
 
-<div class="wrapper"><!-- DEPOIMENTOS -->
-<section>
-<h2>Veja o que pessoas comuns estão conseguindo</h2>
-
-<div class="testimonials">
-
-  <div class="testimonial">
-    <p>"Meu score era 410. Em 45 dias foi pra 690. Consegui meu cartão aprovado no mesmo mês."</p>
-    <span>— Carlos M.</span>
-  </div>
-
-  <div class="testimonial">
-    <p>"Eu já tinha tentado de tudo. Depois do método finalmente meu crédito foi liberado."</p>
-    <span>— Juliana S.</span>
-  </div>
-
-  <div class="testimonial">
-    <p>"Simples, direto e funciona. Apliquei o passo a passo e vi resultado rápido."</p>
-    <span>— Rafael P.</span>
-  </div>
-
-</div>
-
-<a href="SEU_LINK_HOTMART_AQUI" class="btn" onclick="fbq('track','InitiateCheckout')">
-QUERO AUMENTAR MEU SCORE TAMBÉM
-</a>
-</section>
-
+<div class="wrapper">
 
 <!-- HERO -->
 <section>
 <h1>Cansado de ter crédito negado toda vez que tenta comprar algo?</h1>
-<p>Aprenda o método simples que ajuda pessoas comuns a aumentar o score rápido e voltar a ter cartão aprovado.</p>
+<p>Descubra o método simples que está ajudando pessoas comuns a aumentar o score rápido e voltar a ter cartão aprovado.</p>
 
 <div class="timer">Oferta termina em <span id="countdown">10:00</span></div>
 
@@ -217,10 +187,51 @@ QUERO RESOLVER ISSO AGORA
 <h2>O que você vai aprender</h2>
 <ul>
 <li>✅ Como subir seu score mais rápido</li>
-<li>✅ O que derruba sua pontuação sem você perceber</li>
-<li>✅ Passo a passo simples e prático</li>
+<li>✅ O que está derrubando sua pontuação</li>
+<li>✅ Passo a passo simples</li>
 <li>✅ Estratégias que realmente funcionam</li>
 </ul>
+</section>
+
+
+<!-- DEPOIMENTOS -->
+<section>
+<h2>Mais de 1.000 pessoas já melhoraram o score</h2>
+
+<div class="testimonials">
+
+  <div class="testimonial">
+    <img src="https://i.pravatar.cc/100?img=12">
+    <div>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Meu score saiu de 420 pra 690 em 2 meses. Consegui cartão aprovado no mesmo dia."</p>
+      <div class="name">Carlos M.</div>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <img src="https://i.pravatar.cc/100?img=32">
+    <div>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Depois do método finalmente meu crédito foi liberado. Muito mais simples do que eu imaginava."</p>
+      <div class="name">Juliana S.</div>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <img src="https://i.pravatar.cc/100?img=22">
+    <div>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Apliquei o passo a passo por algumas semanas e já vi resultado real."</p>
+      <div class="name">Rafael P.</div>
+    </div>
+  </div>
+
+</div>
+
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
+QUERO TER ESSES RESULTADOS TAMBÉM
+</a>
 </section>
 
 
@@ -241,21 +252,21 @@ GARANTIR MEU ACESSO
 <h2>Perguntas Frequentes</h2>
 
 <div class="faq-item">
-<div class="faq-question">Funciona mesmo com score baixo?</div>
-<div class="faq-answer">Sim. O método foi criado justamente para quem está começando do zero.</div>
+<div class="faq-question">Funciona com score muito baixo?</div>
+<div class="faq-answer">Sim. O método foi criado exatamente para quem está começando do zero.</div>
 </div>
 
 <div class="faq-item">
 <div class="faq-question">Quando recebo o acesso?</div>
-<div class="faq-answer">Imediatamente após o pagamento no seu e-mail.</div>
+<div class="faq-answer">Imediatamente após o pagamento por e-mail.</div>
 </div>
 
 <div class="faq-item">
 <div class="faq-question">Tem garantia?</div>
-<div class="faq-answer">Você tem 7 dias para testar. Se não gostar, recebe 100% do dinheiro de volta.</div>
+<div class="faq-answer">Você tem 7 dias para testar. Se não gostar, devolvemos 100% do valor.</div>
 </div>
 
-<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
+<a href="Shttps://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666I" class="btn" onclick="fbq('track','InitiateCheckout')">
 COMEÇAR AGORA
 </a>
 </section>
