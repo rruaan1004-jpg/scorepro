@@ -8,19 +8,19 @@
 
 <style>
 
-/* ===== ESTILO CLEAN STARTUP ===== */
+/* ===== DARK FINTECH STYLE ===== */
 
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-background:#ffffff;
-color:#0f172a;
+background:#0f172a;
+color:#f1f5f9;
 line-height:1.7;
 padding-bottom:100px;
 }
 
-/* container central elegante */
+/* container central */
 .container{
 max-width:760px;
 margin:auto;
@@ -28,16 +28,15 @@ padding:100px 20px;
 text-align:center;
 }
 
-/* espaçamento entre blocos */
+/* separação elegante */
 .section{
-border-bottom:1px solid #eee;
+border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-/* tipografia grande estilo SaaS */
+/* tipografia */
 h1{
 font-size:42px;
 font-weight:900;
-letter-spacing:-0.5px;
 margin-bottom:20px;
 }
 
@@ -48,73 +47,84 @@ margin-bottom:25px;
 
 p{
 font-size:18px;
-color:#475569;
+color:#cbd5e1;
 }
 
-/* botão moderno */
+/* botão */
 .btn{
 display:inline-block;
-background:#16a34a;
-color:white;
+background:#22c55e;
+color:#0f172a;
 padding:18px 42px;
 border-radius:12px;
-font-weight:700;
+font-weight:800;
 font-size:18px;
 text-decoration:none;
 margin-top:35px;
-transition:.2s;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+box-shadow:0 10px 30px rgba(34,197,94,.35);
 }
 
-.btn:hover{
-transform:translateY(-2px);
-}
-
+/* animação leve */
 .blink{animation:pulse 1.2s infinite}
 @keyframes pulse{50%{transform:scale(1.06)}}
 
-/* lista dor */
+/* lista */
 .list{
 text-align:left;
-max-width:500px;
+max-width:520px;
 margin:30px auto;
-font-size:18px;
 line-height:1.9;
 }
 
-/* grid benefícios clean */
+/* grid */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:16px;
 margin-top:40px;
 }
 
+/* cards */
 .card{
-background:#f8fafc;
+background:#1e293b;
 padding:22px;
-border-radius:12px;
+border-radius:14px;
 }
 
-/* oferta minimalista */
+/* ===== DEPOIMENTOS ===== */
+.testimonial{
+background:#1e293b;
+padding:24px;
+border-radius:14px;
+text-align:left;
+}
+
+.avatar{
+width:44px;
+height:44px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+/* oferta */
 .offer{
-background:#16a34a;
-color:white;
-border-radius:18px;
+background:#22c55e;
+color:#0f172a;
+border-radius:20px;
 padding:70px 30px;
 margin:80px auto;
 max-width:620px;
 }
 
 .price{
-font-size:46px;
+font-size:48px;
 font-weight:900;
 margin:15px 0;
 }
 
 .timer{
 font-size:22px;
-margin:10px 0;
+font-weight:bold;
 }
 
 /* FAQ */
@@ -126,7 +136,7 @@ margin:auto;
 
 .faq h3{
 margin-top:18px;
-font-size:18px;
+color:#fff;
 }
 
 /* barra fixa */
@@ -134,18 +144,18 @@ font-size:18px;
 position:fixed;
 bottom:0;
 width:100%;
-background:#0f172a;
+background:#020617;
 padding:14px;
 text-align:center;
 }
 
 .fixed-cta a{
-background:#16a34a;
-color:white;
+background:#22c55e;
+color:#0f172a;
 padding:14px 28px;
 border-radius:10px;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 }
 
 </style>
@@ -159,7 +169,10 @@ font-weight:bold;
 
 <h1>Aumente seu Score e volte a ter crédito aprovado rapidamente</h1>
 
-<p>Método simples e prático para organizar seu CPF e liberar crédito mais rápido, mesmo começando do zero.</p>
+<p>
+Método simples que já ajudou milhares de pessoas a organizar o CPF,
+subir o score e parar de ouvir “não” dos bancos.
+</p>
 
 <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn blink">🚀 Quero acesso imediato</a>
 
@@ -176,26 +189,57 @@ font-weight:bold;
 ❌ Cartão recusado toda hora<br>
 ❌ Limite sempre baixo<br>
 ❌ Financiamento negado<br>
-❌ Score não sobe nunca<br>
-❌ Bancos dizendo “não”
+❌ Score parado há meses<br>
+❌ Bancos sempre dizem “não”
 </div>
 
 </section>
 
 
 
-<!-- SOLUÇÃO / BENEFÍCIOS -->
+<!-- BENEFÍCIOS -->
 <section class="container section">
 
-<h2>O que você vai aprender no guia</h2>
+<h2>O que você vai aprender</h2>
 
 <div class="grid">
-<div class="card">✅ Como o score realmente funciona</div>
-<div class="card">✅ O que faz subir rapidamente</div>
-<div class="card">✅ Erros que derrubam sua pontuação</div>
-<div class="card">✅ Passo a passo simples</div>
-<div class="card">✅ Estratégias comprovadas</div>
+<div class="card">✅ Como o score funciona</div>
+<div class="card">✅ O que faz subir rápido</div>
+<div class="card">✅ Erros que derrubam pontuação</div>
+<div class="card">✅ Estratégias práticas</div>
 <div class="card">✅ Plano de ação imediato</div>
+<div class="card">✅ Aplicável em poucas horas</div>
+</div>
+
+</section>
+
+
+
+<!-- DEPOIMENTOS PREMIUM -->
+<section class="container section">
+
+<h2>Quem aplicou já viu resultado</h2>
+
+<div class="grid">
+
+<div class="testimonial">
+<img class="avatar" src="https://i.pravatar.cc/80?img=12">
+<p>“Meu score subiu 140 pontos em 2 meses. Finalmente liberaram meu cartão.”</p>
+<strong>Marcos A.</strong>
+</div>
+
+<div class="testimonial">
+<img class="avatar" src="https://i.pravatar.cc/80?img=5">
+<p>“Material simples e direto. Em poucas semanas já senti diferença.”</p>
+<strong>Juliana R.</strong>
+</div>
+
+<div class="testimonial">
+<img class="avatar" src="https://i.pravatar.cc/80?img=32">
+<p>“Valeu cada centavo. Hoje tenho crédito aprovado de novo.”</p>
+<strong>Carlos M.</strong>
+</div>
+
 </div>
 
 </section>
@@ -218,7 +262,7 @@ font-weight:bold;
 <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn blink">Quero meu acesso agora</a>
 
 <p style="font-size:14px;margin-top:10px;">
-🔒 Compra segura • Liberação automática • Pagamento protegido
+🔒 Compra segura • Pagamento protegido
 </p>
 
 </div>
@@ -227,22 +271,11 @@ font-weight:bold;
 
 
 
-<!-- PROVA SOCIAL -->
-<section class="container section">
-
-<h2>⭐⭐⭐⭐⭐ 4.9/5 avaliações</h2>
-<p>Mais de 3.742 pessoas já aplicaram o método</p>
-
-</section>
-
-
-
 <!-- GARANTIA -->
 <section class="container section">
 
-<h2>🛡 Garantia incondicional de 7 dias</h2>
-
-<p>Se não gostar do conteúdo, devolvemos 100% do valor.</p>
+<h2>🛡 Garantia total de 7 dias</h2>
+<p>Se não gostar, devolvemos 100% do valor. Zero risco.</p>
 
 </section>
 
@@ -254,13 +287,13 @@ font-weight:bold;
 <h2>Dúvidas frequentes</h2>
 
 <h3>Recebo na hora?</h3>
-<p>Sim. Acesso imediato após o pagamento.</p>
+<p>Sim, acesso imediato.</p>
 
-<h3>Funciona para iniciantes?</h3>
-<p>Sim. Método feito do zero.</p>
+<h3>Funciona do zero?</h3>
+<p>Sim, feito para iniciantes.</p>
 
 <h3>É seguro comprar?</h3>
-<p>Pagamento 100% protegido.</p>
+<p>Pagamento protegido.</p>
 
 </section>
 
