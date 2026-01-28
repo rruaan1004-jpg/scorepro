@@ -123,12 +123,65 @@ li{
   margin-top:6px;
   color:#bdbdbd;
 }
-</style>
+</style>/* Depoimentos */
+.testimonials{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  margin-top:30px;
+}
+
+.testimonial{
+  background:#111;
+  padding:25px;
+  border-radius:12px;
+  border:1px solid #222;
+  text-align:left;
+}
+
+.testimonial p{
+  font-style:italic;
+  margin-bottom:10px;
+  color:#e5e5e5;
+}
+
+.testimonial span{
+  font-weight:600;
+  color:#22c55e;
+}
+
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="wrapper"><!-- DEPOIMENTOS -->
+<section>
+<h2>Veja o que pessoas comuns estão conseguindo</h2>
+
+<div class="testimonials">
+
+  <div class="testimonial">
+    <p>"Meu score era 410. Em 45 dias foi pra 690. Consegui meu cartão aprovado no mesmo mês."</p>
+    <span>— Carlos M.</span>
+  </div>
+
+  <div class="testimonial">
+    <p>"Eu já tinha tentado de tudo. Depois do método finalmente meu crédito foi liberado."</p>
+    <span>— Juliana S.</span>
+  </div>
+
+  <div class="testimonial">
+    <p>"Simples, direto e funciona. Apliquei o passo a passo e vi resultado rápido."</p>
+    <span>— Rafael P.</span>
+  </div>
+
+</div>
+
+<a href="SEU_LINK_HOTMART_AQUI" class="btn" onclick="fbq('track','InitiateCheckout')">
+QUERO AUMENTAR MEU SCORE TAMBÉM
+</a>
+</section>
+
 
 <!-- HERO -->
 <section>
