@@ -1,227 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScorePro | Aumente seu Score</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ScorePro | Aumente seu Score</title>
 
-  <!-- META PIXEL -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '3346561375499401');
-    fbq('track', 'PageView');
-  </script>
+<!-- Fonte moderna -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      background:#fff;
-      color:#111;
-      margin:0;
-      line-height:1.6;
-      text-align:center;
-    }
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3346561375499401');
+fbq('track', 'PageView');
+</script>
 
-    section{
-      padding:60px 20px;
-      max-width:800px;
-      margin:auto;
-    }
+<style>
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#0f0f0f;
+  color:#ffffff;
+  margin:0;
+}
 
-    h1{font-size:34px;}
-    h2{font-size:26px;}
+/* Container */
+.wrapper{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
 
-    p, li{
-      font-size:18px;
-    }
+/* Cards */
+section{
+  background:#181818;
+  margin:30px 0;
+  padding:50px 35px;
+  border-radius:16px;
+  box-shadow:0 10px 35px rgba(0,0,0,0.6);
+  text-align:center;
+}
 
-    ul{
-      list-style:none;
-      padding:0;
-    }
+/* Tipografia */
+h1{
+  font-size:34px;
+  font-weight:700;
+}
 
-    li{margin:10px 0;}
+h2{
+  font-size:26px;
+  font-weight:600;
+}
 
-    .dark{
-      background:#f3f3f3;
-    }
+p, li{
+  font-size:18px;
+  line-height:1.6;
+  color:#e5e5e5;
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:30px;
-      background:#16a34a;
-      color:#fff;
-      padding:18px 30px;
-      font-size:20px;
-      font-weight:bold;
-      border-radius:8px;
-      text-decoration:none;
-    }
+ul{
+  list-style:none;
+  padding:0;
+}
 
-    .price{
-      font-size:38px;
-      font-weight:bold;
-      margin:20px 0;
-    }
+li{
+  margin:12px 0;
+}
 
-    /* CONTADOR */
-    .timer{
-      font-size:32px;
-      font-weight:bold;
-      color:#dc2626;
-      margin-top:15px;
-    }
+/* Botão */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  background:#22c55e;
+  color:#000;
+  padding:16px 32px;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
+  font-size:18px;
+  transition:.2s;
+  box-shadow:0 6px 25px rgba(34,197,94,.4);
+}
 
-    /* FAQ */
-    .faq-item{
-      text-align:left;
-      margin:15px 0;
-      border-bottom:1px solid #ddd;
-      padding-bottom:10px;
-    }
+.btn:hover{
+  transform:scale(1.05);
+}
 
-    .faq-question{
-      font-weight:bold;
-      cursor:pointer;
-    }
+/* Preço */
+.price{
+  font-size:42px;
+  font-weight:700;
+  color:#22c55e;
+}
 
-    .faq-answer{
-      display:none;
-      margin-top:8px;
-    }
-  </style>
+/* Timer */
+.timer{
+  font-size:28px;
+  color:#ef4444;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+/* FAQ */
+.faq-item{
+  text-align:left;
+  margin:12px 0;
+}
+
+.faq-question{
+  font-weight:600;
+  cursor:pointer;
+}
+
+.faq-answer{
+  display:none;
+  margin-top:6px;
+  color:#bdbdbd;
+}
+</style>
 </head>
 
 <body>
 
+<div class="wrapper">
+
 <!-- HERO -->
 <section>
-  <h1>Cansado de ter crédito negado toda vez que tenta comprar algo?</h1>
-  <p>Aprenda o método simples que ajuda pessoas comuns a aumentar o score rápido.</p>
+<h1>Cansado de ter crédito negado toda vez que tenta comprar algo?</h1>
+<p>Aprenda o método simples que ajuda pessoas comuns a aumentar o score rápido e voltar a ter cartão aprovado.</p>
 
-  <div class="timer">Oferta termina em <span id="countdown">10:00</span></div>
+<div class="timer">Oferta termina em <span id="countdown">10:00</span></div>
 
-  <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666"
-     class="btn"
-     onclick="fbq('track','InitiateCheckout')">
-     QUERO AUMENTAR MEU SCORE AGORA
-  </a>
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
+QUERO AUMENTAR MEU SCORE AGORA
+</a>
 </section>
 
 
 <!-- DOR -->
-<section class="dark">
-  <h2>Você já passou por isso?</h2>
-  <ul>
-    <li>❌ Cartão recusado</li>
-    <li>❌ Crédito negado</li>
-    <li>❌ Limite baixo</li>
-    <li>❌ Vergonha no caixa</li>
-  </ul>
-
-  <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
-    QUERO RESOLVER ISSO AGORA
-  </a>
-</section>
-
-
-<!-- SOLUÇÃO -->
 <section>
-  <h2>Conheça o ScorePro</h2>
-  <p>Um passo a passo simples mostrando exatamente o que fazer para subir seu score com segurança.</p>
+<h2>Você já passou por isso?</h2>
+<ul>
+<li>❌ Cartão recusado</li>
+<li>❌ Crédito negado</li>
+<li>❌ Limite baixo</li>
+<li>❌ Vergonha no caixa</li>
+</ul>
+
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
+QUERO RESOLVER ISSO AGORA
+</a>
 </section>
 
 
-<!-- O QUE RECEBE -->
-<section class="dark">
-  <h2>Você recebe hoje:</h2>
-  <ul>
-    <li>📘 Método completo</li>
-    <li>📋 Checklist prático</li>
-    <li>📄 Modelos de negociação</li>
-    <li>🎁 Bônus extras</li>
-  </ul>
-
-  <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
-    QUERO MEU ACESSO
-  </a>
+<!-- BENEFÍCIOS -->
+<section>
+<h2>O que você vai aprender</h2>
+<ul>
+<li>✅ Como subir seu score mais rápido</li>
+<li>✅ O que derruba sua pontuação sem você perceber</li>
+<li>✅ Passo a passo simples e prático</li>
+<li>✅ Estratégias que realmente funcionam</li>
+</ul>
 </section>
 
 
 <!-- OFERTA -->
 <section>
-  <h2>Quanto vale recuperar seu crédito?</h2>
-  <p>Hoje você paga menos que uma pizza:</p>
-  <div class="price">R$47</div>
-  <p>Pagamento seguro pela Hotmart</p>
+<h2>Tudo isso por menos que uma pizza</h2>
+<div class="price">R$47</div>
+<p>Pagamento seguro pela Hotmart + 7 dias de garantia total</p>
 
-  <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
-    GARANTIR ACESSO AGORA
-  </a>
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
+GARANTIR MEU ACESSO
+</a>
 </section>
 
 
 <!-- FAQ -->
-<section class="dark">
-  <h2>Perguntas Frequentes</h2>
+<section>
+<h2>Perguntas Frequentes</h2>
 
-  <div class="faq-item">
-    <div class="faq-question">Funciona mesmo com score muito baixo?</div>
-    <div class="faq-answer">Sim. O método foi feito justamente para quem está começando do zero ou com score baixo.</div>
-  </div>
+<div class="faq-item">
+<div class="faq-question">Funciona mesmo com score baixo?</div>
+<div class="faq-answer">Sim. O método foi criado justamente para quem está começando do zero.</div>
+</div>
 
-  <div class="faq-item">
-    <div class="faq-question">Em quanto tempo vejo resultado?</div>
-    <div class="faq-answer">Muitos alunos veem mudanças nas primeiras semanas aplicando o passo a passo corretamente.</div>
-  </div>
+<div class="faq-item">
+<div class="faq-question">Quando recebo o acesso?</div>
+<div class="faq-answer">Imediatamente após o pagamento no seu e-mail.</div>
+</div>
 
-  <div class="faq-item">
-    <div class="faq-question">Como recebo o acesso?</div>
-    <div class="faq-answer">Imediatamente após o pagamento você recebe login por e-mail.</div>
-  </div>
+<div class="faq-item">
+<div class="faq-question">Tem garantia?</div>
+<div class="faq-answer">Você tem 7 dias para testar. Se não gostar, recebe 100% do dinheiro de volta.</div>
+</div>
 
-  <div class="faq-item">
-    <div class="faq-question">Tem garantia?</div>
-    <div class="faq-answer">Sim. Você tem 7 dias para testar. Se não gostar, recebe 100% do dinheiro de volta.</div>
-  </div>
-
-  <a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
-    COMEÇAR AGORA
-  </a>
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769622388666" class="btn" onclick="fbq('track','InitiateCheckout')">
+COMEÇAR AGORA
+</a>
 </section>
 
+</div>
 
-<!-- SCRIPT CONTADOR -->
+<!-- CONTADOR -->
 <script>
-let time = 600; // 10 minutos
-
-setInterval(function(){
-  let minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-
-  seconds = seconds < 10 ? "0"+seconds : seconds;
-
-  document.getElementById("countdown").innerHTML = minutes + ":" + seconds;
-
-  if(time > 0) time--;
-}, 1000);
+let time=600;
+setInterval(()=>{
+ let m=Math.floor(time/60);
+ let s=time%60;
+ s=s<10?"0"+s:s;
+ document.getElementById("countdown").innerHTML=m+":"+s;
+ if(time>0)time--;
+},1000);
 </script>
 
-<!-- SCRIPT FAQ -->
+<!-- FAQ -->
 <script>
 document.querySelectorAll('.faq-question').forEach(q=>{
-  q.addEventListener('click',()=>{
-    let answer = q.nextElementSibling;
-    answer.style.display =
-      answer.style.display === 'block' ? 'none' : 'block';
-  });
+ q.onclick=()=>{
+   let a=q.nextElementSibling;
+   a.style.display=a.style.display==='block'?'none':'block';
+ }
 });
 </script>
 
