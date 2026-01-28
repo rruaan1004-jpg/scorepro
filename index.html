@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Score Pro | Suba seu Score rápido</title>
+<title>Score Pro | Aumente seu Score rápido</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -13,40 +13,47 @@ body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
 background:#f6f8fb;
 color:#1f2937;
-text-align:center;
 line-height:1.6;
 padding-bottom:90px;
-}.testimonial{
-background:white;
-padding:22px;
-border-radius:16px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-font-size:15px;
-display:flex;
-flex-direction:column;
-gap:10px;
+text-align:center;
 }
 
-
-/* layout */
+/* ===== layout ===== */
 .section{
-max-width:900px;
+max-width:1100px;
 margin:auto;
-padding:80px 20px;
+padding:90px 20px;
+}
+
+/* ===== HERO ===== */
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.hero-text{flex:1;min-width:320px}
+.hero-img{flex:1;min-width:320px}
+
+.hero-img img{
+width:100%;
+max-width:500px;
 }
 
 h1{
-font-size:36px;
-font-weight:800;
+font-size:40px;
+font-weight:900;
 margin-bottom:15px;
 }
 
 .subtitle{
-font-size:19px;
-opacity:.8;
+font-size:20px;
+opacity:.85;
 }
 
-/* BOTÃO */
+/* ===== BOTÃO ===== */
 .btn{
 display:inline-block;
 background:#16a34a;
@@ -54,117 +61,120 @@ color:white;
 padding:18px 40px;
 border-radius:14px;
 font-size:18px;
-font-weight:800;
+font-weight:bold;
 text-decoration:none;
 margin-top:25px;
 box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
-/* 🔥 PISCANDO */
-.blink{
-animation:pulse 1s infinite;
-}
+/* botão piscando */
+.blink{animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
 
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.07)}
-100%{transform:scale(1)}
-}
+/* ===== CARDS ===== */
+.gray{background:#eef2f7}
 
-/* selo */
-.badge{
-display:inline-block;
-background:#fde047;
-color:#111;
-padding:8px 16px;
-border-radius:999px;
-font-weight:800;
-font-size:13px;
-margin-bottom:18px;
-}
-
-/* grid */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:18px;
 margin-top:35px;
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:14px;
+padding:22px;
+border-radius:16px;
 box-shadow:0 8px 25px rgba(0,0,0,.08);
 font-weight:600;
 }
 
-.gray{background:#eef2f7}
+/* ===== TRUSTPILOT STYLE ===== */
+.trust-header{
+font-size:28px;
+font-weight:800;
+}
 
-/* oferta */
+.stars{
+color:#fbbf24;
+font-size:26px;
+margin:10px 0;
+}
+
+/* ===== CARROSSEL ===== */
+.carousel{
+overflow:hidden;
+position:relative;
+margin-top:40px;
+}
+
+.track{
+display:flex;
+gap:20px;
+transition:transform .6s ease;
+}
+
+.testimonial{
+min-width:320px;
+background:white;
+padding:22px;
+border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+text-align:left;
+}
+
+.avatar{
+width:50px;
+height:50px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+.fade{
+animation:fade .6s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(10px)}
+to{opacity:1}
+}
+
+/* ===== OFERTA ===== */
 .offer{
 background:linear-gradient(135deg,#16a34a,#15803d);
 color:white;
 border-radius:24px;
-margin:50px 15px;
+margin:60px 15px;
 box-shadow:0 25px 60px rgba(0,0,0,.3);
 }
 
 .price{
-font-size:44px;
+font-size:46px;
 font-weight:900;
 margin:15px 0;
 }
 
-/* contador */
 .timer{
 font-size:26px;
 font-weight:bold;
-margin-top:10px;
 }
 
-/* depoimentos */
-.testimonial{
-background:white;
-padding:18px;
-border-radius:14px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-font-size:14px;
-}
-
-/* garantia */
-.guarantee{
-background:#dcfce7;
-padding:30px;
-border-radius:18px;
-font-weight:600;
-}
-
-/* 📌 BARRA FIXA */
+/* ===== FIXED BAR ===== */
 .fixed-cta{
 position:fixed;
 bottom:0;
-left:0;
 width:100%;
 background:#111;
-padding:15px;
-z-index:999;
+padding:14px;
 }
 
 .fixed-cta a{
 background:#16a34a;
 color:white;
 padding:14px 30px;
-border-radius:12px;
+border-radius:10px;
 text-decoration:none;
 font-weight:bold;
-display:inline-block;
-}
-
-.small{
-font-size:13px;
-opacity:.8;
-margin-top:10px;
 }
 </style>
 </head>
@@ -173,34 +183,18 @@ margin-top:10px;
 
 
 <!-- HERO -->
-<div class="section">
+<div class="section hero">
 
-<div class="badge">🏆 MAIS VENDIDO ESSA SEMANA</div>
-
-<h1>Aumente seu Score e volte a ter crédito aprovado</h1>
-
+<div class="hero-text">
+<h1>Seu Score pode subir muito mais rápido 📈</h1>
 <p class="subtitle">
-Método simples que já ajudou mais de <b>3.742 pessoas</b> a subir o score rapidamente.
+Método simples que já ajudou milhares de pessoas a organizar o CPF e voltar a ter crédito aprovado.
 </p>
-
-<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_f17e83a8-9551-4983-ab4d-93d4ba8d0ab5_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769609178616" class="btn blink">
-🚀 Quero acesso imediato
-</a>
-
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1" class="btn blink">🚀 Quero acesso imediato</a>
 </div>
 
-
-
-<!-- PROVA SOCIAL NUMÉRICA -->
-<div class="section gray">
-
-<h2>📊 Resultados reais</h2>
-
-<div class="grid">
-<div class="card">+3.742 alunos</div>
-<div class="card">+1.900 cartões aprovados</div>
-<div class="card">Score subindo em poucas semanas</div>
-<div class="card">Método simples pra iniciantes</div>
+<div class="hero-img">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 </div>
 
 </div>
@@ -208,120 +202,113 @@ Método simples que já ajudou mais de <b>3.742 pessoas</b> a subir o score rapi
 
 
 <!-- BENEFÍCIOS -->
-<div class="section">
-
-<h2>Você vai aprender:</h2>
-
-<div class="grid">
-<div class="card">✅ Como o score funciona</div>
-<div class="card">✅ O que aumenta rápido</div>
-<div class="card">✅ O que derruba sua pontuação</div>
-<div class="card">✅ Passo a passo prático</div>
-</div>
-
-</div>
-
-
-
-<!-- DEPOIMENTOS -->
 <div class="section gray">
-
-<h2>Depoimentos</h2>
-
-<div class="grid">
-<div class="testimonial">“Subiu 150 pontos em 2 meses.” — Marcos</div>
-<div class="testimonial">“Finalmente liberaram crédito.” — Juliana</div>
-<div class="testimonial">“Simples e direto. Funciona.” — Carlos</div>
-</div>
-
-</div>
-
-<!-- DEPOIMENTOS PREMIUM -->
-<div class="section gray">
-
-<h2 style="margin-bottom:40px;">Quem aplicou o método já viu resultado</h2>
+<h2>O que você vai conquistar</h2>
 
 <div class="grid">
+<div class="card">💳 Cartão aprovado</div>
+<div class="card">📈 Score subindo</div>
+<div class="card">🏦 Crédito liberado</div>
+<div class="card">😌 Tranquilidade financeira</div>
+</div>
+</div>
+
+
+
+<!-- TRUSTPILOT / PROVA SOCIAL -->
+<div class="section fade">
+
+<div class="trust-header">Avaliação dos alunos</div>
+
+<div class="stars">★★★★★</div>
+
+<p><b>4.9/5</b> baseado em <span id="reviews">3742</span> avaliações</p>
+
+<!-- CARROSSEL -->
+<div class="carousel">
+<div class="track" id="track">
 
 <div class="testimonial">
-<div style="color:#fbbf24;font-size:18px;">★★★★★</div>
-<p>“Segui o passo a passo certinho e meu score subiu mais de 120 pontos em 60 dias. Finalmente consegui meu cartão aprovado.”</p>
-<strong>— Marcos A.</strong>
+<img class="avatar" src="https://i.pravatar.cc/100?img=1">
+<p>“Subiu 150 pontos em 2 meses. Cartão aprovado!”</p>
+<b>Marcos A.</b>
 </div>
 
 <div class="testimonial">
-<div style="color:#fbbf24;font-size:18px;">★★★★★</div>
-<p>“Achei que era complicado, mas é simples demais. Em poucas semanas já senti diferença no meu CPF.”</p>
-<strong>— Juliana R.</strong>
+<img class="avatar" src="https://i.pravatar.cc/100?img=5">
+<p>“Simples demais. Funcionou rápido.”</p>
+<b>Juliana R.</b>
 </div>
 
 <div class="testimonial">
-<div style="color:#fbbf24;font-size:18px;">★★★★★</div>
-<p>“Direto ao ponto, sem enrolação. Só aplicar e funciona. Recomendo pra qualquer pessoa negativada.”</p>
-<strong>— Carlos M.</strong>
+<img class="avatar" src="https://i.pravatar.cc/100?img=12">
+<p>“Finalmente consegui crédito liberado.”</p>
+<b>Carlos M.</b>
 </div>
 
 <div class="testimonial">
-<div style="color:#fbbf24;font-size:18px;">★★★★★</div>
-<p>“Meu limite dobrou depois que organizei meu score. Valeu cada centavo.”</p>
-<strong>— Fernanda S.</strong>
+<img class="avatar" src="https://i.pravatar.cc/100?img=20">
+<p>“Método direto, sem enrolação.”</p>
+<b>Fernanda S.</b>
+</div>
+
+</div>
 </div>
 
 </div>
 
-</div>
 
 
 <!-- OFERTA -->
 <div class="section offer">
 
-<h2>📲 Acesso imediato</h2>
+<h2>Acesso imediato</h2>
 
 <div class="price">R$47</div>
 
 <p>Oferta termina em:</p>
 <div class="timer" id="countdown">10:00</div>
 
-<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_f17e83a8-9551-4983-ab4d-93d4ba8d0ab5_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769609178616" class="btn blink">
-Quero meu acesso agora
-</a>
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1" class="btn blink">Quero meu acesso agora</a>
 
-<div class="small">🔒 Compra segura • Pagamento protegido</div>
-
-</div>
-
-
-
-<!-- GARANTIA -->
-<div class="section">
-<div class="guarantee">
-🛡 Garantia incondicional de 7 dias. Se não gostar, devolvemos 100% do valor.
-</div>
 </div>
 
 
 
 <!-- BARRA FIXA -->
 <div class="fixed-cta">
-<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_f17e83a8-9551-4983-ab4d-93d4ba8d0ab5_68b9a7e6fa3cc8ac2de85eaf_0_s-1&bid=1769609178616" class="blink">🚀 Comprar agora</a>
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_bf4637d0-0aa8-4266-ba13-32fdaa4a0330_68b9a7e6fa3cc8ac2de85eaf_0_s-1" class="blink">🚀 Comprar agora</a>
 </div>
 
 
 
-<!-- CONTADOR -->
 <script>
+/* contador */
 let time=600;
-function update(){
+setInterval(()=>{
 let m=Math.floor(time/60);
 let s=time%60;
 document.getElementById("countdown").innerHTML=
 String(m).padStart(2,'0')+":"+String(s).padStart(2,'0');
 time--;
-if(time<0)time=600;
-}
-setInterval(update,1000);
-</script>
+if(time<0) time=600;
+},1000);
 
+/* contador avaliações animado */
+let reviews=3000;
+setInterval(()=>{
+reviews+=1;
+document.getElementById("reviews").innerText=reviews;
+},3000);
+
+/* carrossel automático */
+let index=0;
+setInterval(()=>{
+index++;
+document.getElementById("track").style.transform=`translateX(-${index*340}px)`;
+if(index>3) index=0;
+},2500);
+</script>
 
 </body>
 </html>
