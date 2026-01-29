@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head> 
-<!-- Meta Pixel Code -->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScorePro | Recupere seu Score e volte a ter crédito aprovado</title>
+
+<!-- ===== META PIXEL ===== -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+if(!f._fbq)f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -16,21 +21,10 @@ fbq('init', '3346561375499401');
 fbq('track', 'PageView');
 </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=3346561375499401&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ScorePro | Recupere seu Score e volte a ter crédito aprovado</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 html{scroll-behavior:smooth;}
-
 body{
   font-family:'Inter',sans-serif;
   background:#0b0b0c;
@@ -68,9 +62,7 @@ p{color:#bdbdbd;text-align:center;line-height:1.6;}
   border-radius:12px;
   font-weight:700;
   text-decoration:none;
-  transition:.2s;
 }
-.btn:hover{transform:translateY(-2px);}
 
 .badge{
   display:inline-block;
@@ -96,25 +88,17 @@ p{color:#bdbdbd;text-align:center;line-height:1.6;}
   margin-bottom:10px;
 }
 
+.proof-img{
+  width:100%;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
 .timer{
   text-align:center;
   margin-top:10px;
   color:#ef4444;
   font-weight:600;
-}
-
-.faq-item{
-  border-bottom:1px solid #222;
-  padding:12px 0;
-  cursor:pointer;
-  text-align:left;
-}
-.faq-question{font-weight:600;}
-.faq-answer{
-  display:none;
-  color:#aaa;
-  font-size:14px;
-  margin-top:8px;
 }
 
 .floating{
@@ -128,7 +112,6 @@ p{color:#bdbdbd;text-align:center;line-height:1.6;}
   border-radius:30px;
   font-weight:700;
   text-decoration:none;
-  box-shadow:0 0 20px rgba(34,197,94,.4);
 }
 </style>
 </head>
@@ -139,17 +122,13 @@ p{color:#bdbdbd;text-align:center;line-height:1.6;}
 
 <!-- HERO -->
 <section>
-<h1>Seu crédito foi negado de novo? Aumente seu Score e volte a ser aprovado em poucas semanas</h1>
+<h1>Seu crédito foi negado de novo? Aumente seu Score e volte a ser aprovado</h1>
+<p>Método simples usado por mais de 1.000 pessoas para recuperar a pontuação sem burocracia.</p>
+<div class="badge">⭐ +1.000 alunos já aplicaram</div>
 
-<p>Método simples, direto e usado por mais de 1.000 pessoas comuns para recuperar a pontuação sem burocracia.</p>
+<div class="timer">Oferta termina em <span id="countdown">10:00</span></div>
 
-<div class="badge">⭐ +1.000 pessoas já melhoraram o score com o ScorePro</div>
-
-<div class="timer">
-Oferta termina em <span id="countdown">10:00</span>
-</div>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
+<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
 QUERO AUMENTAR MEU SCORE AGORA
 </a>
 </section>
@@ -157,102 +136,71 @@ QUERO AUMENTAR MEU SCORE AGORA
 
 <!-- DOR -->
 <section>
-<h2>Se isso já aconteceu com você, sabe como dói…</h2>
+<h2>Você já passou por isso?</h2>
 <ul class="benefits">
-<li>❌ Cartão recusado na hora de pagar</li>
-<li>❌ Crédito ou financiamento negado</li>
-<li>❌ Limite baixo mesmo pagando tudo certo</li>
-<li>❌ Vergonha ou frustração no caixa</li>
+<li>❌ Cartão recusado</li>
+<li>❌ Crédito negado</li>
+<li>❌ Limite baixo</li>
+<li>❌ Vergonha no caixa</li>
 </ul>
-<p>O problema não é você. É o seu score travando sua vida financeira.</p>
 </section>
 
 
 <!-- BENEFÍCIOS -->
 <section>
-<h2>Com o ScorePro você aprende o passo a passo para</h2>
+<h2>O que você vai aprender</h2>
 <ul class="benefits">
-<li>✅ Descobrir o que está derrubando sua pontuação</li>
-<li>✅ Corrigir erros que os bancos analisam</li>
-<li>✅ Aumentar seu score rapidamente</li>
-<li>✅ Ter mais aprovações em cartões, crédito e financiamentos</li>
+<li>✅ Como subir o score rápido</li>
+<li>✅ Corrigir erros que derrubam sua pontuação</li>
+<li>✅ Estratégias práticas que funcionam</li>
+<li>✅ Mais aprovação em cartões e crédito</li>
 </ul>
 
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
+<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
 SIM, EU QUERO ESSES RESULTADOS
+</a>
+</section>
+
+
+<!-- PROVAS SOCIAIS -->
+<section>
+<h2>Resultados reais de alunos</h2>
+<p>Veja alguns prints enviados por quem aplicou o método 👇</p>
+
+<img src="images/prova1.jpg" class="proof-img">
+<img src="images/prova2.jpg" class="proof-img">
+<img src="images/prova3.jpg" class="proof-img">
+<img src="images/prova4.jpg" class="proof-img">
+
+<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
+QUERO TER ESSES RESULTADOS TAMBÉM
 </a>
 </section>
 
 
 <!-- OFERTA -->
 <section>
+<h2>Hoje apenas</h2>
+<p style="text-decoration:line-through;color:#6b7280;">de €29,90</p>
+<h1 style="color:#22c55e;font-size:42px;">€9,90</h1>
+<p>Acesso imediato + garantia de 7 dias</p>
 
-<h2>Comece hoje com acesso imediato</h2>
-
-<p style="text-decoration:line-through;color:#6b7280;font-size:14px;margin-bottom:4px;">
-de €29,90
-</p>
-
-<h1 style="color:#22c55e;font-size:42px;margin:0;">
-€9,00
-</h1>
-
-<div style="
-display:inline-block;
-background:#22c55e;
-color:#000;
-font-size:12px;
-padding:6px 12px;
-border-radius:20px;
-margin-top:8px;
-font-weight:600;">
-MENOS QUE UM LANCHE • PAGAMENTO ÚNICO
-</div>
-
-<p style="margin-top:12px;">
-Acesso imediato + garantia total de 7 dias. Teste sem risco.
-</p>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
-GARANTIR MEU ACESSO POR €9,00
+<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
+GARANTIR MEU ACESSO AGORA
 </a>
-
-</section>
-
-
-<!-- FAQ -->
-<section>
-<h2>Perguntas Frequentes</h2>
-
-<div class="faq-item">
-<div class="faq-question">Funciona mesmo com score muito baixo?</div>
-<div class="faq-answer">Sim. O método foi feito principalmente para quem está começando do zero ou já teve crédito negado várias vezes.</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Quando recebo acesso?</div>
-<div class="faq-answer">Imediatamente após o pagamento. Você recebe tudo no e-mail na mesma hora.</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">E se eu não gostar?</div>
-<div class="faq-answer">Você tem 7 dias de garantia total. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.</div>
-</div>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn">COMEÇAR AGORA</a>
 </section>
 
 </div>
 
-<!-- BOTÃO FIXO -->
-<a href="https://pay.hotmart.com/N99318938V" class="floating">
-🔥 Comprar por €9,00 agora
+
+<a href="https://pay.hotmart.com/N99318938V" class="floating" onclick="fbq('track','InitiateCheckout')">
+🔥 Comprar agora
 </a>
 
 
-<!-- TIMER CORRIGIDO -->
+<!-- TIMER -->
 <script>
-const total = 600; // 10 minutos
+const total = 600;
 let end = localStorage.getItem("endTime");
 
 function createNewTimer(){
@@ -266,33 +214,16 @@ if(!end || Date.now() > end){
 
 function update(){
   let diff = Math.floor((end - Date.now()) / 1000);
-
-  if(diff <= 0){
-    createNewTimer();
-    diff = total;
-  }
-
+  if(diff <= 0){ createNewTimer(); diff = total; }
   let m = Math.floor(diff/60);
   let s = diff%60;
-
-  document.getElementById("countdown").innerHTML =
-    m + ":" + (s<10 ? "0"+s : s);
+  document.getElementById("countdown").innerHTML = m + ":" + (s<10?"0"+s:s);
 }
 
 setInterval(update,1000);
 update();
 </script>
 
-
-<!-- FAQ TOGGLE -->
-<script>
-document.querySelectorAll('.faq-item').forEach(item=>{
- item.onclick=()=>{
-   const a=item.querySelector('.faq-answer');
-   a.style.display=a.style.display==='block'?'none':'block';
- }
-});
-</script>
-
 </body>
 </html>
+
