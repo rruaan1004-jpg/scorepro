@@ -72,7 +72,6 @@ p{text-align:center;color:#bdbdbd;}
   margin:12px auto 0;
 }
 
-/* lista */
 .benefits{
   list-style:none;
   padding:0;
@@ -85,7 +84,6 @@ p{text-align:center;color:#bdbdbd;}
   margin-bottom:10px;
 }
 
-/* antes depois */
 .compare{
   background:#101012;
   border:1px solid #242424;
@@ -95,23 +93,26 @@ p{text-align:center;color:#bdbdbd;}
   font-size:14px;
 }
 
-/* carrossel */
 .carousel{
   overflow:hidden;
   border-radius:12px;
 }
+
 .carousel-track{
   display:flex;
   transition:transform .5s ease;
 }
+
 .slide{
   min-width:100%;
   text-align:center;
 }
+
 .slide img{
   width:100%;
   border-radius:12px;
 }
+
 .caption{
   font-size:13px;
   color:#d1d5db;
@@ -143,11 +144,9 @@ p{text-align:center;color:#bdbdbd;}
 <body>
 <div class="wrapper">
 
-<!-- HERO -->
 <section>
 <h1>Seu crédito foi negado de novo?</h1>
 <p><b>Aumente seu Score e volte a ser aprovado em poucas semanas</b></p>
-
 <div class="badge">⭐ +1.247 alunos já aplicaram o método</div>
 
 <div class="timer">
@@ -159,32 +158,14 @@ QUERO AUMENTAR MEU SCORE AGORA
 </a>
 </section>
 
-<!-- ANTES DEPOIS -->
 <section>
 <h2>Antes → Depois do ScorePro</h2>
-
 <div class="compare">❌ Cartão recusado → ✅ Cartão aprovado</div>
 <div class="compare">❌ Crédito negado → ✅ Limite liberado</div>
 <div class="compare">❌ Score baixo → ✅ Score subindo toda semana</div>
 <div class="compare">❌ Vergonha no caixa → ✅ Segurança financeira</div>
 </section>
 
-<!-- BENEFICIOS -->
-<section>
-<h2>O que você vai aprender</h2>
-<ul class="benefits">
-<li>✅ Como subir o score rápido</li>
-<li>✅ O que derruba sua pontuação</li>
-<li>✅ Passo a passo simples</li>
-<li>✅ Estratégias que realmente funcionam</li>
-</ul>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
-SIM, EU QUERO ESSES RESULTADOS
-</a>
-</section>
-
-<!-- PROVAS CARROSSEL -->
 <section>
 <h2>Resultados reais de alunos</h2>
 
@@ -192,23 +173,23 @@ SIM, EU QUERO ESSES RESULTADOS
 <div class="carousel-track" id="track">
 
 <div class="slide">
-<div class="caption">📈 Score aumentando após aplicar o método</div>
-<img src="images/prova1.jpg">
+<div class="caption">📈 Score subindo após aplicar o método</div>
+<img src="prova1.jpg">
 </div>
 
 <div class="slide">
-<div class="caption">💳 Crédito aprovado depois do ajuste no score</div>
-<img src="images/prova2.jpg">
+<div class="caption">💳 Crédito aprovado</div>
+<img src="prova2.jpg">
 </div>
 
 <div class="slide">
-<div class="caption">🚀 Evolução clara em poucas semanas</div>
-<img src="images/prova3.jpg">
+<div class="caption">🚀 Evolução em poucas semanas</div>
+<img src="prova3.jpg">
 </div>
 
 <div class="slide">
-<div class="caption">✅ Resultado enviado por aluno satisfeito</div>
-<img src="images/prova4.jpg">
+<div class="caption">✅ Resultado real enviado por aluno</div>
+<img src="prova4.jpg">
 </div>
 
 </div>
@@ -219,24 +200,12 @@ QUERO TER ESSES RESULTADOS TAMBÉM
 </a>
 </section>
 
-<!-- OFERTA -->
-<section>
-<h2>Hoje apenas €9,90</h2>
-<p style="text-decoration:line-through;color:#777;">de €29,90</p>
-<p>Acesso imediato + garantia de 7 dias</p>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
-GARANTIR MEU ACESSO
-</a>
-</section>
-
 </div>
 
 <a href="https://pay.hotmart.com/N99318938V" class="floating" onclick="fbq('track','InitiateCheckout')">
 🔥 Comprar agora
 </a>
 
-<!-- TIMER -->
 <script>
 const total=600;
 let end=Date.now()+total*1000;
@@ -249,7 +218,6 @@ document.getElementById("countdown").innerHTML=m+":"+(s<10?"0"+s:s);
 },1000);
 </script>
 
-<!-- CARROSSEL AUTO -->
 <script>
 const track=document.getElementById('track');
 let index=0;
