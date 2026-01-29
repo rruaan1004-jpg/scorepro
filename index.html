@@ -149,21 +149,64 @@ QUERO COMEÇAR AGORA
 </section>
 
 
-<!-- ===== PROVAS (ÚNICA PARTE NOVA) ===== -->
+<!-- PROVAS SOCIAIS PROFISSIONAL -->
 <section>
 <h2>Resultados reais de alunos</h2>
 
-<div class="compare">❌ Score baixo → ✅ Score subindo</div>
-<div class="compare">❌ Crédito negado → ✅ Crédito aprovado</div>
-<div class="compare">❌ Limite travado → ✅ Limite liberado</div>
+<div style="margin-bottom:18px;background:#101012;border:1px solid #242424;padding:12px;border-radius:12px;text-align:center;font-size:14px;">
+❌ Score travado → ✅ Score subindo constantemente<br>
+❌ Crédito negado → ✅ Cartões aprovados
+</div>
 
-<div class="carousel">
-  <div class="track" id="track">
+<div style="overflow:hidden;border-radius:16px;">
+  <div id="track" style="display:flex;transition:.5s ease;">
 
-    <div class="slide"><img src="prova1.jpg"></div>
-    <div class="slide"><img src="prova2.jpg"></div>
-    <div class="slide"><img src="prova3.jpg"></div>
-    <div class="slide"><img src="prova4.jpg"></div>
+    <div style="min-width:100%;padding:8px;">
+      <div style="background:#101012;border:1px solid #242424;border-radius:14px;padding:10px;">
+        <p style="font-size:13px;color:#9ca3af;">📈 Evolução do score após aplicar o método</p>
+        <img src="prova1.jpg" style="width:100%;border-radius:10px;">
+      </div>
+    </div>
+
+    <div style="min-width:100%;padding:8px;">
+      <div style="background:#101012;border:1px solid #242424;border-radius:14px;padding:10px;">
+        <p style="font-size:13px;color:#9ca3af;">💳 Crédito finalmente aprovado</p>
+        <img src="prova2.jpg" style="width:100%;border-radius:10px;">
+      </div>
+    </div>
+
+    <div style="min-width:100%;padding:8px;">
+      <div style="background:#101012;border:1px solid #242424;border-radius:14px;padding:10px;">
+        <p style="font-size:13px;color:#9ca3af;">🚀 Resultado em poucas semanas</p>
+        <img src="prova3.jpg" style="width:100%;border-radius:10px;">
+      </div>
+    </div>
+
+    <div style="min-width:100%;padding:8px;">
+      <div style="background:#101012;border:1px solid #242424;border-radius:14px;padding:10px;">
+        <p style="font-size:13px;color:#9ca3af;">✅ Print real enviado por aluno</p>
+        <img src="prova4.jpg" style="width:100%;border-radius:10px;">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<a href="https://pay.hotmart.com/N99318938V"
+class="btn"
+onclick="fbq('track','InitiateCheckout')">
+QUERO TER ESSES RESULTADOS TAMBÉM
+</a>
+</section>
+
+<script>
+let i=0;
+setInterval(()=>{
+i=(i+1)%4;
+document.getElementById('track').style.transform=`translateX(-${i*100}%)`;
+},3000);
+</script>
+
 
   </div>
 </div>
