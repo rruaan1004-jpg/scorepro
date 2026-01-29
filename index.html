@@ -12,108 +12,106 @@
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
+n.loaded=!0;n.version='2.0';
+t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '3346561375499401');
-fbq('track', 'PageView');
+fbq('init','3346561375499401');
+fbq('track','PageView');
 </script>
 
 <style>
 body{
-  font-family:'Inter',sans-serif;
-  background:#0b0b0c;
-  color:#fff;
-  margin:0;
+font-family:'Inter',sans-serif;
+background:#0b0b0c;
+color:#fff;
+margin:0;
 }
 
 .wrapper{
-  max-width:720px;
-  margin:auto;
-  padding:28px 18px 100px;
+max-width:720px;
+margin:auto;
+padding:28px 18px 100px;
 }
 
 section{
-  background:#151517;
-  border:1px solid #222;
-  padding:38px 28px;
-  border-radius:18px;
-  margin-bottom:22px;
+background:#151517;
+border:1px solid #222;
+padding:38px 28px;
+border-radius:18px;
+margin-bottom:22px;
 }
 
 h1,h2{text-align:center;}
-p{color:#bdbdbd;text-align:center;}
+p{text-align:center;color:#bdbdbd;}
 
 .btn{
-  display:block;
-  margin:25px auto 0;
-  max-width:380px;
-  text-align:center;
-  background:#22c55e;
-  color:#000;
-  padding:14px;
-  border-radius:12px;
-  font-weight:700;
-  text-decoration:none;
+display:block;
+margin:25px auto 0;
+max-width:380px;
+background:#22c55e;
+color:#000;
+padding:14px;
+border-radius:12px;
+font-weight:700;
+text-decoration:none;
+text-align:center;
 }
 
 .badge{
-  display:inline-block;
-  background:#101012;
-  border:1px solid #242424;
-  padding:8px 14px;
-  border-radius:30px;
-  font-size:14px;
-  margin:10px auto 0;
-  color:#22c55e;
+background:#101012;
+border:1px solid #242424;
+padding:8px 14px;
+border-radius:30px;
+display:inline-block;
+margin:10px auto;
+color:#22c55e;
 }
 
 .benefits{
-  list-style:none;
-  padding:0;
+list-style:none;
+padding:0;
 }
 .benefits li{
-  background:#101012;
-  border:1px solid #242424;
-  padding:14px;
-  border-radius:10px;
-  margin-bottom:10px;
+background:#101012;
+border:1px solid #242424;
+padding:14px;
+border-radius:10px;
+margin-bottom:10px;
 }
 
 .timer{
-  text-align:center;
-  color:#ef4444;
-  font-weight:600;
+text-align:center;
+color:#ef4444;
+font-weight:600;
 }
 
-/* ===== CARROSSEL PROVAS (apenas adição) ===== */
-.carousel{overflow:hidden;border-radius:12px;}
-.track{display:flex;transition:.5s;}
-.slide{min-width:100%;text-align:center;}
-.slide img{width:100%;border-radius:12px;}
-.compare{
-  background:#101012;
-  border:1px solid #242424;
-  padding:10px;
-  border-radius:8px;
-  margin-bottom:10px;
-  font-size:14px;
+/* cards */
+.card{
+background:#101012;
+border:1px solid #242424;
+padding:14px;
+border-radius:12px;
+text-align:center;
 }
+
+/* carrossel */
+.carousel{overflow:hidden;border-radius:14px;}
+.track{display:flex;transition:.5s ease;}
+.slide{min-width:100%;padding:8px;}
+.slide img{width:100%;border-radius:12px;}
 </style>
 </head>
 
 <body>
-
 <div class="wrapper">
 
 <!-- HERO -->
 <section>
 <h1>Aumente seu Score e volte a ter crédito aprovado</h1>
 <p>Método simples, direto e comprovado.</p>
-<div class="badge">⭐ +1.247 alunos já aplicaram o método</div>
+<div class="badge">⭐ +1.247 alunos já aplicaram</div>
 
 <div class="timer">
 Oferta termina em <span id="countdown">10:00</span>
@@ -149,83 +147,40 @@ QUERO COMEÇAR AGORA
 </section>
 
 
-<!-- PROVAS SOCIAIS PROFISSIONAL -->
+<!-- RESULTADOS PREMIUM -->
 <section>
 <h2>Resultados reais de alunos</h2>
 
-<div style="margin-bottom:18px;background:#101012;border:1px solid #242424;padding:12px;border-radius:12px;text-align:center;font-size:14px;">
-❌ Score travado → ✅ Score subindo constantemente<br>
-❌ Crédito negado → ✅ Cartões aprovados
+<div class="card">❌ Score travado → ✅ Score subindo constantemente</div>
+<br>
+<div class="card">❌ Crédito negado → ✅ Cartões aprovados</div>
+
+<br>
+
+<div class="carousel">
+<div class="track" id="track">
+<div class="slide"><img src="prova1.jpg"></div>
+<div class="slide"><img src="prova2.jpg"></div>
+<div class="slide"><img src="prova3.jpg"></div>
+<div class="slide"><img src="prova4.jpg"></div>
+</div>
 </div>
 
-<div style="overflow:hidden;border-radius:16px;">
-  <div id="track" style="display:flex;transition:.5s ease;">
-
-    <div style="min-width:100%;padding:8px;">
-      <div style="background:#101012;border:1px solid #242424;border-radius:14px;padding:10px;">
-        <p style="font-size:13px;color:#9ca3af;">📈 Evolução do score após aplicar o método</p>
-        <img src="prova1.jpg" style="width:100%;border-radius:10px;">
-      </div>
-    </div>
-
-    <div style="min-width:100%;padding:8px;">
-      <div style="background:#101012;border:1px solid #242424;border-radius:14px;padding:10px;">
-        <p style="font-size:13px;color:#9ca3af;">💳 Crédito finalmente aprovado</p>
-        <img src="prova2.jpg" style="width:100%;border-radius:10px;">
-      </div>
-    </div>
-
-    <div style="min-width:100%;padding:8px;">
-      <div style="background:#101012;border:1px solid #242424;border-radius:14px;padding:10px;">
-        <p style="font-size:13px;color:#9ca3af;">🚀 Resultado em poucas semanas</p>
-        <img src="prova3.jpg" style="width:100%;border-radius:10px;">
-      </div>
-    </div>
-
-    <div style="min-width:100%;padding:8px;">
-      <div style="background:#101012;border:1px solid #242424;border-radius:14px;padding:10px;">
-        <p style="font-size:13px;color:#9ca3af;">✅ Print real enviado por aluno</p>
-        <img src="prova4.jpg" style="width:100%;border-radius:10px;">
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<a href="https://pay.hotmart.com/N99318938V"
-class="btn"
-onclick="fbq('track','InitiateCheckout')">
+<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
 QUERO TER ESSES RESULTADOS TAMBÉM
 </a>
 </section>
 
-<script>
-let i=0;
-setInterval(()=>{
-i=(i+1)%4;
-document.getElementById('track').style.transform=`translateX(-${i*100}%)`;
-},3000);
-</script>
 
-
-  </div>
-</div>
-</section>
-<!-- ===================================== -->
-
-
-<!-- FAQ ORIGINAL (mantido) -->
+<!-- FAQ PREMIUM -->
 <section>
 <h2>Perguntas Frequentes</h2>
 
-<p><b>Funciona com score muito baixo?</b><br>
-Sim. O método foi criado exatamente para quem está começando do zero.</p>
+<div class="card"><b>Funciona com score muito baixo?</b><br><span style="color:#bdbdbd;">Sim. Criado para quem está começando do zero.</span></div><br>
 
-<p><b>Quando recebo acesso?</b><br>
-Imediatamente após o pagamento por e-mail.</p>
+<div class="card"><b>Quando recebo acesso?</b><br><span style="color:#bdbdbd;">Imediatamente após o pagamento por e-mail.</span></div><br>
 
-<p><b>Tem garantia?</b><br>
-Você tem 7 dias para testar ou receber 100% do valor de volta.</p>
+<div class="card"><b>Tem garantia?</b><br><span style="color:#bdbdbd;">7 dias para testar ou receber 100% do valor de volta.</span></div>
 </section>
 
 </div>
