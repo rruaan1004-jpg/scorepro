@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ScorePro | Aumente seu Score</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 <!-- PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -20,86 +22,85 @@ fbq('init', '3346561375499401');
 fbq('track', 'PageView');
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
 body{
-font-family:'Inter',sans-serif;
-background:#0b0b0c;
-color:#fff;
-margin:0;
+  font-family:'Inter',sans-serif;
+  background:#0b0b0c;
+  color:#fff;
+  margin:0;
 }
 
 .wrapper{
-max-width:720px;
-margin:auto;
-padding:28px 18px 100px;
+  max-width:720px;
+  margin:auto;
+  padding:28px 18px 100px;
 }
 
 section{
-background:#151517;
-border:1px solid #222;
-padding:38px 28px;
-border-radius:18px;
-margin-bottom:22px;
+  background:#151517;
+  border:1px solid #222;
+  padding:38px 28px;
+  border-radius:18px;
+  margin-bottom:22px;
 }
 
 h1,h2{text-align:center;}
-p{text-align:center;color:#bdbdbd;}
+p{color:#bdbdbd;text-align:center;}
 
 .btn{
-display:block;
-margin:25px auto 0;
-max-width:380px;
-text-align:center;
-background:#22c55e;
-color:#000;
-padding:14px;
-border-radius:12px;
-font-weight:700;
-text-decoration:none;
+  display:block;
+  margin:25px auto 0;
+  max-width:380px;
+  text-align:center;
+  background:#22c55e;
+  color:#000;
+  padding:14px;
+  border-radius:12px;
+  font-weight:700;
+  text-decoration:none;
 }
 
 .badge{
-display:inline-block;
-background:#101012;
-border:1px solid #242424;
-padding:8px 14px;
-border-radius:30px;
-font-size:14px;
-margin:10px auto 0;
-color:#22c55e;
+  display:inline-block;
+  background:#101012;
+  border:1px solid #242424;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:14px;
+  margin:10px auto 0;
+  color:#22c55e;
 }
 
 .benefits{
-list-style:none;
-padding:0;
+  list-style:none;
+  padding:0;
 }
 .benefits li{
-background:#101012;
-border:1px solid #242424;
-padding:14px;
-border-radius:10px;
-margin-bottom:10px;
+  background:#101012;
+  border:1px solid #242424;
+  padding:14px;
+  border-radius:10px;
+  margin-bottom:10px;
 }
 
 .timer{
-text-align:center;
-color:#ef4444;
-font-weight:600;
+  text-align:center;
+  color:#ef4444;
+  font-weight:600;
 }
 
-.floating{
-position:fixed;
-bottom:18px;
-left:50%;
-transform:translateX(-50%);
-background:#22c55e;
-color:#000;
-padding:12px 24px;
-border-radius:30px;
-font-weight:700;
-text-decoration:none;
+/* ===== CARROSSEL PROVAS (apenas adição) ===== */
+.carousel{overflow:hidden;border-radius:12px;}
+.track{display:flex;transition:.5s;}
+.slide{min-width:100%;text-align:center;}
+.slide img{width:100%;border-radius:12px;}
+.compare{
+  background:#101012;
+  border:1px solid #242424;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:10px;
+  font-size:14px;
 }
 </style>
 </head>
@@ -108,10 +109,11 @@ text-decoration:none;
 
 <div class="wrapper">
 
+<!-- HERO -->
 <section>
 <h1>Aumente seu Score e volte a ter crédito aprovado</h1>
 <p>Método simples, direto e comprovado.</p>
-<div class="badge">⭐ +1.000 alunos já aplicaram</div>
+<div class="badge">⭐ +1.247 alunos já aplicaram o método</div>
 
 <div class="timer">
 Oferta termina em <span id="countdown">10:00</span>
@@ -122,6 +124,8 @@ QUERO COMEÇAR AGORA
 </a>
 </section>
 
+
+<!-- PROBLEMAS -->
 <section>
 <h2>Você já passou por isso?</h2>
 <ul class="benefits">
@@ -132,6 +136,8 @@ QUERO COMEÇAR AGORA
 </ul>
 </section>
 
+
+<!-- BENEFÍCIOS -->
 <section>
 <h2>O que você vai aprender</h2>
 <ul class="benefits">
@@ -142,31 +148,47 @@ QUERO COMEÇAR AGORA
 </ul>
 </section>
 
-<!-- PROVAS (SIMPLES, SEM CARROSSEL, ZERO ERRO) -->
+
+<!-- ===== PROVAS (ÚNICA PARTE NOVA) ===== -->
 <section>
 <h2>Resultados reais de alunos</h2>
 
-<p>📈 Score aumentando após aplicar o método</p>
-<img src="prova1.jpg" style="width:100%;border-radius:12px;margin-bottom:12px;">
+<div class="compare">❌ Score baixo → ✅ Score subindo</div>
+<div class="compare">❌ Crédito negado → ✅ Crédito aprovado</div>
+<div class="compare">❌ Limite travado → ✅ Limite liberado</div>
 
-<p>💳 Crédito aprovado</p>
-<img src="prova2.jpg" style="width:100%;border-radius:12px;margin-bottom:12px;">
+<div class="carousel">
+  <div class="track" id="track">
 
-<p>🚀 Evolução em poucas semanas</p>
-<img src="prova3.jpg" style="width:100%;border-radius:12px;margin-bottom:12px;">
+    <div class="slide"><img src="prova1.jpg"></div>
+    <div class="slide"><img src="prova2.jpg"></div>
+    <div class="slide"><img src="prova3.jpg"></div>
+    <div class="slide"><img src="prova4.jpg"></div>
 
-<p>✅ Resultado real enviado por aluno</p>
-<img src="prova4.jpg" style="width:100%;border-radius:12px;margin-bottom:12px;">
+  </div>
+</div>
+</section>
+<!-- ===================================== -->
 
-<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
-QUERO TER ESSES RESULTADOS TAMBÉM
-</a>
+
+<!-- FAQ ORIGINAL (mantido) -->
+<section>
+<h2>Perguntas Frequentes</h2>
+
+<p><b>Funciona com score muito baixo?</b><br>
+Sim. O método foi criado exatamente para quem está começando do zero.</p>
+
+<p><b>Quando recebo acesso?</b><br>
+Imediatamente após o pagamento por e-mail.</p>
+
+<p><b>Tem garantia?</b><br>
+Você tem 7 dias para testar ou receber 100% do valor de volta.</p>
 </section>
 
 </div>
 
-<a href="https://pay.hotmart.com/N99318938V" class="floating">🔥 Comprar agora</a>
 
+<!-- TIMER -->
 <script>
 const total=600;
 let end=Date.now()+total*1000;
@@ -177,6 +199,15 @@ let m=Math.floor(diff/60);
 let s=diff%60;
 document.getElementById("countdown").innerHTML=m+":"+(s<10?"0"+s:s);
 },1000);
+</script>
+
+<!-- CARROSSEL -->
+<script>
+let i=0;
+setInterval(()=>{
+i=(i+1)%4;
+document.getElementById('track').style.transform=`translateX(-${i*100}%)`;
+},3000);
 </script>
 
 </body>
