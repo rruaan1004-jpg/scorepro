@@ -84,12 +84,39 @@ p{color:#bdbdbd;text-align:center;line-height:1.6;}
 }
 
 /* ===== TIMER ===== */
-.timer{
-  text-align:center;
-  margin-top:10px;
-  color:#ef4444;
-  font-weight:600;
+<script>
+const total = 600; // 10 minutos em segundos
+let end = localStorage.getItem("endTime");
+
+function createNewTimer(){
+  end = Date.now() + total * 1000;
+  localStorage.setItem("endTime", end);
 }
+
+// se não existir OU já expirou → recria
+if(!end || Date.now() > end){
+  createNewTimer();
+}
+
+function update(){
+  let diff = Math.floor((end - Date.now()) / 1000);
+
+  if(diff <= 0){
+    createNewTimer();
+    diff = total;
+  }
+
+  let m = Math.floor(diff/60);
+  let s = diff%60;
+
+  document.getElementById("countdown").innerHTML =
+    m + ":" + (s<10 ? "0"+s : s);
+}
+
+setInterval(update,1000);
+update();
+</script>
+
 
 /* ===== FAQ ===== */
 .faq-item{
