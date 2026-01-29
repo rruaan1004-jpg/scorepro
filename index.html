@@ -264,6 +264,114 @@ Pagamento seguro • Acesso imediato • 7 dias de garantia
 
 <!-- FAQ PREMIUM -->
 <section>
+  <!-- ===== OFERTA ULTRA PERSUASIVA ===== -->
+<section>
+
+<!-- SELO -->
+<div style="
+background:#22c55e;
+color:#000;
+display:inline-block;
+padding:6px 14px;
+border-radius:20px;
+font-weight:700;
+font-size:12px;
+margin:auto;
+text-align:center;
+display:block;
+width:max-content;
+margin-bottom:14px;
+">
+🔥 MAIS VENDIDO DA SEMANA
+</div>
+
+<h2 style="margin-bottom:10px;">
+Última chance de garantir seu acesso
+</h2>
+
+<!-- MINI VSL TEXTO -->
+<p style="max-width:520px;margin:0 auto 18px auto;color:#bdbdbd;">
+Se o seu score está baixo hoje, você já sabe o problema:
+crédito negado, limite travado e portas fechadas.
+<br><br>
+O <b>ScorePro</b> foi criado exatamente para resolver isso de forma simples,
+rápida e prática — mesmo começando do zero.
+</p>
+
+
+<!-- STACK -->
+<div style="
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-bottom:22px;
+">
+
+<div class="card">✅ Método completo passo a passo</div>
+<div class="card">✅ Estratégias que bancos não explicam</div>
+<div class="card">✅ Correção de erros que derrubam seu score</div>
+<div class="card">✅ Acesso imediato e vitalício</div>
+<div class="card">✅ Garantia total de 7 dias</div>
+
+</div>
+
+
+<!-- PREÇO -->
+<p style="text-decoration:line-through;color:#6b7280;font-size:14px;margin:0;">
+de €29,90
+</p>
+
+<h1 style="color:#22c55e;font-size:44px;margin:4px 0;">
+€9,90
+</h1>
+
+<p style="color:#9ca3af;font-size:13px;margin-bottom:10px;">
+Pagamento único • acesso imediato
+</p>
+
+
+<!-- CONTADOR NA OFERTA -->
+<div style="
+background:#101012;
+border:1px solid #242424;
+padding:10px;
+border-radius:10px;
+text-align:center;
+color:#ef4444;
+font-weight:700;
+margin-bottom:16px;
+">
+⚠️ Desconto expira em <span id="offerTimer">10:00</span>
+</div>
+
+
+<!-- CTA -->
+<a href="https://pay.hotmart.com/N99318938V"
+class="btn"
+onclick="fbq('track','InitiateCheckout')">
+GARANTIR MEU ACESSO AGORA
+</a>
+
+<p style="font-size:12px;color:#9ca3af;margin-top:10px;">
+Compra segura • Acesso imediato • Teste sem risco
+</p>
+
+</section>
+
+
+<!-- TIMER DA OFERTA -->
+<script>
+const offerTotal=600;
+let offerEnd=Date.now()+offerTotal*1000;
+
+setInterval(()=>{
+let diff=Math.floor((offerEnd-Date.now())/1000);
+if(diff<=0){offerEnd=Date.now()+offerTotal*1000; diff=offerTotal;}
+let m=Math.floor(diff/60);
+let s=diff%60;
+document.getElementById("offerTimer").innerHTML=m+":"+(s<10?"0"+s:s);
+},1000);
+</script>
 <h2>Perguntas Frequentes</h2>
 
 <div class="faq">
