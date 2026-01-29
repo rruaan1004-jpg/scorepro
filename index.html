@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ScorePro | Recupere seu Score e volte a ter crédito aprovado</title>
 
-<!-- ===== META PIXEL ===== -->
+<!-- ================= PIXEL META ================= -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -20,11 +20,13 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '3346561375499401');
 fbq('track', 'PageView');
 </script>
+<!-- ============================================= -->
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 html{scroll-behavior:smooth;}
+
 body{
   font-family:'Inter',sans-serif;
   background:#0b0b0c;
@@ -49,7 +51,12 @@ section{
 h1,h2{text-align:center;}
 h1{font-size:28px;}
 h2{font-size:20px;color:#e5e5e5;}
-p{color:#bdbdbd;text-align:center;line-height:1.6;}
+
+p{
+  color:#bdbdbd;
+  text-align:center;
+  line-height:1.6;
+}
 
 .btn{
   display:block;
@@ -80,6 +87,7 @@ p{color:#bdbdbd;text-align:center;line-height:1.6;}
   padding:0;
   margin:20px auto;
 }
+
 .benefits li{
   background:#101012;
   border:1px solid #242424;
@@ -88,7 +96,7 @@ p{color:#bdbdbd;text-align:center;line-height:1.6;}
   margin-bottom:10px;
 }
 
-.proof-img{
+.proof{
   width:100%;
   border-radius:12px;
   margin-bottom:12px;
@@ -124,11 +132,16 @@ p{color:#bdbdbd;text-align:center;line-height:1.6;}
 <section>
 <h1>Seu crédito foi negado de novo? Aumente seu Score e volte a ser aprovado</h1>
 <p>Método simples usado por mais de 1.000 pessoas para recuperar a pontuação sem burocracia.</p>
+
 <div class="badge">⭐ +1.000 alunos já aplicaram</div>
 
-<div class="timer">Oferta termina em <span id="countdown">10:00</span></div>
+<div class="timer">
+Oferta termina em <span id="countdown">10:00</span>
+</div>
 
-<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
+<a href="https://pay.hotmart.com/N99318938V"
+class="btn"
+onclick="fbq('track','InitiateCheckout')">
 QUERO AUMENTAR MEU SCORE AGORA
 </a>
 </section>
@@ -153,10 +166,12 @@ QUERO AUMENTAR MEU SCORE AGORA
 <li>✅ Como subir o score rápido</li>
 <li>✅ Corrigir erros que derrubam sua pontuação</li>
 <li>✅ Estratégias práticas que funcionam</li>
-<li>✅ Mais aprovação em cartões e crédito</li>
+<li>✅ Mais aprovação em crédito e cartões</li>
 </ul>
 
-<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
+<a href="https://pay.hotmart.com/N99318938V"
+class="btn"
+onclick="fbq('track','InitiateCheckout')">
 SIM, EU QUERO ESSES RESULTADOS
 </a>
 </section>
@@ -165,14 +180,16 @@ SIM, EU QUERO ESSES RESULTADOS
 <!-- PROVAS SOCIAIS -->
 <section>
 <h2>Resultados reais de alunos</h2>
-<p>Veja alguns prints enviados por quem aplicou o método 👇</p>
+<p>Alguns prints enviados por quem aplicou o método 👇</p>
 
-<img src="images/prova1.jpg" class="proof-img">
-<img src="images/prova2.jpg" class="proof-img">
-<img src="images/prova3.jpg" class="proof-img">
-<img src="images/prova4.jpg" class="proof-img">
+<img src="images/prova1.jpg" class="proof">
+<img src="images/prova2.jpg" class="proof">
+<img src="images/prova3.jpg" class="proof">
+<img src="images/prova4.jpg" class="proof">
 
-<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
+<a href="https://pay.hotmart.com/N99318938V"
+class="btn"
+onclick="fbq('track','InitiateCheckout')">
 QUERO TER ESSES RESULTADOS TAMBÉM
 </a>
 </section>
@@ -185,7 +202,9 @@ QUERO TER ESSES RESULTADOS TAMBÉM
 <h1 style="color:#22c55e;font-size:42px;">€9,90</h1>
 <p>Acesso imediato + garantia de 7 dias</p>
 
-<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
+<a href="https://pay.hotmart.com/N99318938V"
+class="btn"
+onclick="fbq('track','InitiateCheckout')">
 GARANTIR MEU ACESSO AGORA
 </a>
 </section>
@@ -193,12 +212,14 @@ GARANTIR MEU ACESSO AGORA
 </div>
 
 
-<a href="https://pay.hotmart.com/N99318938V" class="floating" onclick="fbq('track','InitiateCheckout')">
+<a href="https://pay.hotmart.com/N99318938V"
+class="floating"
+onclick="fbq('track','InitiateCheckout')">
 🔥 Comprar agora
 </a>
 
 
-<!-- TIMER -->
+<!-- TIMER CORRIGIDO -->
 <script>
 const total = 600;
 let end = localStorage.getItem("endTime");
@@ -215,9 +236,12 @@ if(!end || Date.now() > end){
 function update(){
   let diff = Math.floor((end - Date.now()) / 1000);
   if(diff <= 0){ createNewTimer(); diff = total; }
+
   let m = Math.floor(diff/60);
   let s = diff%60;
-  document.getElementById("countdown").innerHTML = m + ":" + (s<10?"0"+s:s);
+
+  document.getElementById("countdown").innerHTML =
+    m + ":" + (s<10 ? "0"+s : s);
 }
 
 setInterval(update,1000);
@@ -226,4 +250,3 @@ update();
 
 </body>
 </html>
-
