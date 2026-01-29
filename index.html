@@ -1,13 +1,196 @@
-<!-- RESULTADOS PREMIUM -->
-<section>
-<h2 style="margin-bottom:24px;">Resultados reais de alunos</h2>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScorePro | Aumente seu Score</title>
 
-<div style="
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+n.loaded=!0;n.version='2.0';
+t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','3346561375499401');
+fbq('track','PageView');
+</script>
+
+<style>
+body{
+font-family:'Inter',sans-serif;
+background:#0b0b0c;
+color:#fff;
+margin:0;
+}
+
+.wrapper{
+max-width:720px;
+margin:auto;
+padding:28px 18px 100px;
+}
+
+section{
+background:#151517;
+border:1px solid #222;
+padding:38px 28px;
+border-radius:18px;
+margin-bottom:22px;
+}
+
+h1,h2{
+text-align:center;
+margin-bottom:18px;
+}
+
+p{
+text-align:center;
+color:#bdbdbd;
+}
+
+.btn{
+display:block;
+margin:25px auto 0;
+max-width:380px;
+background:#22c55e;
+color:#000;
+padding:14px;
+border-radius:12px;
+font-weight:700;
+text-decoration:none;
+text-align:center;
+}
+
+.badge{
+background:#101012;
+border:1px solid #242424;
+padding:8px 14px;
+border-radius:30px;
+display:inline-block;
+margin:10px auto;
+color:#22c55e;
+}
+
+.benefits{
+list-style:none;
+padding:0;
+}
+.benefits li{
+background:#101012;
+border:1px solid #242424;
+padding:14px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.timer{
+text-align:center;
+color:#ef4444;
+font-weight:600;
+margin-top:8px;
+}
+
+/* CARDS */
+.card{
+background:#101012;
+border:1px solid #242424;
+padding:16px;
+border-radius:14px;
+text-align:center;
+}
+
+/* RESULTADOS */
+.results{
 display:flex;
 flex-direction:column;
 gap:14px;
 margin-bottom:26px;
-">
+}
+
+/* CARROSSEL */
+.carousel{
+overflow:hidden;
+border-radius:14px;
+margin-top:10px;
+}
+.track{
+display:flex;
+transition:.5s ease;
+}
+.slide{
+min-width:100%;
+padding:6px;
+}
+.slide img{
+width:100%;
+border-radius:12px;
+}
+
+/* FAQ */
+.faq{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+
+<!-- HERO -->
+<section>
+<h1>Aumente seu Score e volte a ter crédito aprovado</h1>
+<p>Método simples, direto e comprovado.</p>
+
+<div class="badge">⭐ +1.247 alunos já aplicaram</div>
+
+<div class="timer">
+Oferta termina em <span id="countdown">10:00</span>
+</div>
+
+<a href="https://pay.hotmart.com/N99318938V"
+class="btn"
+onclick="fbq('track','InitiateCheckout')">
+QUERO COMEÇAR AGORA
+</a>
+</section>
+
+
+<!-- PROBLEMAS -->
+<section>
+<h2>Você já passou por isso?</h2>
+<ul class="benefits">
+<li>❌ Cartão recusado</li>
+<li>❌ Crédito negado</li>
+<li>❌ Limite baixo</li>
+<li>❌ Vergonha no caixa</li>
+</ul>
+</section>
+
+
+<!-- BENEFÍCIOS -->
+<section>
+<h2>O que você vai aprender</h2>
+<ul class="benefits">
+<li>✅ Como subir seu score rápido</li>
+<li>✅ O que derruba sua pontuação</li>
+<li>✅ Passo a passo simples</li>
+<li>✅ Estratégias que realmente funcionam</li>
+</ul>
+</section>
+
+
+<!-- RESULTADOS PREMIUM -->
+<section>
+<h2>Resultados reais de alunos</h2>
+
+<div class="results">
 
 <div class="card">
 ❌ Score travado → ✅ Score subindo constantemente
@@ -18,7 +201,6 @@ margin-bottom:26px;
 </div>
 
 </div>
-
 
 <div class="carousel">
 <div class="track" id="track">
@@ -31,8 +213,61 @@ margin-bottom:26px;
 
 <a href="https://pay.hotmart.com/N99318938V"
 class="btn"
-style="margin-top:22px;"
 onclick="fbq('track','InitiateCheckout')">
 QUERO TER ESSES RESULTADOS TAMBÉM
 </a>
 </section>
+
+
+<!-- FAQ PREMIUM -->
+<section>
+<h2>Perguntas Frequentes</h2>
+
+<div class="faq">
+
+<div class="card">
+<b>Funciona com score muito baixo?</b><br>
+<span style="color:#bdbdbd;">Sim. Criado para quem está começando do zero.</span>
+</div>
+
+<div class="card">
+<b>Quando recebo acesso?</b><br>
+<span style="color:#bdbdbd;">Imediatamente após o pagamento por e-mail.</span>
+</div>
+
+<div class="card">
+<b>Tem garantia?</b><br>
+<span style="color:#bdbdbd;">7 dias para testar ou receber 100% do valor de volta.</span>
+</div>
+
+</div>
+</section>
+
+</div>
+
+
+<!-- TIMER -->
+<script>
+const total=600;
+let end=Date.now()+total*1000;
+
+setInterval(()=>{
+let diff=Math.floor((end-Date.now())/1000);
+if(diff<=0){end=Date.now()+total*1000; diff=total;}
+let m=Math.floor(diff/60);
+let s=diff%60;
+document.getElementById("countdown").innerHTML=m+":"+(s<10?"0"+s:s);
+},1000);
+</script>
+
+<!-- CARROSSEL -->
+<script>
+let i=0;
+setInterval(()=>{
+i=(i+1)%4;
+document.getElementById('track').style.transform=`translateX(-${i*100}%)`;
+},3000);
+</script>
+
+</body>
+</html>
