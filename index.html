@@ -1,271 +1,286 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Aumente seu Score</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-<!-- META PIXEL -->
+<!-- ================= PIXEL META ================= -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-n.loaded=!0;n.version='2.0';
-t=b.createElement(e);t.async=!0;
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','3346561375499401');
-fbq('track','PageView');
+fbq('init', '3346561375499401');
+fbq('track', 'PageView');
 </script>
+<!-- ============================================ -->
 
 <style>
 body{
-font-family:'Inter',sans-serif;
-background:#0b0b0c;
-color:#fff;
-margin:0;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f6f8;
+  color:#111;
 }
 
-.wrapper{
-max-width:720px;
-margin:auto;
-padding:28px 18px 100px;
+.container{
+  max-width:760px;
+  margin:auto;
+  padding:22px;
 }
 
-section{
-background:#151517;
-border:1px solid #222;
-padding:38px 28px;
-border-radius:18px;
-margin:0 auto 22px auto;
-text-align:center;
+.section{margin:45px 0;text-align:center;}
+
+.hero{
+  background:#FFD400;
+  padding:60px 25px;
+  border-radius:22px;
 }
 
-h1,h2{
-margin-bottom:18px;
-}
-
-p{
-color:#bdbdbd;
-}
+h1{font-size:32px;}
+h2{font-size:26px;margin-bottom:18px;}
+p{font-size:18px;}
 
 .btn{
-display:block;
-margin:25px auto 0;
-max-width:380px;
-background:#22c55e;
-color:#000;
-padding:14px;
-border-radius:12px;
-font-weight:700;
-text-decoration:none;
-text-align:center;
-}
-
-.badge{
-background:#101012;
-border:1px solid #242424;
-padding:8px 14px;
-border-radius:30px;
-display:inline-block;
-margin:10px auto;
-color:#22c55e;
-}
-
-.benefits{
-list-style:none;
-padding:0;
-margin:0 auto;
-max-width:480px;
-text-align:left;
-}
-.benefits li{
-background:#101012;
-border:1px solid #242424;
-padding:14px;
-border-radius:10px;
-margin-bottom:10px;
+  display:block;
+  background:#00c853;
+  color:#fff;
+  padding:18px;
+  border-radius:14px;
+  font-size:20px;
+  font-weight:bold;
+  text-decoration:none;
+  margin-top:20px;
+  box-shadow:0 8px 18px rgba(0,0,0,.2);
 }
 
 .card{
-background:#101012;
-border:1px solid #242424;
-padding:16px;
-border-radius:14px;
-max-width:480px;
-margin:0 auto;
+  background:#fff;
+  padding:22px;
+  border-radius:18px;
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+  margin:15px 0;
 }
 
-.results{
-display:flex;
-flex-direction:column;
-gap:14px;
-align-items:center;
+.list{text-align:left;line-height:1.8;font-size:18px;}
+
+.price{
+  font-size:42px;
+  font-weight:bold;
+  color:#00c853;
 }
 
-.carousel{
-overflow:hidden;
-border-radius:14px;
-margin-top:20px;
+/* CARROSSEL */
+.carousel{position:relative;overflow:hidden;border-radius:18px;}
+.carousel img{width:100%;display:none;border-radius:18px;}
+.carousel img.active{display:block}
+
+/* FAQ */
+.faq-item{
+  text-align:left;
+  background:#fff;
+  margin:10px 0;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+.faq-question{
+  padding:14px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.faq-answer{
+  display:none;
+  padding:0 14px 14px;
+  font-size:15px;
+  color:#444;
 }
 
-.track{
-display:flex;
-transition:.5s ease;
+/* BARRA VISITANTES */
+#liveBar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#00c853;
+  color:#fff;
+  font-weight:bold;
+  text-align:center;
+  padding:7px;
+  font-size:14px;
+  z-index:9999;
 }
 
-.slide{
-min-width:100%;
-padding:6px;
+/* CONTADOR */
+#countdownBar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:9px;
+  font-weight:bold;
+  z-index:9999;
 }
 
-.slide img{
-width:100%;
-border-radius:12px;
+#purchasePopup{
+  position:fixed;
+  bottom:70px;
+  left:12px;
+  background:#fff;
+  padding:10px 14px;
+  border-radius:12px;
+  box-shadow:0 6px 16px rgba(0,0,0,.2);
+  font-size:14px;
+  display:none;
+  z-index:9999;
 }
 
-.timer{
-color:#ef4444;
-font-weight:600;
-margin-top:8px;
-}
+body{padding-top:32px;padding-bottom:40px;}
+
 </style>
 </head>
 
 <body>
-<div class="wrapper">
+
+<!-- BARRA VISITANTES -->
+<div id="liveBar">
+🔥 <span id="viewerCount">17</span> pessoas estão vendo essa oferta agora
+</div>
+
+<div class="container">
 
 <!-- HERO -->
-<section>
-<h1>Aumente seu Score e volte a ter crédito aprovado</h1>
-<p>Método simples, direto e comprovado.</p>
+<div class="section hero">
+<h1>Aumente seu Score rápido<br>e volte a ter crédito aprovado</h1>
+<p>Método simples que pode subir +300 pontos em poucas semanas</p>
 
-<div class="badge">⭐ +1.247 alunos já aplicaram</div>
-
-<div class="timer">
-Oferta termina em <span id="countdown">10:00</span>
-</div>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn" onclick="fbq('track','InitiateCheckout')">
-QUERO COMEÇAR AGORA
+<a href="https://pay.hotmart.com/N99318938V?bid=1769770611908"
+   class="btn"
+   onclick="fbq('track','InitiateCheckout');">
+   QUERO AUMENTAR MEU SCORE AGORA
 </a>
-</section>
-
-<!-- PROBLEMAS -->
-<section>
-<h2>Você já passou por isso?</h2>
-<ul class="benefits">
-<li>❌ Cartão recusado</li>
-<li>❌ Crédito negado</li>
-<li>❌ Limite baixo</li>
-<li>❌ Vergonha no caixa</li>
-</ul>
-</section>
+</div>
 
 <!-- BENEFÍCIOS -->
-<section>
-<h2>O que você vai aprender</h2>
-<ul class="benefits">
-<li>✅ Como subir seu score rápido</li>
-<li>✅ O que derruba sua pontuação</li>
-<li>✅ Passo a passo simples</li>
-<li>✅ Estratégias que realmente funcionam</li>
-</ul>
-</section>
-
-<!-- PROVAS SOCIAIS -->
-<section>
-<h2>Resultados reais de alunos</h2>
-<p>Pessoas comuns que aplicaram o método e já estão com crédito aprovado 👇</p>
-
-<div class="results">
-
-<div class="card">
-⭐⭐⭐⭐⭐<br><br>
-“Meu score saiu de 420 para 710 em poucas semanas. Consegui cartão!”
-<br><b style="color:#22c55e;">— Carlos M.</b>
+<div class="section card list">
+✅ 7 passos práticos<br>
+✅ O que pagar primeiro<br>
+✅ Como negociar dívidas<br>
+✅ Limpar pendências antigas<br>
+✅ Checklist de 30 dias
 </div>
 
-<div class="card">
-⭐⭐⭐⭐⭐<br><br>
-“Finalmente entendi o que derrubava meu score. Muito simples.”
-<br><b style="color:#22c55e;">— Juliana R.</b>
-</div>
-
-<div class="card">
-⭐⭐⭐⭐⭐<br><br>
-“Paguei R$47 e já recuperei crédito no mesmo mês.”
-<br><b style="color:#22c55e;">— Marcos A.</b>
-</div>
-
-</div>
-
+<!-- CARROSSEL PROVAS -->
+<div class="section">
+<h2>Resultados reais</h2>
 <div class="carousel">
-<div class="track" id="track">
-<div class="slide"><img src="prova1.jpg"></div>
-<div class="slide"><img src="prova2.jpg"></div>
-<div class="slide"><img src="prova3.jpg"></div>
-<div class="slide"><img src="prova4.jpg"></div>
+<img src="prova1.jpg" class="active">
+<img src="prova2.jpg">
+<img src="prova3.jpg">
+<img src="prova4.jpg">
 </div>
 </div>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
-QUERO TER ESSES RESULTADOS TAMBÉM
-</a>
-</section>
 
 <!-- OFERTA -->
-<section>
+<div class="section card">
+<h2>Hoje por apenas</h2>
+<div class="price">R$47</div>
 
-<p style="text-decoration:line-through;color:#6b7280;font-size:14px;margin:0;">
-de R$ 97
-</p>
-
-<h1 style="color:#22c55e;font-size:44px;margin:6px 0;">
-R$ 47
-</h1>
-
-<p style="color:#ef4444;font-weight:600;">
-⚠️ Desconto disponível só hoje
-</p>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
-GARANTIR MEU ACESSO AGORA
+<a href="https://pay.hotmart.com/N99318938V?bid=1769770611908"
+   class="btn"
+   onclick="fbq('track','Purchase',{value:47.00,currency:'BRL'});">
+   COMPRAR AGORA
 </a>
-
-<p style="font-size:12px;color:#9ca3af;margin-top:10px;">
-💳 Cartão de crédito • 🟡 Pix • 🧾 Boleto • Acesso imediato • 7 dias de garantia
-</p>
-
-</section>
-
 </div>
 
-<!-- TIMER -->
-<script>
-const total=600;
-let end=Date.now()+total*1000;
+<!-- FAQ -->
+<div class="section">
+<h2>Perguntas Frequentes</h2>
 
+<div class="faq-item">
+<div class="faq-question">Funciona mesmo?</div>
+<div class="faq-answer">Sim. O método corrige exatamente os erros que mais derrubam o score.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Em quanto tempo vejo resultado?</div>
+<div class="faq-answer">Muitas pessoas notam aumento em poucas semanas.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">É pagamento mensal?</div>
+<div class="faq-answer">Não. Pagamento único e acesso vitalício.</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Tem garantia?</div>
+<div class="faq-answer">Sim. 7 dias para testar ou receber reembolso.</div>
+</div>
+
+</div>
+</div>
+
+<!-- CONTADOR -->
+<div id="countdownBar">
+⏰ Oferta expira em <span id="timer">10:00</span>
+</div>
+
+<!-- POPUP -->
+<div id="purchasePopup"></div>
+
+<script>
+
+/* CARROSSEL */
+let slides=document.querySelectorAll(".carousel img"),i=0;
 setInterval(()=>{
-let diff=Math.floor((end-Date.now())/1000);
-let m=Math.floor(diff/60);
-let s=diff%60;
-document.getElementById("countdown").innerHTML=m+":"+(s<10?"0"+s:s);
+slides[i].classList.remove("active");
+i=(i+1)%slides.length;
+slides[i].classList.add("active");
+},2500);
+
+/* FAQ */
+document.querySelectorAll(".faq-question").forEach(q=>{
+q.onclick=()=>{let a=q.nextElementSibling;a.style.display=a.style.display==="block"?"none":"block"}
+});
+
+/* VISITANTES */
+function randomViewers(){
+document.getElementById("viewerCount").innerText=Math.floor(Math.random()*24)+9;
+}
+setInterval(randomViewers,4000);
+
+/* CONTADOR */
+let duration=600,timer=duration;
+setInterval(()=>{
+let m=parseInt(timer/60),s=parseInt(timer%60);
+m=m<10?"0"+m:m;s=s<10?"0"+s:s;
+document.getElementById("timer").innerText=m+":"+s;
+timer--; if(timer<0) timer=duration;
 },1000);
-</script>
 
-<!-- CARROSSEL -->
-<script>
-let i=0;
-setInterval(()=>{
-i=(i+1)%4;
-document.getElementById('track').style.transform=`translateX(-${i*100}%)`;
-},3000);
+/* POPUP */
+const names=["João","Carlos","Ana","Lucas","Fernanda","Rafael","Juliana"];
+const cities=["São Paulo","Rio","Belo Horizonte","Curitiba","Recife"];
+
+function showPopup(){
+let name=names[Math.floor(Math.random()*names.length)];
+let city=cities[Math.floor(Math.random()*cities.length)];
+let p=document.getElementById("purchasePopup");
+p.innerHTML="✅ <b>"+name+"</b> de "+city+" acabou de comprar";
+p.style.display="block";
+setTimeout(()=>p.style.display="none",3500);
+}
+setInterval(showPopup,7000);
+
 </script>
 
 </body>
-  </html>
+</html>
