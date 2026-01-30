@@ -191,5 +191,98 @@ QUERO COMEÇAR AGORA
 <li>✅ Como subir seu score rápido</li>
 <li>✅ O que derruba sua pontuação</li>
 <li>✅ Passo a passo simples</li>
-<li>✅ Estratégias que realmente fun
-       
+<li>✅ Estratégias que realmente funcionam</li>
+</ul>
+</section>
+
+
+<!-- RESULTADOS -->
+<section>
+<h2>Resultados reais de alunos</h2>
+
+<div class="results">
+<div class="card">❌ Score travado → ✅ Score subindo constantemente</div>
+<div class="card">❌ Crédito negado → ✅ Cartões aprovados</div>
+</div>
+
+<div class="carousel">
+<div class="track" id="track">
+<div class="slide"><img src="prova1.jpg"></div>
+<div class="slide"><img src="prova2.jpg"></div>
+<div class="slide"><img src="prova3.jpg"></div>
+<div class="slide"><img src="prova4.jpg"></div>
+</div>
+</div>
+
+<a href="https://pay.hotmart.com/N99318938V" class="btn">
+QUERO TER ESSES RESULTADOS TAMBÉM
+</a>
+</section>
+
+
+<!-- OFERTA -->
+<section>
+
+<h2>Comece hoje com acesso imediato</h2>
+
+<p style="text-decoration:line-through;color:#6b7280;font-size:14px;margin:0;">
+de R$ 97
+</p>
+
+<h1 style="color:#22c55e;font-size:44px;margin:6px 0;">
+R$ 47
+</h1>
+
+<p style="color:#ef4444;font-weight:600;font-size:14px;">
+⚠️ Desconto disponível só hoje
+</p>
+
+<a href="https://pay.hotmart.com/N99318938V" class="btn">
+GARANTIR MEU ACESSO AGORA
+</a>
+
+<p style="font-size:12px;color:#9ca3af;margin-top:10px;">
+💳 Cartão de crédito • 🟡 Pix • 🧾 Boleto • Acesso imediato • 7 dias de garantia
+</p>
+
+</section>
+
+
+<!-- FAQ -->
+<section>
+<h2>Perguntas Frequentes</h2>
+
+<div class="faq">
+<div class="card"><b>Funciona com score muito baixo?</b><br>Sim, mesmo começando do zero.</div>
+<div class="card"><b>Quando recebo acesso?</b><br>Imediatamente após o pagamento.</div>
+<div class="card"><b>Tem garantia?</b><br>7 dias ou seu dinheiro de volta.</div>
+</div>
+</section>
+
+</div>
+
+
+<!-- TIMER -->
+<script>
+const total=600;
+let end=Date.now()+total*1000;
+
+setInterval(()=>{
+let diff=Math.floor((end-Date.now())/1000);
+let m=Math.floor(diff/60);
+let s=diff%60;
+document.getElementById("countdown").innerHTML=m+":"+(s<10?"0"+s:s);
+},1000);
+</script>
+
+<!-- CARROSSEL -->
+<script>
+let i=0;
+setInterval(()=>{
+i=(i+1)%4;
+document.getElementById('track').style.transform=`translateX(-${i*100}%)`;
+},3000);
+</script>
+
+</body>
+                          </html>
