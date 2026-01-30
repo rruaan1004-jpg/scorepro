@@ -6,9 +6,9 @@
 
 <title>ScorePro | Aumente seu Score</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- PIXEL -->
+<!-- 🔥 META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -19,180 +19,250 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '3346561375499401');
-fbq('track', 'PageView');
-fbq('track', 'ViewContent');
+fbq('init','3346561375499401');
+fbq('track','PageView');
+fbq('track','ViewContent');
 </script>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-  font-family:'Montserrat',sans-serif;
-  background:#0c0c14;
-  color:#fff;
+font-family:'Montserrat',sans-serif;
+background:#0b0b13;
+color:#fff;
+overflow-x:hidden;
 }
 
-.section{
-  padding:70px 20px;
-}
+/* ===== LAYOUT ===== */
 
-.container{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-}
+.section{padding:110px 25px}
+.container{max-width:1100px;margin:auto}
+
+/* ===== HERO PREMIUM ===== */
 
 .hero{
-  background:linear-gradient(135deg,#1a0f2e,#0c0c14);
+text-align:center;
+padding:160px 25px;
+background:
+radial-gradient(circle at 20% 20%,#6a00ff33,transparent 40%),
+radial-gradient(circle at 80% 30%,#ff006633,transparent 40%),
+#0b0b13;
 }
 
-h1{
-  font-size:40px;
-  font-weight:800;
-  line-height:1.2;
-  margin-bottom:20px;
+.hero h1{
+font-size:52px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:25px;
 }
 
-h2{
-  margin-bottom:30px;
+.hero p{
+font-size:20px;
+opacity:.85;
+margin-bottom:40px;
 }
 
-.subtitle{
-  font-size:18px;
-  opacity:.85;
-  margin-bottom:30px;
-}
+/* ===== BOTÃO ===== */
 
 .btn{
-  display:inline-block;
-  background:linear-gradient(90deg,#ff2e93,#ff0066);
-  padding:18px 40px;
-  border-radius:12px;
-  font-weight:800;
-  text-decoration:none;
-  color:#fff;
-  font-size:16px;
-  box-shadow:0 10px 30px rgba(255,0,100,.35);
-  transition:.2s;
+display:inline-block;
+padding:20px 55px;
+border-radius:14px;
+font-weight:800;
+font-size:18px;
+text-decoration:none;
+background:linear-gradient(90deg,#ff0066,#ff2e93);
+color:#fff;
+box-shadow:0 0 45px rgba(255,0,120,.6);
+transition:.25s;
 }
 
 .btn:hover{
-  transform:scale(1.05);
+transform:translateY(-4px);
+box-shadow:0 0 70px rgba(255,0,120,.9);
 }
 
+/* ===== GRID ===== */
+
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:18px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:45px;
 }
 
 .card{
-  background:#15151f;
-  padding:20px;
-  border-radius:14px;
-  text-align:left;
+background:#15151f;
+padding:28px;
+border-radius:18px;
+box-shadow:0 0 30px rgba(0,0,0,.7);
 }
 
-.provas img{
-  width:100%;
-  border-radius:14px;
-  margin-top:18px;
+/* ===== CARROSSEL ===== */
+
+.carousel{
+position:relative;
+overflow:hidden;
+margin-top:40px;
+border-radius:20px;
 }
 
-.price-box{
-  background:#15151f;
-  padding:40px;
-  border-radius:18px;
-  box-shadow:0 0 40px rgba(0,0,0,.6);
+.slides{
+display:flex;
+transition:transform .5s ease;
 }
 
-.old{
-  text-decoration:line-through;
-  opacity:.5;
+.slide{
+min-width:100%;
+background:#15151f;
+padding:25px;
+text-align:center;
 }
+
+.slide img{
+width:100%;
+border-radius:16px;
+box-shadow:0 0 30px rgba(0,0,0,.8);
+}
+
+.caption{
+margin-top:14px;
+font-weight:700;
+color:#00ff99;
+}
+
+.prev,.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#0008;
+border:none;
+color:#fff;
+font-size:32px;
+width:48px;
+height:48px;
+border-radius:50%;
+cursor:pointer;
+}
+
+.prev{left:10px}
+.next{right:10px}
+
+/* ===== OFERTA ===== */
+
+.offer{
+background:#15151f;
+padding:70px 30px;
+border-radius:28px;
+text-align:center;
+box-shadow:0 0 60px rgba(0,0,0,.8);
+}
+
+.old{opacity:.4;text-decoration:line-through}
 
 .price{
-  font-size:48px;
-  font-weight:800;
-  color:#00ff99;
-  margin:10px 0;
+font-size:64px;
+font-weight:800;
+color:#00ff99;
+margin:15px 0;
 }
 
 .payments{
-  max-width:350px;
-  margin:20px auto;
+max-width:420px;
+margin:25px auto;
 }
 
 .small{
-  font-size:13px;
-  opacity:.7;
+opacity:.6;
+font-size:13px;
+margin-top:12px;
 }
+
+h2{
+text-align:center;
+font-size:34px;
+margin-bottom:15px;
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<section class="section hero">
-<div class="container">
-<h1>Aumente seu Score de Crédito e volte a ter crédito aprovado</h1>
-<p class="subtitle">Mais de 1.200 brasileiros já melhoraram o score usando esse método</p>
+<section class="hero">
+<h1>Aumente seu Score de Crédito e volte a ter limite aprovado</h1>
+<p>Mais de 1.200 brasileiros já aplicaram o método ScorePro</p>
 
 <a class="btn"
 href="https://pay.hotmart.com/N99318938V"
 onclick="fbq('track','InitiateCheckout')">
 QUERO AUMENTAR MEU SCORE AGORA
 </a>
-</div>
 </section>
 
+
 <!-- DORES -->
-<section class="section">
-<div class="container">
+<section class="section container">
 <h2>Se você passa por isso...</h2>
 
 <div class="grid">
 <div class="card">❌ Cartão recusado</div>
 <div class="card">❌ Empréstimo negado</div>
-<div class="card">❌ Limite baixo</div>
-<div class="card">❌ Nome sujo / score travado</div>
-</div>
+<div class="card">❌ Limite baixo demais</div>
+<div class="card">❌ Score travado</div>
 </div>
 </section>
+
 
 <!-- BENEFÍCIOS -->
-<section class="section" style="background:#11111a;">
-<div class="container">
-<h2>Você vai aprender</h2>
+<section class="section container">
+<h2>O que você vai aprender</h2>
 
 <div class="grid">
-<div class="card">✅ Como subir o score rápido</div>
+<div class="card">✅ Estratégias para subir o score rápido</div>
 <div class="card">✅ Limpar restrições do CPF</div>
-<div class="card">✅ Estratégias usadas pelos bancos</div>
-<div class="card">✅ Passo a passo simples</div>
-</div>
+<div class="card">✅ Técnicas usadas pelos bancos</div>
+<div class="card">✅ Plano simples passo a passo</div>
 </div>
 </section>
 
-<!-- PROVAS -->
-<section class="section provas">
-<div class="container">
-<h2>Resultados reais</h2>
+
+<!-- PROVAS CARROSSEL -->
+<section class="section container">
+<h2>Resultados reais de alunos</h2>
+
+<div class="carousel">
+<div class="slides">
+
+<div class="slide">
 <img src="prova1.jpg">
+<p class="caption">ANTES: 312 → DEPOIS: 781 pontos</p>
+</div>
+
+<div class="slide">
 <img src="prova2.jpg">
+<p class="caption">ANTES: 280 → DEPOIS: 830 pontos</p>
+</div>
+
+<div class="slide">
 <img src="prova3.jpg">
+<p class="caption">ANTES: 350 → DEPOIS: 805 pontos</p>
+</div>
+
+</div>
+
+<button class="prev">‹</button>
+<button class="next">›</button>
 </div>
 </section>
+
 
 <!-- OFERTA -->
-<section class="section hero">
-<div class="container">
-<div class="price-box">
+<section class="section container">
+<div class="offer">
 
 <p class="old">De R$197</p>
 <div class="price">R$ 47</div>
@@ -205,11 +275,31 @@ onclick="fbq('track','InitiateCheckout')">
 LIBERAR MEU CRÉDITO AGORA
 </a>
 
-<p class="small">Pagamento único • Garantia de 7 dias • Compra segura</p>
+<p class="small">Pagamento único • Garantia 7 dias • Compra segura pela Hotmart</p>
 
 </div>
-</div>
 </section>
+
+
+<!-- JS CARROSSEL -->
+<script>
+const slides=document.querySelector('.slides');
+const slide=document.querySelectorAll('.slide');
+const prev=document.querySelector('.prev');
+const next=document.querySelector('.next');
+let index=0;
+
+function showSlide(i){
+if(i>=slide.length)index=0;
+if(i<0)index=slide.length-1;
+slides.style.transform=`translateX(-${index*100}%)`;
+}
+
+next.onclick=()=>{index++;showSlide(index)}
+prev.onclick=()=>{index--;showSlide(index)}
+
+setInterval(()=>{index++;showSlide(index)},4000);
+</script>
 
 </body>
 </html>
