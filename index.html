@@ -6,7 +6,7 @@
 
 <title>ScorePro | Aumente seu Score</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- 🔥 META PIXEL -->
 <script>
@@ -23,115 +23,151 @@ fbq('init', '3346561375499401');
 fbq('track', 'PageView');
 fbq('track', 'ViewContent');
 </script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=3346561375499401&ev=PageView&noscript=1"/>
-</noscript>
-<!-- 🔥 FIM PIXEL -->
 
 <style>
+
 *{
+  margin:0;
+  padding:0;
   box-sizing:border-box;
 }
 
 body{
-  margin:0;
   font-family:'Montserrat',sans-serif;
-  background:#0b0b0f;
+  background:#0c0c14;
   color:#fff;
 }
 
+/* ===== LAYOUT ===== */
+
 .section{
-  padding:50px 20px;
-  text-align:center;
+  padding:70px 20px;
 }
 
 .container{
-  max-width:520px;
+  max-width:900px;
   margin:auto;
+  text-align:center;
 }
 
-.gradient{
-  background:linear-gradient(135deg,#14141c,#1b0f2a);
+/* ===== HERO ===== */
+
+.hero{
+  background:linear-gradient(135deg,#1a0f2e,#0c0c14);
 }
 
 h1{
-  font-size:28px;
+  font-size:40px;
   font-weight:800;
-  margin-bottom:16px;
-}
-
-h2{
-  font-size:22px;
+  line-height:1.2;
   margin-bottom:20px;
 }
 
-p{
-  color:#cfcfcf;
-  font-size:14px;
+.subtitle{
+  font-size:18px;
+  opacity:.85;
+  margin-bottom:30px;
 }
 
-.box{
-  background:#17171f;
-  border-radius:12px;
-  padding:14px;
-  margin:8px 0;
-}
+/* ===== BOTÃO ===== */
 
 .btn{
-  display:block;
-  background:#ff2e93;
-  padding:16px;
-  border-radius:10px;
+  display:inline-block;
+  background:linear-gradient(90deg,#ff2e93,#ff0066);
+  padding:18px 40px;
+  border-radius:12px;
   font-weight:800;
   text-decoration:none;
   color:#fff;
-  margin:25px 0;
-  font-size:15px;
+  font-size:16px;
+  box-shadow:0 10px 30px rgba(255,0,100,.35);
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:scale(1.03);
+}
+
+/* ===== CARDS ===== */
+
+.grid{
+  display:grid;
+  gap:18px;
+}
+
+.grid-2{
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+
+.card{
+  background:#15151f;
+  padding:20px;
+  border-radius:14px;
+  text-align:left;
+}
+
+/* ===== PROVAS ===== */
+
+.provas img{
+  width:100%;
+  border-radius:14px;
+  margin-top:18px;
+}
+
+/* ===== PREÇO ===== */
+
+.price-box{
+  background:#15151f;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 0 40px rgba(0,0,0,.6);
+}
+
+.old{
+  text-decoration:line-through;
+  opacity:.5;
 }
 
 .price{
-  font-size:36px;
+  font-size:48px;
   font-weight:800;
   color:#00ff99;
   margin:10px 0;
 }
 
-.old{
-  text-decoration:line-through;
-  color:#888;
-}
-
-img{
-  width:100%;
-  border-radius:10px;
-  margin-top:14px;
-}
-
 .small{
-  font-size:12px;
-  color:#aaa;
+  font-size:13px;
+  opacity:.7;
+  margin-top:12px;
 }
+
+.payments{
+  max-width:350px;
+  margin:20px auto;
+}
+
 </style>
 </head>
 
 <body>
 
+
 <!-- HERO -->
-<section class="section gradient">
+<section class="section hero">
 <div class="container">
 
 <h1>
 Aumente seu Score de Crédito<br>
-e volte a ter cartão e empréstimo aprovados
+e volte a ter crédito aprovado
 </h1>
 
-<p>Mais de <b>1.200 brasileiros</b> já aplicaram o método e subiram o score rapidamente</p>
+<p class="subtitle">
+Mais de 1.200 brasileiros já subiram o score usando esse método simples
+</p>
 
-<a class="btn"
-href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_671ffa21-dcce-4de7-8242-e6d2f1b57eea_68b9a7e6fa3cc8ac2de85eaf_0_s-1"
+<a class="btn" href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_671ffa21-dcce-4de7-8242-e6d2f1b57eea_68b9a7e6fa3cc8ac2de85eaf_0_s-1"
 onclick="fbq('track','InitiateCheckout')">
-👉 QUERO AUMENTAR MEU SCORE AGORA
+QUERO AUMENTAR MEU SCORE AGORA
 </a>
 
 </div>
@@ -142,40 +178,38 @@ onclick="fbq('track','InitiateCheckout')">
 <section class="section">
 <div class="container">
 
-<h2>Você passa por isso?</h2>
+<h2 style="margin-bottom:30px;">Se você passa por isso...</h2>
 
-<div class="box">❌ Cartão recusado toda hora</div>
-<div class="box">❌ Empréstimo negado</div>
-<div class="box">❌ Limite muito baixo</div>
-<div class="box">❌ Nome sujo ou score travado</div>
+<div class="grid grid-2">
+<div class="card">❌ Cartão recusado</div>
+<div class="card">❌ Empréstimo negado</div>
+<div class="card">❌ Limite muito baixo</div>
+<div class="card">❌ Nome sujo ou score travado</div>
+</div>
 
 </div>
 </section>
 
 
-<!-- SOLUÇÃO -->
-<section class="section gradient">
+<!-- BENEFÍCIOS -->
+<section class="section" style="background:#11111a;">
 <div class="container">
 
-<h2>O que você vai aprender</h2>
+<h2 style="margin-bottom:30px;">Você vai aprender</h2>
 
-<div class="box">✅ Como aumentar seu score rápido</div>
-<div class="box">✅ Como limpar restrições do CPF</div>
-<div class="box">✅ Estratégias usadas pelos bancos</div>
-<div class="box">✅ Plano simples passo a passo</div>
-
-<a class="btn"
-href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_671ffa21-dcce-4de7-8242-e6d2f1b57eea_68b9a7e6fa3cc8ac2de85eaf_0_s-1"
-onclick="fbq('track','InitiateCheckout')">
-👉 COMEÇAR AGORA
-</a>
+<div class="grid grid-2">
+<div class="card">✅ Estratégias para subir o score rápido</div>
+<div class="card">✅ Limpar restrições do CPF</div>
+<div class="card">✅ Como os bancos analisam seu crédito</div>
+<div class="card">✅ Plano passo a passo simples</div>
+</div>
 
 </div>
 </section>
 
 
 <!-- PROVAS -->
-<section class="section">
+<section class="section provas">
 <div class="container">
 
 <h2>Resultados reais de alunos</h2>
@@ -184,36 +218,34 @@ onclick="fbq('track','InitiateCheckout')">
 <img src="prova2.jpg">
 <img src="prova3.jpg">
 
-<p class="small">Prints reais de quem aplicou o método</p>
-
 </div>
 </section>
 
 
-<!-- OFERTA BRASIL -->
-<section class="section gradient">
+<!-- OFERTA PREMIUM -->
+<section class="section hero">
 <div class="container">
+
+<div class="price-box">
 
 <h2>Oferta especial de hoje</h2>
 
 <p class="old">De R$197</p>
 
-<div class="price">R$ 47,00</div>
+<div class="price">R$ 47</div>
 
-<p>Acesso imediato • pagamento único • garantia de 7 dias</p>
+<img src="pagamentos-br.png" class="payments">
 
-<!-- MÉTODOS DE PAGAMENTO BR -->
-<img src="pagamentos-br.png">
+<a class="btn" href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_671ffa21-dcce-4de7-8242-e6d2f1b57eea_68b9a7e6fa3cc8ac2de85eaf_0_s-1"
+onclick="fbq('track','InitiateCheckout')">
+LIBERAR MEU CRÉDITO AGORA
+</a>
 
 <p class="small">
-Pix • Boleto • Cartão de crédito • Compra 100% segura pela Hotmart
+Pagamento único • Acesso imediato • Garantia de 7 dias
 </p>
 
-<a class="btn"
-href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_671ffa21-dcce-4de7-8242-e6d2f1b57eea_68b9a7e6fa3cc8ac2de85eaf_0_s-1"
-onclick="fbq('track','InitiateCheckout')">
-👉 LIBERAR MEU CRÉDITO AGORA
-</a>
+</div>
 
 </div>
 </section>
@@ -224,35 +256,13 @@ onclick="fbq('track','InitiateCheckout')">
 <div class="container">
 
 <h2>Risco zero</h2>
-
-<p>
-Você tem 7 dias de garantia total.<br>
-Se não gostar, recebe 100% do seu dinheiro de volta.
+<p style="margin-top:10px; opacity:.8;">
+Se não gostar, a Hotmart devolve 100% do seu dinheiro.
 </p>
 
 </div>
 </section>
 
-
-<!-- FAQ -->
-<section class="section gradient">
-<div class="container">
-
-<h2>Perguntas Frequentes</h2>
-
-<div class="box">📌 Acesso imediato após pagamento</div>
-<div class="box">📌 Funciona mesmo com score baixo</div>
-<div class="box">📌 Pode assistir pelo celular</div>
-<div class="box">📌 Garantia total de reembolso</div>
-
-<a class="btn"
-href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_671ffa21-dcce-4de7-8242-e6d2f1b57eea_68b9a7e6fa3cc8ac2de85eaf_0_s-1"
-onclick="fbq('track','InitiateCheckout')">
-👉 QUERO COMEÇAR AGORA
-</a>
-
-</div>
-</section>
 
 </body>
 </html>
