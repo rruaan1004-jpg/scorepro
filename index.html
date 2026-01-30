@@ -1,221 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aumente seu Score | Volte a ter crédito aprovado</title>
 
-<title>ScorePro | Aumente seu Score</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+<!-- PIXEL -->
 <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
+n.loaded=!0;n.version='2.0';
+t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init','3346561375499401');
 fbq('track','PageView');
 </script>
 
 <style>
-
-*{margin:0;padding:0;box-sizing:border-box}
-
 body{
-font-family:'Montserrat',sans-serif;
-background:#0f0f17;
+font-family:'Inter',sans-serif;
+background:#0b0b0c;
 color:#fff;
-line-height:1.5;
+margin:0;
 }
 
-/* ===== SEÇÕES ===== */
-
-.section{
-padding:80px 20px;
-}
-
-.container{
-max-width:900px;
+.wrapper{
+max-width:720px;
 margin:auto;
+padding:28px 18px 100px;
+}
+
+section{
+background:#151517;
+border:1px solid #222;
+padding:38px 28px;
+border-radius:18px;
+margin-bottom:22px;
+}
+
+h1,h2{text-align:center;margin-bottom:18px;}
+p{text-align:center;color:#bdbdbd;}
+
+.btn{
+display:block;
+margin:25px auto 0;
+max-width:380px;
+background:#22c55e;
+color:#000;
+padding:14px;
+border-radius:12px;
+font-weight:700;
+text-decoration:none;
 text-align:center;
 }
 
-/* ===== HERO ===== */
-
-.hero{
-padding:120px 20px;
-background:#141421;
-}
-
-.hero h1{
-font-size:38px;
-font-weight:800;
-margin-bottom:18px;
-}
-
-.subtitle{
-opacity:.8;
-margin-bottom:30px;
-}
-
-/* ===== BOTÃO ===== */
-
-.btn{
+.badge{
+background:#101012;
+border:1px solid #242424;
+padding:8px 14px;
+border-radius:30px;
 display:inline-block;
-background:#ff2e93;
-padding:16px 36px;
-border-radius:10px;
-font-weight:800;
-color:#fff;
-text-decoration:none;
+margin:10px auto;
+color:#22c55e;
 }
 
-/* ===== CARDS ===== */
+.benefits{
+list-style:none;
+padding:0;
+}
+.benefits li{
+background:#101012;
+border:1px solid #242424;
+padding:14px;
+border-radius:10px;
+margin-bottom:10px;
+}
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:16px;
-margin-top:30px;
+.timer{
+text-align:center;
+color:#ef4444;
+font-weight:600;
+margin-top:8px;
 }
 
 .card{
-background:#1a1a26;
-padding:18px;
-border-radius:12px;
-text-align:left;
+background:#101012;
+border:1px solid #242424;
+padding:16px;
+border-radius:14px;
+text-align:center;
 }
 
-/* ===== CARROSSEL ===== */
-
-.carousel{
-overflow:hidden;
-border-radius:12px;
-margin-top:25px;
-}
-
-.slides{
+.results{
 display:flex;
-transition:.4s;
+flex-direction:column;
+gap:14px;
+margin-bottom:26px;
 }
 
-.slide{
-min-width:100%;
-border-radius:12px;
+.carousel{overflow:hidden;border-radius:14px;}
+.track{display:flex;transition:.5s ease;}
+.slide{min-width:100%;padding:6px;}
+.slide img{width:100%;border-radius:12px;}
+
+.faq{
+display:flex;
+flex-direction:column;
+gap:12px;
 }
-
-/* ===== OFERTA ===== */
-
-.offer{
-background:#1a1a26;
-padding:40px;
-border-radius:16px;
-}
-
-.old{
-text-decoration:line-through;
-opacity:.4;
-}
-
-.price{
-font-size:46px;
-font-weight:800;
-color:#00ff99;
-margin:10px 0;
-}
-
-.payments{
-max-width:320px;
-margin:20px auto;
-}
-
-.small{
-opacity:.6;
-font-size:13px;
-}
-
-h2{
-margin-bottom:10px;
-font-size:26px;
-}
-
 </style>
 </head>
 
 <body>
+<div class="wrapper">
 
 <!-- HERO -->
-<section class="hero">
-<div class="container">
+<section>
 <h1>Aumente seu Score e volte a ter crédito aprovado</h1>
-<p class="subtitle">Método simples que já ajudou mais de 1.200 brasileiros</p>
+<p>Método simples, direto e comprovado para melhorar sua pontuação rapidamente.</p>
 
-<a class="btn" href="https://pay.hotmart.com/N99318938V"
-onclick="fbq('track','InitiateCheckout')">
-QUERO COMEÇAR AGORA
+<div class="badge">⭐ +1.247 alunos já aplicaram</div>
+
+<div class="timer">
+Oferta termina em <span id="countdown">10:00</span>
+</div>
+
+<a href="https://pay.hotmart.com/N99318938V" class="btn">
+QUERO AUMENTAR MEU SCORE AGORA
 </a>
-</div>
 </section>
 
 
-<!-- DORES -->
-<section class="section container">
-<h2>Se você passa por isso...</h2>
-
-<div class="grid">
-<div class="card">❌ Cartão recusado</div>
-<div class="card">❌ Empréstimo negado</div>
-<div class="card">❌ Limite muito baixo</div>
-<div class="card">❌ Score travado</div>
-</div>
+<!-- PROBLEMAS -->
+<section>
+<h2>Você já passou por isso?</h2>
+<ul class="benefits">
+<li>❌ Cartão recusado</li>
+<li>❌ Crédito negado</li>
+<li>❌ Limite baixo</li>
+<li>❌ Vergonha no caixa</li>
+</ul>
 </section>
 
 
-<!-- PROVAS -->
-<section class="section container">
-<h2>Resultados reais</h2>
+<!-- BENEFÍCIOS -->
+<section>
+<h2>O que você vai aprender</h2>
+<ul class="benefits">
+<li>✅ Como subir seu score rápido</li>
+<li>✅ O que derruba sua pontuação</li>
+<li>✅ Passo a passo simples</li>
+<li>✅ Estratégias que realmente funcionam</li>
+</ul>
+</section>
+
+
+<!-- RESULTADOS -->
+<section>
+<h2>Resultados reais de alunos</h2>
+
+<div class="results">
+<div class="card">❌ Score travado → ✅ Score subindo constantemente</div>
+<div class="card">❌ Crédito negado → ✅ Cartões aprovados</div>
+</div>
 
 <div class="carousel">
-<div class="slides">
-<img src="prova1.jpg" class="slide">
-<img src="prova2.jpg" class="slide">
-<img src="prova3.jpg" class="slide">
+<div class="track" id="track">
+<div class="slide"><img src="prova1.jpg"></div>
+<div class="slide"><img src="prova2.jpg"></div>
+<div class="slide"><img src="prova3.jpg"></div>
+<div class="slide"><img src="prova4.jpg"></div>
 </div>
 </div>
-</section>
 
-
-<!-- OFERTA -->
-<section class="section container">
-<div class="offer">
-
-<p class="old">De R$197</p>
-<div class="price">R$ 47</div>
-
-<img src="pagamentos-br.png" class="payments">
-
-<a class="btn"
-href="https://pay.hotmart.com/N99318938V"
-onclick="fbq('track','InitiateCheckout')">
-LIBERAR MEU CRÉDITO AGORA
+<a href="https://pay.hotmart.com/N99318938V" class="btn">
+QUERO TER ESSES RESULTADOS TAMBÉM
 </a>
+</section>
 
-<p class="small">Pagamento único • Garantia 7 dias • Hotmart</p>
 
+<!-- FAQ -->
+<section>
+<h2>Perguntas Frequentes</h2>
+
+<div class="faq">
+<div class="card"><b>Funciona com score muito baixo?</b><br>Sim, foi criado para quem começa do zero.</div>
+<div class="card"><b>Quando recebo acesso?</b><br>Imediatamente após o pagamento.</div>
+<div class="card"><b>Tem garantia?</b><br>7 dias ou seu dinheiro de volta.</div>
 </div>
 </section>
 
+</div>
 
 <script>
-const slides=document.querySelector('.slides');
+const total=600;
+let end=Date.now()+total*1000;
+setInterval(()=>{
+let diff=Math.floor((end-Date.now())/1000);
+if(diff<=0){end=Date.now()+total*1000; diff=total;}
+let m=Math.floor(diff/60);
+let s=diff%60;
+document.getElementById("countdown").innerHTML=m+":"+(s<10?"0"+s:s);
+},1000);
+</script>
+
+<script>
 let i=0;
 setInterval(()=>{
-i=(i+1)%3;
-slides.style.transform=`translateX(-${i*100}%)`;
+i=(i+1)%4;
+document.getElementById('track').style.transform=`translateX(-${i*100}%)`;
 },3000);
 </script>
 
