@@ -1,356 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Aumente seu Score</title>
 
-<!-- ================= PIXEL META ================= -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+<title>Aumente Seu Score Agora</title>
 
-fbq('init', '3346561375499401');
-fbq('track', 'PageView');
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-*{box-sizing:border-box;}
+*{box-sizing:border-box;font-family:'Poppins',sans-serif}
 
 body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-background:#f4f6f8;
-color:#111;
-line-height:1.6;
-padding-top:35px;
-padding-bottom:95px;
+  margin:0;
+  background:radial-gradient(circle at top,#1b0f24,#0b0b0f);
+  color:#fff;
 }
+
+/* BARRA URGÊNCIA */
+.topbar{
+  background:#ff003c;
+  text-align:center;
+  padding:10px;
+  font-weight:700;
+  animation:blink 1s infinite;
+}
+@keyframes blink{50%{opacity:.6}}
 
 .container{
-max-width:760px;
-margin:auto;
-padding:22px;
-}
-
-.section{
-margin:55px 0;
-text-align:center;
+  max-width:820px;
+  margin:auto;
+  padding:22px;
 }
 
 /* HERO */
 .hero{
-background:linear-gradient(135deg,#FFD400,#FFC400);
-padding:60px 25px;
-border-radius:26px;
-box-shadow:0 12px 30px rgba(0,0,0,.15);
+  text-align:center;
+  padding:60px 0 40px;
 }
 
-h1{font-size:32px;margin-bottom:14px;}
-h2{font-size:26px;margin-bottom:18px;}
-
-.btn{
-display:block;
-background:#00c853;
-color:#fff;
-padding:20px;
-border-radius:16px;
-font-size:20px;
-font-weight:bold;
-text-decoration:none;
-margin:25px auto 0;
-max-width:420px;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
+.hero h1{
+  font-size:36px;
+  font-weight:800;
+  line-height:1.25;
 }
 
-/* CARDS */
+.highlight{
+  color:#ff2ea6;
+  text-shadow:0 0 12px #ff2ea6;
+}
+
+/* CARD */
 .card{
-background:#fff;
-padding:26px;
-border-radius:22px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+  background:#17171d;
+  padding:26px;
+  border-radius:18px;
+  margin:22px 0;
+  box-shadow:0 0 40px rgba(255,0,130,.2);
 }
 
-.list{
-text-align:left;
-max-width:420px;
-margin:auto;
-font-size:18px;
+/* BOTÃO */
+.btn{
+  display:block;
+  text-align:center;
+  padding:20px;
+  background:linear-gradient(90deg,#ff2ea6,#ff0066);
+  border-radius:14px;
+  font-size:20px;
+  font-weight:800;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 0 25px rgba(255,0,130,.7);
+  margin-top:20px;
+  transition:.2s;
+}
+.btn:hover{transform:scale(1.05)}
+
+.timer{
+  font-size:32px;
+  color:#00ff9d;
+  font-weight:800;
 }
 
-/* PREÇO */
-.price{
-font-size:46px;
-font-weight:bold;
-color:#00c853;
+/* PROVA SOCIAL */
+.live{
+  font-size:14px;
+  margin-top:10px;
+  color:#00ff9d;
 }
 
-/* CARROSSEL */
-.carousel{overflow:hidden;border-radius:20px;}
-.carousel img{width:100%;display:none;}
-.carousel img.active{display:block;}
+/* LISTA */
+ul{line-height:2}
 
-/* ===== DEPOIMENTOS ===== */
-.testimonial{
-display:flex;
-gap:12px;
-text-align:left;
-background:#fff;
-padding:14px;
-border-radius:16px;
-box-shadow:0 6px 18px rgba(0,0,0,.08);
-margin:12px 0;
-align-items:center;
+/* BOTÃO FIXO */
+.sticky{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:18px;
+  text-align:center;
+  background:#ff0066;
+  font-weight:800;
+  text-decoration:none;
+  color:#fff;
+  font-size:18px;
 }
 
-.testimonial img{
-width:55px;
-height:55px;
-border-radius:50%;
-object-fit:cover;
+/* NOTIFICAÇÕES */
+.toast{
+  position:fixed;
+  left:15px;
+  bottom:90px;
+  background:#111;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:13px;
+  box-shadow:0 0 15px rgba(0,0,0,.6);
+  display:none;
 }
-
-.testimonial b{
-display:block;
-margin-bottom:4px;
-}
-
-/* FAQ */
-.faq-item{
-text-align:left;
-background:#fff;
-margin:12px 0;
-border-radius:16px;
-box-shadow:0 6px 18px rgba(0,0,0,.06);
-}
-
-.faq-question{padding:16px;font-weight:bold;cursor:pointer;}
-.faq-answer{display:none;padding:0 16px 16px;color:#444;}
-
-/* BARRA TOPO */
-#liveBar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#00c853;
-color:#fff;
-font-weight:bold;
-text-align:center;
-padding:8px;
-font-size:14px;
-z-index:9999;
-}
-
-/* CONTADOR */
-#countdownBar{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#111;
-color:#fff;
-text-align:center;
-padding:10px;
-font-weight:bold;
-z-index:9999;
-}
-
-/* POPUP */
-#purchasePopup{
-position:fixed;
-bottom:80px;
-left:12px;
-background:#fff;
-padding:12px 16px;
-border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-font-size:14px;
-display:none;
-z-index:9999;
-}
-
-/* ===== BOTÃO FIXO FLUTUANTE ===== */
-#floatingBtn{
-position:fixed;
-bottom:45px;
-left:50%;
-transform:translateX(-50%);
-background:#00c853;
-color:#fff;
-padding:16px 28px;
-border-radius:40px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-z-index:9999;
-}
-
 </style>
 </head>
 
 <body>
 
-<div id="liveBar">🔥 <span id="viewerCount">21</span> pessoas estão vendo essa oferta agora</div>
+<div class="topbar">
+⚠️ ATENÇÃO: promoção pode sair do ar a qualquer momento
+</div>
 
 <div class="container">
 
 <!-- HERO -->
-<div class="section hero">
-<h1>Aumente seu Score rápido<br>e volte a ter crédito aprovado</h1>
-<p>Método simples que pode subir +300 pontos em poucas semanas</p>
+<section class="hero">
 
-<a href="https://pay.hotmart.com/N99318938V?bid=1769770611908" class="btn"
-onclick="fbq('track','InitiateCheckout');">
-QUERO AUMENTAR MEU SCORE AGORA
-</a>
-</div>
+<h1>
+Seu score está <span class="highlight">baixo e travado?</span><br>
+Pessoas estão subindo <span class="highlight">+300 pontos</span><br>
+em poucas semanas
+</h1>
 
-<!-- BENEFÍCIOS -->
-<div class="section card list">
-✓ Cartão aprovado<br>
-✓ Limite maior<br>
-✓ Crédito liberado<br>
-✓ Passo a passo simples<br>
-✓ Checklist de 30 dias
-</div>
+<a href="https://go.hotmart.com/A104011156D" class="btn">🔥 QUERO AUMENTAR MEU SCORE AGORA</a>
 
-<!-- PROVAS -->
-<div class="section">
-<h2>Resultados reais</h2>
-<div class="carousel">
-<img src="prova1.jpg" class="active">
-<img src="prova2.jpg">
-<img src="prova3.jpg">
-<img src="prova4.jpg">
-</div>
-</div>
+<div class="live" id="live">🔴 21 pessoas vendo essa página agora</div>
 
-<!-- ===== DEPOIMENTOS ===== -->
-<div class="section">
-<h2>Quem já usou recomenda</h2>
+</section>
 
-<div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=1">
-<div>
-<b>Marcos – SP</b>
-Subi 280 pontos em 1 mês. Cartão aprovado na hora.
-</div>
-</div>
-
-<div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=5">
-<div>
-<b>Ana – RJ</b>
-Segui o passo a passo e meu limite dobrou.
-</div>
-</div>
-
-<div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=12">
-<div>
-<b>Lucas – BH</b>
-Nunca explicaram isso pra mim antes. Funcionou demais.
-</div>
-</div>
-
-</div>
-
-<!-- OFERTA -->
-<div class="section card">
-<h2>Hoje por apenas</h2>
-<div class="price">R$47</div>
-
-<a href="https://pay.hotmart.com/N99318938V?bid=1769770611908"
-class="btn"
-onclick="fbq('track','Purchase',{value:47.00,currency:'BRL'});">
-COMPRAR AGORA
-</a>
-</div>
-
-<!-- FAQ -->
-<div class="section">
-<h2>Perguntas Frequentes</h2>
-
-<div class="faq-item">
-<div class="faq-question">Funciona mesmo?</div>
-<div class="faq-answer">Sim. O método corrige os erros que mais derrubam o score.</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">É pagamento mensal?</div>
-<div class="faq-answer">Não. Pagamento único e acesso vitalício.</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Tem garantia?</div>
-<div class="faq-answer">Sim. 7 dias para testar sem risco.</div>
-</div>
-
-</div>
-
-</div>
-
-<!-- BOTÃO FLUTUANTE -->
-<a id="floatingBtn"
-href="https://pay.hotmart.com/N99318938V?bid=1769770611908"
-onclick="fbq('track','InitiateCheckout');">
-QUERO AUMENTAR MEU SCORE
-</a>
 
 <!-- CONTADOR -->
-<div id="countdownBar">
-⏰ Oferta expira em <span id="timer">10:00</span>
+<section class="card" style="text-align:center">
+
+<h2>Oferta termina em:</h2>
+<div class="timer" id="countdown">10:00</div>
+
+</section>
+
+
+<!-- DOR -->
+<section class="card">
+
+<h2>Se você sofre com:</h2>
+
+<ul>
+<li>❌ Cartão recusado</li>
+<li>❌ Crédito negado</li>
+<li>❌ Limite baixo</li>
+<li>❌ Score que nunca sobe</li>
+</ul>
+
+<p><b>Você só não conhece o método certo.</b></p>
+
+<a href="https://go.hotmart.com/A104011156D" class="btn">🚀 ACESSAR MÉTODO AGORA</a>
+
+</section>
+
+
+<!-- BENEFÍCIOS -->
+<section class="card">
+
+<h2>Dentro você aprende:</h2>
+
+<ul>
+<li>✔ Como o Serasa calcula sua pontuação</li>
+<li>✔ Ajustes rápidos que sobem pontos</li>
+<li>✔ Erros que derrubam seu score</li>
+<li>✔ Como liberar crédito mais fácil</li>
+</ul>
+
+</section>
+
+
+<!-- PREÇO -->
+<section class="card" style="text-align:center">
+
+<h2>Hoje apenas:</h2>
+<p><s>R$97</s></p>
+<p style="font-size:34px;color:#00ff9d;font-weight:800;">R$47 acesso completo</p>
+
+<a href="https://go.hotmart.com/A104011156D" class="btn">🔥 GARANTIR MINHA VAGA</a>
+
+</section>
+
 </div>
 
-<div id="purchasePopup"></div>
+<!-- BOTÃO FIXO -->
+<a href="https://go.hotmart.com/A104011156D" class="sticky">👉 COMEÇAR AGORA</a>
+
+<!-- NOTIFICAÇÃO -->
+<div class="toast" id="toast"></div>
 
 <script>
-
-/* CARROSSEL */
-let slides=document.querySelectorAll(".carousel img"),i=0;
-setInterval(()=>{
-slides[i].classList.remove("active");
-i=(i+1)%slides.length;
-slides[i].classList.add("active");
-},2500);
-
-/* FAQ */
-document.querySelectorAll(".faq-question").forEach(q=>{
-q.onclick=()=>{let a=q.nextElementSibling;a.style.display=a.style.display==="block"?"none":"block"}
-});
-
-/* VISITANTES */
-setInterval(()=>{
-document.getElementById("viewerCount").innerText=Math.floor(Math.random()*30)+10;
-},4000);
-
 /* CONTADOR */
-let duration=600,timer=duration;
+let time=600;
+const el=document.getElementById("countdown");
 setInterval(()=>{
-let m=parseInt(timer/60),s=parseInt(timer%60);
-m=m<10?"0"+m:m;s=s<10?"0"+s:s;
-document.getElementById("timer").innerText=m+":"+s;
-timer--; if(timer<0) timer=duration;
+let m=Math.floor(time/60);
+let s=time%60;
+el.innerHTML=`${m}:${s<10?'0':''}${s}`;
+time--;
 },1000);
 
-/* POPUP */
-const names=["João","Carlos","Ana","Lucas","Fernanda"];
+/* PROVA SOCIAL DINÂMICA */
 setInterval(()=>{
-let p=document.getElementById("purchasePopup");
-p.innerHTML="✅ <b>"+names[Math.floor(Math.random()*names.length)]+"</b> acabou de comprar";
-p.style.display="block";
-setTimeout(()=>p.style.display="none",3500);
-},7000);
+let n=Math.floor(Math.random()*15)+18;
+document.getElementById("live").innerHTML=`🔴 ${n} pessoas vendo essa página agora`;
+},3000);
 
+/* NOTIFICAÇÕES FAKE */
+const names=["Maria","João","Carlos","Ana","Pedro","Lucas","Mariana","Rafael"];
+const toast=document.getElementById("toast");
+
+setInterval(()=>{
+let name=names[Math.floor(Math.random()*names.length)];
+toast.innerHTML=`✅ ${name} acabou de comprar o método`;
+toast.style.display="block";
+setTimeout(()=>toast.style.display="none",4000);
+},6000);
 </script>
 
 </body>
-  </html>
+</html>
