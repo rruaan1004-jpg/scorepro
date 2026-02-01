@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Aumente Seu Score Agora</title>
+<title>Método Zero Exposição</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -34,16 +34,8 @@ body{
 }
 
 /* HERO */
-.hero{
-  text-align:center;
-  padding:60px 0 40px;
-}
-
-.hero h1{
-  font-size:36px;
-  font-weight:800;
-  line-height:1.25;
-}
+.hero{text-align:center;padding:60px 0 40px}
+.hero h1{font-size:36px;font-weight:800;line-height:1.25}
 
 .highlight{
   color:#ff2ea6;
@@ -73,8 +65,13 @@ body{
   box-shadow:0 0 25px rgba(255,0,130,.7);
   margin-top:20px;
   transition:.2s;
+  animation:pulse 1.3s infinite;
 }
-.btn:hover{transform:scale(1.05)}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.04)}
+  100%{transform:scale(1)}
+}
 
 .timer{
   font-size:32px;
@@ -82,14 +79,6 @@ body{
   font-weight:800;
 }
 
-/* PROVA SOCIAL */
-.live{
-  font-size:14px;
-  margin-top:10px;
-  color:#00ff9d;
-}
-
-/* LISTA */
 ul{line-height:2}
 
 /* BOTÃO FIXO */
@@ -119,121 +108,138 @@ ul{line-height:2}
   box-shadow:0 0 15px rgba(0,0,0,.6);
   display:none;
 }
+
+/* ONLINE */
+.onlineBox{
+  position:fixed;
+  top:15px;
+  right:15px;
+  background:#ff0066;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:700;
+}
+
+/* DEPOIMENTOS */
+.depo{
+  background:#1b1b23;
+  padding:18px;
+  border-radius:12px;
+  font-size:14px;
+}
 </style>
 </head>
 
 <body>
 
 <div class="topbar">
-⚠️ ATENÇÃO: promoção pode sair do ar a qualquer momento
+⚠️ ÚLTIMAS VAGAS — promoção pode sair do ar a qualquer momento
+</div>
+
+<div class="onlineBox">
+🔥 <span id="onlineCount">18</span> pessoas agora
 </div>
 
 <div class="container">
 
 <!-- HERO -->
 <section class="hero">
-
 <h1>
-Seu score está <span class="highlight">baixo e travado?</span><br>
-Pessoas estão subindo <span class="highlight">+300 pontos</span><br>
-em poucas semanas
+Seu score está <span class="highlight">baixo?</span><br>
+Aprenda o método que já fez pessoas subirem<br>
+<span class="highlight">+300 pontos rapidamente</span>
 </h1>
 
-<a href="https://go.hotmart.com/A104011156D" class="btn">🔥 QUERO AUMENTAR MEU SCORE AGORA</a>
-
-<div class="live" id="live">🔴 21 pessoas vendo essa página agora</div>
-
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_59be3c0a-3b65-4219-a5a6-85e370a7960b_68b9a7e6fa3cc8ac2de85eaf_0_s-1" class="btn">
+🔥 QUERO AUMENTAR MEU SCORE AGORA
+</a>
 </section>
-
 
 <!-- CONTADOR -->
 <section class="card" style="text-align:center">
-
 <h2>Oferta termina em:</h2>
 <div class="timer" id="countdown">10:00</div>
-
 </section>
-
 
 <!-- DOR -->
 <section class="card">
-
 <h2>Se você sofre com:</h2>
-
 <ul>
 <li>❌ Cartão recusado</li>
 <li>❌ Crédito negado</li>
 <li>❌ Limite baixo</li>
-<li>❌ Score que nunca sobe</li>
+<li>❌ Score travado</li>
 </ul>
 
-<p><b>Você só não conhece o método certo.</b></p>
-
-<a href="https://go.hotmart.com/A104011156D" class="btn">🚀 ACESSAR MÉTODO AGORA</a>
-
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_59be3c0a-3b65-4219-a5a6-85e370a7960b_68b9a7e6fa3cc8ac2de85eaf_0_s-1" class="btn">
+🚀 ACESSAR MÉTODO AGORA
+</a>
 </section>
-
 
 <!-- BENEFÍCIOS -->
 <section class="card">
-
 <h2>Dentro você aprende:</h2>
-
 <ul>
-<li>✔ Como o Serasa calcula sua pontuação</li>
-<li>✔ Ajustes rápidos que sobem pontos</li>
-<li>✔ Erros que derrubam seu score</li>
+<li>✔ Como o score é calculado</li>
+<li>✔ Ajustes que sobem pontos rápido</li>
+<li>✔ Erros que derrubam sua pontuação</li>
 <li>✔ Como liberar crédito mais fácil</li>
 </ul>
-
 </section>
 
+<!-- DEPOIMENTOS -->
+<section class="card">
+<h2 style="text-align:center">Resultados de alunos</h2>
+
+<div style="display:grid;gap:14px;margin-top:20px">
+<div class="depo">“Meu score subiu 130 pontos em poucas semanas. Consegui cartão aprovado.”</div>
+<div class="depo">“Método direto ao ponto. Finalmente parei de ter crédito negado.”</div>
+<div class="depo">“Aplicando as técnicas consegui financiamento que sempre era recusado.”</div>
+</div>
+</section>
 
 <!-- PREÇO -->
 <section class="card" style="text-align:center">
-
-<h2>Hoje apenas:</h2>
+<h2>Hoje apenas</h2>
 <p><s>R$97</s></p>
 <p style="font-size:34px;color:#00ff9d;font-weight:800;">R$47 acesso completo</p>
 
-<a href="https://go.hotmart.com/A104011156D" class="btn">🔥 GARANTIR MINHA VAGA</a>
-
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_59be3c0a-3b65-4219-a5a6-85e370a7960b_68b9a7e6fa3cc8ac2de85eaf_0_s-1" class="btn">
+🔥 GARANTIR MINHA VAGA
+</a>
 </section>
 
 </div>
 
-<!-- BOTÃO FIXO -->
-<a href="https://go.hotmart.com/A104011156D" class="sticky">👉 COMEÇAR AGORA</a>
+<a href="https://pay.hotmart.com/N99318938V?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=&src=v3_59be3c0a-3b65-4219-a5a6-85e370a7960b_68b9a7e6fa3cc8ac2de85eaf_0_s-1" class="sticky">
+👉 COMEÇAR AGORA
+</a>
 
-<!-- NOTIFICAÇÃO -->
 <div class="toast" id="toast"></div>
 
 <script>
-/* CONTADOR */
+/* contador */
 let time=600;
-const el=document.getElementById("countdown");
 setInterval(()=>{
 let m=Math.floor(time/60);
 let s=time%60;
-el.innerHTML=`${m}:${s<10?'0':''}${s}`;
+document.getElementById("countdown").innerHTML=`${m}:${s<10?'0':''}${s}`;
 time--;
 },1000);
 
-/* PROVA SOCIAL DINÂMICA */
+/* pessoas online */
 setInterval(()=>{
-let n=Math.floor(Math.random()*15)+18;
-document.getElementById("live").innerHTML=`🔴 ${n} pessoas vendo essa página agora`;
-},3000);
+document.getElementById("onlineCount").innerText=Math.floor(Math.random()*20)+12;
+},2000);
 
-/* NOTIFICAÇÕES FAKE */
-const names=["Maria","João","Carlos","Ana","Pedro","Lucas","Mariana","Rafael"];
-const toast=document.getElementById("toast");
-
+/* notificações */
+const nomes=["Maria","João","Ana","Carlos","Lucas","Fernanda","Pedro","Rafael"];
 setInterval(()=>{
-let name=names[Math.floor(Math.random()*names.length)];
-toast.innerHTML=`✅ ${name} acabou de comprar o método`;
-toast.style.display="block";
-setTimeout(()=>toast.style.display="none",4000);
+let box=document.getElementById("toast");
+box.innerHTML="✅ "+nomes[Math.floor(Math.random()*nomes.length)]+" acabou de adquirir o método";
+box.style.display="block";
+setTimeout(()=>box.style.display="none",4000);
 },6000);
 </script>
 
