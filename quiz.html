@@ -3,36 +3,28 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <title>Diagnóstico do Score</title>
 
-<!-- ================= PIXEL ================= -->
+<!-- PIXEL -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '898113899383416');
-fbq('track', 'PageView');
+fbq('init','898113899383416');
+fbq('track','PageView');
 </script>
-<!-- ================= PIXEL ================= -->
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+*{box-sizing:border-box;font-family:Arial,sans-serif}
 
 body{
-background:linear-gradient(135deg,#0b0e14,#181c25);
+margin:0;
+background:linear-gradient(135deg,#0b0f18,#171c27);
 color:#fff;
 display:flex;
 justify-content:center;
@@ -41,39 +33,26 @@ height:100vh;
 padding:15px;
 }
 
-.quiz{
-width:100%;
+.card{
 max-width:420px;
-background:#141821;
-border-radius:22px;
+width:100%;
+background:#161b25;
 padding:26px;
-box-shadow:0 30px 80px rgba(0,0,0,.7);
+border-radius:20px;
+box-shadow:0 25px 70px rgba(0,0,0,.6);
 text-align:center;
-position:relative;
-overflow:hidden;
 }
 
-/* ================= TITULO ================= */
+h1{font-size:20px;margin-bottom:8px}
+.sub{font-size:13px;opacity:.7;margin-bottom:18px}
 
-h1{
-font-size:20px;
-margin-bottom:10px;
-}
-
-.sub{
-font-size:13px;
-opacity:.7;
-margin-bottom:15px;
-}
-
-/* ================= PROGRESSO ================= */
-
+/* progresso */
 .progress{
 height:6px;
-background:#2c3240;
+background:#2a3142;
 border-radius:10px;
 overflow:hidden;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .fill{
@@ -83,36 +62,34 @@ background:#ff2f75;
 transition:.4s;
 }
 
-/* ================= QUESTÃO ================= */
-
-.question{
-min-height:55px;
-font-size:17px;
-margin-bottom:15px;
-transition:.3s;
-}
+/* pergunta */
+.question{min-height:55px;font-size:16px;margin-bottom:12px}
 
 .options button{
 width:100%;
 padding:14px;
-margin:7px 0;
-border-radius:12px;
+margin:6px 0;
 border:none;
-background:#232838;
+border-radius:12px;
+background:#242c3a;
 color:#fff;
 cursor:pointer;
 transition:.2s;
 }
 
-.options button:hover{
-background:#ff2f75;
-transform:scale(1.03);
+.options button:hover{background:#ff2f75;transform:scale(1.03)}
+
+/* resultado */
+.result{display:none}
+
+.score{
+font-size:46px;
+font-weight:bold;
+color:#ff2f75;
+margin:10px 0;
 }
 
-/* ================= BOTÃO FINAL ================= */
-
 .cta{
-display:none;
 width:100%;
 padding:16px;
 border:none;
@@ -120,194 +97,124 @@ border-radius:14px;
 background:#ff2f75;
 color:#fff;
 font-weight:bold;
-margin-top:15px;
+margin-top:12px;
 cursor:pointer;
 }
 
-/* ================= LOADER ================= */
+/* loader */
+.loader{display:none;margin-top:10px;font-size:13px}
 
-.loader{
-display:none;
-margin-top:20px;
-font-size:14px;
-}
-
-.bar{
-height:6px;
-background:#ff2f75;
-animation:load 2.5s forwards;
-border-radius:10px;
-}
-
-@keyframes load{
-from{width:0%}
-to{width:100%}
-}
-
-/* ================= DEPOIMENTO ================= */
-
+/* notificação */
 .toast{
 position:fixed;
 bottom:20px;
 left:50%;
 transform:translateX(-50%);
-background:#1f2533;
+background:#1f2635;
 padding:10px 14px;
-border-radius:12px;
+border-radius:10px;
 font-size:12px;
 display:none;
-box-shadow:0 10px 30px rgba(0,0,0,.6);
 }
 
-/* ================= TIMER ================= */
-
-.timer{
-margin-top:10px;
-font-size:12px;
-opacity:.6;
-}
+/* timer */
+.timer{font-size:12px;opacity:.7;margin-top:8px}
 
 </style>
 </head>
 
 <body>
 
-<div class="quiz">
+<div class="card">
 
 <h1>Diagnóstico gratuito do seu Score</h1>
-<div class="sub">Responda rápido (30 segundos)</div>
+<div class="sub">Leva menos de 30 segundos</div>
 
 <div class="progress"><div class="fill" id="fill"></div></div>
 
-<div class="question" id="question"></div>
-<div class="options" id="options"></div>
-
-<button class="cta" id="cta">Ver meu resultado →</button>
-
-<div class="loader" id="loader">
-<p>Analisando seu perfil com IA...</p>
-<div class="bar"></div>
+<div id="quizBox">
+  <div class="question" id="question"></div>
+  <div class="options" id="options"></div>
 </div>
 
-<div class="timer" id="timer"></div>
+<div id="resultBox" class="result">
+  <div class="score" id="score">420</div>
+  <p>Seu score pode estar travando seu crédito.</p>
+  <button class="cta" onclick="go()">Quero aumentar agora →</button>
+  <div class="loader" id="loader">Analisando perfil...</div>
+  <div class="timer" id="timer"></div>
+</div>
 
 </div>
 
 <div class="toast" id="toast"></div>
 
-<!-- SOM NOTIFICAÇÃO -->
-<audio id="ding">
-<source src="https://assets.mixkit.co/sfx/preview/mixkit-positive-notification-951.mp3">
-</audio>
-
 <script>
 
-const redirectURL = "https://metodozeroexposicao.com";
+const link="https://metodozeroexposicao.com";
 
-/* ================= QUIZ ================= */
-
-const questions = [
-{q:"Seu score está abaixo de 500?",a:["Sim","Não sei","Acho que sim"]},
-{q:"Já teve cartão ou crédito negado?",a:["Sim","Algumas vezes","Nunca"]},
-{q:"Quer aprender como aumentar rápido?",a:["Sim agora","Claro","Com certeza"]}
+/* quiz */
+const questions=[
+"Seu crédito já foi negado?",
+"Seu score está abaixo de 500?",
+"Possui dívidas atrasadas?",
+"Quer aprender a aumentar rápido?"
 ];
 
-let step = 0;
+let step=0;
+let score=380;
 
-const question = document.getElementById("question");
-const options = document.getElementById("options");
-const fill = document.getElementById("fill");
-const cta = document.getElementById("cta");
-const loader = document.getElementById("loader");
-
-function updateBar(){
-fill.style.width = ((step)/questions.length)*100 + "%";
-}
+const q=document.getElementById("question");
+const op=document.getElementById("options");
+const fill=document.getElementById("fill");
 
 function show(){
-
-const q = questions[step];
-
-question.style.opacity=0;
-
-setTimeout(()=>{
-question.innerText=q.q;
-options.innerHTML="";
-
-q.a.forEach(text=>{
-const btn=document.createElement("button");
-btn.innerText=text;
-btn.onclick=next;
-options.appendChild(btn);
+q.innerText=questions[step];
+op.innerHTML="";
+["Sim","Não","Talvez"].forEach(t=>{
+let b=document.createElement("button");
+b.innerText=t;
+b.onclick=next;
+op.appendChild(b);
 });
-
-question.style.opacity=1;
-updateBar();
-
-},200);
 }
 
 function next(){
+score+=Math.floor(Math.random()*40)+25;
 step++;
-
-if(step<questions.length){
-show();
-}else{
-finish();
-}
+fill.style.width=(step/questions.length*100)+"%";
+if(step<questions.length) show();
+else finish();
 }
 
 function finish(){
-options.style.display="none";
-question.innerText="Seu resultado está pronto 👇";
-cta.style.display="block";
-fill.style.width="100%";
+document.getElementById("quizBox").style.display="none";
+document.getElementById("resultBox").style.display="block";
+document.getElementById("score").innerText=score;
 }
 
-cta.onclick=function(){
-
-cta.style.display="none";
-loader.style.display="block";
-
+function go(){
 fbq('track','Lead');
-
-setTimeout(()=>{
-window.location.href=redirectURL;
-},2500);
-
-};
+document.getElementById("loader").style.display="block";
+setTimeout(()=>window.location.href=link,1800);
+}
 
 show();
 
-/* ================= SOCIAL PROOF ================= */
-
-const names=["Carlos","Ana","Lucas","Mariana","Pedro","Fernanda"];
-
-function toast(){
-const t=document.getElementById("toast");
-const ding=document.getElementById("ding");
-
-const name=names[Math.floor(Math.random()*names.length)];
-
-t.innerText=name+" acabou de acessar o método agora";
-
-t.style.display="block";
-ding.play();
-
-setTimeout(()=>t.style.display="none",2500);
-}
-
-setInterval(toast,6000);
-
-/* ================= TIMER ================= */
-
-let time=5;
-
+/* prova social */
+const names=["Ana","Carlos","Pedro","Lucas","Mariana","Fernanda"];
 setInterval(()=>{
-document.getElementById("timer").innerText=
-"⚡ Oferta expira em "+time+" minutos";
-time--;
-if(time<=0)time=5;
+let t=document.getElementById("toast");
+t.innerText=names[Math.floor(Math.random()*names.length)]+" acabou de acessar o método";
+t.style.display="block";
+setTimeout(()=>t.style.display="none",2500);
+},6000);
+
+/* urgência */
+let m=5;
+setInterval(()=>{
+document.getElementById("timer").innerText="⚡ Oferta disponível por "+m+" min";
+m--; if(m<=0)m=5;
 },60000);
 
 </script>
