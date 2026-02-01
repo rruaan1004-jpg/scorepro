@@ -4,266 +4,311 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Análise Confidencial de Score</title>
+<title>Diagnóstico do Score</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<!-- 🔥 PIXEL NOVO -->
+<!-- ================= PIXEL ================= -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','898113899383416');
-fbq('track','PageView');
+fbq('init', '898113899383416');
+fbq('track', 'PageView');
 </script>
+<!-- ================= PIXEL ================= -->
 
 <style>
-*{box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
 
 body{
-margin:0;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-background:radial-gradient(circle at top,#121217,#050507);
+background:linear-gradient(135deg,#0b0e14,#181c25);
 color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+padding:15px;
 }
 
-.container{
-width:95%;
-max-width:520px;
-}
-
-.card{
-background:#14141b;
-padding:32px;
-border-radius:24px;
-box-shadow:0 0 70px rgba(255,0,120,.12);
+.quiz{
+width:100%;
+max-width:420px;
+background:#141821;
+border-radius:22px;
+padding:26px;
+box-shadow:0 30px 80px rgba(0,0,0,.7);
 text-align:center;
+position:relative;
+overflow:hidden;
 }
+
+/* ================= TITULO ================= */
 
 h1{
-font-size:22px;
-font-weight:800;
-margin-bottom:8px;
+font-size:20px;
+margin-bottom:10px;
 }
 
-.subtitle{
+.sub{
 font-size:13px;
-opacity:.6;
-margin-bottom:25px;
+opacity:.7;
+margin-bottom:15px;
 }
+
+/* ================= PROGRESSO ================= */
 
 .progress{
 height:6px;
-background:#222;
-border-radius:20px;
+background:#2c3240;
+border-radius:10px;
 overflow:hidden;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
-.bar{
+.fill{
 height:100%;
 width:0%;
-background:linear-gradient(90deg,#ff2ea6,#ff0066);
+background:#ff2f75;
+transition:.4s;
+}
+
+/* ================= QUESTÃO ================= */
+
+.question{
+min-height:55px;
+font-size:17px;
+margin-bottom:15px;
 transition:.3s;
 }
 
-.option{
-background:#1f1f27;
-padding:15px;
-border-radius:14px;
-margin:10px 0;
+.options button{
+width:100%;
+padding:14px;
+margin:7px 0;
+border-radius:12px;
+border:none;
+background:#232838;
+color:#fff;
 cursor:pointer;
-font-weight:600;
 transition:.2s;
 }
 
-.option:hover{
-background:#ff0066;
+.options button:hover{
+background:#ff2f75;
+transform:scale(1.03);
 }
 
-.btn{
-display:block;
-margin-top:25px;
-padding:18px;
-background:linear-gradient(90deg,#ff2ea6,#ff0066);
+/* ================= BOTÃO FINAL ================= */
+
+.cta{
+display:none;
+width:100%;
+padding:16px;
+border:none;
 border-radius:14px;
-font-weight:800;
-text-decoration:none;
+background:#ff2f75;
 color:#fff;
-font-size:17px;
-animation:pulse 1.3s infinite;
+font-weight:bold;
+margin-top:15px;
+cursor:pointer;
 }
 
-@keyframes pulse{
-50%{transform:scale(1.05)}
-}
-
-.hidden{display:none}
+/* ================= LOADER ================= */
 
 .loader{
-font-size:18px;
-color:#00ff9d;
-animation:blink 1s infinite;
+display:none;
+margin-top:20px;
+font-size:14px;
 }
 
-@keyframes blink{50%{opacity:.4}}
-
-.badge{
-background:#ff003c;
-padding:6px 12px;
-border-radius:20px;
-font-size:11px;
-font-weight:700;
-display:inline-block;
-margin-bottom:15px;
+.bar{
+height:6px;
+background:#ff2f75;
+animation:load 2.5s forwards;
+border-radius:10px;
 }
+
+@keyframes load{
+from{width:0%}
+to{width:100%}
+}
+
+/* ================= DEPOIMENTO ================= */
+
+.toast{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#1f2533;
+padding:10px 14px;
+border-radius:12px;
+font-size:12px;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+
+/* ================= TIMER ================= */
+
+.timer{
+margin-top:10px;
+font-size:12px;
+opacity:.6;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="quiz">
 
-<!-- QUIZ -->
-<div class="card" id="quiz">
+<h1>Diagnóstico gratuito do seu Score</h1>
+<div class="sub">Responda rápido (30 segundos)</div>
 
-<div class="badge">ANÁLISE CONFIDENCIAL</div>
+<div class="progress"><div class="fill" id="fill"></div></div>
 
-<h1 id="question"></h1>
-<div class="subtitle">Responda para gerar seu diagnóstico personalizado</div>
+<div class="question" id="question"></div>
+<div class="options" id="options"></div>
 
-<div class="progress"><div class="bar" id="bar"></div></div>
+<button class="cta" id="cta">Ver meu resultado →</button>
 
-<div id="options"></div>
+<div class="loader" id="loader">
+<p>Analisando seu perfil com IA...</p>
+<div class="bar"></div>
+</div>
+
+<div class="timer" id="timer"></div>
 
 </div>
 
+<div class="toast" id="toast"></div>
 
-<!-- LOADING PROFISSIONAL -->
-<div class="card hidden" id="loading">
-<h1>🔎 Processando seu perfil financeiro...</h1>
-<p class="loader">Executando algoritmo de análise...</p>
-</div>
-
-
-<!-- RESULTADO PREMIUM -->
-<div class="card hidden" id="result">
-
-<h1>⚠️ RISCO DETECTADO</h1>
-
-<p id="resultText" style="font-weight:700;color:#ff2ea6;margin:18px 0"></p>
-
-<p style="font-size:14px">
-Seu histórico indica bloqueios ocultos que impedem aumento de crédito.<br><br>
-Criamos um plano direto que já ajudou milhares de pessoas a subir +100 até +300 pontos rapidamente.
-</p>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
-🔓 LIBERAR MEU PLANO AGORA
-</a>
-
-<p style="font-size:12px;opacity:.6;margin-top:10px">
-Acesso imediato • Garantia 7 dias • Oferta limitada
-</p>
-
-</div>
-
-</div>
-
+<!-- SOM NOTIFICAÇÃO -->
+<audio id="ding">
+<source src="https://assets.mixkit.co/sfx/preview/mixkit-positive-notification-951.mp3">
+</audio>
 
 <script>
 
-const questions=[
-"Teve crédito negado nos últimos 6 meses?",
-"Seu score está abaixo de 600 pontos?",
-"Possui contas atrasadas ou negativação?",
-"Seu limite atual é muito baixo?",
-"Quer aumentar seu score rapidamente ainda este mês?"
+const redirectURL = "https://metodozeroexposicao.com";
+
+/* ================= QUIZ ================= */
+
+const questions = [
+{q:"Seu score está abaixo de 500?",a:["Sim","Não sei","Acho que sim"]},
+{q:"Já teve cartão ou crédito negado?",a:["Sim","Algumas vezes","Nunca"]},
+{q:"Quer aprender como aumentar rápido?",a:["Sim agora","Claro","Com certeza"]}
 ];
 
-let current=0;
-let score=0;
+let step = 0;
 
-const qEl=document.getElementById("question");
-const optEl=document.getElementById("options");
-const bar=document.getElementById("bar");
+const question = document.getElementById("question");
+const options = document.getElementById("options");
+const fill = document.getElementById("fill");
+const cta = document.getElementById("cta");
+const loader = document.getElementById("loader");
 
-function next(){
-
-bar.style.width=((current/questions.length)*100)+"%";
-
-if(current>=questions.length){
-finish();
-return;
+function updateBar(){
+fill.style.width = ((step)/questions.length)*100 + "%";
 }
 
-qEl.innerText=questions[current];
+function show(){
 
-optEl.innerHTML="";
+const q = questions[step];
 
-["Sim","Talvez","Não"].forEach((text,i)=>{
+question.style.opacity=0;
 
-let d=document.createElement("div");
-d.className="option";
-d.innerText=text;
+setTimeout(()=>{
+question.innerText=q.q;
+options.innerHTML="";
 
-d.onclick=()=>{
-if(i==0) score+=2;
-if(i==1) score+=1;
-current++;
-next();
-};
-
-optEl.appendChild(d);
-
+q.a.forEach(text=>{
+const btn=document.createElement("button");
+btn.innerText=text;
+btn.onclick=next;
+options.appendChild(btn);
 });
+
+question.style.opacity=1;
+updateBar();
+
+},200);
+}
+
+function next(){
+step++;
+
+if(step<questions.length){
+show();
+}else{
+finish();
+}
 }
 
 function finish(){
-
-document.getElementById("quiz").classList.add("hidden");
-document.getElementById("loading").classList.remove("hidden");
-
-setTimeout(()=>{
-
-fbq('track','ViewContent');
-
-document.getElementById("loading").classList.add("hidden");
-document.getElementById("result").classList.remove("hidden");
-
-let text="";
-
-if(score>=7){
-text="🚨 Perfil crítico: alta chance de score abaixo de 500";
-}
-else{
-text="⚠️ Perfil moderado: você está perdendo pontos sem perceber";
+options.style.display="none";
+question.innerText="Seu resultado está pronto 👇";
+cta.style.display="block";
+fill.style.width="100%";
 }
 
-document.getElementById("resultText").innerText=text;
+cta.onclick=function(){
 
-fbq('track','InitiateCheckout');
+cta.style.display="none";
+loader.style.display="block";
+
+fbq('track','Lead');
 
 setTimeout(()=>{
-window.location.href="https://pay.hotmart.com/N99318938V";
-},6000);
-
+window.location.href=redirectURL;
 },2500);
+
+};
+
+show();
+
+/* ================= SOCIAL PROOF ================= */
+
+const names=["Carlos","Ana","Lucas","Mariana","Pedro","Fernanda"];
+
+function toast(){
+const t=document.getElementById("toast");
+const ding=document.getElementById("ding");
+
+const name=names[Math.floor(Math.random()*names.length)];
+
+t.innerText=name+" acabou de acessar o método agora";
+
+t.style.display="block";
+ding.play();
+
+setTimeout(()=>t.style.display="none",2500);
 }
 
-next();
+setInterval(toast,6000);
+
+/* ================= TIMER ================= */
+
+let time=5;
+
+setInterval(()=>{
+document.getElementById("timer").innerText=
+"⚡ Oferta expira em "+time+" minutos";
+time--;
+if(time<=0)time=5;
+},60000);
 
 </script>
 
