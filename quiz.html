@@ -3,7 +3,7 @@
 
 <head>
 
-<!-- ========= GTM (GARANTE DATALAYER) ========= -->
+<!-- ========= GTM ========= -->
 <script>
 window.dataLayer = window.dataLayer || [];
 </script>
@@ -19,10 +19,8 @@ j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
 f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NQKTKKGB');
 </script>
-<!-- =========================================== -->
 
-
-<!-- ========= META PIXEL (GARANTIDO) ========= -->
+<!-- ========= META PIXEL ========= -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
@@ -40,13 +38,10 @@ s.parentNode.insertBefore(t,s);
 fbq('init','898113899383416');
 fbq('track','PageView');
 </script>
-<!-- =========================================== -->
-
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Diagnóstico do Score</title>
-
 
 <style>
 *{box-sizing:border-box;font-family:Arial,sans-serif}
@@ -126,7 +121,6 @@ cursor:pointer;
 </style>
 </head>
 
-
 <body>
 
 <!-- GTM noscript -->
@@ -135,11 +129,10 @@ cursor:pointer;
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
-
 <div class="card">
 
 <h1>Diagnóstico gratuito do seu Score</h1>
-<div class="sub">Leva menos de 30 segundos</div>
+<div class="sub">Leva menos de 30 segundos • 100% online</div>
 
 <div class="progress"><div class="fill" id="fill"></div></div>
 
@@ -149,9 +142,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 
 <div id="resultBox" class="result">
+  <h1>Seu diagnóstico está pronto</h1>
   <div class="score" id="score">420</div>
-  <p>Seu score pode estar travando seu crédito.</p>
-  <button class="cta" id="btnLead">Quero aumentar agora →</button>
+  <p id="resultText">
+    Identificamos fatores que podem estar afetando seu crédito.
+    Consulte agora seu diagnóstico completo com orientações seguras.
+  </p>
+  <button class="cta" id="btnLead">Ver meu diagnóstico completo</button>
 </div>
 
 </div>
@@ -161,12 +158,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 const link="https://metodozeroexposicao.com";
 
-/* QUIZ */
+/* QUIZ OTIMIZADO */
 const questions=[
-"Seu crédito já foi negado?",
-"Seu score está abaixo de 500?",
-"Possui dívidas atrasadas?",
-"Quer aprender a aumentar rápido?"
+"Seu crédito já foi negado alguma vez?",
+"Você gostaria de melhorar seu score mais rápido?",
+"Possui dívidas atrasadas atualmente?",
+"Quer ver um diagnóstico gratuito com orientações para seu score?"
 ];
 
 let step=0;
@@ -201,26 +198,23 @@ document.getElementById("resultBox").style.display="block";
 document.getElementById("score").innerText=score;
 }
 
-/* ========= LEAD DISPARO GARANTIDO ========= */
+/* ========= LEAD ========= */
 
 document.getElementById("btnLead").addEventListener("mousedown",function(){
 
-// META PIXEL
 if(typeof fbq !== "undefined"){
   fbq('track','Lead');
 }
 
-// GTM
 window.dataLayer.push({event:'lead'});
 
-// espera disparar
 setTimeout(function(){
   window.location.href=link;
 },800);
 
 });
 
-/* ========================================= */
+/* ======================== */
 
 show();
 
