@@ -2,126 +2,114 @@
 <html lang="pt-br">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NQKTKKGB');
-  </script>
-  <!-- End Google Tag Manager -->
 
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diagnóstico do Score</title>
+<!-- 🔥 GARANTE dataLayer (evita erro "dataLayer not defined") -->
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
 
-  <style>
-  *{box-sizing:border-box;font-family:Arial,sans-serif}
+<!-- 🔥 Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQKTKKGB');
+</script>
 
-  body{
-  margin:0;
-  background:linear-gradient(135deg,#0b0f18,#171c27);
-  color:#fff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-  padding:15px;
-  }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Diagnóstico do Score</title>
 
-  .card{
-  max-width:420px;
-  width:100%;
-  background:#161b25;
-  padding:26px;
-  border-radius:20px;
-  box-shadow:0 25px 70px rgba(0,0,0,.6);
-  text-align:center;
-  }
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
 
-  h1{font-size:20px;margin-bottom:8px}
-  .sub{font-size:13px;opacity:.7;margin-bottom:18px}
+body{
+margin:0;
+background:linear-gradient(135deg,#0b0f18,#171c27);
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+padding:15px;
+}
 
-  .progress{
-  height:6px;
-  background:#2a3142;
-  border-radius:10px;
-  overflow:hidden;
-  margin-bottom:18px;
-  }
+.card{
+max-width:420px;
+width:100%;
+background:#161b25;
+padding:26px;
+border-radius:20px;
+box-shadow:0 25px 70px rgba(0,0,0,.6);
+text-align:center;
+}
 
-  .fill{
-  height:100%;
-  width:0%;
-  background:#ff2f75;
-  transition:.4s;
-  }
+h1{font-size:20px;margin-bottom:8px}
+.sub{font-size:13px;opacity:.7;margin-bottom:18px}
 
-  .question{min-height:55px;font-size:16px;margin-bottom:12px}
+.progress{
+height:6px;
+background:#2a3142;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:18px;
+}
 
-  .options button{
-  width:100%;
-  padding:14px;
-  margin:6px 0;
-  border:none;
-  border-radius:12px;
-  background:#242c3a;
-  color:#fff;
-  cursor:pointer;
-  transition:.2s;
-  }
+.fill{
+height:100%;
+width:0%;
+background:#ff2f75;
+transition:.4s;
+}
 
-  .options button:hover{background:#ff2f75;transform:scale(1.03)}
+.options button{
+width:100%;
+padding:14px;
+margin:6px 0;
+border:none;
+border-radius:12px;
+background:#242c3a;
+color:#fff;
+cursor:pointer;
+}
 
-  .result{display:none}
+.options button:hover{
+background:#ff2f75;
+}
 
-  .score{
-  font-size:46px;
-  font-weight:bold;
-  color:#ff2f75;
-  margin:10px 0;
-  }
+.result{display:none}
 
-  .cta{
-  width:100%;
-  padding:16px;
-  border:none;
-  border-radius:14px;
-  background:#ff2f75;
-  color:#fff;
-  font-weight:bold;
-  margin-top:12px;
-  cursor:pointer;
-  }
+.score{
+font-size:46px;
+font-weight:bold;
+color:#ff2f75;
+margin:10px 0;
+}
 
-  .loader{display:none;margin-top:10px;font-size:13px}
+.cta{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+background:#ff2f75;
+color:#fff;
+font-weight:bold;
+margin-top:12px;
+cursor:pointer;
+}
+</style>
 
-  .toast{
-  position:fixed;
-  bottom:20px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#1f2635;
-  padding:10px 14px;
-  border-radius:10px;
-  font-size:12px;
-  display:none;
-  }
-
-  .timer{font-size:12px;opacity:.7;margin-top:8px}
-  </style>
 </head>
-
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
+<!-- GTM noscript -->
 <noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQKTKKGB"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQKTKKGB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
+
 
 <div class="card">
 
@@ -131,28 +119,27 @@
 <div class="progress"><div class="fill" id="fill"></div></div>
 
 <div id="quizBox">
-  <div class="question" id="question"></div>
-  <div class="options" id="options"></div>
+<div id="question"></div>
+<div class="options" id="options"></div>
 </div>
 
 <div id="resultBox" class="result">
-  <div class="score" id="score">420</div>
-  <p>Seu score pode estar travando seu crédito.</p>
-  <button class="cta" onclick="go()">Quero aumentar agora →</button>
-  <div class="loader" id="loader">Analisando perfil...</div>
-  <div class="timer" id="timer"></div>
-</div>
+<div class="score" id="score">420</div>
+<p>Seu score pode estar travando seu crédito.</p>
+
+<button class="cta" onclick="go()">
+Quero aumentar agora →
+</button>
 
 </div>
 
-<div class="toast" id="toast"></div>
+</div>
 
 
 <script>
 
 const link="https://metodozeroexposicao.com";
 
-/* quiz */
 const questions=[
 "Seu crédito já foi negado?",
 "Seu score está abaixo de 500?",
@@ -170,6 +157,7 @@ const fill=document.getElementById("fill");
 function show(){
 q.innerText=questions[step];
 op.innerHTML="";
+
 ["Sim","Não","Talvez"].forEach(t=>{
 let b=document.createElement("button");
 b.innerText=t;
@@ -182,6 +170,7 @@ function next(){
 score+=Math.floor(Math.random()*40)+25;
 step++;
 fill.style.width=(step/questions.length*100)+"%";
+
 if(step<questions.length) show();
 else finish();
 }
@@ -193,15 +182,15 @@ document.getElementById("score").innerText=score;
 }
 
 
-/* 🔥 FUNÇÃO CORRIGIDA (LEAD GARANTIDO) */
+/* 🔥🔥🔥 AQUI ESTÁ O LEAD REAL */
 function go(){
 
-// GTM
-window.dataLayer.push({ event:'lead' });
+// dispara evento pro GTM
+dataLayer.push({
+  event:'lead'
+});
 
-// espera pixel registrar
-document.getElementById("loader").style.display="block";
-
+// espera o GTM enviar
 setTimeout(()=>{
   window.location.href=link;
 },700);
@@ -209,22 +198,6 @@ setTimeout(()=>{
 }
 
 show();
-
-/* prova social */
-const names=["Ana","Carlos","Pedro","Lucas","Mariana","Fernanda"];
-setInterval(()=>{
-let t=document.getElementById("toast");
-t.innerText=names[Math.floor(Math.random()*names.length)]+" acabou de acessar o método";
-t.style.display="block";
-setTimeout(()=>t.style.display="none",2500);
-},6000);
-
-/* urgência */
-let m=5;
-setInterval(()=>{
-document.getElementById("timer").innerText="⚡ Oferta disponível por "+m+" min";
-m--; if(m<=0)m=5;
-},60000);
 
 </script>
 
