@@ -6,7 +6,7 @@
 
 <title>Método Zero Exposição</title>
 
-<!-- ================= PIXEL META ================= -->
+<!-- ================= META PIXEL ================= -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -27,8 +27,107 @@ fbq('track', 'PageView');
 <style>
 *{box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{margin:0;background:radial-gradient(circle at top,#1b0f24,#0b0b0f);color:#fff}
+.topbar{background:#ff003c;text-align:center;padding:10px;font-weight:700;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.6}}
+.container{max-width:820px;margin:auto;padding:22px}
+.hero{text-align:center;padding:60px 0 40px}
+.hero h1{font-size:34px;font-weight:800;line-height:1.35}
+.highlight{color:#ff2ea6;text-shadow:0 0 12px #ff2ea6}
+.card{background:#17171d;padding:26px;border-radius:18px;margin:22px 0;box-shadow:0 0 40px rgba(255,0,130,.2)}
+.btn{display:block;text-align:center;padding:20px;background:linear-gradient(90deg,#ff2ea6,#ff0066);border-radius:14px;font-size:20px;font-weight:800;color:#fff;text-decoration:none;box-shadow:0 0 25px rgba(255,0,130,.7);margin-top:20px;animation:pulse 1.3s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+.timer{font-size:32px;color:#00ff9d;font-weight:800}
+ul{line-height:2}
+.sticky{position:fixed;bottom:0;left:0;width:100%;padding:18px;text-align:center;background:#ff0066;font-weight:800;text-decoration:none;color:#fff;font-size:18px}
+.onlineBox{position:fixed;top:15px;right:15px;background:#ff0066;padding:8px 14px;border-radius:20px;font-size:13px;font-weight:700}
+</style>
+</head>
 
-.topbar{
-background:#ff003c;
-text-align:center;
-padding:
+<body>
+
+<div class="topbar">
+⚠️ ÚLTIMAS VAGAS — essa promoção pode sair do ar hoje
+</div>
+
+<div class="onlineBox">
+🔥 <span id="onlineCount">18</span> pessoas agora
+</div>
+
+<div class="container">
+
+<section class="hero">
+<h1>
+Seu <span class="highlight">score é baixo</span> e os bancos vivem te negando crédito?<br><br>
+Descubra o método simples que já fez pessoas subirem<br>
+<span class="highlight">+300 pontos em poucas semanas</span>
+</h1>
+
+<a href="https://pay.hotmart.com/N99318938V" class="btn buy">
+🔥 QUERO AUMENTAR MEU SCORE AGORA
+</a>
+</section>
+
+<section class="card">
+<h2>Se você já passou por isso, sabe como dói:</h2>
+<ul>
+<li>❌ Cartão recusado na maquininha</li>
+<li>❌ Crédito negado no banco</li>
+<li>❌ Limite ridículo</li>
+<li>❌ Financiamento bloqueado</li>
+<li>❌ Sensação de estar travado financeiramente</li>
+</ul>
+</section>
+
+<section class="card" style="text-align:center">
+<h2>Oferta termina em:</h2>
+<div class="timer" id="countdown">10:00</div>
+
+<a href="https://pay.hotmart.com/N99318938V" class="btn buy">
+🚀 GARANTIR MINHA VAGA
+</a>
+</section>
+
+<section class="card" style="text-align:center">
+<a href="https://pay.hotmart.com/N99318938V" class="btn buy">
+🔥 COMPRAR AGORA
+</a>
+</section>
+
+</div>
+
+<a href="https://pay.hotmart.com/N99318938V" class="sticky buy">
+👉 COMEÇAR AGORA
+</a>
+
+<script>
+/* TIMER */
+let time=600;
+setInterval(()=>{
+let m=Math.floor(time/60);
+let s=time%60;
+document.getElementById("countdown").innerHTML=`${m}:${s<10?'0':''}${s}`;
+time--;
+},1000);
+
+
+/* ========= LEAD GARANTIDO (SEM PERDER EVENTO) ========= */
+document.querySelectorAll('.buy').forEach(btn=>{
+btn.addEventListener('click',function(e){
+
+e.preventDefault();
+
+let url = btn.href;
+
+fbq('track','Lead'); // envia lead
+
+setTimeout(()=>{
+window.location.href = url;
+},300);
+
+});
+});
+/* ====================================================== */
+</script>
+
+</body>
+                                                </html>
