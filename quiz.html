@@ -2,25 +2,51 @@
 <html lang="pt-br">
 
 <head>
+
+<!-- ========= GTM (GARANTE DATALAYER) ========= -->
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+
+<script>
+(function(w,d,s,l,i){
+w[l]=w[l]||[];
+w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQKTKKGB');
+</script>
+<!-- =========================================== -->
+
+
+<!-- ========= META PIXEL (GARANTIDO) ========= -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','898113899383416');
+fbq('track','PageView');
+</script>
+<!-- =========================================== -->
+
+
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Diagnóstico do Score</title>
 
-<!-- ================= META PIXEL (OBRIGATÓRIO) ================= -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','898113899383416'); 
-fbq('track','PageView');
-</script>
-<!-- =========================================================== -->
 
 <style>
 *{box-sizing:border-box;font-family:Arial,sans-serif}
@@ -77,8 +103,6 @@ color:#fff;
 cursor:pointer;
 }
 
-.options button:hover{background:#ff2f75}
-
 .result{display:none}
 
 .score{
@@ -102,7 +126,15 @@ cursor:pointer;
 </style>
 </head>
 
+
 <body>
+
+<!-- GTM noscript -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQKTKKGB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
 
 <div class="card">
 
@@ -119,19 +151,17 @@ cursor:pointer;
 <div id="resultBox" class="result">
   <div class="score" id="score">420</div>
   <p>Seu score pode estar travando seu crédito.</p>
-
-  <!-- BOTÃO FINAL -->
-  <button class="cta" onclick="go()">Quero aumentar agora →</button>
+  <button class="cta" id="btnLead">Quero aumentar agora →</button>
 </div>
 
 </div>
+
 
 <script>
 
-/* ================= QUIZ ================= */
-
 const link="https://metodozeroexposicao.com";
 
+/* QUIZ */
 const questions=[
 "Seu crédito já foi negado?",
 "Seu score está abaixo de 500?",
@@ -171,19 +201,26 @@ document.getElementById("resultBox").style.display="block";
 document.getElementById("score").innerText=score;
 }
 
-/* ================= LEAD EVENT (SIMPLES) ================= */
+/* ========= LEAD DISPARO GARANTIDO ========= */
 
-function go(){
+document.getElementById("btnLead").addEventListener("mousedown",function(){
 
-// 🔥 DISPARA LEAD
-fbq('track','Lead');
-
-// redireciona depois
-setTimeout(()=>{
-window.location.href=link;
-},400);
-
+// META PIXEL
+if(typeof fbq !== "undefined"){
+  fbq('track','Lead');
 }
+
+// GTM
+window.dataLayer.push({event:'lead'});
+
+// espera disparar
+setTimeout(function(){
+  window.location.href=link;
+},800);
+
+});
+
+/* ========================================= */
 
 show();
 
