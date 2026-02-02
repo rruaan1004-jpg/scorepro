@@ -1,129 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Diagnóstico do Score</title>
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NQKTKKGB');
+  </script>
+  <!-- End Google Tag Manager -->
 
-<!-- PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-t=b.createElement(e);t.async=!0;t.src=v;
-s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnóstico do Score</title>
 
-fbq('init','898113899383416');
-fbq('track','PageView');
-</script>
+  <style>
+  *{box-sizing:border-box;font-family:Arial,sans-serif}
 
-<style>
+  body{
+  margin:0;
+  background:linear-gradient(135deg,#0b0f18,#171c27);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  padding:15px;
+  }
 
-*{box-sizing:border-box;font-family:Arial,sans-serif}
+  .card{
+  max-width:420px;
+  width:100%;
+  background:#161b25;
+  padding:26px;
+  border-radius:20px;
+  box-shadow:0 25px 70px rgba(0,0,0,.6);
+  text-align:center;
+  }
 
-body{
-margin:0;
-background:linear-gradient(135deg,#0b0f18,#171c27);
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-padding:15px;
-}
+  h1{font-size:20px;margin-bottom:8px}
+  .sub{font-size:13px;opacity:.7;margin-bottom:18px}
 
-.card{
-max-width:420px;
-width:100%;
-background:#161b25;
-padding:26px;
-border-radius:20px;
-box-shadow:0 25px 70px rgba(0,0,0,.6);
-text-align:center;
-}
+  .progress{
+  height:6px;
+  background:#2a3142;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:18px;
+  }
 
-h1{font-size:20px;margin-bottom:8px}
-.sub{font-size:13px;opacity:.7;margin-bottom:18px}
+  .fill{
+  height:100%;
+  width:0%;
+  background:#ff2f75;
+  transition:.4s;
+  }
 
-/* progresso */
-.progress{
-height:6px;
-background:#2a3142;
-border-radius:10px;
-overflow:hidden;
-margin-bottom:18px;
-}
+  .question{min-height:55px;font-size:16px;margin-bottom:12px}
 
-.fill{
-height:100%;
-width:0%;
-background:#ff2f75;
-transition:.4s;
-}
+  .options button{
+  width:100%;
+  padding:14px;
+  margin:6px 0;
+  border:none;
+  border-radius:12px;
+  background:#242c3a;
+  color:#fff;
+  cursor:pointer;
+  transition:.2s;
+  }
 
-/* pergunta */
-.question{min-height:55px;font-size:16px;margin-bottom:12px}
+  .options button:hover{background:#ff2f75;transform:scale(1.03)}
 
-.options button{
-width:100%;
-padding:14px;
-margin:6px 0;
-border:none;
-border-radius:12px;
-background:#242c3a;
-color:#fff;
-cursor:pointer;
-transition:.2s;
-}
+  .result{display:none}
 
-.options button:hover{background:#ff2f75;transform:scale(1.03)}
+  .score{
+  font-size:46px;
+  font-weight:bold;
+  color:#ff2f75;
+  margin:10px 0;
+  }
 
-/* resultado */
-.result{display:none}
+  .cta{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  background:#ff2f75;
+  color:#fff;
+  font-weight:bold;
+  margin-top:12px;
+  cursor:pointer;
+  }
 
-.score{
-font-size:46px;
-font-weight:bold;
-color:#ff2f75;
-margin:10px 0;
-}
+  .loader{display:none;margin-top:10px;font-size:13px}
 
-.cta{
-width:100%;
-padding:16px;
-border:none;
-border-radius:14px;
-background:#ff2f75;
-color:#fff;
-font-weight:bold;
-margin-top:12px;
-cursor:pointer;
-}
+  .toast{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#1f2635;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:12px;
+  display:none;
+  }
 
-/* loader */
-.loader{display:none;margin-top:10px;font-size:13px}
-
-/* notificação */
-.toast{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-background:#1f2635;
-padding:10px 14px;
-border-radius:10px;
-font-size:12px;
-display:none;
-}
-
-/* timer */
-.timer{font-size:12px;opacity:.7;margin-top:8px}
-
-</style>
+  .timer{font-size:12px;opacity:.7;margin-top:8px}
+  </style>
 </head>
 
+
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQKTKKGB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 
 <div class="card">
 
@@ -148,6 +147,7 @@ display:none;
 </div>
 
 <div class="toast" id="toast"></div>
+
 
 <script>
 
@@ -194,7 +194,10 @@ document.getElementById("score").innerText=score;
 }
 
 function go(){
-fbq('track','Lead');
+
+// 🔥 Evento Lead pelo GTM (server/capi)
+dataLayer.push({ event: 'lead' });
+
 document.getElementById("loader").style.display="block";
 setTimeout(()=>window.location.href=link,1800);
 }
