@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Diagnóstico do Score</title>
 
-<!-- 🔥 META PIXEL (OBRIGATÓRIO) -->
+<!-- ================= META PIXEL (OBRIGATÓRIO) ================= -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,40 +17,86 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','898113899383416');
+fbq('init','898113899383416'); 
 fbq('track','PageView');
 </script>
-<!-- 🔥 FIM PIXEL -->
+<!-- =========================================================== -->
 
 <style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+
 body{
 margin:0;
-background:#111827;
+background:linear-gradient(135deg,#0b0f18,#171c27);
 color:#fff;
-font-family:Arial;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
+padding:15px;
 }
 
 .card{
-background:#1f2937;
-padding:30px;
+max-width:420px;
+width:100%;
+background:#161b25;
+padding:26px;
 border-radius:20px;
+box-shadow:0 25px 70px rgba(0,0,0,.6);
 text-align:center;
-width:340px;
 }
 
-button{
-margin-top:20px;
-padding:15px;
+h1{font-size:20px;margin-bottom:8px}
+.sub{font-size:13px;opacity:.7;margin-bottom:18px}
+
+.progress{
+height:6px;
+background:#2a3142;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:18px;
+}
+
+.fill{
+height:100%;
+width:0%;
+background:#ff2f75;
+transition:.4s;
+}
+
+.question{min-height:55px;font-size:16px;margin-bottom:12px}
+
+.options button{
 width:100%;
+padding:14px;
+margin:6px 0;
 border:none;
 border-radius:12px;
+background:#242c3a;
+color:#fff;
+cursor:pointer;
+}
+
+.options button:hover{background:#ff2f75}
+
+.result{display:none}
+
+.score{
+font-size:46px;
+font-weight:bold;
+color:#ff2f75;
+margin:10px 0;
+}
+
+.cta{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
 background:#ff2f75;
 color:#fff;
 font-weight:bold;
+margin-top:12px;
 cursor:pointer;
 }
 </style>
@@ -58,26 +105,88 @@ cursor:pointer;
 <body>
 
 <div class="card">
-<h2>Diagnóstico do Score</h2>
-<p>Seu score: <b>559</b></p>
 
-<button onclick="go()">
-Quero aumentar agora →
-</button>
+<h1>Diagnóstico gratuito do seu Score</h1>
+<div class="sub">Leva menos de 30 segundos</div>
+
+<div class="progress"><div class="fill" id="fill"></div></div>
+
+<div id="quizBox">
+  <div class="question" id="question"></div>
+  <div class="options" id="options"></div>
+</div>
+
+<div id="resultBox" class="result">
+  <div class="score" id="score">420</div>
+  <p>Seu score pode estar travando seu crédito.</p>
+
+  <!-- BOTÃO FINAL -->
+  <button class="cta" onclick="go()">Quero aumentar agora →</button>
+</div>
+
 </div>
 
 <script>
+
+/* ================= QUIZ ================= */
+
+const link="https://metodozeroexposicao.com";
+
+const questions=[
+"Seu crédito já foi negado?",
+"Seu score está abaixo de 500?",
+"Possui dívidas atrasadas?",
+"Quer aprender a aumentar rápido?"
+];
+
+let step=0;
+let score=380;
+
+const q=document.getElementById("question");
+const op=document.getElementById("options");
+const fill=document.getElementById("fill");
+
+function show(){
+q.innerText=questions[step];
+op.innerHTML="";
+["Sim","Não","Talvez"].forEach(t=>{
+let b=document.createElement("button");
+b.innerText=t;
+b.onclick=next;
+op.appendChild(b);
+});
+}
+
+function next(){
+score+=Math.floor(Math.random()*40)+25;
+step++;
+fill.style.width=(step/questions.length*100)+"%";
+if(step<questions.length) show();
+else finish();
+}
+
+function finish(){
+document.getElementById("quizBox").style.display="none";
+document.getElementById("resultBox").style.display="block";
+document.getElementById("score").innerText=score;
+}
+
+/* ================= LEAD EVENT (SIMPLES) ================= */
+
 function go(){
 
-  /* 🔥 LEAD DIRETO NO PIXEL */
-  fbq('track','Lead');
+// 🔥 DISPARA LEAD
+fbq('track','Lead');
 
-  /* redireciona depois */
-  setTimeout(()=>{
-    window.location.href="https://metodozeroexposicao.com";
-  },500);
+// redireciona depois
+setTimeout(()=>{
+window.location.href=link;
+},400);
 
 }
+
+show();
+
 </script>
 
 </body>
