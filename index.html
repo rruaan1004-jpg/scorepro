@@ -50,7 +50,7 @@ ul{line-height:2}
 </div>
 
 <div class="onlineBox">
-🔥 <span id="onlineCount">18</span> pessoas agora
+🔥 18 pessoas agora
 </div>
 
 <div class="container">
@@ -99,7 +99,9 @@ Descubra o método simples que já fez pessoas subirem<br>
 👉 COMEÇAR AGORA
 </a>
 
+<!-- ================= SCRIPTS ================= -->
 <script>
+
 /* TIMER */
 let time=600;
 setInterval(()=>{
@@ -110,24 +112,28 @@ time--;
 },1000);
 
 
-/* ========= LEAD GARANTIDO (SEM PERDER EVENTO) ========= */
+/* ================= LEAD PIXEL (CORRIGIDO) ================= */
+/* dispara lead e espera antes de redirecionar */
+
 document.querySelectorAll('.buy').forEach(btn=>{
-btn.addEventListener('click',function(e){
+  btn.addEventListener('click', function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-let url = btn.href;
+    const url = this.href;
 
-fbq('track','Lead'); // envia lead
+    fbq('track','Lead');
 
-setTimeout(()=>{
-window.location.href = url;
-},300);
+    setTimeout(()=>{
+      window.location.href = url;
+    }, 300);
 
+  });
 });
-});
-/* ====================================================== */
+/* ========================================================= */
+
 </script>
+<!-- ========================================== -->
 
 </body>
-                                                </html>
+</html>
