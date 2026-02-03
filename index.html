@@ -4,246 +4,260 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Diagnóstico Inteligente do Score</title>
+<title>Método Zero Exposição</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- 🔥 PIXEL NOVO -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init','898113899383416');
-fbq('track','PageView');
-</script>
-
 <style>
-*{
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{box-sizing:border-box;font-family:'Poppins',sans-serif}
 
 body{
-margin:0;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-background:linear-gradient(180deg,#0b0b10,#14141b);
-color:#fff;
+  margin:0;
+  background:radial-gradient(circle at top,#1b0f24,#0b0b0f);
+  color:#fff;
 }
 
+.topbar{
+  background:#ff003c;
+  text-align:center;
+  padding:10px;
+  font-weight:700;
+  animation:blink 1s infinite;
+}
+@keyframes blink{50%{opacity:.6}}
+
 .container{
-width:95%;
-max-width:520px;
+  max-width:820px;
+  margin:auto;
+  padding:22px;
+}
+
+.hero{text-align:center;padding:60px 0 40px}
+
+.hero h1{
+  font-size:34px;
+  font-weight:800;
+  line-height:1.35;
+}
+
+.highlight{
+  color:#ff2ea6;
+  text-shadow:0 0 12px #ff2ea6;
 }
 
 .card{
-background:#15151c;
-padding:32px;
-border-radius:24px;
-box-shadow:0 0 80px rgba(255,0,120,.15);
-text-align:center;
-animation:fade .4s ease;
+  background:#17171d;
+  padding:26px;
+  border-radius:18px;
+  margin:22px 0;
+  box-shadow:0 0 40px rgba(255,0,130,.2);
 }
 
-@keyframes fade{
-from{opacity:0;transform:translateY(10px)}
-to{opacity:1}
+.btn{
+  display:block;
+  text-align:center;
+  padding:20px;
+  background:linear-gradient(90deg,#ff2ea6,#ff0066);
+  border-radius:14px;
+  font-size:20px;
+  font-weight:800;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 0 25px rgba(255,0,130,.7);
+  margin-top:20px;
+  animation:pulse 1.3s infinite;
 }
 
-.logo{
-font-weight:800;
-color:#ff2ea6;
-margin-bottom:12px;
-letter-spacing:1px;
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.04)}
+  100%{transform:scale(1)}
 }
 
-h1{
-font-size:22px;
-margin-bottom:20px;
+.timer{
+  font-size:32px;
+  color:#00ff9d;
+  font-weight:800;
 }
 
-.progress{
-height:7px;
-background:#24242b;
-border-radius:20px;
-overflow:hidden;
-margin-bottom:25px;
+ul{line-height:2}
+
+.sticky{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:18px;
+  text-align:center;
+  background:#ff0066;
+  font-weight:800;
+  text-decoration:none;
+  color:#fff;
+  font-size:18px;
 }
 
-.bar{
-height:100%;
-width:0%;
-background:linear-gradient(90deg,#ff2ea6,#ff0066);
-transition:.4s;
+.toast{
+  position:fixed;
+  left:15px;
+  bottom:90px;
+  background:#111;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:13px;
+  display:none;
 }
 
-.option{
-background:#1f1f27;
-padding:16px;
-border-radius:14px;
-margin:10px 0;
-cursor:pointer;
-font-weight:600;
-transition:.2s;
+.onlineBox{
+  position:fixed;
+  top:15px;
+  right:15px;
+  background:#ff0066;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:700;
 }
 
-.option:hover{
-transform:scale(1.03);
-background:#ff0066;
-}
-
-.hidden{
-display:none;
-}
-
-.loader{
-color:#00ff9d;
-font-weight:700;
-animation:blink 1s infinite;
-}
-
-@keyframes blink{
-50%{opacity:.5}
-}
-
-.small{
-font-size:12px;
-opacity:.6;
-margin-top:12px;
+.depo{
+  background:#1b1b23;
+  padding:18px;
+  border-radius:12px;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+⚠️ ÚLTIMAS VAGAS — essa promoção pode sair do ar hoje
+</div>
+
+<div class="onlineBox">
+🔥 <span id="onlineCount">18</span> pessoas agora
+</div>
+
 <div class="container">
 
-<!-- QUIZ -->
-<div class="card" id="quiz">
-
-<div class="logo">SCORE AI™</div>
-
-<div class="progress">
-<div class="bar" id="bar"></div>
-</div>
-
-<h1 id="question"></h1>
-<div id="options"></div>
-
-<p class="small">Análise gratuita • 30 segundos</p>
-
-</div>
-
-
-<!-- ANALISANDO -->
-<div class="card hidden" id="loading">
-<h1>🤖 IA analisando seu score...</h1>
-<p class="loader">Processando dados bancários...</p>
-</div>
-
-
-<!-- RESULTADO -->
-<div class="card hidden" id="result">
-
-<h1 style="color:#ff2ea6">
-⚠️ Detectamos bloqueios no seu crédito
+<!-- HERO -->
+<section class="hero">
+<h1>
+Seu <span class="highlight">score é baixo</span> e os bancos vivem te negando crédito?<br><br>
+Descubra o método simples que já fez pessoas subirem<br>
+<span class="highlight">+300 pontos em poucas semanas</span>
 </h1>
 
-<p style="margin-top:15px;font-weight:600">
-Seu perfil apresenta erros que podem estar derrubando até 300 pontos do seu score.
-</p>
+<a href="https://pay.hotmart.com/N99318938V" class="btn">
+🔥 QUERO AUMENTAR MEU SCORE AGORA
+</a>
+</section>
+
+
+<!-- DOR FORTE -->
+<section class="card">
+<h2>Se você já passou por isso, sabe como dói:</h2>
+<ul>
+<li>❌ Cartão recusado na maquininha</li>
+<li>❌ Crédito negado no banco</li>
+<li>❌ Limite ridículo</li>
+<li>❌ Financiamento bloqueado</li>
+<li>❌ Sensação de estar travado financeiramente</li>
+</ul>
 
 <p style="margin-top:15px">
-Estamos liberando agora o plano recomendado para corrigir isso automaticamente.
+A verdade é que os bancos usam regras escondidas que quase ninguém conhece…
+E é exatamente isso que você vai aprender aqui dentro.
 </p>
+</section>
 
-<p class="loader">Redirecionando...</p>
+
+<!-- CONTADOR -->
+<section class="card" style="text-align:center">
+<h2>Oferta termina em:</h2>
+<div class="timer" id="countdown">10:00</div>
+
+<a href="https://pay.hotmart.com/N99318938V" class="btn">
+🚀 GARANTIR MINHA VAGA
+</a>
+</section>
+
+
+<!-- BENEFÍCIOS -->
+<section class="card">
+<h2>Dentro você aprende:</h2>
+<ul>
+<li>✔ Como o score é calculado de verdade</li>
+<li>✔ Ajustes que sobem pontos rápido</li>
+<li>✔ Erros que derrubam sua pontuação sem você perceber</li>
+<li>✔ Como liberar crédito mais fácil</li>
+<li>✔ Passo a passo simples pra aplicar hoje mesmo</li>
+</ul>
+</section>
+
+
+<!-- PROVA SOCIAL -->
+<section class="card">
+<h2 style="text-align:center">Resultados reais de alunos</h2>
+
+<div style="display:grid;gap:14px;margin-top:20px">
+<div class="depo">“Subi de 420 → 610 em 30 dias. Cartão aprovado na hora.”</div>
+<div class="depo">“Liberaram 5 mil de limite depois do método.”</div>
+<div class="depo">“Meu financiamento que sempre era negado foi aprovado.”</div>
+</div>
+</section>
+
+
+<!-- GARANTIA -->
+<section class="card" style="text-align:center">
+<h2>Risco ZERO pra você</h2>
+<p>
+Teste por 7 dias completos.<br>
+Se não aumentar seu score, devolvemos 100% do seu dinheiro.
+</p>
+<p style="color:#00ff9d;font-weight:800;">Você não tem nada a perder.</p>
+</section>
+
+
+<!-- PREÇO -->
+<section class="card" style="text-align:center">
+<h2>De R$97 por apenas hoje:</h2>
+<p style="font-size:40px;color:#00ff9d;font-weight:800;">R$47 acesso vitalício</p>
+<p style="font-size:14px;opacity:.8">Menos que uma pizza pra mudar seu crédito pra sempre</p>
+
+<a href="https://pay.hotmart.com/N99318938V" class="btn">
+🔥 COMPRAR AGORA
+</a>
+</section>
 
 </div>
 
-</div>
+<a href="https://pay.hotmart.com/N99318938V" class="sticky">
+👉 COMEÇAR AGORA
+</a>
+
+<div class="toast" id="toast"></div>
 
 <script>
+let time=600;
+setInterval(()=>{
+let m=Math.floor(time/60);
+let s=time%60;
+document.getElementById("countdown").innerHTML=`${m}:${s<10?'0':''}${s}`;
+time--;
+},1000);
 
-const questions=[
-"Você já teve cartão recusado?",
-"Seu score está abaixo de 600?",
-"Já teve crédito negado nos últimos 3 meses?",
-"Seu limite é menor que R$1000?",
-"Quer aumentar seu score o mais rápido possível?"
-];
+setInterval(()=>{
+document.getElementById("onlineCount").innerText=Math.floor(Math.random()*20)+12;
+},2000);
 
-let current=0;
-
-const qEl=document.getElementById("question");
-const optEl=document.getElementById("options");
-const bar=document.getElementById("bar");
-
-function next(){
-
-bar.style.width=((current/questions.length)*100)+"%";
-
-if(current>=questions.length){
-finish();
-return;
-}
-
-qEl.innerText=questions[current];
-optEl.innerHTML="";
-
-["Sim","Talvez","Não"].forEach((text)=>{
-
-let d=document.createElement("div");
-d.className="option";
-d.innerText=text;
-
-d.onclick=()=>{
-current++;
-next();
-};
-
-optEl.appendChild(d);
-
-});
-}
-
-function finish(){
-
-fbq('track','ViewContent');
-
-document.getElementById("quiz").classList.add("hidden");
-document.getElementById("loading").classList.remove("hidden");
-
-setTimeout(()=>{
-
-fbq('track','Lead');
-fbq('track','InitiateCheckout');
-
-document.getElementById("loading").classList.add("hidden");
-document.getElementById("result").classList.remove("hidden");
-
-setTimeout(()=>{
-window.location.href="https://pay.hotmart.com/N99318938V";
-},1800);
-
-},2200);
-
-}
-
-next();
-
+const nomes=["Maria","João","Ana","Carlos","Lucas","Fernanda","Pedro"];
+setInterval(()=>{
+let box=document.getElementById("toast");
+box.innerHTML="✅ "+nomes[Math.floor(Math.random()*nomes.length)]+" acabou de adquirir o método";
+box.style.display="block";
+setTimeout(()=>box.style.display="none",4000);
+},6000);
 </script>
 
 </body>
-</html>
+  </html>
