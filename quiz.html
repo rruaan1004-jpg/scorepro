@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 
-<script>
-window.dataLayer = window.dataLayer || [];
-</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Diagnóstico do Score</title>
 
-<script>
-(function(w,d,s,l,i){
-w[l]=w[l]||[];
-w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-j.async=true;
-j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NQKTKKGB');
-</script>
-
+<!-- PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
@@ -32,20 +20,16 @@ t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s);
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init','898113899383416');
 fbq('track','PageView');
 </script>
 
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Diagnóstico do Score</title>
-
 <style>
-*{box-sizing:border-box;font-family:Arial,sans-serif}
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+
 body{
 margin:0;
-background:linear-gradient(135deg,#0b0f18,#171c27);
+background:linear-gradient(135deg,#0a0f18,#111827);
 color:#fff;
 display:flex;
 justify-content:center;
@@ -53,6 +37,7 @@ align-items:center;
 height:100vh;
 padding:15px;
 }
+
 .card{
 max-width:420px;
 width:100%;
@@ -62,8 +47,21 @@ border-radius:20px;
 box-shadow:0 25px 70px rgba(0,0,0,.6);
 text-align:center;
 }
-h1{font-size:20px;margin-bottom:8px}
-.sub{font-size:13px;opacity:.7;margin-bottom:18px}
+
+h1{font-size:20px;margin-bottom:6px}
+
+.sub{
+font-size:13px;
+opacity:.7;
+margin-bottom:18px;
+}
+
+.online{
+font-size:12px;
+color:#00ff9d;
+margin-bottom:8px;
+}
+
 .progress{
 height:6px;
 background:#2a3142;
@@ -71,13 +69,20 @@ border-radius:10px;
 overflow:hidden;
 margin-bottom:18px;
 }
+
 .fill{
 height:100%;
 width:0%;
 background:#ff2f75;
-transition:.4s;
+transition:.3s;
 }
-.question{min-height:55px;font-size:16px;margin-bottom:12px}
+
+.question{
+min-height:55px;
+font-size:16px;
+margin-bottom:12px;
+}
+
 .options button{
 width:100%;
 padding:14px;
@@ -87,14 +92,34 @@ border-radius:12px;
 background:#242c3a;
 color:#fff;
 cursor:pointer;
+font-weight:bold;
 }
+
+.loading{
+display:none;
+font-size:15px;
+padding:30px 0;
+opacity:.9;
+}
+
 .result{display:none}
+
 .score{
 font-size:46px;
 font-weight:bold;
 color:#ff2f75;
 margin:10px 0;
 }
+
+.leadInput{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:none;
+margin-top:10px;
+font-size:16px;
+}
+
 .cta{
 width:100%;
 padding:16px;
@@ -105,16 +130,13 @@ color:#fff;
 font-weight:bold;
 margin-top:12px;
 cursor:pointer;
+font-size:15px;
 }
 
-/* NOVO campo */
-.leadInput{
-width:100%;
-padding:14px;
-border-radius:12px;
-border:none;
-margin-top:10px;
-font-size:16px;
+.small{
+font-size:12px;
+opacity:.6;
+margin-top:8px;
 }
 </style>
 </head>
@@ -123,41 +145,57 @@ font-size:16px;
 
 <div class="card">
 
+<div class="online">🔥 23 pessoas fazendo agora</div>
+
 <h1>Diagnóstico gratuito do seu Score</h1>
-<div class="sub">Leva menos de 30 segundos • 100% online</div>
+<div class="sub">Responda 4 perguntas rápidas</div>
 
 <div class="progress"><div class="fill" id="fill"></div></div>
 
+<!-- QUIZ -->
 <div id="quizBox">
   <div class="question" id="question"></div>
   <div class="options" id="options"></div>
 </div>
 
+<!-- LOADING -->
+<div id="loadingBox" class="loading">
+🔍 Analisando seu perfil financeiro...  
+<br><br>
+Isso pode levar alguns segundos
+</div>
+
+<!-- RESULTADO + LEAD -->
 <div id="resultBox" class="result">
-  <h1>Seu resultado está pronto</h1>
-  <div class="score" id="score">420</div>
 
-  <p>
-    Seu score pode estar sendo impactado por alguns fatores comuns.
-    Informe seu WhatsApp para liberar o método de melhoria.
-  </p>
+<h1>⚠️ Encontramos problemas no seu score</h1>
 
-  <!-- FORM NOVO -->
-  <form id="leadForm" action="https://formspree.io/f/xkozeqqq" method="POST">
+<div class="score" id="score">420</div>
 
-    <input 
-      type="tel"
-      name="whatsapp"
-      placeholder="Digite seu WhatsApp"
-      class="leadInput"
-      required
-    />
+<p>
+Identificamos fatores que podem estar travando seu crédito.<br>
+Receba o plano completo no WhatsApp.
+</p>
 
-    <button class="cta" type="submit">
-      Descobrir como melhorar meu score
-    </button>
+<form id="leadForm" action="https://formspree.io/f/xkozeqqq" method="POST">
 
-  </form>
+<input
+type="tel"
+name="whatsapp"
+placeholder="Digite seu WhatsApp com DDD"
+class="leadInput"
+required
+/>
+
+<button class="cta" type="submit">
+👉 VER PLANO COMPLETO AGORA
+</button>
+
+</form>
+
+<div class="small">
+Sem spam • acesso imediato
+</div>
 
 </div>
 
@@ -168,10 +206,10 @@ font-size:16px;
 const link="https://metodozeroexposicao.com";
 
 const questions=[
-"Seu crédito já foi negado alguma vez?",
-"Você gostaria de melhorar seu score mais rápido?",
-"Possui dívidas atrasadas atualmente?",
-"Quer ver como melhorar seu score com orientações simples?"
+"Seu crédito já foi negado?",
+"Tem dificuldade para conseguir limite?",
+"Possui dívidas atrasadas?",
+"Quer aumentar seu score rápido?"
 ];
 
 let step=0;
@@ -184,6 +222,7 @@ const fill=document.getElementById("fill");
 function show(){
 q.innerText=questions[step];
 op.innerHTML="";
+
 ["Sim","Não","Talvez"].forEach(t=>{
 let b=document.createElement("button");
 b.innerText=t;
@@ -196,37 +235,43 @@ function next(){
 score+=Math.floor(Math.random()*40)+25;
 step++;
 fill.style.width=(step/questions.length*100)+"%";
+
 if(step<questions.length) show();
 else finish();
 }
 
 function finish(){
+
 document.getElementById("quizBox").style.display="none";
+document.getElementById("loadingBox").style.display="block";
+
+setTimeout(()=>{
+document.getElementById("loadingBox").style.display="none";
 document.getElementById("resultBox").style.display="block";
 document.getElementById("score").innerText=score;
+},1500);
+
 }
 
 /* ENVIA + PIXEL + REDIRECIONA */
 document.getElementById("leadForm").addEventListener("submit", function(e){
 e.preventDefault();
 
-const form = this;
+const form=this;
 
 fetch(form.action,{
-  method:"POST",
-  body:new FormData(form),
-  headers:{ 'Accept':'application/json' }
+method:"POST",
+body:new FormData(form),
+headers:{'Accept':'application/json'}
 }).then(()=>{
 
-  if(typeof fbq !== "undefined"){
-    fbq('track','Lead');
-  }
+if(typeof fbq!=="undefined"){
+fbq('track','Lead');
+}
 
-  window.dataLayer.push({event:'lead'});
-
-  setTimeout(()=>{
-    window.location.href=link;
-  },600);
+setTimeout(()=>{
+window.location.href=link;
+},600);
 
 });
 });
