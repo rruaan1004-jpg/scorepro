@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Método Zero Exposição</title>
 
-<!-- PIXEL -->
+<!-- ================= META PIXEL ================= -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,226 +16,124 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','898113899383416');
-fbq('track','PageView');
+
+fbq('init', '898113899383416');
+fbq('track', 'PageView');
 </script>
+<!-- ============================================= -->
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-*{box-sizing:border-box;font-family:Poppins,sans-serif}
-body{margin:0;background:#0b0b0f;color:#fff}
-
-.container{max-width:1000px;margin:auto;padding:20px}
-
-/* HERO */
-.hero{
-background:linear-gradient(135deg,#1a0f25,#0b0b0f);
-text-align:center;
-padding:70px 20px;
-}
-
-h1{
-font-size:30px;
-font-weight:800;
-}
-
-.highlight{color:#ff2ea6}
-
-.btn{
-display:inline-block;
-background:linear-gradient(90deg,#ff2ea6,#ff0066);
-padding:18px 30px;
-border-radius:12px;
-color:#fff;
-font-weight:700;
-text-decoration:none;
-margin-top:25px;
-}
-
-.section{
-padding:50px 20px;
-}
-
-.card{
-background:#17171d;
-padding:25px;
-border-radius:14px;
-margin:15px 0;
-}
-
-.grid{
-display:grid;
-gap:15px;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-}
-
-/* provas */
-.carousel{
-display:flex;
-gap:10px;
-overflow-x:auto;
-scroll-snap-type:x mandatory;
-}
-
-.carousel img{
-width:260px;
-border-radius:10px;
-scroll-snap-align:center;
-}
-
-/* pagamento */
-.payments{
-text-align:center;
-margin-top:15px;
-opacity:.85;
-}
-
-.payments span{
-margin:5px 8px;
-font-size:14px;
-}
-
-/* garantia */
-.guarantee{
-background:#1c1028;
-border:2px solid #ff2ea6;
-padding:25px;
-border-radius:15px;
-text-align:center;
-}
-
-/* FAQ */
-.faq-item{
-background:#17171d;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
-cursor:pointer;
-}
-
-.answer{
-display:none;
-font-size:14px;
-opacity:.8;
-margin-top:10px;
-}
-
-/* sticky */
-.sticky{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#ff0066;
-padding:14px;
-text-align:center;
-font-weight:700;
-color:#fff;
-text-decoration:none;
-}
-
+*{box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{margin:0;background:radial-gradient(circle at top,#1b0f24,#0b0b0f);color:#fff}
+.topbar{background:#ff003c;text-align:center;padding:10px;font-weight:700;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.6}}
+.container{max-width:820px;margin:auto;padding:22px}
+.hero{text-align:center;padding:60px 0 40px}
+.hero h1{font-size:34px;font-weight:800;line-height:1.35}
+.highlight{color:#ff2ea6;text-shadow:0 0 12px #ff2ea6}
+.card{background:#17171d;padding:26px;border-radius:18px;margin:22px 0;box-shadow:0 0 40px rgba(255,0,130,.2)}
+.btn{display:block;text-align:center;padding:20px;background:linear-gradient(90deg,#ff2ea6,#ff0066);border-radius:14px;font-size:20px;font-weight:800;color:#fff;text-decoration:none;box-shadow:0 0 25px rgba(255,0,130,.7);margin-top:20px;animation:pulse 1.3s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+.timer{font-size:32px;color:#00ff9d;font-weight:800}
+ul{line-height:2}
+.sticky{position:fixed;bottom:0;left:0;width:100%;padding:18px;text-align:center;background:#ff0066;font-weight:800;text-decoration:none;color:#fff;font-size:18px}
+.onlineBox{position:fixed;top:15px;right:15px;background:#ff0066;padding:8px 14px;border-radius:20px;font-size:13px;font-weight:700}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<div class="topbar">
+⚠️ ÚLTIMAS VAGAS — essa promoção pode sair do ar hoje
+</div>
+
+<div class="onlineBox">
+🔥 18 pessoas agora
+</div>
+
+<div class="container">
+
 <section class="hero">
 <h1>
-Seu <span class="highlight">score é baixo</span> e o crédito vive sendo negado?<br><br>
-Aprenda o método simples que já ajudou centenas de pessoas a subir o score rápido.
+Seu <span class="highlight">score é baixo</span> e os bancos vivem te negando crédito?<br><br>
+Descubra o método simples que já fez pessoas subirem<br>
+<span class="highlight">+300 pontos em poucas semanas</span>
 </h1>
 
-<a href="https://pay.hotmart.com/N99318938V" class="btn buy">QUERO AUMENTAR MEU SCORE AGORA</a>
+<a href="https://pay.hotmart.com/N99318938V" class="btn buy">
+🔥 QUERO AUMENTAR MEU SCORE AGORA
+</a>
 </section>
 
-
-<!-- BENEFÍCIOS -->
-<section class="section container grid">
-<div class="card">✔ Aumente seu score passo a passo</div>
-<div class="card">✔ Descubra o que trava seu crédito</div>
-<div class="card">✔ Técnicas usadas por especialistas</div>
-<div class="card">✔ Resultados rápidos e práticos</div>
+<section class="card">
+<h2>Se você já passou por isso, sabe como dói:</h2>
+<ul>
+<li>❌ Cartão recusado na maquininha</li>
+<li>❌ Crédito negado no banco</li>
+<li>❌ Limite ridículo</li>
+<li>❌ Financiamento bloqueado</li>
+<li>❌ Sensação de estar travado financeiramente</li>
+</ul>
 </section>
 
+<section class="card" style="text-align:center">
+<h2>Oferta termina em:</h2>
+<div class="timer" id="countdown">10:00</div>
 
-<!-- PROVAS -->
-<section class="section container">
-<h2>Resultados reais de alunos:</h2>
+<a href="https://pay.hotmart.com/N99318938V" class="btn buy">
+🚀 GARANTIR MINHA VAGA
+</a>
+</section>
 
-<div class="carousel">
-<img src="prova1.jpg">
-<img src="prova2.jpg">
-<img src="prova3.jpg">
-<img src="prova4.jpg">
+<section class="card" style="text-align:center">
+<a href="https://pay.hotmart.com/N99318938V" class="btn buy">
+🔥 COMPRAR AGORA
+</a>
+</section>
+
 </div>
-</section>
-
-
-<!-- OFERTA -->
-<section class="section container card" style="text-align:center">
-<h2>Oferta especial hoje</h2>
-<h1 style="font-size:42px">R$ 47,00</h1>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn buy">COMPRAR AGORA</a>
-
-<div class="payments">
-<span>💳 Cartão</span>
-<span>⚡ Pix</span>
-<span>🧾 Boleto</span>
-<span>📅 Parcelado</span>
-</div>
-</section>
-
-
-<!-- GARANTIA -->
-<section class="section container guarantee">
-<h2>7 dias de garantia incondicional</h2>
-<p>Se não gostar, devolvemos 100% do seu dinheiro.</p>
-</section>
-
-
-<!-- FAQ -->
-<section class="section container">
-<h2>Dúvidas frequentes</h2>
-
-<div class="faq-item">O acesso é imediato?
-<div class="answer">Sim. Após o pagamento você recebe por e-mail.</div></div>
-
-<div class="faq-item">Funciona mesmo?
-<div class="answer">O método ensina como organizar e melhorar seu histórico de crédito.</div></div>
-
-<div class="faq-item">Posso pagar no cartão?
-<div class="answer">Sim, cartão, pix ou boleto.</div></div>
-
-</section>
-
 
 <a href="https://pay.hotmart.com/N99318938V" class="sticky buy">
 👉 COMEÇAR AGORA
 </a>
 
-
+<!-- ================= SCRIPTS ================= -->
 <script>
 
-/* LEAD */
-document.querySelectorAll('.buy').forEach(btn=>{
-btn.addEventListener('click',e=>{
-e.preventDefault();
-const url=btn.href;
-fbq('track','Lead');
-setTimeout(()=>{window.location.href=url},300);
-});
-});
+/* TIMER */
+let time=600;
+setInterval(()=>{
+let m=Math.floor(time/60);
+let s=time%60;
+document.getElementById("countdown").innerHTML=`${m}:${s<10?'0':''}${s}`;
+time--;
+},1000);
 
-/* FAQ */
-document.querySelectorAll('.faq-item').forEach(item=>{
-item.onclick=()=>item.querySelector('.answer').style.display='block';
+
+/* ================= LEAD PIXEL (CORRIGIDO) ================= */
+/* dispara lead e espera antes de redirecionar */
+
+document.querySelectorAll('.buy').forEach(btn=>{
+  btn.addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    const url = this.href;
+
+    fbq('track','Lead');
+
+    setTimeout(()=>{
+      window.location.href = url;
+    }, 300);
+
+  });
 });
+/* ========================================================= */
 
 </script>
+<!-- ========================================== -->
 
 </body>
 </html>
