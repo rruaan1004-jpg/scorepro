@@ -3,7 +3,6 @@
 
 <head>
 
-<!-- ========= GTM ========= -->
 <script>
 window.dataLayer = window.dataLayer || [];
 </script>
@@ -20,7 +19,6 @@ f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NQKTKKGB');
 </script>
 
-<!-- ========= META PIXEL ========= -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
@@ -45,7 +43,6 @@ fbq('track','PageView');
 
 <style>
 *{box-sizing:border-box;font-family:Arial,sans-serif}
-
 body{
 margin:0;
 background:linear-gradient(135deg,#0b0f18,#171c27);
@@ -56,7 +53,6 @@ align-items:center;
 height:100vh;
 padding:15px;
 }
-
 .card{
 max-width:420px;
 width:100%;
@@ -66,10 +62,8 @@ border-radius:20px;
 box-shadow:0 25px 70px rgba(0,0,0,.6);
 text-align:center;
 }
-
 h1{font-size:20px;margin-bottom:8px}
 .sub{font-size:13px;opacity:.7;margin-bottom:18px}
-
 .progress{
 height:6px;
 background:#2a3142;
@@ -77,16 +71,13 @@ border-radius:10px;
 overflow:hidden;
 margin-bottom:18px;
 }
-
 .fill{
 height:100%;
 width:0%;
 background:#ff2f75;
 transition:.4s;
 }
-
 .question{min-height:55px;font-size:16px;margin-bottom:12px}
-
 .options button{
 width:100%;
 padding:14px;
@@ -97,16 +88,13 @@ background:#242c3a;
 color:#fff;
 cursor:pointer;
 }
-
 .result{display:none}
-
 .score{
 font-size:46px;
 font-weight:bold;
 color:#ff2f75;
 margin:10px 0;
 }
-
 .cta{
 width:100%;
 padding:16px;
@@ -123,12 +111,6 @@ cursor:pointer;
 
 <body>
 
-<!-- GTM noscript -->
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQKTKKGB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-
 <div class="card">
 
 <h1>Diagnóstico gratuito do seu Score</h1>
@@ -142,28 +124,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </div>
 
 <div id="resultBox" class="result">
-  <h1>Seu diagnóstico está pronto</h1>
+  <h1>Seu resultado está pronto</h1>
   <div class="score" id="score">420</div>
-  <p id="resultText">
-    Identificamos fatores que podem estar afetando seu crédito.
-    Consulte agora seu diagnóstico completo com orientações seguras.
+
+  <p>
+    Seu score pode estar sendo impactado por alguns fatores comuns.
+    Veja agora como melhorar isso de forma simples.
   </p>
-  <button class="cta" id="btnLead">Ver meu diagnóstico completo</button>
+
+  <button class="cta" id="btnLead">Descobrir como melhorar meu score</button>
 </div>
 
 </div>
-
 
 <script>
 
 const link="https://metodozeroexposicao.com";
 
-/* QUIZ OTIMIZADO */
 const questions=[
 "Seu crédito já foi negado alguma vez?",
 "Você gostaria de melhorar seu score mais rápido?",
 "Possui dívidas atrasadas atualmente?",
-"Quer ver um diagnóstico gratuito com orientações para seu score?"
+"Quer ver como melhorar seu score com orientações simples?"
 ];
 
 let step=0;
@@ -198,8 +180,6 @@ document.getElementById("resultBox").style.display="block";
 document.getElementById("score").innerText=score;
 }
 
-/* ========= LEAD ========= */
-
 document.getElementById("btnLead").addEventListener("mousedown",function(){
 
 if(typeof fbq !== "undefined"){
@@ -213,8 +193,6 @@ setTimeout(function(){
 },800);
 
 });
-
-/* ======================== */
 
 show();
 
