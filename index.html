@@ -4,260 +4,250 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Método Zero Exposição</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Organize sua Vida Financeira</title>
 
 <style>
-*{box-sizing:border-box;font-family:'Poppins',sans-serif}
 
 body{
-  margin:0;
-  background:radial-gradient(circle at top,#1b0f24,#0b0b0f);
-  color:#fff;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+background:#f6f7f9;
+margin:0;
+color:#222;
 }
-
-.topbar{
-  background:#ff003c;
-  text-align:center;
-  padding:10px;
-  font-weight:700;
-  animation:blink 1s infinite;
-}
-@keyframes blink{50%{opacity:.6}}
 
 .container{
-  max-width:820px;
-  margin:auto;
-  padding:22px;
-}
-
-.hero{text-align:center;padding:60px 0 40px}
-
-.hero h1{
-  font-size:34px;
-  font-weight:800;
-  line-height:1.35;
-}
-
-.highlight{
-  color:#ff2ea6;
-  text-shadow:0 0 12px #ff2ea6;
+max-width:620px;
+margin:auto;
+padding:20px;
 }
 
 .card{
-  background:#17171d;
-  padding:26px;
-  border-radius:18px;
-  margin:22px 0;
-  box-shadow:0 0 40px rgba(255,0,130,.2);
+background:#fff;
+padding:26px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,0.07);
+margin-bottom:18px;
 }
 
-.btn{
-  display:block;
-  text-align:center;
-  padding:20px;
-  background:linear-gradient(90deg,#ff2ea6,#ff0066);
-  border-radius:14px;
-  font-size:20px;
-  font-weight:800;
-  color:#fff;
-  text-decoration:none;
-  box-shadow:0 0 25px rgba(255,0,130,.7);
-  margin-top:20px;
-  animation:pulse 1.3s infinite;
+h1{
+font-size:26px;
+line-height:1.3;
 }
 
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.04)}
-  100%{transform:scale(1)}
+h2{
+font-size:20px;
+margin-bottom:12px;
 }
 
+p{
+line-height:1.6;
+}
+
+ul{
+padding-left:18px;
+line-height:1.8;
+}
+
+.center{
+text-align:center;
+}
+
+.cta{
+background:#00c853;
+color:#fff;
+border:none;
+width:100%;
+padding:16px;
+font-size:18px;
+border-radius:10px;
+font-weight:bold;
+margin-top:14px;
+cursor:pointer;
+}
+
+.cta:hover{
+opacity:.92;
+}
+
+/* contador */
 .timer{
-  font-size:32px;
-  color:#00ff9d;
-  font-weight:800;
+background:#ffe9e9;
+color:#d40000;
+font-weight:bold;
+padding:10px;
+border-radius:8px;
+margin-top:10px;
+font-size:14px;
 }
 
-ul{line-height:2}
-
-.sticky{
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  padding:18px;
-  text-align:center;
-  background:#ff0066;
-  font-weight:800;
-  text-decoration:none;
-  color:#fff;
-  font-size:18px;
+.video{
+position:relative;
+padding-bottom:56%;
+height:0;
+overflow:hidden;
+border-radius:10px;
 }
 
-.toast{
-  position:fixed;
-  left:15px;
-  bottom:90px;
-  background:#111;
-  padding:12px 18px;
-  border-radius:12px;
-  font-size:13px;
-  display:none;
+.video iframe{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
 }
 
-.onlineBox{
-  position:fixed;
-  top:15px;
-  right:15px;
-  background:#ff0066;
-  padding:8px 14px;
-  border-radius:20px;
-  font-size:13px;
-  font-weight:700;
+.payments{
+font-size:13px;
+opacity:.7;
+margin-top:10px;
 }
 
-.depo{
-  background:#1b1b23;
-  padding:18px;
-  border-radius:12px;
-  font-size:14px;
+.small{
+font-size:12px;
+opacity:.6;
+margin-top:10px;
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-⚠️ ÚLTIMAS VAGAS — essa promoção pode sair do ar hoje
-</div>
-
-<div class="onlineBox">
-🔥 <span id="onlineCount">18</span> pessoas agora
-</div>
-
 <div class="container">
 
+
 <!-- HERO -->
-<section class="hero">
+<div class="card center">
+
 <h1>
-Seu <span class="highlight">score é baixo</span> e os bancos vivem te negando crédito?<br><br>
-Descubra o método simples que já fez pessoas subirem<br>
-<span class="highlight">+300 pontos em poucas semanas</span>
+Se o teu salário nunca sobra e tu não sabe pra onde o dinheiro vai…
+o problema não é quanto tu ganha — é a falta de um método.
 </h1>
 
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
-🔥 QUERO AUMENTAR MEU SCORE AGORA
-</a>
-</section>
-
-
-<!-- DOR FORTE -->
-<section class="card">
-<h2>Se você já passou por isso, sabe como dói:</h2>
-<ul>
-<li>❌ Cartão recusado na maquininha</li>
-<li>❌ Crédito negado no banco</li>
-<li>❌ Limite ridículo</li>
-<li>❌ Financiamento bloqueado</li>
-<li>❌ Sensação de estar travado financeiramente</li>
-</ul>
-
-<p style="margin-top:15px">
-A verdade é que os bancos usam regras escondidas que quase ninguém conhece…
-E é exatamente isso que você vai aprender aqui dentro.
+<p>
+Aprende um passo a passo simples pra organizar gastos, sair das dívidas
+e começar a guardar dinheiro todo mês — mesmo ganhando pouco.
 </p>
-</section>
 
-
-<!-- CONTADOR -->
-<section class="card" style="text-align:center">
-<h2>Oferta termina em:</h2>
-<div class="timer" id="countdown">10:00</div>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
-🚀 GARANTIR MINHA VAGA
+<a href="https://go.hotmart.com/K104263832O?ap=2d13">
+<button class="cta">QUERO ORGANIZAR MINHAS FINANÇAS AGORA</button>
 </a>
-</section>
+
+<div class="payments">
+💳 Pix • Visa • Mastercard • Boleto
+</div>
+
+</div>
+
+
+
+<!-- STORYTELLING -->
+<div class="card">
+
+<h2>Eu passei exatamente por isso…</h2>
+
+<p>
+Todo mês era a mesma coisa.<br><br>
+
+O salário caía… e em poucos dias sumia.<br>
+Cartão estourado. Contas atrasadas. Ansiedade.<br><br>
+
+Eu achava que ganhava pouco demais.<br>
+Mas descobri que o problema era não ter organização nenhuma.<br><br>
+
+Quando aprendi um método simples de controle financeiro,
+finalmente comecei a ver dinheiro sobrando no fim do mês.
+</p>
+
+</div>
+
+
+
+<!-- VIDEO OPCIONAL -->
+<div class="card">
+
+<h2 class="center">Assiste rápido (1 minuto)</h2>
+
+<div class="video">
+<iframe src="https://go.hotmart.com/K104263832O?ap=2d13" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<a href="https://go.hotmart.com/K104263832O?ap=2d13">
+<button class="cta">VER O MÉTODO COMPLETO</button>
+</a>
+
+</div>
+
 
 
 <!-- BENEFÍCIOS -->
-<section class="card">
-<h2>Dentro você aprende:</h2>
+<div class="card">
+
+<h2>Com esse método você vai:</h2>
+
 <ul>
-<li>✔ Como o score é calculado de verdade</li>
-<li>✔ Ajustes que sobem pontos rápido</li>
-<li>✔ Erros que derrubam sua pontuação sem você perceber</li>
-<li>✔ Como liberar crédito mais fácil</li>
-<li>✔ Passo a passo simples pra aplicar hoje mesmo</li>
+<li>✔ Saber exatamente pra onde cada real vai</li>
+<li>✔ Cortar desperdícios invisíveis</li>
+<li>✔ Parar de depender do cartão</li>
+<li>✔ Criar reserva financeira</li>
+<li>✔ Ter paz no fim do mês</li>
 </ul>
-</section>
 
-
-<!-- PROVA SOCIAL -->
-<section class="card">
-<h2 style="text-align:center">Resultados reais de alunos</h2>
-
-<div style="display:grid;gap:14px;margin-top:20px">
-<div class="depo">“Subi de 420 → 610 em 30 dias. Cartão aprovado na hora.”</div>
-<div class="depo">“Liberaram 5 mil de limite depois do método.”</div>
-<div class="depo">“Meu financiamento que sempre era negado foi aprovado.”</div>
 </div>
-</section>
 
 
-<!-- GARANTIA -->
-<section class="card" style="text-align:center">
-<h2>Risco ZERO pra você</h2>
-<p>
-Teste por 7 dias completos.<br>
-Se não aumentar seu score, devolvemos 100% do seu dinheiro.
+
+<!-- CTA FINAL + URGÊNCIA -->
+<div class="card center">
+
+<h2>Comece hoje mesmo</h2>
+
+<a href="https://go.hotmart.com/K104263832O?ap=2d13>"
+<button class="cta">COMEÇAR AGORA</button>
+</a>
+
+<div class="timer">
+⏳ Acesso disponível por tempo limitado: <span id="countdown"></span>
+</div>
+
+<p class="small">
+Pagamento seguro via Pix, cartão ou boleto • Garantia de 7 dias pela Hotmart
 </p>
-<p style="color:#00ff9d;font-weight:800;">Você não tem nada a perder.</p>
-</section>
-
-
-<!-- PREÇO -->
-<section class="card" style="text-align:center">
-<h2>De R$97 por apenas hoje:</h2>
-<p style="font-size:40px;color:#00ff9d;font-weight:800;">R$47 acesso vitalício</p>
-<p style="font-size:14px;opacity:.8">Menos que uma pizza pra mudar seu crédito pra sempre</p>
-
-<a href="https://pay.hotmart.com/N99318938V" class="btn">
-🔥 COMPRAR AGORA
-</a>
-</section>
 
 </div>
 
-<a href="https://pay.hotmart.com/N99318938V" class="sticky">
-👉 COMEÇAR AGORA
-</a>
 
-<div class="toast" id="toast"></div>
+</div>
 
+
+
+<!-- SCRIPT CONTADOR (15 minutos reinicia automático) -->
 <script>
-let time=600;
-setInterval(()=>{
-let m=Math.floor(time/60);
-let s=time%60;
-document.getElementById("countdown").innerHTML=`${m}:${s<10?'0':''}${s}`;
-time--;
-},1000);
 
-setInterval(()=>{
-document.getElementById("onlineCount").innerText=Math.floor(Math.random()*20)+12;
-},2000);
+var minutes = 15;
+var seconds = 0;
 
-const nomes=["Maria","João","Ana","Carlos","Lucas","Fernanda","Pedro"];
-setInterval(()=>{
-let box=document.getElementById("toast");
-box.innerHTML="✅ "+nomes[Math.floor(Math.random()*nomes.length)]+" acabou de adquirir o método";
-box.style.display="block";
-setTimeout(()=>box.style.display="none",4000);
-},6000);
+function updateTimer(){
+if(seconds == 0){
+if(minutes == 0){
+minutes = 15;
+seconds = 0;
+}else{
+minutes--;
+seconds = 59;
+}
+}else{
+seconds--;
+}
+
+document.getElementById("countdown").innerHTML =
+minutes.toString().padStart(2,'0') + ":" +
+seconds.toString().padStart(2,'0');
+}
+
+setInterval(updateTimer,1000);
+
 </script>
 
 </body>
-  </html>
+</html>
