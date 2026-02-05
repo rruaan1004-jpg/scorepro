@@ -6,6 +6,26 @@
 
 <title>Organize sua Vida Financeira</title>
 
+<!-- 🔥 META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '898113899383416');
+fbq('track', 'PageView');
+</script>
+<!-- 🔥 FIM PIXEL -->
+
+
 <style>
 
 body{
@@ -18,12 +38,12 @@ color:#222;
 .container{
 max-width:620px;
 margin:auto;
-padding:28px 18px 60px;
+padding:30px 18px 60px;
 }
 
 .card{
 background:#fff;
-padding:32px 26px;
+padding:34px 26px;
 border-radius:16px;
 box-shadow:0 10px 28px rgba(0,0,0,0.08);
 margin-bottom:26px;
@@ -80,45 +100,28 @@ margin-top:18px;
 font-weight:bold;
 }
 
-.payments{
-margin-top:20px;
-font-size:14px;
-opacity:.85;
+.payment-icons{
+display:flex;
+justify-content:center;
+gap:12px;
+margin-top:14px;
+flex-wrap:wrap;
 }
 
-.payment-icons{
-margin-top:8px;
-font-size:22px;
-letter-spacing:6px;
+.payment-icons img{
+height:26px;
 }
 
 .security{
-margin-top:14px;
 font-size:13px;
 opacity:.7;
-}
-
-.video{
-position:relative;
-padding-bottom:56%;
-height:0;
-overflow:hidden;
-border-radius:12px;
-margin-top:18px;
-}
-
-.video iframe{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+margin-top:10px;
 }
 
 .small{
 font-size:12px;
 opacity:.6;
-margin-top:14px;
+margin-top:12px;
 }
 
 </style>
@@ -142,20 +145,20 @@ Aprenda um passo a passo simples pra organizar gastos, sair das dívidas
 e começar a guardar dinheiro todo mês.
 </p>
 
-<a href="https://go.hotmart.com/K104263832O?ap=2d13">
-<button class="cta">
-QUERO ORGANIZAR MINHAS FINANÇAS AGORA
-</button>
+<a href="https://go.hotmart.com/K104263832O?ap=2d13"
+   onclick="fbq('track','Lead');">
+<button class="cta">QUERO ORGANIZAR MINHAS FINANÇAS AGORA</button>
 </a>
 
-<div class="payments">
-Aceitamos:
-<div class="payment-icons">💳 🟦 🟥 🟨 ⚡</div>
-Pix • Visa • Mastercard • Boleto
+<div class="payment-icons">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png">
+<img src="https://logodownload.org/wp-content/uploads/2020/02/pix-banco-central-logo.png">
+<img src="https://cdn-icons-png.flaticon.com/512/633/633611.png">
 </div>
 
 <div class="security">
-🔒 Compra 100% segura • Pagamento processado pela Hotmart
+🔒 Pagamento 100% seguro • Processado pela Hotmart
 </div>
 
 </div>
@@ -169,29 +172,11 @@ Pix • Visa • Mastercard • Boleto
 
 <p>
 O salário caía… e simplesmente sumia.<br>
-Cartão estourado. Contas atrasadas. Ansiedade todo mês.<br><br>
+Cartão estourado. Contas atrasadas. Ansiedade.<br><br>
 
-Até aprender um método prático de organização financeira.<br><br>
-
-Hoje eu sei exatamente pra onde cada real vai — e finalmente comecei a guardar dinheiro.
+Quando aprendi um método simples de organização financeira,
+finalmente comecei a ver dinheiro sobrando no fim do mês.
 </p>
-
-</div>
-
-
-
-<!-- VIDEO (OPCIONAL) -->
-<div class="card">
-
-<h2 class="center">Assista rápido (1 minuto)</h2>
-
-<div class="video">
-<iframe src="LINK_DO_VIDEO" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<a href="https://go.hotmart.com/K104263832O?ap=2d13">
-<button class="cta">VER O MÉTODO COMPLETO</button>
-</a>
 
 </div>
 
@@ -217,9 +202,8 @@ Hoje eu sei exatamente pra onde cada real vai — e finalmente comecei a guardar
 <!-- CTA FINAL -->
 <div class="card center">
 
-<h2>Comece hoje mesmo</h2>
-
-<a href="https://go.hotmart.com/K104263832O?ap=2d13">
+<a href="https://go.hotmart.com/K104263832O?ap=2d13"
+   onclick="fbq('track','Lead');">
 <button class="cta">COMEÇAR AGORA</button>
 </a>
 
@@ -236,7 +220,6 @@ Garantia de 7 dias • Reembolso direto pela Hotmart
 
 
 </div>
-
 
 
 <script>
