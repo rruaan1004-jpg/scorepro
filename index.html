@@ -18,25 +18,26 @@ color:#222;
 .container{
 max-width:620px;
 margin:auto;
-padding:20px;
+padding:28px 18px 60px;
 }
 
 .card{
 background:#fff;
-padding:26px;
-border-radius:14px;
-box-shadow:0 8px 25px rgba(0,0,0,0.07);
-margin-bottom:18px;
+padding:32px 26px;
+border-radius:16px;
+box-shadow:0 10px 28px rgba(0,0,0,0.08);
+margin-bottom:26px;
 }
 
 h1{
 font-size:26px;
-line-height:1.3;
+line-height:1.35;
+margin-bottom:18px;
 }
 
 h2{
 font-size:20px;
-margin-bottom:12px;
+margin-bottom:14px;
 }
 
 p{
@@ -44,8 +45,8 @@ line-height:1.6;
 }
 
 ul{
-padding-left:18px;
-line-height:1.8;
+padding-left:20px;
+line-height:2;
 }
 
 .center{
@@ -57,27 +58,44 @@ background:#00c853;
 color:#fff;
 border:none;
 width:100%;
-padding:16px;
-font-size:18px;
-border-radius:10px;
+padding:18px;
+font-size:19px;
+border-radius:12px;
 font-weight:bold;
-margin-top:14px;
+margin-top:22px;
 cursor:pointer;
+box-shadow:0 6px 14px rgba(0,200,83,0.35);
 }
 
 .cta:hover{
-opacity:.92;
+transform:scale(1.02);
 }
 
-/* contador */
 .timer{
-background:#ffe9e9;
+background:#fff2f2;
 color:#d40000;
+padding:12px;
+border-radius:10px;
+margin-top:18px;
 font-weight:bold;
-padding:10px;
-border-radius:8px;
-margin-top:10px;
+}
+
+.payments{
+margin-top:20px;
 font-size:14px;
+opacity:.85;
+}
+
+.payment-icons{
+margin-top:8px;
+font-size:22px;
+letter-spacing:6px;
+}
+
+.security{
+margin-top:14px;
+font-size:13px;
+opacity:.7;
 }
 
 .video{
@@ -85,7 +103,8 @@ position:relative;
 padding-bottom:56%;
 height:0;
 overflow:hidden;
-border-radius:10px;
+border-radius:12px;
+margin-top:18px;
 }
 
 .video iframe{
@@ -96,16 +115,10 @@ width:100%;
 height:100%;
 }
 
-.payments{
-font-size:13px;
-opacity:.7;
-margin-top:10px;
-}
-
 .small{
 font-size:12px;
 opacity:.6;
-margin-top:10px;
+margin-top:14px;
 }
 
 </style>
@@ -125,51 +138,55 @@ o problema não é quanto tu ganha — é a falta de um método.
 </h1>
 
 <p>
-Aprende um passo a passo simples pra organizar gastos, sair das dívidas
-e começar a guardar dinheiro todo mês — mesmo ganhando pouco.
+Aprenda um passo a passo simples pra organizar gastos, sair das dívidas
+e começar a guardar dinheiro todo mês.
 </p>
 
 <a href="https://go.hotmart.com/K104263832O?ap=2d13">
-<button class="cta">QUERO ORGANIZAR MINHAS FINANÇAS AGORA</button>
+<button class="cta">
+QUERO ORGANIZAR MINHAS FINANÇAS AGORA
+</button>
 </a>
 
 <div class="payments">
-💳 Pix • Visa • Mastercard • Boleto
+Aceitamos:
+<div class="payment-icons">💳 🟦 🟥 🟨 ⚡</div>
+Pix • Visa • Mastercard • Boleto
+</div>
+
+<div class="security">
+🔒 Compra 100% segura • Pagamento processado pela Hotmart
 </div>
 
 </div>
 
 
 
-<!-- STORYTELLING -->
+<!-- STORY -->
 <div class="card">
 
 <h2>Eu passei exatamente por isso…</h2>
 
 <p>
-Todo mês era a mesma coisa.<br><br>
+O salário caía… e simplesmente sumia.<br>
+Cartão estourado. Contas atrasadas. Ansiedade todo mês.<br><br>
 
-O salário caía… e em poucos dias sumia.<br>
-Cartão estourado. Contas atrasadas. Ansiedade.<br><br>
+Até aprender um método prático de organização financeira.<br><br>
 
-Eu achava que ganhava pouco demais.<br>
-Mas descobri que o problema era não ter organização nenhuma.<br><br>
-
-Quando aprendi um método simples de controle financeiro,
-finalmente comecei a ver dinheiro sobrando no fim do mês.
+Hoje eu sei exatamente pra onde cada real vai — e finalmente comecei a guardar dinheiro.
 </p>
 
 </div>
 
 
 
-<!-- VIDEO OPCIONAL -->
+<!-- VIDEO (OPCIONAL) -->
 <div class="card">
 
-<h2 class="center">Assiste rápido (1 minuto)</h2>
+<h2 class="center">Assista rápido (1 minuto)</h2>
 
 <div class="video">
-<iframe src="https://go.hotmart.com/K104263832O?ap=2d13" frameborder="0" allowfullscreen></iframe>
+<iframe src="LINK_DO_VIDEO" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <a href="https://go.hotmart.com/K104263832O?ap=2d13">
@@ -197,21 +214,22 @@ finalmente comecei a ver dinheiro sobrando no fim do mês.
 
 
 
-<!-- CTA FINAL + URGÊNCIA -->
+<!-- CTA FINAL -->
 <div class="card center">
 
 <h2>Comece hoje mesmo</h2>
 
-<a href="https://go.hotmart.com/K104263832O?ap=2d13>"
+<a href="https://go.hotmart.com/K104263832O?ap=2d13">
 <button class="cta">COMEÇAR AGORA</button>
 </a>
 
 <div class="timer">
-⏳ Acesso disponível por tempo limitado: <span id="countdown"></span>
+⏳ Acesso disponível por tempo limitado:
+<span id="countdown"></span>
 </div>
 
 <p class="small">
-Pagamento seguro via Pix, cartão ou boleto • Garantia de 7 dias pela Hotmart
+Garantia de 7 dias • Reembolso direto pela Hotmart
 </p>
 
 </div>
@@ -221,9 +239,7 @@ Pagamento seguro via Pix, cartão ou boleto • Garantia de 7 dias pela Hotmart
 
 
 
-<!-- SCRIPT CONTADOR (15 minutos reinicia automático) -->
 <script>
-
 var minutes = 15;
 var seconds = 0;
 
@@ -246,8 +262,7 @@ seconds.toString().padStart(2,'0');
 }
 
 setInterval(updateTimer,1000);
-
 </script>
 
 </body>
-</html>
+  </html>
