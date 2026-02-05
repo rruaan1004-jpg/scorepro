@@ -11,20 +11,15 @@
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '898113899383416');
 fbq('track', 'PageView');
 </script>
-<!-- 🔥 FIM PIXEL -->
-
 
 <style>
 
@@ -33,43 +28,31 @@ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
 background:#f6f7f9;
 margin:0;
 color:#222;
+padding-bottom:90px; /* espaço pro botão fixo */
 }
 
 .container{
 max-width:620px;
 margin:auto;
-padding:30px 18px 60px;
+padding:28px 18px;
 }
 
 .card{
 background:#fff;
-padding:34px 26px;
+padding:32px 24px;
 border-radius:16px;
 box-shadow:0 10px 28px rgba(0,0,0,0.08);
-margin-bottom:26px;
+margin-bottom:24px;
 }
 
 h1{
 font-size:26px;
 line-height:1.35;
-margin-bottom:18px;
-}
-
-h2{
-font-size:20px;
-margin-bottom:14px;
+text-align:center;
 }
 
 p{
 line-height:1.6;
-}
-
-ul{
-padding-left:20px;
-line-height:2;
-}
-
-.center{
 text-align:center;
 }
 
@@ -79,49 +62,68 @@ color:#fff;
 border:none;
 width:100%;
 padding:18px;
-font-size:19px;
+font-size:18px;
 border-radius:12px;
 font-weight:bold;
-margin-top:22px;
-cursor:pointer;
-box-shadow:0 6px 14px rgba(0,200,83,0.35);
-}
-
-.cta:hover{
-transform:scale(1.02);
-}
-
-.timer{
-background:#fff2f2;
-color:#d40000;
-padding:12px;
-border-radius:10px;
 margin-top:18px;
-font-weight:bold;
+cursor:pointer;
 }
 
-.payment-icons{
+/* pagamentos */
+.payments{
 display:flex;
 justify-content:center;
-gap:12px;
-margin-top:14px;
+gap:10px;
 flex-wrap:wrap;
+margin-top:16px;
 }
 
-.payment-icons img{
-height:26px;
+.pay{
+background:#f1f1f1;
+padding:6px 12px;
+border-radius:6px;
+font-size:13px;
+font-weight:bold;
 }
 
 .security{
-font-size:13px;
-opacity:.7;
-margin-top:10px;
-}
-
-.small{
 font-size:12px;
 opacity:.6;
-margin-top:12px;
+text-align:center;
+margin-top:8px;
+}
+
+/* contador */
+.timer{
+background:#fff2f2;
+color:#d40000;
+padding:10px;
+border-radius:8px;
+margin-top:14px;
+font-weight:bold;
+text-align:center;
+}
+
+/* 🔥 BOTÃO FIXO */
+.sticky{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#ffffff;
+padding:10px;
+box-shadow:0 -5px 20px rgba(0,0,0,0.15);
+}
+
+.sticky button{
+background:#00c853;
+color:#fff;
+border:none;
+width:100%;
+padding:16px;
+font-size:18px;
+border-radius:10px;
+font-weight:bold;
 }
 
 </style>
@@ -131,9 +133,8 @@ margin-top:12px;
 
 <div class="container">
 
-
 <!-- HERO -->
-<div class="card center">
+<div class="card">
 
 <h1>
 Se o teu salário nunca sobra e tu não sabe pra onde o dinheiro vai…
@@ -146,33 +147,28 @@ e começar a guardar dinheiro todo mês.
 </p>
 
 <a href="https://go.hotmart.com/K104263832O?ap=2d13"
-   onclick="fbq('track','Lead');">
+onclick="fbq('track','Lead');">
 <button class="cta">QUERO ORGANIZAR MINHAS FINANÇAS AGORA</button>
 </a>
 
-<div class="payment-icons">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png">
-<img src="https://logodownload.org/wp-content/uploads/2020/02/pix-banco-central-logo.png">
-<img src="https://cdn-icons-png.flaticon.com/512/633/633611.png">
+<div class="payments">
+<span class="pay">Visa</span>
+<span class="pay">Mastercard</span>
+<span class="pay">Pix</span>
+<span class="pay">Boleto</span>
 </div>
 
-<div class="security">
-🔒 Pagamento 100% seguro • Processado pela Hotmart
-</div>
+<p class="security">🔒 Pagamento 100% seguro • Processado pela Hotmart</p>
 
 </div>
-
 
 
 <!-- STORY -->
 <div class="card">
 
-<h2>Eu passei exatamente por isso…</h2>
-
 <p>
 O salário caía… e simplesmente sumia.<br>
-Cartão estourado. Contas atrasadas. Ansiedade.<br><br>
+Cartão estourado. Contas atrasadas. Ansiedade todo mês.<br><br>
 
 Quando aprendi um método simples de organização financeira,
 finalmente comecei a ver dinheiro sobrando no fim do mês.
@@ -181,71 +177,44 @@ finalmente comecei a ver dinheiro sobrando no fim do mês.
 </div>
 
 
-
 <!-- BENEFÍCIOS -->
 <div class="card">
 
-<h2>Com esse método você vai:</h2>
-
-<ul>
-<li>✔ Saber exatamente pra onde cada real vai</li>
-<li>✔ Cortar desperdícios invisíveis</li>
-<li>✔ Parar de depender do cartão</li>
-<li>✔ Criar reserva financeira</li>
-<li>✔ Ter paz no fim do mês</li>
-</ul>
-
-</div>
-
-
-
-<!-- CTA FINAL -->
-<div class="card center">
-
-<a href="https://go.hotmart.com/K104263832O?ap=2d13"
-   onclick="fbq('track','Lead');">
-<button class="cta">COMEÇAR AGORA</button>
-</a>
+<p>
+✔ Saber pra onde cada real vai<br>
+✔ Cortar desperdícios invisíveis<br>
+✔ Sair do vermelho<br>
+✔ Criar reserva financeira<br>
+✔ Ter paz no fim do mês
+</p>
 
 <div class="timer">
 ⏳ Acesso disponível por tempo limitado:
 <span id="countdown"></span>
 </div>
 
-<p class="small">
-Garantia de 7 dias • Reembolso direto pela Hotmart
-</p>
+</div>
 
 </div>
 
 
+<!-- 🔥 BOTÃO FIXO NO RODAPÉ -->
+<div class="sticky">
+<a href="https://go.hotmart.com/K104263832O?ap=2d13"
+onclick="fbq('track','Lead');">
+<button>COMEÇAR AGORA</button>
+</a>
 </div>
 
 
 <script>
-var minutes = 15;
-var seconds = 0;
-
-function updateTimer(){
-if(seconds == 0){
-if(minutes == 0){
-minutes = 15;
-seconds = 0;
-}else{
-minutes--;
-seconds = 59;
-}
-}else{
-seconds--;
-}
-
-document.getElementById("countdown").innerHTML =
-minutes.toString().padStart(2,'0') + ":" +
-seconds.toString().padStart(2,'0');
-}
-
-setInterval(updateTimer,1000);
+var m=15,s=0;
+setInterval(function(){
+if(s==0){if(m==0){m=15;s=0}else{m--;s=59}}else{s--}
+document.getElementById("countdown").innerHTML=
+m.toString().padStart(2,'0')+":"+s.toString().padStart(2,'0');
+},1000);
 </script>
 
 </body>
-  </html>
+   </html>
