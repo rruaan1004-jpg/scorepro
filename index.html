@@ -28,62 +28,38 @@ max-width:1200px;
 margin:auto;
 }
 
-h1,h2,h3{
-font-weight:700;
-}
-
-h2{
-text-align:center;
-margin-bottom:60px;
-font-size:36px;
-}
-
-/* HERO */
+/* ===== HERO ===== */
 
 .hero{
 display:flex;
 flex-wrap:wrap;
 align-items:center;
-gap:50px;
+justify-content:center;
+gap:60px;
+text-align:center;
 }
 
 .hero-text{
-flex:1;
+flex:1 1 420px;
 }
 
-.hero-text h1{
-font-size:46px;
-margin-bottom:20px;
+.hero h1{
+font-size:52px;
+margin-bottom:15px;
 }
 
-.hero-text p{
+.hero p{
 font-size:20px;
-opacity:.85;
+opacity:.9;
 margin-bottom:30px;
 }
 
-.hero-img{
-flex:1;
-display:flex;
-gap:20px;
-justify-content:center;
-}
-
-.hero-img img{
-width:48%;
-border-radius:14px;
-box-shadow:0 15px 40px rgba(0,0,0,.6);
-}
-
-/* BUTTON */
-
 .btn{
-background:#2de0c4;
-color:#000;
-padding:18px 45px;
-border-radius:10px;
+background:#2ee6c2;
+color:#06202f;
+padding:18px 42px;
+border-radius:12px;
 font-weight:700;
-font-size:18px;
 text-decoration:none;
 display:inline-block;
 transition:.3s;
@@ -93,246 +69,68 @@ transition:.3s;
 transform:scale(1.05);
 }
 
-/* TIMER */
+/* ===== IMAGENS (CORRIGIDO AQUI) ===== */
 
-.timer{
-margin-top:20px;
-color:#ff7676;
-font-weight:600;
-}
-
-/* CARDS */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.card{
-background:#132f46;
-padding:30px;
-border-radius:14px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
-
-/* BEFORE AFTER */
-
-.compare{
+.hero-images{
+flex:1 1 500px;
 display:flex;
-flex-wrap:wrap;
-gap:30px;
-}
-
-.compare div{
-flex:1;
-background:#132f46;
-padding:30px;
-border-radius:14px;
-}
-
-/* TESTIMONIALS */
-
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
-}
-
-.testimonial{
-background:#132f46;
-padding:25px;
-border-radius:14px;
-text-align:center;
-}
-
-.testimonial img{
-width:70px;
-height:70px;
-border-radius:50%;
-margin-bottom:15px;
-}
-
-/* FAQ */
-
-details{
-background:#132f46;
-padding:20px;
-border-radius:10px;
-margin-bottom:15px;
-cursor:pointer;
-}
-
-summary{
-font-weight:600;
-font-size:18px;
-}
-
-/* GUARANTEE */
-
-.guarantee{
-text-align:center;
-background:#0f2539;
-padding:60px;
-border-radius:20px;
-}
-
-/* WHATS */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-width:65px;
-height:65px;
-background:#25d366;
-border-radius:50%;
-display:flex;
-align-items:center;
 justify-content:center;
-font-size:30px;
-color:#fff;
-text-decoration:none;
-animation:pulse 1.5s infinite;
+align-items:center;
+flex-wrap:wrap;
 }
 
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
-70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
-100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+.hero-images img{
+width:260px;
+border-radius:16px;
+box-shadow:0 15px 35px rgba(0,0,0,.45);
+transition:.3s;
+}
+
+.hero-images img:hover{
+transform:translateY(-6px);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+}
+.hero-images img{
+width:90%;
+}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
 
 <div class="hero-text">
-<h1>Controle todo o financeiro do seu Alojamento Local em 5 minutos por dia</h1>
-<p>Pare de perder dinheiro, erros manuais e planilhas confusas. Tenha tudo automático, organizado e profissional.</p>
+<h1>Gestor AL Pro</h1>
 
-<a class="btn" href="https://go.hotmart.com/M104320817Y" target="_blank">Comprar Agora</a>
+<p>
+Controle financeiro completo do seu Alojamento Local  
+em apenas <strong>5 minutos por dia</strong>
+</p>
 
-<div class="timer">🔥 Oferta termina em <span id="timer"></span></div>
+<a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
 </div>
 
-<div class="hero-img">
-<img src="capa.jpg">
-<img src="painel.jpg">
+
+<!-- 🔥 AQUI ESTÁ A CORREÇÃO REAL 🔥 -->
+<div class="hero-images">
+
+<!-- CAPA -->
+<img src="capa.jpg" alt="Capa do produto">
+
+<!-- DASHBOARD (PAINEL) -->
+<img src="painel.jpg" alt="Dashboard financeiro">
+
 </div>
 
 </section>
-
-<!-- BENEFICIOS -->
-<section>
-<h2>O que você vai ganhar</h2>
-
-<div class="grid">
-<div class="card">Controle total de reservas</div>
-<div class="card">Cálculo automático de taxas</div>
-<div class="card">Relatórios e gráficos prontos</div>
-<div class="card">Dashboard profissional</div>
-<div class="card">Economize horas toda semana</div>
-<div class="card">Mais lucro, menos stress</div>
-</div>
-</section>
-
-<!-- ANTES DEPOIS -->
-<section>
-<h2>Antes vs Depois</h2>
-
-<div class="compare">
-<div>
-<h3>❌ Antes</h3>
-<p>Planilhas confusas, erros, contas manuais e perda de dinheiro.</p>
-</div>
-
-<div>
-<h3>✅ Depois</h3>
-<p>Relatórios automáticos, controle total e visão clara do lucro.</p>
-</div>
-</div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section>
-<h2>Quem já usa recomenda</h2>
-
-<div class="testimonials">
-
-<div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=1">
-⭐⭐⭐⭐⭐
-<p>"Finalmente organizei minhas finanças"</p>
-<strong>Carlos — Porto</strong>
-</div>
-
-<div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=2">
-⭐⭐⭐⭐⭐
-<p>"Economizei 3h por semana"</p>
-<strong>Ana — Lisboa</strong>
-</div>
-
-<div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=3">
-⭐⭐⭐⭐⭐
-<p>"Vale cada euro investido"</p>
-<strong>Miguel — Algarve</strong>
-</div>
-
-</div>
-</section>
-
-<!-- GARANTIA -->
-<section class="guarantee">
-<h2>Garantia total de 7 dias</h2>
-<p>Teste sem risco. Se não gostar, devolvemos 100% do dinheiro.</p>
-<br>
-<a class="btn" href="https://go.hotmart.com/M104320817Y" target="_blank">Quero Comprar Agora</a>
-</section>
-
-<!-- FAQ -->
-<section>
-<h2>Perguntas Frequentes</h2>
-
-<details>
-<summary>Funciona no Excel?</summary>
-<p>Sim, 100% compatível.</p>
-</details>
-
-<details>
-<summary>Precisa internet?</summary>
-<p>Não, funciona offline.</p>
-</details>
-
-<details>
-<summary>Recebo na hora?</summary>
-<p>Download imediato após o pagamento.</p>
-</details>
-
-<details>
-<summary>Posso pedir reembolso?</summary>
-<p>Sim, 7 dias de garantia total.</p>
-</details>
-
-</section>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/351923515605" target="_blank">☎</a>
-
-<script>
-let time=3600;
-setInterval(()=>{
-let m=Math.floor(time/60);
-let s=time%60;
-document.getElementById("timer").innerHTML=m+":"+("0"+s).slice(-2);
-time--;
-},1000);
-</script>
 
 </body>
-                          </html>
+</html>
