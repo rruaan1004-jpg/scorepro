@@ -1,92 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Gestor AL Pro</title>
+<title>Gestor AL Pro - Controle Financeiro Profissional</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f172a;
-color:white;
+background:#0b1724;
+color:#fff;
+line-height:1.6;
 }
 
-.container{
+section{
+padding:90px 20px;
 max-width:1200px;
 margin:auto;
-padding:70px 20px;
+}
+
+h1{
+font-size:56px;
+font-weight:800;
 text-align:center;
 }
 
-h1{font-size:54px;color:#22d3ee}
-h2{font-size:34px;margin-bottom:40px}
+h2{
+font-size:36px;
+margin-bottom:30px;
+text-align:center;
+}
 
+p{text-align:center;opacity:.85}
+
+/* BOTÕES */
 .btn{
-background:#22d3ee;
+background:#19e0c5;
+color:#000;
 padding:18px 45px;
-border-radius:10px;
-color:black;
-font-weight:bold;
+border-radius:12px;
+font-weight:700;
 text-decoration:none;
+font-size:20px;
 display:inline-block;
-transition:.3s;
+transition:.25s;
 }
-.btn:hover{transform:scale(1.08)}
+.btn:hover{transform:scale(1.05)}
 
-img{
-max-width:100%;
-border-radius:14px;
-box-shadow:0 20px 50px rgba(0,0,0,.6);
+/* HERO */
+.hero{text-align:center;padding-top:120px}
+
+.sub{
+font-size:20px;
+opacity:.8;
+margin-top:15px;
 }
 
-.section{padding:80px 20px}
-.dark{background:#1e293b}
-
-.grid{
+/* MOCKUP */
+.mockup{
 display:flex;
-flex-wrap:wrap;
-gap:30px;
+gap:40px;
 justify-content:center;
+flex-wrap:wrap;
+margin-top:60px;
+}
+
+.mockup img{
+width:450px;
+border-radius:14px;
+box-shadow:0 20px 40px rgba(0,0,0,.6);
+}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
 .card{
-background:#1e293b;
-padding:25px;
-width:260px;
-border-radius:12px;
+background:#12263a;
+padding:30px;
+border-radius:14px;
+text-align:center;
 }
 
+/* BEFORE AFTER */
+.compare{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.box{
+flex:1;
+background:#12263a;
+padding:25px;
+border-radius:14px;
+}
+
+/* TESTEMUNHOS */
 .testimonial{
-background:#111827;
+background:#12263a;
 padding:25px;
-width:300px;
-border-radius:12px;
+border-radius:14px;
+text-align:center;
 }
 
+.testimonial img{
+width:80px;
+height:80px;
+border-radius:50%;
+margin-bottom:10px;
+}
+
+/* GARANTIA */
+.guarantee{
+background:#19e0c5;
+color:#000;
+padding:40px;
+border-radius:14px;
+text-align:center;
+font-weight:700;
+}
+
+/* BADGES */
+.badges{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:25px;
+font-size:14px;
+opacity:.8;
+}
+
+/* FAQ */
 .faq{
-text-align:left;
-max-width:800px;
-margin:auto;
+margin:18px 0;
 }
 
-.faq div{
-margin-bottom:18px;
+/* TIMER */
+.timer{
+color:#ff5c5c;
+font-size:26px;
+margin-top:15px;
 }
 
-.countdown{
-font-size:28px;
-color:#22d3ee;
-margin:20px 0;
-}
-
-/* WhatsApp */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
-bottom:25px;
-right:25px;
+right:20px;
+bottom:20px;
 width:65px;
 height:65px;
 background:#25d366;
@@ -94,14 +165,21 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-animation:pulse 1.6s infinite;
+font-size:30px;
+color:#fff;
+text-decoration:none;
+animation:pulse 1.5s infinite;
 }
-.whatsapp img{width:32px}
-
 @keyframes pulse{
 0%{transform:scale(1)}
-70%{transform:scale(1.12);box-shadow:0 0 0 18px rgba(37,211,102,0)}
+50%{transform:scale(1.15)}
 100%{transform:scale(1)}
+}
+
+footer{
+text-align:center;
+padding:40px;
+opacity:.5;
 }
 </style>
 </head>
@@ -109,103 +187,123 @@ animation:pulse 1.6s infinite;
 <body>
 
 <!-- HERO -->
-<section class="container">
+<section class="hero">
 <h1>Gestor AL Pro</h1>
-<p>Controle financeiro do seu Alojamento Local em apenas 5 minutos por dia</p>
+<p class="sub">O sistema profissional para controlar o financeiro do seu Alojamento Local em 5 minutos por dia</p>
 
-<br>
+<div style="margin-top:30px">
+<a class="btn" href="https://go.hotmart.com/M104320817Y">Comprar Agora</a>
+</div>
 
-<img src="arquivo_000000000d56c7.jpg"> <!-- COLOCA O NOME EXATO -->
+<div class="timer">🔥 Oferta termina em <span id="countdown"></span></div>
 
-<br><br>
-
-<a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
-
-<div class="countdown">
-🔥 Oferta termina em <span id="timer"></span>
+<div class="mockup">
+<img src="arquivo_00000000d56c71f483fd36fe124c3fe4.jpg">
+<img src="IMG_20260207_125738_426.jpg">
 </div>
 </section>
 
-
-
-<!-- DASHBOARD -->
-<section class="section dark">
-<h2>Veja o sistema por dentro</h2>
-<img src="IMG_20260207_125738_426.jpg">
-</section>
-
-
-
 <!-- BENEFÍCIOS -->
-<section class="section">
+<section>
 <h2>O que você vai ganhar</h2>
 
 <div class="grid">
-<div class="card">✔ Controle total de reservas</div>
-<div class="card">✔ Cálculo automático de taxas</div>
-<div class="card">✔ Relatórios prontos</div>
+<div class="card">✔ Controle total de reservas e receitas</div>
+<div class="card">✔ Cálculo automático de taxas e comissões</div>
+<div class="card">✔ Relatórios prontos e gráficos</div>
 <div class="card">✔ Dashboard profissional</div>
 <div class="card">✔ Economia de horas toda semana</div>
 <div class="card">✔ Mais lucro, menos stress</div>
 </div>
 </section>
 
+<!-- ANTES / DEPOIS -->
+<section>
+<h2>Antes vs Depois</h2>
 
+<div class="compare">
+<div class="box">
+<h3>❌ Antes</h3>
+<p>Planilhas confusas<br>Contas no papel<br>Erros de cálculo<br>Perda de tempo</p>
+</div>
+
+<div class="box">
+<h3>✅ Depois</h3>
+<p>Tudo automático<br>Relatórios prontos<br>Controle total<br>Lucro claro todo mês</p>
+</div>
+</div>
+</section>
 
 <!-- DEPOIMENTOS -->
-<section class="section dark">
+<section>
 <h2>Quem já usa recomenda</h2>
 
 <div class="grid">
-<div class="testimonial">⭐⭐⭐⭐⭐<br>“Finalmente organizei minhas finanças!”<br><b>— Carlos, Porto</b></div>
-<div class="testimonial">⭐⭐⭐⭐⭐<br>“Economizei 3h por semana.”<br><b>— Ana, Lisboa</b></div>
-<div class="testimonial">⭐⭐⭐⭐⭐<br>“Vale cada euro.”<br><b>— Miguel, Algarve</b></div>
+<div class="testimonial">
+<img src="https://i.pravatar.cc/100?img=12">
+⭐⭐⭐⭐⭐
+<p>"Finalmente organizei minhas finanças!"</p>
+<b>Carlos - Porto</b>
+</div>
+
+<div class="testimonial">
+<img src="https://i.pravatar.cc/100?img=15">
+⭐⭐⭐⭐⭐
+<p>"Economizei 3h por semana."</p>
+<b>Ana - Lisboa</b>
+</div>
+
+<div class="testimonial">
+<img src="https://i.pravatar.cc/100?img=18">
+⭐⭐⭐⭐⭐
+<p>"Vale cada euro investido."</p>
+<b>Miguel - Algarve</b>
+</div>
 </div>
 </section>
 
+<!-- GARANTIA -->
+<section>
+<div class="guarantee">
+🛡️ Garantia total de 7 dias  
+<br>Teste sem risco. Se não gostar, devolvemos 100% do seu dinheiro.
+</div>
 
+<div class="badges">
+🔒 Pagamento seguro Hotmart | SSL | Download imediato | Suporte WhatsApp
+</div>
+</section>
 
 <!-- FAQ -->
-<section class="section">
+<section>
 <h2>Perguntas Frequentes</h2>
 
-<div class="faq">
-<div><b>Funciona no Excel?</b><br>Sim, 100% compatível.</div>
-<div><b>Precisa internet?</b><br>Não, funciona offline.</div>
-<div><b>Recebo na hora?</b><br>Sim, download imediato.</div>
-<div><b>Tem suporte?</b><br>Sim, WhatsApp direto comigo.</div>
+<div class="faq"><b>Funciona no Excel?</b><br>Sim, 100% compatível.</div>
+<div class="faq"><b>Precisa internet?</b><br>Não, funciona offline.</div>
+<div class="faq"><b>Recebo na hora?</b><br>Download imediato.</div>
+<div class="faq"><b>Posso pedir reembolso?</b><br>Sim, 7 dias de garantia.</div>
+
+<div style="text-align:center;margin-top:40px">
+<a class="btn" href="https://go.hotmart.com/M104320817Y">Quero Comprar Agora</a>
 </div>
 </section>
 
+<footer>
+© 2026 Método Zero Exposição
+</footer>
 
-
-<!-- CTA FINAL -->
-<section class="section dark">
-<h2>Comece hoje mesmo</h2>
-<a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
-</section>
-
-
-
-<!-- WHATSAPP -->
-<a class="whatsapp"
-href="https://wa.me/351923515605?text=Olá,%20tenho%20dúvidas%20sobre%20o%20Gestor%20AL%20Pro"
-target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-</a>
-
-
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/351923515605">📞</a>
 
 <script>
-let time = 3600;
+let time=3600;
 setInterval(()=>{
+let m=Math.floor(time/60);
+let s=time%60;
+document.getElementById("countdown").innerText=m+":"+String(s).padStart(2,"0");
 time--;
-let m = Math.floor(time/60);
-let s = time%60;
-document.getElementById("timer").innerHTML =
-m.toString().padStart(2,"0")+":"+s.toString().padStart(2,"0");
 },1000);
 </script>
 
 </body>
-</html>
+                   </html>
