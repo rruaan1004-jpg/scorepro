@@ -1,220 +1,178 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestor AL Pro Starter | Método Zero Exposição</title>
 
-<title>Organize sua Vida Financeira</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
 
-<!-- 🔥 META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    body{
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+      color:white;
+      line-height:1.5;
+    }
 
-fbq('init', '898113899383416');
-fbq('track', 'PageView');
-</script>
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:60px 20px;
+      text-align:center;
+    }
 
-<style>
+    h1{
+      font-size:48px;
+      margin-bottom:15px;
+    }
 
-body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-background:#f6f7f9;
-margin:0;
-color:#222;
-padding-bottom:90px; /* espaço pro botão fixo */
-}
+    h2{
+      font-size:22px;
+      font-weight:300;
+      color:#cbd5e1;
+    }
 
-.container{
-max-width:620px;
-margin:auto;
-padding:28px 18px;
-}
+    .btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:18px 45px;
+      background:#22c55e;
+      color:#000;
+      font-weight:bold;
+      text-decoration:none;
+      border-radius:12px;
+      font-size:18px;
+      transition:.2s;
+    }
 
-.card{
-background:#fff;
-padding:32px 24px;
-border-radius:16px;
-box-shadow:0 10px 28px rgba(0,0,0,0.08);
-margin-bottom:24px;
-}
+    .btn:hover{
+      transform:scale(1.05);
+    }
 
-h1{
-font-size:26px;
-line-height:1.35;
-text-align:center;
-}
+    .section{
+      padding:80px 20px;
+    }
 
-p{
-line-height:1.6;
-text-align:center;
-}
+    .cards{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+      margin-top:40px;
+    }
 
-.cta{
-background:#00c853;
-color:#fff;
-border:none;
-width:100%;
-padding:18px;
-font-size:18px;
-border-radius:12px;
-font-weight:bold;
-margin-top:18px;
-cursor:pointer;
-}
+    .card{
+      background:#1e293b;
+      padding:25px;
+      width:260px;
+      border-radius:14px;
+      box-shadow:0 0 20px rgba(0,0,0,0.4);
+    }
 
-/* pagamentos */
-.payments{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-margin-top:16px;
-}
+    .price{
+      font-size:46px;
+      font-weight:bold;
+      color:#22c55e;
+      margin:20px 0;
+    }
 
-.pay{
-background:#f1f1f1;
-padding:6px 12px;
-border-radius:6px;
-font-size:13px;
-font-weight:bold;
-}
+    img{
+      max-width:100%;
+      border-radius:16px;
+      margin-top:30px;
+      box-shadow:0 0 25px rgba(0,0,0,.6);
+    }
 
-.security{
-font-size:12px;
-opacity:.6;
-text-align:center;
-margin-top:8px;
-}
+    footer{
+      text-align:center;
+      padding:30px;
+      font-size:14px;
+      color:#94a3b8;
+    }
 
-/* contador */
-.timer{
-background:#fff2f2;
-color:#d40000;
-padding:10px;
-border-radius:8px;
-margin-top:14px;
-font-weight:bold;
-text-align:center;
-}
-
-/* 🔥 BOTÃO FIXO */
-.sticky{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#ffffff;
-padding:10px;
-box-shadow:0 -5px 20px rgba(0,0,0,0.15);
-}
-
-.sticky button{
-background:#00c853;
-color:#fff;
-border:none;
-width:100%;
-padding:16px;
-font-size:18px;
-border-radius:10px;
-font-weight:bold;
-}
-
-</style>
+    @media(max-width:768px){
+      h1{font-size:32px}
+      .cards{flex-direction:column;align-items:center}
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
-
 <!-- HERO -->
-<div class="card">
+<section class="container">
+  <h1>Gestor AL Pro Starter</h1>
+  <h2>Controle financeiro do seu Alojamento Local em 5 minutos por dia</h2>
 
-<h1>
-Se o teu salário nunca sobra e tu não sabe pra onde o dinheiro vai…
-o problema não é quanto tu ganha — é a falta de um método.
-</h1>
+  <a href="https://go.hotmart.com/M104320817Y" class="btn">
+    Comprar agora por 27€
+  </a>
 
-<p>
-Aprenda um passo a passo simples pra organizar gastos, sair das dívidas
-e começar a guardar dinheiro todo mês.
-</p>
-
-<a href="https://go.hotmart.com/K104263832O?ap=2d13"
-onclick="fbq('track','Lead');">
-<button class="cta">QUERO ORGANIZAR MINHAS FINANÇAS AGORA</button>
-</a>
-
-<div class="payments">
-<span class="pay">Visa</span>
-<span class="pay">Mastercard</span>
-<span class="pay">Pix</span>
-<span class="pay">Boleto</span>
-</div>
-
-<p class="security">🔒 Pagamento 100% seguro • Processado pela Hotmart</p>
-
-</div>
+  <!-- coloque depois o print da dashboard aqui -->
+  <!-- substitui dashboard.png pela tua imagem -->
+  <img src="dashboard.png" alt="Dashboard da planilha">
+</section>
 
 
-<!-- STORY -->
-<div class="card">
-
-<p>
-O salário caía… e simplesmente sumia.<br>
-Cartão estourado. Contas atrasadas. Ansiedade todo mês.<br><br>
-
-Quando aprendi um método simples de organização financeira,
-finalmente comecei a ver dinheiro sobrando no fim do mês.
-</p>
-
-</div>
+<!-- PROBLEMA -->
+<section class="section" style="background:#111827">
+  <div class="container">
+    <h1>Menos caos. Mais lucro.</h1>
+    <h2>Pare de perder dinheiro com contas manuais e planilhas confusas.</h2>
+  </div>
+</section>
 
 
 <!-- BENEFÍCIOS -->
-<div class="card">
+<section class="container">
+  <h1>O que você recebe</h1>
 
-<p>
-✔ Saber pra onde cada real vai<br>
-✔ Cortar desperdícios invisíveis<br>
-✔ Sair do vermelho<br>
-✔ Criar reserva financeira<br>
-✔ Ter paz no fim do mês
-</p>
-
-<div class="timer">
-⏳ Acesso disponível por tempo limitado:
-<span id="countdown"></span>
-</div>
-
-</div>
-
-</div>
+  <div class="cards">
+    <div class="card">📊 Dashboard automático de lucros</div>
+    <div class="card">🏠 Controle de reservas por mês</div>
+    <div class="card">💰 Cálculo de taxas e comissões</div>
+    <div class="card">📈 Relatórios prontos</div>
+    <div class="card">⚡ Fácil de usar (Excel/Sheets)</div>
+    <div class="card">📱 Suporte WhatsApp</div>
+  </div>
+</section>
 
 
-<!-- 🔥 BOTÃO FIXO NO RODAPÉ -->
-<div class="sticky">
-<a href="https://go.hotmart.com/K104263832O?ap=2d13"
-onclick="fbq('track','Lead');">
-<button>COMEÇAR AGORA</button>
-</a>
-</div>
+<!-- OFERTA -->
+<section class="section" style="background:#0f172a">
+  <div class="container">
+
+    <h1>Pagamento único</h1>
+    <div class="price">27€</div>
+
+    <h2>Acesso imediato + atualizações gratuitas</h2>
+
+    <a href="https://go.hotmart.com/M104320817Y" class="btn">
+      Quero meu acesso agora
+    </a>
+
+  </div>
+</section>
 
 
-<script>
-var m=15,s=0;
-setInterval(function(){
-if(s==0){if(m==0){m=15;s=0}else{m--;s=59}}else{s--}
-document.getElementById("countdown").innerHTML=
-m.toString().padStart(2,'0')+":"+s.toString().padStart(2,'0');
-},1000);
-</script>
+<!-- FAQ -->
+<section class="container">
+  <h1>Dúvidas rápidas</h1>
+  <p>✔ Funciona no Excel e Google Sheets</p>
+  <p>✔ Download imediato após pagamento</p>
+  <p>✔ Uso vitalício</p>
+  <p>✔ Suporte direto pelo WhatsApp</p>
+</section>
+
+
+<footer>
+  © Método Zero Exposição • Gestor AL Pro Starter
+</footer>
 
 </body>
-   </html>
+</html>
