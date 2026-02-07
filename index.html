@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gestor AL Pro | Controle Financeiro AL</title>
+<title>Gestor AL Pro</title>
 
 <style>
 body{
@@ -14,67 +14,41 @@ background:#0f172a;
 color:white;
 }
 
-/* LAYOUT */
 .container{
 max-width:1200px;
 margin:auto;
-padding:80px 20px;
+padding:70px 20px;
+text-align:center;
 }
 
-h1{font-size:56px;color:#22d3ee;margin-bottom:15px}
-h2{font-size:36px;margin-bottom:30px}
-p{color:#cbd5e1}
+h1{font-size:54px;color:#22d3ee}
+h2{font-size:34px;margin-bottom:40px}
 
-/* BOTÃO */
 .btn{
 background:#22d3ee;
-color:black;
 padding:18px 45px;
 border-radius:10px;
+color:black;
 font-weight:bold;
-font-size:20px;
 text-decoration:none;
 display:inline-block;
 transition:.3s;
 }
-.btn:hover{transform:scale(1.06)}
+.btn:hover{transform:scale(1.08)}
 
-/* HERO */
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:40px;
-}
-
-.hero img{
-max-width:420px;
+img{
+max-width:100%;
 border-radius:14px;
-box-shadow:0 25px 60px rgba(0,0,0,.6);
+box-shadow:0 20px 50px rgba(0,0,0,.6);
 }
 
-/* SEÇÃO DASHBOARD */
-.dashboard{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:40px;
-flex-wrap:wrap;
-}
+.section{padding:80px 20px}
+.dark{background:#1e293b}
 
-.dashboard img{
-max-width:650px;
-width:100%;
-border-radius:14px;
-box-shadow:0 25px 60px rgba(0,0,0,.6);
-}
-
-/* CARDS */
-.cards{
+.grid{
 display:flex;
 flex-wrap:wrap;
-gap:25px;
+gap:30px;
 justify-content:center;
 }
 
@@ -85,11 +59,30 @@ width:260px;
 border-radius:12px;
 }
 
-/* FUNDOS */
-.dark{background:#1e293b}
-.highlight{background:#111827}
+.testimonial{
+background:#111827;
+padding:25px;
+width:300px;
+border-radius:12px;
+}
 
-/* WHATSAPP */
+.faq{
+text-align:left;
+max-width:800px;
+margin:auto;
+}
+
+.faq div{
+margin-bottom:18px;
+}
+
+.countdown{
+font-size:28px;
+color:#22d3ee;
+margin:20px 0;
+}
+
+/* WhatsApp */
 .whatsapp{
 position:fixed;
 bottom:25px;
@@ -103,104 +96,94 @@ align-items:center;
 justify-content:center;
 animation:pulse 1.6s infinite;
 }
-
 .whatsapp img{width:32px}
 
 @keyframes pulse{
 0%{transform:scale(1)}
-70%{transform:scale(1.12); box-shadow:0 0 0 18px rgba(37,211,102,0)}
+70%{transform:scale(1.12);box-shadow:0 0 0 18px rgba(37,211,102,0)}
 100%{transform:scale(1)}
-}
-
-footer{
-text-align:center;
-padding:40px;
-color:#94a3b8;
 }
 </style>
 </head>
 
 <body>
 
-
-<!-- HERO (CAPA DO PRODUTO) -->
-<section class="container hero">
-
-<div>
+<!-- HERO -->
+<section class="container">
 <h1>Gestor AL Pro</h1>
-<p>Controle financeiro do seu Alojamento Local em apenas <b>5 minutos por dia</b>.</p>
+<p>Controle financeiro do seu Alojamento Local em apenas 5 minutos por dia</p>
 
 <br>
-<a href="https://go.hotmart.com/M104320817Y" class="btn" target="_blank">
-Comprar Agora
-</a>
+
+<img src="arquivo_000000000d56c7.jpg"> <!-- COLOCA O NOME EXATO -->
+
+<br><br>
+
+<a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
+
+<div class="countdown">
+🔥 Oferta termina em <span id="timer"></span>
 </div>
-
-<!-- CAPA -->
-<img src="arquivo_00000000d56c71f483fd36fe124c.jpg">
-
 </section>
 
 
 
-<!-- DASHBOARD (PROVA VISUAL) -->
-<section class="container highlight dashboard">
-
-<div>
-<h2>Veja o sistema por dentro</h2>
-<p>
-Dashboard automático, relatórios prontos, gráficos, lucro por município,
-taxas e comissões calculadas sem esforço.
-</p>
-
-<br>
-<a href="https://go.hotmart.com/M104320817Y" class="btn" target="_blank">
-Quero Acessar Agora
-</a>
-</div>
-
 <!-- DASHBOARD -->
+<section class="section dark">
+<h2>Veja o sistema por dentro</h2>
 <img src="IMG_20260207_125738_426.jpg">
-
 </section>
 
 
 
 <!-- BENEFÍCIOS -->
-<section class="container dark">
-<h2 style="text-align:center">Tudo automatizado</h2>
+<section class="section">
+<h2>O que você vai ganhar</h2>
 
-<div class="cards">
-
-<div class="card">✔ Controle total de receitas</div>
-<div class="card">✔ Cálculo automático de comissões</div>
+<div class="grid">
+<div class="card">✔ Controle total de reservas</div>
+<div class="card">✔ Cálculo automático de taxas</div>
 <div class="card">✔ Relatórios prontos</div>
 <div class="card">✔ Dashboard profissional</div>
-<div class="card">✔ Economiza horas por semana</div>
-<div class="card">✔ Mais lucro, menos caos</div>
+<div class="card">✔ Economia de horas toda semana</div>
+<div class="card">✔ Mais lucro, menos stress</div>
+</div>
+</section>
 
+
+
+<!-- DEPOIMENTOS -->
+<section class="section dark">
+<h2>Quem já usa recomenda</h2>
+
+<div class="grid">
+<div class="testimonial">⭐⭐⭐⭐⭐<br>“Finalmente organizei minhas finanças!”<br><b>— Carlos, Porto</b></div>
+<div class="testimonial">⭐⭐⭐⭐⭐<br>“Economizei 3h por semana.”<br><b>— Ana, Lisboa</b></div>
+<div class="testimonial">⭐⭐⭐⭐⭐<br>“Vale cada euro.”<br><b>— Miguel, Algarve</b></div>
+</div>
+</section>
+
+
+
+<!-- FAQ -->
+<section class="section">
+<h2>Perguntas Frequentes</h2>
+
+<div class="faq">
+<div><b>Funciona no Excel?</b><br>Sim, 100% compatível.</div>
+<div><b>Precisa internet?</b><br>Não, funciona offline.</div>
+<div><b>Recebo na hora?</b><br>Sim, download imediato.</div>
+<div><b>Tem suporte?</b><br>Sim, WhatsApp direto comigo.</div>
 </div>
 </section>
 
 
 
 <!-- CTA FINAL -->
-<section class="container" style="text-align:center">
+<section class="section dark">
 <h2>Comece hoje mesmo</h2>
-<p>Baixe agora e tenha controle total do seu AL.</p>
-
-<br><br>
-
-<a href="https://go.hotmart.com/M104320817Y" class="btn" target="_blank">
-Comprar Agora
-</a>
+<a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
 </section>
-
-
-
-<footer>
-© 2026 Método Zero Exposição • Todos os direitos reservados
-</footer>
 
 
 
@@ -211,5 +194,18 @@ target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
 
+
+
+<script>
+let time = 3600;
+setInterval(()=>{
+time--;
+let m = Math.floor(time/60);
+let s = time%60;
+document.getElementById("timer").innerHTML =
+m.toString().padStart(2,"0")+":"+s.toString().padStart(2,"0");
+},1000);
+</script>
+
 </body>
-  </html>
+</html>
