@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Gestor AL Pro | Controle Financeiro Inteligente</title>
+<title>Gestor AL Pro</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,91 +20,257 @@ font-family:'Poppins',sans-serif;
 body{
 background:linear-gradient(135deg,#0b1624,#132f46);
 color:#fff;
-line-height:1.6;
 }
 
-/* ===== CONTAINER ===== */
+/* CONTAINER */
 .container{
 max-width:1200px;
 margin:auto;
-padding:110px 20px;
+padding:80px 20px;
 }
 
-/* ===== HERO ===== */
-
+/* HERO */
 .hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:70px;
-flex-wrap:wrap;
+text-align:center;
 }
 
-.hero-text{
-flex:1;
-}
-
-.hero h1{
-font-size:54px;
+h1{
+font-size:48px;
 font-weight:800;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
-.hero p{
+.sub{
 font-size:20px;
 opacity:.9;
-margin-bottom:35px;
-max-width:520px;
+margin-bottom:30px;
 }
 
 .btn{
-background:#2ee6c2;
-color:#06202f;
-padding:18px 46px;
-border-radius:14px;
+background:#2dd4bf;
+color:#000;
+padding:18px 40px;
+border-radius:12px;
 font-weight:700;
 text-decoration:none;
 display:inline-block;
 font-size:18px;
-transition:.25s;
-box-shadow:0 12px 30px rgba(46,230,194,.35);
+transition:.2s;
 }
 
 .btn:hover{
 transform:scale(1.05);
 }
 
-/* ===== BOTÃO FINAL GRANDE (NOVO) ===== */
+/* BOTÃO GRANDE FINAL */
 .btn-big{
-font-size:22px;
+font-size:24px;
 padding:26px 80px;
-border-radius:16px;
+border-radius:14px;
 }
 
-/* ===== IMAGEM GRANDE ===== */
-
-.mockup{
-flex:1;
-text-align:center;
+/* IMAGENS */
+.preview{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:70px;
+align-items:center;
 }
 
-.mockup img{
+.preview img{
 width:100%;
-max-width:600px;
-border-radius:18px;
-box-shadow:0 30px 80px rgba(0,0,0,.6);
+border-radius:16px;
+box-shadow:0 25px 60px rgba(0,0,0,.5);
 }
 
-/* ===== BENEFÍCIOS ===== */
-
+/* BENEFÍCIOS */
 .grid{
+margin-top:80px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:22px;
-margin-top:80px;
+gap:20px;
 }
 
 .card{
+background:#14253d;
+padding:25px;
+border-radius:12px;
+font-weight:600;
+}
+
+/* TESTEMUNHOS */
+.test-grid{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.test-card{
 background:#14263c;
-padding:28px;
- see?????
+padding:25px;
+border-radius:12px;
+text-align:center;
+}
+
+.avatar{
+width:70px;
+height:70px;
+border-radius:50%;
+margin:auto;
+margin-bottom:15px;
+background-size:cover;
+background-position:center;
+}
+
+/* FAQ */
+details{
+background:#14253d;
+margin-bottom:12px;
+padding:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* ===== BARRA ESTILO ZUMUB (NOVO) ===== */
+.trust-bar{
+background:#0e1f33;
+margin-top:80px;
+padding:18px;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+font-weight:600;
+font-size:15px;
+opacity:.95;
+}
+
+/* WHATS */
+.whats{
+position:fixed;
+right:20px;
+bottom:20px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:30px;
+text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.preview{
+grid-template-columns:1fr;
+}
+h1{font-size:34px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="container hero">
+
+<h1>Pare de perder dinheiro no seu Alojamento Local</h1>
+
+<p class="sub">
+Organize receitas, despesas e lucros em 5 minutos por dia com um sistema profissional.
+</p>
+
+<a href="https://go.hotmart.com/M104320817Y" class="btn">
+Comprar Agora
+</a>
+
+<div class="preview">
+<img src="capa.jpg" alt="">
+<img src="painel.jpg" alt="">
+</div>
+
+</section>
+
+
+<!-- BENEFÍCIOS -->
+<section class="container">
+
+<div class="grid">
+<div class="card">✔ Controle total de reservas</div>
+<div class="card">✔ Cálculo automático de taxas</div>
+<div class="card">✔ Relatórios prontos</div>
+<div class="card">✔ Dashboard profissional</div>
+<div class="card">✔ Mais lucro, menos stress</div>
+<div class="card">✔ Economia de horas toda semana</div>
+</div>
+
+</section>
+
+
+<!-- TESTEMUNHOS -->
+<section class="container">
+
+<h2 style="text-align:center;margin-bottom:30px;">Quem já usa recomenda</h2>
+
+<div class="test-grid">
+
+<div class="test-card">
+<div class="avatar" style="background-image:url('https://randomuser.me/api/portraits/men/32.jpg')"></div>
+★★★★★<br><br>
+“Finalmente organizei minhas finanças”
+</div>
+
+<div class="test-card">
+<div class="avatar" style="background-image:url('https://randomuser.me/api/portraits/women/44.jpg')"></div>
+★★★★★<br><br>
+“Economizo 3h por semana”
+</div>
+
+<div class="test-card">
+<div class="avatar" style="background-image:url('https://randomuser.me/api/portraits/men/65.jpg')"></div>
+★★★★★<br><br>
+“Vale cada euro investido”
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="container">
+
+<details><summary>Funciona no Excel?</summary>Sim, 100% compatível.</details>
+<details><summary>Precisa internet?</summary>Funciona offline.</details>
+<details><summary>Recebo na hora?</summary>Download imediato.</details>
+
+</section>
+
+
+<!-- BOTÃO FINAL GRANDE -->
+<section class="container" style="text-align:center;">
+<a href="https://go.hotmart.com/M104320817Y" class="btn btn-big">
+Quero Comprar Agora
+</a>
+</section>
+
+
+<!-- BARRA ZUMUB -->
+<div class="trust-bar">
+<span>⚡ Download imediato</span>
+<span>🔒 Pagamento seguro</span>
+<span>💸 Garantia 7 dias</span>
+<span>📞 Suporte WhatsApp</span>
+</div>
+
+
+<a class="whats" href="https://wa.me/351923515605">☎</a>
+
+</body>
+ </html>
