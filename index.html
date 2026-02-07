@@ -3,22 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gestor AL Pro | Controle Financeiro para Alojamento Local</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<title>Gestor AL Pro | Controle Financeiro AL</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 
 body{
 background:linear-gradient(135deg,#0f172a,#1e3a5f);
-color:#fff;
+color:white;
 }
 
 /* CONTAINER */
@@ -34,7 +26,7 @@ text-align:center;
 }
 
 h1{
-font-size:52px;
+font-size:48px;
 font-weight:800;
 margin-bottom:15px;
 }
@@ -54,7 +46,7 @@ font-weight:700;
 text-decoration:none;
 display:inline-block;
 font-size:18px;
-transition:.25s;
+transition:.2s;
 }
 
 .btn:hover{
@@ -63,80 +55,47 @@ transform:scale(1.05);
 
 /* IMAGENS */
 .preview{
-display:flex;
+display:grid;
+grid-template-columns:1fr 1fr;
 gap:40px;
-justify-content:center;
+margin-top:70px;
 align-items:center;
-flex-wrap:wrap;
-margin-top:60px;
 }
 
 .preview img{
-width:380px;
-border-radius:18px;
+width:100%;
+border-radius:16px;
 box-shadow:0 25px 60px rgba(0,0,0,.5);
 }
 
 /* BENEFÍCIOS */
 .grid{
-margin-top:90px;
+margin-top:80px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
 .card{
 background:#14253d;
 padding:25px;
-border-radius:14px;
+border-radius:12px;
 font-weight:600;
 }
 
-/* DEPOIMENTOS */
-.testimonials{
-margin-top:100px;
-text-align:center;
-}
-
-.test-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.test{
-background:#14253d;
-padding:25px;
-border-radius:14px;
-}
-
-.avatar{
-width:70px;
-height:70px;
-border-radius:50%;
-margin:auto;
-margin-bottom:12px;
-background:linear-gradient(45deg,#2dd4bf,#0ea5e9);
-}
-
 /* FAQ */
-.faq{
-margin-top:100px;
-}
-
 .faq-item{
 background:#14253d;
-margin-bottom:10px;
-border-radius:12px;
-cursor:pointer;
+margin-bottom:12px;
 padding:18px;
+border-radius:10px;
+cursor:pointer;
 }
 
 .answer{
 display:none;
-margin-top:10px;
 opacity:.8;
+margin-top:8px;
 }
 
 /* WHATS */
@@ -151,10 +110,10 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:30px;
 color:white;
+font-size:30px;
 text-decoration:none;
-animation:pulse 1.6s infinite;
+animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
@@ -163,16 +122,16 @@ animation:pulse 1.6s infinite;
 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
 
+/* MOBILE */
 @media(max-width:900px){
+.preview{grid-template-columns:1fr}
 h1{font-size:34px}
-.preview img{width:100%}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="container hero">
 
 <h1>Gestor AL Pro</h1>
@@ -184,60 +143,27 @@ Controle financeiro do seu Alojamento Local em apenas 5 minutos por dia
 <a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
 
 <div class="preview">
-<img src="capa.jpg">
-<img src="painel.jpg">
+<img src="capa.jpg" alt="Capa">
+<img src="painel.jpg" alt="Dashboard">
 </div>
 
 </section>
 
-<!-- BENEFÍCIOS -->
+
 <section class="container">
-
 <div class="grid">
-<div class="card">✔ Controle total de receitas e despesas</div>
-<div class="card">✔ Relatórios automáticos</div>
+<div class="card">✔ Controle total de reservas e receitas</div>
+<div class="card">✔ Cálculo automático de taxas</div>
+<div class="card">✔ Relatórios prontos</div>
 <div class="card">✔ Dashboard profissional</div>
-<div class="card">✔ Economia de horas toda semana</div>
+<div class="card">✔ Economia de horas por semana</div>
 <div class="card">✔ Mais lucro, menos stress</div>
-<div class="card">✔ Funciona offline no Excel</div>
 </div>
-
 </section>
 
-<!-- DEPOIMENTOS -->
-<section class="container testimonials">
 
-<h2>Quem já usa recomenda</h2>
-
-<div class="test-grid">
-<div class="test">
-<div class="avatar"></div>
-★★★★★<br>
-"Finalmente organizei minhas finanças"<br>
-<b>Carlos — Porto</b>
-</div>
-
-<div class="test">
-<div class="avatar"></div>
-★★★★★<br>
-"Economizo 3h por semana"<br>
-<b>Ana — Lisboa</b>
-</div>
-
-<div class="test">
-<div class="avatar"></div>
-★★★★★<br>
-"Vale cada euro investido"<br>
-<b>Miguel — Algarve</b>
-</div>
-</div>
-
-</section>
-
-<!-- FAQ -->
-<section class="container faq">
-
-<h2>Perguntas Frequentes</h2>
+<section class="container">
+<h2 style="margin-bottom:25px;">Perguntas Frequentes</h2>
 
 <div class="faq-item" onclick="toggle(this)">
 Funciona no Excel?
@@ -246,17 +172,21 @@ Funciona no Excel?
 
 <div class="faq-item" onclick="toggle(this)">
 Precisa internet?
-<div class="answer">Não. Funciona offline.</div>
+<div class="answer">Não, funciona offline.</div>
 </div>
 
 <div class="faq-item" onclick="toggle(this)">
 Recebo na hora?
-<div class="answer">Download imediato após a compra.</div>
+<div class="answer">Download imediato.</div>
 </div>
 
+<div class="faq-item" onclick="toggle(this)">
+Tem garantia?
+<div class="answer">7 dias de reembolso total.</div>
+</div>
 </section>
 
-<!-- WHATS -->
+
 <a class="whats" href="https://wa.me/351923515605" target="_blank">☎</a>
 
 <script>
