@@ -22,14 +22,12 @@ background:linear-gradient(135deg,#0b1624,#132f46);
 color:#fff;
 }
 
-/* CONTAINER */
 .container{
 max-width:1200px;
 margin:auto;
 padding:80px 20px;
 }
 
-/* HERO */
 .hero{
 text-align:center;
 }
@@ -44,6 +42,9 @@ margin-bottom:15px;
 font-size:20px;
 opacity:.9;
 margin-bottom:30px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
 }
 
 .btn{
@@ -62,14 +63,12 @@ transition:.2s;
 transform:scale(1.05);
 }
 
-/* BOTÃO GRANDE FINAL */
 .btn-big{
 font-size:24px;
 padding:26px 80px;
 border-radius:14px;
 }
 
-/* IMAGENS */
 .preview{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -84,7 +83,6 @@ border-radius:16px;
 box-shadow:0 25px 60px rgba(0,0,0,.5);
 }
 
-/* BENEFÍCIOS */
 .grid{
 margin-top:80px;
 display:grid;
@@ -99,7 +97,6 @@ border-radius:12px;
 font-weight:600;
 }
 
-/* TESTEMUNHOS */
 .test-grid{
 margin-top:60px;
 display:grid;
@@ -124,7 +121,6 @@ background-size:cover;
 background-position:center;
 }
 
-/* FAQ */
 details{
 background:#14253d;
 margin-bottom:12px;
@@ -133,7 +129,6 @@ border-radius:10px;
 cursor:pointer;
 }
 
-/* ===== BARRA ESTILO ZUMUB (NOVO) ===== */
 .trust-bar{
 background:#0e1f33;
 margin-top:80px;
@@ -147,7 +142,6 @@ font-size:15px;
 opacity:.95;
 }
 
-/* WHATS */
 .whats{
 position:fixed;
 right:20px;
@@ -164,7 +158,6 @@ font-size:30px;
 text-decoration:none;
 }
 
-/* MOBILE */
 @media(max-width:900px){
 .preview{
 grid-template-columns:1fr;
@@ -180,20 +173,27 @@ h1{font-size:34px;}
 <!-- HERO -->
 <section class="container hero">
 
-<h1>Pare de perder dinheiro no seu Alojamento Local</h1>
-
 <h1>
-Você está perdendo dinheiro TODOS os meses no seu Alojamento Local… e nem percebe.
+Seu Alojamento Local pode estar a dar lucro…  
+mas você não faz ideia para onde o dinheiro está a ir.
 </h1>
 
-<p>
-Chega de planilhas confusas, contas na mão e lucros invisíveis. 
-O Gestor AL Pro organiza receitas, despesas e resultados automaticamente em apenas 5 minutos por dia — com controle profissional e total segurança.
+<p class="sub">
+Planilhas confusas, contas manuais e taxas escondidas roubam horas do seu dia e centenas de euros todos os meses.  
+O <strong>Gestor AL Pro</strong> organiza tudo automaticamente e mostra o lucro real do seu negócio em menos de 5 minutos por dia.
+Simples. Profissional. Sem stress.
 </p>
 
 <div class="preview">
 <img src="capa.jpg" alt="">
 <img src="painel.jpg" alt="">
+</div>
+
+<!-- BOTÃO ADICIONADO (dashboard) -->
+<div style="text-align:center;margin-top:40px;">
+<a href="https://go.hotmart.com/M104320817Y" class="btn btn-big">
+Comprar Agora
+</a>
 </div>
 
 </section>
@@ -262,7 +262,7 @@ Quero Comprar Agora
 </section>
 
 
-<!-- BARRA ZUMUB -->
+<!-- BARRA -->
 <div class="trust-bar">
 <span>⚡ Download imediato</span>
 <span>🔒 Pagamento seguro</span>
@@ -274,4 +274,4 @@ Quero Comprar Agora
 <a class="whats" href="https://wa.me/351923515605">☎</a>
 
 </body>
- </html>
+</html>
