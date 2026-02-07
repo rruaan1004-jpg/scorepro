@@ -1,160 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gestor AL Pro | Controle Financeiro para Alojamento Local</title>
+<title>Gestor AL Pro | Controle Financeiro para Alojamento Local</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#0f172a;
+  color:white;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+/* ===== LAYOUT ===== */
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      color: #22d3ee;
-    }
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
 
-    h2 {
-      font-weight: 400;
-      margin-bottom: 30px;
-      color: #cbd5e1;
-    }
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:40px;
+}
 
-    .produto-img {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 14px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-      margin: 30px 0;
-    }
+.hero-text{
+  flex:1;
+  min-width:300px;
+}
 
-    .beneficios {
-      text-align: left;
-      max-width: 600px;
-      margin: 40px auto;
-      line-height: 1.8;
-      font-size: 18px;
-    }
+.hero-img{
+  flex:1;
+  text-align:center;
+}
 
-    .beneficios li {
-      margin-bottom: 10px;
-    }
+.hero-img img{
+  width:100%;
+  max-width:520px;
+  border-radius:14px;
+  box-shadow:0 15px 50px rgba(0,0,0,0.6);
+}
 
-    .cta {
-      margin-top: 40px;
-    }
+/* ===== TEXTOS ===== */
 
-    .btn-comprar {
-      background: #22d3ee;
-      color: #000;
-      padding: 18px 40px;
-      border-radius: 12px;
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+h1{
+  font-size:48px;
+  margin:0;
+  color:#22d3ee;
+}
 
-    .btn-comprar:hover {
-      background: #06b6d4;
-      transform: scale(1.05);
-    }
+h2{
+  font-weight:400;
+  color:#cbd5e1;
+  margin-top:10px;
+  margin-bottom:30px;
+}
 
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
+/* ===== BOTÃO ===== */
 
-    /* ====================== */
-    /* WHATSAPP PULSANTE */
-    /* ====================== */
+.btn{
+  display:inline-block;
+  background:#22d3ee;
+  color:black;
+  padding:18px 40px;
+  border-radius:10px;
+  font-size:20px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:.3s;
+}
 
-    .whatsapp {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      animation: pulse 1.8s infinite;
-      z-index: 999;
-    }
+.btn:hover{
+  transform:scale(1.05);
+  background:#06b6d4;
+}
 
-    .whatsapp img {
-      width: 32px;
-    }
+/* ===== BENEFÍCIOS ===== */
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(37,211,102, 0.7);
-      }
-      70% {
-        transform: scale(1.1);
-        box-shadow: 0 0 0 18px rgba(37,211,102, 0);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
+.section{
+  padding:70px 0;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+}
+
+.card{
+  background:#1e293b;
+  padding:25px;
+  border-radius:12px;
+  width:260px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+}
+
+/* ===== WHATSAPP ===== */
+
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25d366;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:pulse 1.7s infinite;
+}
+
+.whatsapp img{
+  width:32px;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  70%{transform:scale(1.1); box-shadow:0 0 0 18px rgba(37,211,102,0);}
+  100%{transform:scale(1);}
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<!-- ===== HERO ===== -->
 
+<section class="container hero">
+
+  <div class="hero-text">
     <h1>Gestor AL Pro</h1>
-    <h2>Controle financeiro do seu Alojamento Local em 5 minutos por dia</h2>
+    <h2>Controle financeiro do seu Alojamento Local em apenas 5 minutos por dia</h2>
 
-    <!-- SUA IMAGEM DO GITHUB -->
-    <img src="IMG_20260207_125738_426.jpg" class="produto-img">
+    <a href="https://go.hotmart.com/M104320817Y" target="_blank" class="btn">
+      Comprar Agora
+    </a>
+  </div>
 
-    <ul class="beneficios">
-      <li>✔ Controle total de reservas e receitas</li>
-      <li>✔ Cálculo automático de comissões e taxas</li>
-      <li>✔ Relatórios e gráficos prontos</li>
-      <li>✔ Dashboard simples e profissional</li>
-      <li>✔ Ideal para Airbnb e ALs</li>
-    </ul>
+  <div class="hero-img">
+    <img src="IMG_20260207_125738_426.jpg">
+  </div>
 
-    <div class="cta">
-      <a href="https://go.hotmart.com/M104320817Y" target="_blank" class="btn-comprar">
-        Comprar Agora
-      </a>
-    </div>
+</section>
 
-    <footer>
-      © 2026 Método Zero Exposição • Todos os direitos reservados
-    </footer>
+<!-- ===== BENEFÍCIOS ===== -->
+
+<section class="section container">
+
+  <div class="cards">
+
+    <div class="card">✔ Controle total de reservas e receitas</div>
+    <div class="card">✔ Cálculo automático de comissões e taxas</div>
+    <div class="card">✔ Relatórios e gráficos prontos</div>
+    <div class="card">✔ Dashboard simples e profissional</div>
+    <div class="card">✔ Ideal para Airbnb e ALs</div>
+    <div class="card">✔ Economize horas toda semana</div>
 
   </div>
 
-  <!-- WHATSAPP FLUTUANTE PULSANTE -->
-  <a class="whatsapp"
-     href="https://wa.me/351923515605?text=Olá,%20tenho%20dúvida%20sobre%20o%20Gestor%20AL%20Pro"
-     target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+
+<section class="section" style="text-align:center">
+  <a href="https://go.hotmart.com/M104320817Y" target="_blank" class="btn">
+    Quero Começar Agora
   </a>
+</section>
+
+<footer>
+© 2026 Método Zero Exposição • Todos os direitos reservados
+</footer>
+
+
+<!-- WHATSAPP -->
+<a class="whatsapp"
+   href="https://wa.me/351923515605?text=Olá,%20tenho%20dúvida%20sobre%20o%20Gestor%20AL%20Pro"
+   target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
 
 </body>
 </html>
