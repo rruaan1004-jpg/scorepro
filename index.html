@@ -1,206 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gestor AL Pro | Controle Financeiro para Alojamento Local</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0c1c2b,#132f46);
+background:linear-gradient(135deg,#0f172a,#1e3a5f);
 color:#fff;
 line-height:1.6;
 }
 
-section{
-padding:90px 20px;
+.container{
 max-width:1200px;
 margin:auto;
-}
-
-h1,h2,h3{
-font-weight:700;
-}
-
-h2{
-text-align:center;
-margin-bottom:60px;
-font-size:36px;
+padding:60px 20px;
 }
 
 /* HERO */
-
 .hero{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:50px;
+text-align:center;
+padding:100px 20px 60px;
 }
 
-.hero-text{
-flex:1;
-}
-
-.hero-text h1{
-font-size:46px;
+h1{
+font-size:48px;
+font-weight:800;
 margin-bottom:20px;
 }
 
-.hero-text p{
+.sub{
 font-size:20px;
-opacity:.85;
+opacity:.9;
 margin-bottom:30px;
 }
 
-.hero-img{
-flex:1;
-display:flex;
-gap:20px;
-justify-content:center;
-}
-
-.hero-img img{
-width:48%;
-border-radius:14px;
-box-shadow:0 15px 40px rgba(0,0,0,.6);
-}
-
-/* BUTTON */
-
 .btn{
-background:#2de0c4;
+background:#2dd4bf;
 color:#000;
-padding:18px 45px;
+padding:18px 40px;
 border-radius:10px;
 font-weight:700;
 font-size:18px;
 text-decoration:none;
 display:inline-block;
-transition:.3s;
+transition:.2s;
 }
 
 .btn:hover{
 transform:scale(1.05);
 }
 
-/* TIMER */
-
 .timer{
 margin-top:20px;
-color:#ff7676;
-font-weight:600;
+color:#ff6b6b;
+font-weight:700;
 }
 
-/* CARDS */
+/* IMAGENS */
+.preview{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-top:60px;
+}
 
+.preview img{
+width:100%;
+border-radius:14px;
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+/* BENEFÍCIOS */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+gap:20px;
+margin-top:60px;
 }
 
 .card{
-background:#132f46;
-padding:30px;
-border-radius:14px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
+background:#14253d;
+padding:25px;
+border-radius:12px;
+font-weight:600;
 }
 
-/* BEFORE AFTER */
-
-.compare{
-display:flex;
-flex-wrap:wrap;
-gap:30px;
-}
-
-.compare div{
-flex:1;
-background:#132f46;
-padding:30px;
-border-radius:14px;
-}
-
-/* TESTIMONIALS */
-
+/* DEPOIMENTOS */
 .testimonials{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
+margin-top:60px;
 }
 
 .testimonial{
-background:#132f46;
+background:#14253d;
 padding:25px;
-border-radius:14px;
+border-radius:12px;
 text-align:center;
 }
 
 .testimonial img{
-width:70px;
-height:70px;
+width:80px;
+height:80px;
 border-radius:50%;
-margin-bottom:15px;
+object-fit:cover;
+margin-bottom:12px;
 }
 
 /* FAQ */
+.faq{
+margin-top:80px;
+}
 
-details{
-background:#132f46;
+.faq-item{
+background:#14253d;
+margin-bottom:12px;
 padding:20px;
 border-radius:10px;
-margin-bottom:15px;
-cursor:pointer;
 }
 
-summary{
-font-weight:600;
-font-size:18px;
-}
-
-/* GUARANTEE */
-
-.guarantee{
-text-align:center;
-background:#0f2539;
-padding:60px;
-border-radius:20px;
-}
-
-/* WHATS */
-
-.whatsapp{
+/* WhatsApp */
+.whats{
 position:fixed;
-bottom:20px;
 right:20px;
+bottom:20px;
 width:65px;
 height:65px;
-background:#25d366;
+background:#25D366;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
+color:white;
 font-size:30px;
-color:#fff;
 text-decoration:none;
 animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
-70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
+0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
+70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}
 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.preview{
+grid-template-columns:1fr;
+}
+h1{font-size:34px;}
 }
 </style>
 </head>
@@ -208,131 +166,97 @@ animation:pulse 1.5s infinite;
 <body>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero container">
+<h1>Gestor AL Pro</h1>
+<p class="sub">Controle financeiro do seu Alojamento Local em apenas 5 minutos por dia</p>
 
-<div class="hero-text">
-<h1>Controle todo o financeiro do seu Alojamento Local em 5 minutos por dia</h1>
-<p>Pare de perder dinheiro, erros manuais e planilhas confusas. Tenha tudo automático, organizado e profissional.</p>
+<a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
 
-<a class="btn" href="https://go.hotmart.com/M104320817Y" target="_blank">Comprar Agora</a>
+<p class="timer">🔥 Oferta termina em <span id="countdown"></span></p>
 
-<div class="timer">🔥 Oferta termina em <span id="timer"></span></div>
+<div class="preview">
+<img src="capa.jpg" alt="Capa do produto">
+<img src="painel.jpg" alt="Dashboard do sistema">
 </div>
-
-<div class="hero-img">
-<img src="capa.jpg">
-<img src="painel.jpg">
-</div>
-
 </section>
 
-<!-- BENEFICIOS -->
-<section>
-<h2>O que você vai ganhar</h2>
+
+<!-- BENEFÍCIOS -->
+<section class="container">
+<h2 style="text-align:center;margin-bottom:40px;">O que você vai ganhar</h2>
 
 <div class="grid">
-<div class="card">Controle total de reservas</div>
-<div class="card">Cálculo automático de taxas</div>
-<div class="card">Relatórios e gráficos prontos</div>
-<div class="card">Dashboard profissional</div>
-<div class="card">Economize horas toda semana</div>
-<div class="card">Mais lucro, menos stress</div>
+<div class="card">✔ Controle total de reservas e receitas</div>
+<div class="card">✔ Cálculo automático de taxas e comissões</div>
+<div class="card">✔ Relatórios e gráficos prontos</div>
+<div class="card">✔ Dashboard profissional</div>
+<div class="card">✔ Economia de horas toda semana</div>
+<div class="card">✔ Mais lucro, menos stress</div>
 </div>
 </section>
 
-<!-- ANTES DEPOIS -->
-<section>
-<h2>Antes vs Depois</h2>
 
-<div class="compare">
-<div>
-<h3>❌ Antes</h3>
-<p>Planilhas confusas, erros, contas manuais e perda de dinheiro.</p>
-</div>
-
-<div>
-<h3>✅ Depois</h3>
-<p>Relatórios automáticos, controle total e visão clara do lucro.</p>
-</div>
-</div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section>
-<h2>Quem já usa recomenda</h2>
+<!-- PROVAS SOCIAIS -->
+<section class="container">
+<h2 style="text-align:center;margin-bottom:40px;">Quem já usa recomenda</h2>
 
 <div class="testimonials">
 
 <div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=1">
+<img src="prova0.jpg">
 ⭐⭐⭐⭐⭐
-<p>"Finalmente organizei minhas finanças"</p>
-<strong>Carlos — Porto</strong>
+<p>"Finalmente organizei minhas finanças!"</p>
+<strong>Carlos – Porto</strong>
 </div>
 
 <div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=2">
+<img src="prova1.jpg">
 ⭐⭐⭐⭐⭐
-<p>"Economizei 3h por semana"</p>
-<strong>Ana — Lisboa</strong>
+<p>"Economizei 3h por semana."</p>
+<strong>Ana – Lisboa</strong>
 </div>
 
 <div class="testimonial">
-<img src="https://i.pravatar.cc/100?img=3">
+<img src="prova2.jpg">
 ⭐⭐⭐⭐⭐
-<p>"Vale cada euro investido"</p>
-<strong>Miguel — Algarve</strong>
+<p>"Vale cada euro investido."</p>
+<strong>Miguel – Algarve</strong>
 </div>
 
 </div>
 </section>
 
-<!-- GARANTIA -->
-<section class="guarantee">
-<h2>Garantia total de 7 dias</h2>
-<p>Teste sem risco. Se não gostar, devolvemos 100% do dinheiro.</p>
-<br>
-<a class="btn" href="https://go.hotmart.com/M104320817Y" target="_blank">Quero Comprar Agora</a>
-</section>
 
 <!-- FAQ -->
-<section>
-<h2>Perguntas Frequentes</h2>
+<section class="container faq">
+<h2 style="text-align:center;margin-bottom:40px;">Perguntas Frequentes</h2>
 
-<details>
-<summary>Funciona no Excel?</summary>
-<p>Sim, 100% compatível.</p>
-</details>
+<div class="faq-item">Funciona no Excel? → Sim, 100% compatível.</div>
+<div class="faq-item">Precisa internet? → Não, funciona offline.</div>
+<div class="faq-item">Recebo na hora? → Download imediato.</div>
+<div class="faq-item">Posso pedir reembolso? → 7 dias de garantia.</div>
 
-<details>
-<summary>Precisa internet?</summary>
-<p>Não, funciona offline.</p>
-</details>
-
-<details>
-<summary>Recebo na hora?</summary>
-<p>Download imediato após o pagamento.</p>
-</details>
-
-<details>
-<summary>Posso pedir reembolso?</summary>
-<p>Sim, 7 dias de garantia total.</p>
-</details>
-
+<div style="text-align:center;margin-top:40px;">
+<a href="https://go.hotmart.com/M104320817Y" class="btn">Quero Comprar Agora</a>
+</div>
 </section>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/351923515605" target="_blank">☎</a>
 
+<!-- WhatsApp -->
+<a class="whats" href="https://wa.me/351923515605" target="_blank">☎</a>
+
+
+<!-- CONTADOR -->
 <script>
 let time=3600;
 setInterval(()=>{
 let m=Math.floor(time/60);
 let s=time%60;
-document.getElementById("timer").innerHTML=m+":"+("0"+s).slice(-2);
+document.getElementById("countdown").innerHTML=
+m+":"+("0"+s).slice(-2);
 time--;
 },1000);
 </script>
 
 </body>
-                          </html>
+  </html>
