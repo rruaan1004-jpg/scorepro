@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gestor AL Pro</title>
+<title>Gestor AL Pro | Controle Financeiro para Alojamento Local</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -17,57 +17,43 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0c1625,#132f46);
+background:linear-gradient(135deg,#0f172a,#1e3a5f);
 color:#fff;
 }
 
 /* CONTAINER */
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
-padding:80px 20px;
+padding:90px 20px;
 }
 
-/* TITULOS */
+/* HERO */
+.hero{
+text-align:center;
+}
+
 h1{
 font-size:52px;
 font-weight:800;
 margin-bottom:15px;
 }
 
-h2{
-text-align:center;
-font-size:34px;
-margin-bottom:40px;
-}
-
-/* HERO */
-.hero{
-display:flex;
-align-items:center;
-gap:60px;
-flex-wrap:wrap;
-}
-
-.hero-text{
-flex:1;
-}
-
 .sub{
 font-size:20px;
-margin-bottom:25px;
 opacity:.9;
+margin-bottom:30px;
 }
 
-/* BOTAO */
 .btn{
-background:#2ee6c2;
-color:#001c28;
-padding:18px 45px;
-border-radius:14px;
-font-weight:800;
+background:#2dd4bf;
+color:#000;
+padding:18px 40px;
+border-radius:12px;
+font-weight:700;
 text-decoration:none;
 display:inline-block;
+font-size:18px;
 transition:.25s;
 }
 
@@ -76,68 +62,81 @@ transform:scale(1.05);
 }
 
 /* IMAGENS */
-.hero-images{
-flex:1;
+.preview{
 display:flex;
-gap:25px;
+gap:40px;
 justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+margin-top:60px;
 }
 
-.hero-images img{
-width:260px;
-border-radius:16px;
-box-shadow:0 25px 60px rgba(0,0,0,.6);
+.preview img{
+width:380px;
+border-radius:18px;
+box-shadow:0 25px 60px rgba(0,0,0,.5);
 }
 
-/* BENEFICIOS */
+/* BENEFÍCIOS */
 .grid{
+margin-top:90px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:18px;
-margin-top:50px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
 background:#14253d;
-padding:22px;
-border-radius:12px;
+padding:25px;
+border-radius:14px;
+font-weight:600;
 }
 
 /* DEPOIMENTOS */
 .testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-.testimonial{
-background:#14253d;
-padding:25px;
-border-radius:14px;
+margin-top:100px;
 text-align:center;
 }
 
-.testimonial img{
+.test-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.test{
+background:#14253d;
+padding:25px;
+border-radius:14px;
+}
+
+.avatar{
 width:70px;
 height:70px;
 border-radius:50%;
-object-fit:cover;
-margin-bottom:10px;
+margin:auto;
+margin-bottom:12px;
+background:linear-gradient(45deg,#2dd4bf,#0ea5e9);
 }
 
 /* FAQ */
+.faq{
+margin-top:100px;
+}
+
 .faq-item{
 background:#14253d;
-border-radius:10px;
 margin-bottom:10px;
+border-radius:12px;
 cursor:pointer;
-padding:15px 18px;
+padding:18px;
 }
 
 .answer{
 display:none;
+margin-top:10px;
 opacity:.8;
-padding-top:10px;
 }
 
 /* WHATS */
@@ -152,10 +151,10 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:28px;
-text-decoration:none;
+font-size:30px;
 color:white;
-animation:pulse 1.5s infinite;
+text-decoration:none;
+animation:pulse 1.6s infinite;
 }
 
 @keyframes pulse{
@@ -165,7 +164,8 @@ animation:pulse 1.5s infinite;
 }
 
 @media(max-width:900px){
-.hero{flex-direction:column;text-align:center}
+h1{font-size:34px}
+.preview img{width:100%}
 }
 </style>
 </head>
@@ -175,8 +175,6 @@ animation:pulse 1.5s infinite;
 <!-- HERO -->
 <section class="container hero">
 
-<div class="hero-text">
-
 <h1>Gestor AL Pro</h1>
 
 <p class="sub">
@@ -185,68 +183,59 @@ Controle financeiro do seu Alojamento Local em apenas 5 minutos por dia
 
 <a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
 
-</div>
-
-<div class="hero-images">
+<div class="preview">
 <img src="capa.jpg">
 <img src="painel.jpg">
 </div>
 
 </section>
-
 
 <!-- BENEFÍCIOS -->
 <section class="container">
 
-<h2>O que você vai ganhar</h2>
-
 <div class="grid">
-<div class="card">✔ Controle total de reservas</div>
-<div class="card">✔ Cálculo automático de taxas</div>
+<div class="card">✔ Controle total de receitas e despesas</div>
+<div class="card">✔ Relatórios automáticos</div>
 <div class="card">✔ Dashboard profissional</div>
-<div class="card">✔ Relatórios prontos</div>
-<div class="card">✔ Economia de horas</div>
+<div class="card">✔ Economia de horas toda semana</div>
 <div class="card">✔ Mais lucro, menos stress</div>
+<div class="card">✔ Funciona offline no Excel</div>
 </div>
 
 </section>
 
-
-<!-- DEPOIMENTOS (AGORA COM FOTO REAL) -->
-<section class="container">
+<!-- DEPOIMENTOS -->
+<section class="container testimonials">
 
 <h2>Quem já usa recomenda</h2>
 
-<div class="testimonials">
-
-<div class="testimonial">
-<img src="capa.jpg">
+<div class="test-grid">
+<div class="test">
+<div class="avatar"></div>
 ★★★★★<br>
-“Finalmente organizei minhas finanças”<br>
-<strong>Carlos — Porto</strong>
+"Finalmente organizei minhas finanças"<br>
+<b>Carlos — Porto</b>
 </div>
 
-<div class="testimonial">
-<img src="painel.jpg">
+<div class="test">
+<div class="avatar"></div>
 ★★★★★<br>
-“Economizo 3h por semana”<br>
-<strong>Ana — Lisboa</strong>
+"Economizo 3h por semana"<br>
+<b>Ana — Lisboa</b>
 </div>
 
-<div class="testimonial">
-<img src="capa.jpg">
+<div class="test">
+<div class="avatar"></div>
 ★★★★★<br>
-“Vale cada euro investido”<br>
-<strong>Miguel — Algarve</strong>
+"Vale cada euro investido"<br>
+<b>Miguel — Algarve</b>
 </div>
-
 </div>
 
 </section>
 
-
-<!-- FAQ (CLICÁVEL) -->
-<section class="container">
+<!-- FAQ -->
+<section class="container faq">
 
 <h2>Perguntas Frequentes</h2>
 
@@ -257,23 +246,23 @@ Funciona no Excel?
 
 <div class="faq-item" onclick="toggle(this)">
 Precisa internet?
-<div class="answer">Não, funciona offline.</div>
+<div class="answer">Não. Funciona offline.</div>
 </div>
 
 <div class="faq-item" onclick="toggle(this)">
 Recebo na hora?
-<div class="answer">Download imediato.</div>
+<div class="answer">Download imediato após a compra.</div>
 </div>
 
 </section>
 
-
+<!-- WHATS -->
 <a class="whats" href="https://wa.me/351923515605" target="_blank">☎</a>
 
 <script>
 function toggle(el){
-let a = el.querySelector('.answer');
-a.style.display = a.style.display === "block" ? "none" : "block";
+let a=el.querySelector(".answer");
+a.style.display=a.style.display=="block"?"none":"block";
 }
 </script>
 
