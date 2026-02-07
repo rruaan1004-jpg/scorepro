@@ -6,7 +6,7 @@
 
 <title>Gestor AL Pro | Controle Financeiro para Alojamento Local</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -17,120 +17,305 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0c1c2b,#132f46);
+background:linear-gradient(135deg,#0b1422,#132f46);
 color:#fff;
 line-height:1.6;
 }
 
-section{
-padding:90px 20px;
+.container{
 max-width:1200px;
 margin:auto;
+padding:100px 20px;
 }
 
-/* ===== HERO ===== */
+/* ===== TITULOS ===== */
+h1{
+font-size:60px;
+font-weight:800;
+margin-bottom:20px;
+}
 
-.hero{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-justify-content:center;
-gap:60px;
+h2{
+font-size:38px;
+font-weight:800;
 text-align:center;
+margin-bottom:50px;
 }
 
-.hero-text{
-flex:1 1 420px;
-}
-
-.hero h1{
-font-size:52px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:20px;
-opacity:.9;
-margin-bottom:30px;
-}
-
+/* ===== BOTÃO ===== */
 .btn{
 background:#2ee6c2;
 color:#06202f;
-padding:18px 42px;
-border-radius:12px;
-font-weight:700;
+padding:18px 50px;
+border-radius:14px;
+font-weight:800;
+font-size:18px;
 text-decoration:none;
 display:inline-block;
 transition:.3s;
 }
 
 .btn:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
-/* ===== IMAGENS (CORRIGIDO AQUI) ===== */
-
-.hero-images{
-flex:1 1 500px;
+/* ===== HERO ===== */
+.hero{
 display:flex;
-gap:25px;
-justify-content:center;
 align-items:center;
+gap:70px;
 flex-wrap:wrap;
 }
 
+.hero-text{
+flex:1 1 500px;
+}
+
+.sub{
+font-size:22px;
+opacity:.9;
+margin-bottom:25px;
+}
+
+.timer{
+margin-top:12px;
+color:#ff6b6b;
+font-weight:700;
+}
+
+.hero-images{
+flex:1 1 450px;
+display:flex;
+gap:25px;
+justify-content:center;
+}
+
 .hero-images img{
-width:260px;
+width:270px;
+border-radius:18px;
+box-shadow:0 25px 70px rgba(0,0,0,.6);
+}
+
+/* ===== BARRA CONFIANÇA ===== */
+.trust{
+background:#101f32;
+padding:18px;
+text-align:center;
+font-size:14px;
+opacity:.8;
+}
+
+/* ===== GRID BENEFICIOS ===== */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:#14253d;
+padding:30px;
 border-radius:16px;
-box-shadow:0 15px 35px rgba(0,0,0,.45);
+font-weight:600;
 transition:.3s;
 }
 
-.hero-images img:hover{
+.card:hover{
 transform:translateY(-6px);
 }
 
-/* RESPONSIVO */
-@media(max-width:768px){
-.hero{
-flex-direction:column;
+/* ===== DEPOIMENTOS ===== */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
-.hero-images img{
-width:90%;
+
+.testimonial{
+background:#14253d;
+padding:25px;
+border-radius:16px;
+text-align:center;
 }
+
+.avatar{
+width:70px;
+height:70px;
+border-radius:50%;
+background:#2ee6c2;
+margin:auto;
+margin-bottom:10px;
+}
+
+/* ===== GARANTIA ===== */
+.guarantee{
+background:#0f2439;
+padding:45px;
+border-radius:18px;
+text-align:center;
+font-size:18px;
+margin-top:70px;
+}
+
+/* ===== FAQ ===== */
+.faq-item{
+background:#14253d;
+padding:18px;
+border-radius:12px;
+margin-bottom:12px;
+}
+
+/* ===== WHATS ===== */
+.whats{
+position:fixed;
+right:20px;
+bottom:20px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
+70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+/* ===== RESPONSIVO ===== */
+@media(max-width:900px){
+.hero{flex-direction:column;text-align:center}
+h1{font-size:38px}
+.hero-images img{width:90%}
 }
 </style>
 </head>
 
 <body>
 
-<section class="hero">
+<div class="trust">
+🔒 Pagamento 100% seguro via Hotmart • Download imediato • Funciona offline
+</div>
+
+
+<!-- HERO -->
+<section class="container hero">
 
 <div class="hero-text">
+
 <h1>Gestor AL Pro</h1>
 
-<p>
-Controle financeiro completo do seu Alojamento Local  
+<p class="sub">
+Controle financeiro profissional do seu Alojamento Local  
 em apenas <strong>5 minutos por dia</strong>
 </p>
 
 <a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
+
+<p class="timer">🔥 Oferta termina em <span id="countdown"></span></p>
+
 </div>
 
-
-<!-- 🔥 AQUI ESTÁ A CORREÇÃO REAL 🔥 -->
 <div class="hero-images">
-
-<!-- CAPA -->
 <img src="capa.jpg" alt="Capa do produto">
-
-<!-- DASHBOARD (PAINEL) -->
 <img src="painel.jpg" alt="Dashboard financeiro">
+</div>
+
+</section>
+
+
+<!-- BENEFÍCIOS -->
+<section class="container">
+
+<h2>Por que você vai amar</h2>
+
+<div class="grid">
+<div class="card">✔ Controle total de reservas e receitas</div>
+<div class="card">✔ Cálculo automático de comissões</div>
+<div class="card">✔ Dashboard profissional pronto</div>
+<div class="card">✔ Relatórios automáticos</div>
+<div class="card">✔ Economia de horas toda semana</div>
+<div class="card">✔ Mais lucro, menos stress</div>
+</div>
+
+</section>
+
+
+<!-- DEPOIMENTOS -->
+<section class="container">
+
+<h2>Quem já usa recomenda</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<div class="avatar"></div>
+★★★★★<br><br>
+“Finalmente organizei minhas finanças!”
+<br><strong>Carlos — Porto</strong>
+</div>
+
+<div class="testimonial">
+<div class="avatar"></div>
+★★★★★<br><br>
+“Economizo 3h por semana.”
+<br><strong>Ana — Lisboa</strong>
+</div>
+
+<div class="testimonial">
+<div class="avatar"></div>
+★★★★★<br><br>
+“Vale cada euro investido.”
+<br><strong>Miguel — Algarve</strong>
+</div>
 
 </div>
 
 </section>
+
+
+<!-- GARANTIA -->
+<section class="container guarantee">
+🛡️ <strong>Garantia incondicional de 7 dias</strong><br><br>
+Se não gostar, devolvemos 100% do seu dinheiro.
+</section>
+
+
+<!-- FAQ -->
+<section class="container">
+
+<h2>Perguntas Frequentes</h2>
+
+<div class="faq-item">Funciona no Excel? → Sim, 100% compatível.</div>
+<div class="faq-item">Precisa internet? → Não, funciona offline.</div>
+<div class="faq-item">Recebo na hora? → Download imediato.</div>
+<div class="faq-item">Pagamento seguro? → Processado pela Hotmart.</div>
+
+<div style="text-align:center;margin-top:40px">
+<a href="https://go.hotmart.com/M104320817Y" class="btn">Quero Comprar Agora</a>
+</div>
+
+</section>
+
+
+<a class="whats" href="https://wa.me/351923515605" target="_blank">☎</a>
+
+<script>
+let t=3600;
+setInterval(()=>{
+let m=Math.floor(t/60);
+let s=t%60;
+document.getElementById("countdown").innerHTML=m+":"+("0"+s).slice(-2);
+t--;
+},1000);
+</script>
 
 </body>
 </html>
