@@ -3,14 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestor AL Pro | Controle Financeiro AL</title>
+
+<title>Gestor AL Pro | Controle Financeiro para Alojamento Local</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e3a5f);
-color:white;
+background:linear-gradient(135deg,#0b1726,#0f2e4a);
+color:#fff;
 }
 
 /* CONTAINER */
@@ -22,16 +32,23 @@ padding:90px 20px;
 
 /* HERO */
 .hero{
-text-align:center;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:70px;
 }
 
-h1{
-font-size:48px;
+.hero-text{
+flex:1;
+}
+
+.hero h1{
+font-size:52px;
 font-weight:800;
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
-.sub{
+.hero p{
 font-size:20px;
 opacity:.9;
 margin-bottom:30px;
@@ -39,14 +56,14 @@ margin-bottom:30px;
 
 .btn{
 background:#2dd4bf;
-color:#000;
-padding:18px 40px;
+color:#04202b;
+padding:18px 42px;
 border-radius:12px;
-font-weight:700;
+font-weight:800;
 text-decoration:none;
 display:inline-block;
-font-size:18px;
-transition:.2s;
+box-shadow:0 15px 40px rgba(45,212,191,.35);
+transition:.25s;
 }
 
 .btn:hover{
@@ -55,32 +72,70 @@ transform:scale(1.05);
 
 /* IMAGENS */
 .preview{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-margin-top:70px;
-align-items:center;
+flex:1;
+display:flex;
+gap:25px;
 }
 
 .preview img{
-width:100%;
+width:260px;
 border-radius:16px;
-box-shadow:0 25px 60px rgba(0,0,0,.5);
+box-shadow:0 25px 60px rgba(0,0,0,.6);
+}
+
+/* TIMER */
+.timer{
+margin-top:18px;
+color:#ff6b6b;
+font-weight:700;
 }
 
 /* BENEFÍCIOS */
 .grid{
-margin-top:80px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
+margin-top:60px;
 }
 
 .card{
+background:#13263c;
+padding:26px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+/* DEPOIMENTOS */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
+}
+
+.t-card{
 background:#14253d;
-padding:25px;
-border-radius:12px;
-font-weight:600;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+transition:.3s;
+}
+
+.t-card:hover{
+transform:translateY(-8px);
+}
+
+.avatar{
+width:80px;
+height:80px;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+.stars{
+color:#ffd34d;
+margin-bottom:8px;
 }
 
 /* FAQ */
@@ -92,10 +147,18 @@ border-radius:10px;
 cursor:pointer;
 }
 
-.answer{
+.faq-item p{
 display:none;
 opacity:.8;
 margin-top:8px;
+}
+
+/* GARANTIA */
+.guarantee{
+text-align:center;
+margin-top:80px;
+font-size:20px;
+font-weight:600;
 }
 
 /* WHATS */
@@ -111,7 +174,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 color:white;
-font-size:30px;
+font-size:28px;
 text-decoration:none;
 animation:pulse 1.5s infinite;
 }
@@ -122,79 +185,136 @@ animation:pulse 1.5s infinite;
 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
 
-/* MOBILE */
 @media(max-width:900px){
-.preview{grid-template-columns:1fr}
-h1{font-size:34px}
+.hero{flex-direction:column;text-align:center}
+.preview{justify-content:center}
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="container hero">
 
+<div class="hero-text">
 <h1>Gestor AL Pro</h1>
 
-<p class="sub">
-Controle financeiro do seu Alojamento Local em apenas 5 minutos por dia
+<p>
+Controle financeiro do seu Alojamento Local<br>
+em apenas <b>5 minutos por dia</b>
 </p>
 
 <a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
 
+<p class="timer">🔥 Oferta termina em <span id="countdown"></span></p>
+</div>
+
 <div class="preview">
-<img src="capa.jpg" alt="Capa">
-<img src="painel.jpg" alt="Dashboard">
+<img src="capa.jpg">
+<img src="painel.jpg">
 </div>
 
 </section>
 
 
+<!-- BENEFÍCIOS -->
 <section class="container">
+<h2 style="text-align:center">O que você vai ganhar</h2>
+
 <div class="grid">
-<div class="card">✔ Controle total de reservas e receitas</div>
+<div class="card">✔ Controle total de reservas</div>
 <div class="card">✔ Cálculo automático de taxas</div>
 <div class="card">✔ Relatórios prontos</div>
 <div class="card">✔ Dashboard profissional</div>
-<div class="card">✔ Economia de horas por semana</div>
+<div class="card">✔ Economiza horas toda semana</div>
 <div class="card">✔ Mais lucro, menos stress</div>
 </div>
 </section>
 
 
+<!-- DEPOIMENTOS -->
 <section class="container">
-<h2 style="margin-bottom:25px;">Perguntas Frequentes</h2>
+<h2 style="text-align:center">Quem já usa recomenda</h2>
 
-<div class="faq-item" onclick="toggle(this)">
-Funciona no Excel?
-<div class="answer">Sim, 100% compatível.</div>
+<div class="testimonials">
+
+<div class="t-card">
+<img class="avatar" src="https://randomuser.me/api/portraits/men/32.jpg">
+<div class="stars">★★★★★</div>
+<p>"Finalmente organizei minhas finanças!"</p>
+<b>Carlos — Porto</b>
 </div>
 
-<div class="faq-item" onclick="toggle(this)">
-Precisa internet?
-<div class="answer">Não, funciona offline.</div>
+<div class="t-card">
+<img class="avatar" src="https://randomuser.me/api/portraits/women/44.jpg">
+<div class="stars">★★★★★</div>
+<p>"Economizo 3h por semana fácil."</p>
+<b>Ana — Lisboa</b>
 </div>
 
-<div class="faq-item" onclick="toggle(this)">
-Recebo na hora?
-<div class="answer">Download imediato.</div>
+<div class="t-card">
+<img class="avatar" src="https://randomuser.me/api/portraits/men/65.jpg">
+<div class="stars">★★★★★</div>
+<p>"Vale cada euro investido."</p>
+<b>Miguel — Algarve</b>
 </div>
 
-<div class="faq-item" onclick="toggle(this)">
-Tem garantia?
-<div class="answer">7 dias de reembolso total.</div>
 </div>
 </section>
 
 
+<!-- FAQ -->
+<section class="container">
+<h2>Perguntas Frequentes</h2>
+
+<div class="faq-item">Funciona no Excel?
+<p>Sim, 100% compatível.</p></div>
+
+<div class="faq-item">Precisa internet?
+<p>Não, funciona offline.</p></div>
+
+<div class="faq-item">Recebo na hora?
+<p>Download imediato.</p></div>
+
+<div class="faq-item">Tem garantia?
+<p>7 dias de reembolso total.</p></div>
+
+</section>
+
+
+<!-- GARANTIA -->
+<div class="container guarantee">
+🔒 Garantia incondicional de 7 dias ou seu dinheiro de volta
+</div>
+
+
+<!-- WHATS -->
 <a class="whats" href="https://wa.me/351923515605" target="_blank">☎</a>
 
+
+<!-- JS -->
 <script>
-function toggle(el){
-let a=el.querySelector(".answer");
-a.style.display=a.style.display=="block"?"none":"block";
-}
+
+// contador
+let t=3600;
+setInterval(()=>{
+let m=Math.floor(t/60);
+let s=t%60;
+document.getElementById("countdown").innerHTML=m+":"+("0"+s).slice(-2);
+t--;
+},1000);
+
+// FAQ toggle
+document.querySelectorAll('.faq-item').forEach(item=>{
+item.onclick=()=> {
+let p=item.querySelector('p');
+p.style.display = p.style.display==="block" ? "none" : "block";
+};
+});
+
 </script>
 
 </body>
-</html>
+  </html>
