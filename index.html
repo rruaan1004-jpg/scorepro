@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Gestor AL Pro</title>
@@ -20,55 +20,57 @@ font-family:'Poppins',sans-serif;
 body{
 background:linear-gradient(135deg,#0b1624,#132f46);
 color:#fff;
+line-height:1.5;
 }
 
-/* container */
 .container{
 max-width:1100px;
 margin:auto;
 padding:50px 20px;
-}
-
-/* HERO */
-.hero{
 text-align:center;
 }
 
-.hero h1{
+section{
+margin-bottom:70px;
+}
+
+h1{
 font-size:34px;
 font-weight:800;
-line-height:1.2;
 margin-bottom:15px;
 }
 
-.hero p{
-font-size:16px;
-opacity:.9;
+h2{
+font-size:26px;
 margin-bottom:25px;
 }
 
+p{
+opacity:.9;
+margin-bottom:20px;
+}
+
+/* BOTÃO */
 .btn{
 background:#2dd4bf;
 color:#000;
 padding:16px 34px;
 border-radius:12px;
-font-weight:700;
+font-weight:800;
 text-decoration:none;
 display:inline-block;
 font-size:16px;
-transition:.2s;
 }
 
 .btn:hover{
 transform:scale(1.05);
 }
 
-/* preview imagens */
+/* IMAGENS */
 .preview{
-margin-top:35px;
 display:grid;
-grid-template-columns:1fr;
 gap:25px;
+margin-top:25px;
 }
 
 .preview img{
@@ -77,23 +79,81 @@ border-radius:14px;
 box-shadow:0 25px 60px rgba(0,0,0,.5);
 }
 
-/* benefícios */
-.benefits{
-margin-top:45px;
+/* GRIDS */
+.grid{
 display:grid;
-gap:14px;
+gap:15px;
+margin-top:25px;
 }
 
-.benefit{
+.card{
 background:#14253d;
-padding:16px;
+padding:18px;
 border-radius:10px;
 font-weight:600;
+}
+
+/* PREÇO */
+.price-box{
+background:#14253d;
+padding:30px;
+border-radius:14px;
+}
+
+.old{
+text-decoration:line-through;
+opacity:.5;
+}
+
+.price{
+font-size:40px;
+font-weight:800;
+margin:10px 0;
+}
+
+/* GARANTIA */
+.guarantee{
+margin-top:18px;
+background:#0e1f33;
+padding:14px;
+border-radius:10px;
+font-size:14px;
+opacity:.95;
+}
+
+/* CONTADOR */
+.timer{
+margin-top:15px;
+font-weight:700;
+color:#ffcc00;
+}
+
+/* PROVA SOCIAL */
+.test-grid{
+display:grid;
+gap:18px;
+margin-top:30px;
+}
+
+.test{
+background:#14253d;
+padding:18px;
+border-radius:10px;
 font-size:14px;
 }
 
-/* CTA fixo mobile */
-.sticky-cta{
+/* FAQ */
+details{
+background:#14253d;
+padding:18px;
+border-radius:10px;
+margin-bottom:12px;
+text-align:left;
+cursor:pointer;
+}
+
+/* BOTÃO FIXO MOBILE */
+.sticky{
 position:fixed;
 bottom:0;
 left:0;
@@ -104,11 +164,10 @@ text-align:center;
 padding:16px;
 font-weight:800;
 text-decoration:none;
-font-size:18px;
 z-index:999;
 }
 
-/* whatsapp */
+/* WHATS */
 .whats{
 position:fixed;
 right:20px;
@@ -125,20 +184,27 @@ font-size:28px;
 text-decoration:none;
 }
 
-/* desktop */
+/* DESKTOP */
 @media(min-width:900px){
-
-.hero h1{
-font-size:48px;
-}
 
 .preview{
 grid-template-columns:1fr 1fr;
-gap:40px;
 }
 
-.sticky-cta{
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.test-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.sticky{
 display:none;
+}
+
+h1{
+font-size:48px;
 }
 
 }
@@ -148,42 +214,133 @@ display:none;
 
 <body>
 
-<!-- HERO OTIMIZADO -->
-<section class="container hero">
+<!-- HERO -->
+<section class="container">
 
 <h1>Controle o lucro real do seu Airbnb em minutos</h1>
+<p>Automatize receitas, taxas e comissões numa única planilha profissional.</p>
 
-<p>
-Automatize receitas, taxas, comissões e despesas numa única planilha profissional.  
-Sem contas manuais. Sem confusão. Sem perder dinheiro.
-</p>
-
-<a href="https://go.hotmart.com/M104320817Y" class="btn">
-Quero a planilha agora
-</a>
+<a href="https://go.hotmart.com/M104320817Y" class="btn">Comprar Agora</a>
 
 <div class="preview">
-<img src="painel.jpg" alt="Dashboard da planilha">
+<img src="painel.jpg" alt="Dashboard">
 <img src="capa.jpg" alt="Gestor AL Pro">
-</div>
-
-<div class="benefits">
-<div class="benefit">✔ Lucro líquido automático por reserva</div>
-<div class="benefit">✔ Relatórios por cidade e plataforma</div>
-<div class="benefit">✔ Controle de comissões e taxas</div>
-<div class="benefit">✔ Funciona direto no Google Sheets</div>
-<div class="benefit">✔ Configuração em menos de 5 minutos</div>
 </div>
 
 </section>
 
-<!-- BOTÃO FIXO MOBILE (vende MUITO) -->
-<a class="sticky-cta" href="https://go.hotmart.com/M104320817Y">
-Comprar agora por €19
+
+<!-- BENEFÍCIOS -->
+<section class="container">
+
+<h2>Tudo automático. Sem contas manuais.</h2>
+
+<div class="grid">
+<div class="card">✔ Lucro líquido automático</div>
+<div class="card">✔ Relatórios por cidade</div>
+<div class="card">✔ Controle de comissões Airbnb/Booking</div>
+<div class="card">✔ Dashboard profissional</div>
+<div class="card">✔ Google Sheets online</div>
+<div class="card">✔ Pronto em 5 minutos</div>
+</div>
+
+</section>
+
+
+<!-- PROVA SOCIAL -->
+<section class="container">
+
+<h2>Quem usa recomenda</h2>
+
+<div class="test-grid">
+
+<div class="test">⭐⭐⭐⭐⭐<br>“Descobri 300€ de taxas que estava a perder.”<br><b>— João, Lisboa</b></div>
+
+<div class="test">⭐⭐⭐⭐⭐<br>“Agora sei o lucro exato de cada reserva.”<br><b>— Marta, Porto</b></div>
+
+<div class="test">⭐⭐⭐⭐⭐<br>“Muito melhor que Excel manual. Simples e rápido.”<br><b>— Carlos, Algarve</b></div>
+
+</div>
+
+</section>
+
+
+<!-- PREÇO -->
+<section class="container">
+
+<div class="price-box">
+
+<p class="old">Software similar: 29€/mês</p>
+
+<p class="price">19€ pagamento único</p>
+
+<p>Use para sempre. Sem mensalidades.</p>
+
+<div class="timer">
+Oferta termina em <span id="countdown">15:00</span>
+</div>
+
+<a href="https://go.hotmart.com/M104320817Y" class="btn" style="margin-top:20px;">
+Comprar Agora
 </a>
 
-<!-- whatsapp -->
+<div class="guarantee">
+🛡️ Garantia incondicional de 7 dias — teste sem risco.  
+Se não gostar, devolvemos 100% do seu dinheiro.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="container">
+
+<h2>Perguntas Frequentes</h2>
+
+<details><summary>Funciona no Excel?</summary>Funciona no Google Sheets online.</details>
+<details><summary>Preciso saber fórmulas?</summary>Não. Tudo automático.</details>
+<details><summary>Posso usar para vários imóveis?</summary>Sim, ilimitado.</details>
+<details><summary>Como recebo?</summary>Download imediato após pagamento.</details>
+
+</section>
+
+
+<!-- CTA FINAL -->
+<section class="container">
+<a href="https://go.hotmart.com/M104320817Y" class="btn">Começar Agora</a>
+</section>
+
+
+<!-- BOTÃO FIXO MOBILE -->
+<a class="sticky" href="https://go.hotmart.com/M104320817Y">
+Comprar agora por 19€
+</a>
+
 <a class="whats" href="https://wa.me/351923515605">☎</a>
 
+
+<!-- CONTADOR -->
+<script>
+let duration = 15 * 60;
+
+function updateTimer(){
+let minutes = Math.floor(duration / 60);
+let seconds = duration % 60;
+
+document.getElementById("countdown").innerHTML =
+minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+duration--;
+
+if(duration < 0){
+duration = 15 * 60;
+}
+}
+
+setInterval(updateTimer,1000);
+</script>
+
 </body>
-</html>
+  </html>
