@@ -22,11 +22,11 @@ background:linear-gradient(135deg,#0b1624,#132f46);
 color:#fff;
 }
 
-/* CONTAINER */
+/* container */
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
-padding:80px 20px;
+padding:50px 20px;
 }
 
 /* HERO */
@@ -34,27 +34,28 @@ padding:80px 20px;
 text-align:center;
 }
 
-h1{
-font-size:48px;
+.hero h1{
+font-size:34px;
 font-weight:800;
+line-height:1.2;
 margin-bottom:15px;
 }
 
-.sub{
-font-size:20px;
+.hero p{
+font-size:16px;
 opacity:.9;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 .btn{
 background:#2dd4bf;
 color:#000;
-padding:18px 40px;
+padding:16px 34px;
 border-radius:12px;
 font-weight:700;
 text-decoration:none;
 display:inline-block;
-font-size:18px;
+font-size:16px;
 transition:.2s;
 }
 
@@ -62,107 +63,84 @@ transition:.2s;
 transform:scale(1.05);
 }
 
-/* 🔥 SOMENTE AQUI MUDOU (2 → 3 colunas) */
+/* preview imagens */
 .preview{
+margin-top:35px;
 display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:40px;
-margin-top:70px;
-align-items:center;
+grid-template-columns:1fr;
+gap:25px;
 }
 
 .preview img{
 width:100%;
-border-radius:16px;
+border-radius:14px;
 box-shadow:0 25px 60px rgba(0,0,0,.5);
 }
 
-/* botão lateral */
-.cta-side{
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.grid{
-margin-top:80px;
+/* benefícios */
+.benefits{
+margin-top:45px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+gap:14px;
 }
 
-.card{
+.benefit{
 background:#14253d;
-padding:25px;
-border-radius:12px;
-font-weight:600;
-}
-
-.test-grid{
-margin-top:60px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.test-card{
-background:#14263c;
-padding:25px;
-border-radius:12px;
-text-align:center;
-}
-
-.avatar{
-width:70px;
-height:70px;
-border-radius:50%;
-margin:auto;
-margin-bottom:15px;
-background-size:cover;
-background-position:center;
-}
-
-details{
-background:#14253d;
-margin-bottom:12px;
-padding:18px;
+padding:16px;
 border-radius:10px;
-cursor:pointer;
-}
-
-.trust-bar{
-background:#0e1f33;
-margin-top:80px;
-padding:18px;
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
 font-weight:600;
-font-size:15px;
-opacity:.95;
+font-size:14px;
 }
 
+/* CTA fixo mobile */
+.sticky-cta{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#2dd4bf;
+color:#000;
+text-align:center;
+padding:16px;
+font-weight:800;
+text-decoration:none;
+font-size:18px;
+z-index:999;
+}
+
+/* whatsapp */
 .whats{
 position:fixed;
 right:20px;
-bottom:20px;
-width:65px;
-height:65px;
+bottom:80px;
+width:60px;
+height:60px;
 background:#25D366;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
-font-size:30px;
+font-size:28px;
 text-decoration:none;
 }
 
-@media(max-width:900px){
-.preview{
-grid-template-columns:1fr;
+/* desktop */
+@media(min-width:900px){
+
+.hero h1{
+font-size:48px;
 }
+
+.preview{
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.sticky-cta{
+display:none;
+}
+
 }
 
 </style>
@@ -170,35 +148,41 @@ grid-template-columns:1fr;
 
 <body>
 
-<!-- HERO (TEXTO ORIGINAL INTACTO) -->
+<!-- HERO OTIMIZADO -->
 <section class="container hero">
 
-<h1>Pare de perder dinheiro no seu Alojamento Local</h1>
-
-<h1>
-Você está perdendo dinheiro TODOS os meses no seu Alojamento Local… e nem percebe.
-</h1>
+<h1>Controle o lucro real do seu Airbnb em minutos</h1>
 
 <p>
-Chega de planilhas confusas, contas na mão e lucros invisíveis. 
-O Gestor AL Pro organiza receitas, despesas e resultados automaticamente em apenas 5 minutos por dia — com controle profissional e total segurança.
+Automatize receitas, taxas, comissões e despesas numa única planilha profissional.  
+Sem contas manuais. Sem confusão. Sem perder dinheiro.
 </p>
 
-<div class="preview">
-<img src="capa.jpg" alt="">
-<img src="painel.jpg" alt="">
-
-<!-- 🔥 BOTÃO ADICIONADO AQUI -->
-<div class="cta-side">
 <a href="https://go.hotmart.com/M104320817Y" class="btn">
-Comprar Agora
+Quero a planilha agora
 </a>
+
+<div class="preview">
+<img src="painel.jpg" alt="Dashboard da planilha">
+<img src="capa.jpg" alt="Gestor AL Pro">
 </div>
 
+<div class="benefits">
+<div class="benefit">✔ Lucro líquido automático por reserva</div>
+<div class="benefit">✔ Relatórios por cidade e plataforma</div>
+<div class="benefit">✔ Controle de comissões e taxas</div>
+<div class="benefit">✔ Funciona direto no Google Sheets</div>
+<div class="benefit">✔ Configuração em menos de 5 minutos</div>
 </div>
 
 </section>
 
+<!-- BOTÃO FIXO MOBILE (vende MUITO) -->
+<a class="sticky-cta" href="https://go.hotmart.com/M104320817Y">
+Comprar agora por €19
+</a>
+
+<!-- whatsapp -->
 <a class="whats" href="https://wa.me/351923515605">☎</a>
 
 </body>
