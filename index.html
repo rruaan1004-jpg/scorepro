@@ -6,9 +6,9 @@
 
 <title>Gestor AL Pro</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- PIXEL META -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,102 +18,333 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1056723816631326');
-fbq('track', 'PageView');
+fbq('init','1056723816631326');
+fbq('track','PageView');
 </script>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:linear-gradient(135deg,#0b1624,#132f46);color:#fff;line-height:1.5;}
-.container{max-width:1100px;margin:auto;padding:50px 20px;text-align:center;}
-section{margin-bottom:70px;}
-h1{font-size:34px;font-weight:800;margin-bottom:15px;}
-h2{font-size:26px;margin-bottom:25px;}
-p{opacity:.9;margin-bottom:20px;}
-.btn{background:#2dd4bf;color:#000;padding:16px 34px;border-radius:12px;font-weight:800;text-decoration:none;display:inline-block;font-size:16px;}
-.btn:hover{transform:scale(1.05);}
-.preview{display:grid;gap:25px;margin-top:25px;}
-.preview img{width:100%;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.5);}
-.grid{display:grid;gap:15px;margin-top:25px;}
-.card{background:#14253d;padding:18px;border-radius:10px;font-weight:600;}
-.price-box{background:#14253d;padding:30px;border-radius:14px;}
-.old{text-decoration:line-through;opacity:.5;}
-.price{font-size:40px;font-weight:800;margin:10px 0;}
-.guarantee{margin-top:18px;background:#0e1f33;padding:14px;border-radius:10px;font-size:14px;opacity:.95;}
-.timer{margin-top:15px;font-weight:700;color:#ffcc00;}
-.test-grid{display:grid;gap:18px;margin-top:30px;}
-.test{background:#14253d;padding:18px;border-radius:10px;font-size:14px;}
-details{background:#14253d;padding:18px;border-radius:10px;margin-bottom:12px;text-align:left;cursor:pointer;}
-.sticky{position:fixed;bottom:0;left:0;width:100%;background:#2dd4bf;color:#000;text-align:center;padding:16px;font-weight:800;text-decoration:none;z-index:999;}
-.whats{position:fixed;right:20px;bottom:80px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:28px;text-decoration:none;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(140deg,#0b1624,#132f46);
+color:#fff;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+text-align:center;
+}
+
+h1{
+font-size:48px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+h2{
+font-size:30px;
+margin-bottom:35px;
+}
+
+p{
+opacity:.9;
+margin-bottom:25px;
+}
+
+/* BOTÃO */
+.btn{
+background:#2dd4bf;
+color:#000;
+padding:18px 40px;
+border-radius:14px;
+font-weight:800;
+font-size:18px;
+text-decoration:none;
+display:inline-block;
+transition:.2s;
+}
+
+.btn:hover{
+transform:scale(1.06);
+}
+
+/* HERO BADGE */
+.badge{
+display:inline-block;
+background:#1f3a57;
+padding:8px 16px;
+border-radius:50px;
+font-size:14px;
+margin-bottom:18px;
+opacity:.9;
+}
+
+/* PREVIEW */
+.preview{
+margin-top:40px;
+}
+
+.preview img{
+width:100%;
+border-radius:18px;
+box-shadow:0 30px 80px rgba(0,0,0,.5);
+}
+
+/* CARDS */
+.grid{
+display:grid;
+gap:18px;
+margin-top:30px;
+}
+
+.card{
+background:#14253d;
+padding:22px;
+border-radius:14px;
+font-weight:600;
+}
+
+/* COMPARAÇÃO */
+.compare{
+display:grid;
+gap:20px;
+margin-top:30px;
+}
+
+.box{
+padding:25px;
+border-radius:16px;
+background:#14253d;
+}
+
+.box.highlight{
+background:#2dd4bf;
+color:#000;
+font-weight:800;
+transform:scale(1.05);
+}
+
+/* PREÇO */
+.price-box{
+background:#14253d;
+padding:40px;
+border-radius:20px;
+margin-top:20px;
+}
+
+.price{
+font-size:50px;
+font-weight:800;
+margin:15px 0;
+}
+
+.old{
+text-decoration:line-through;
+opacity:.4;
+}
+
+.timer{
+margin-top:15px;
+font-weight:700;
+color:#ffcc00;
+}
+
+/* DEPOIMENTOS */
+.test-grid{
+display:grid;
+gap:20px;
+margin-top:40px;
+}
+
+.test{
+background:#14253d;
+padding:20px;
+border-radius:14px;
+}
+
+/* FAQ */
+details{
+background:#14253d;
+padding:18px;
+border-radius:12px;
+margin-bottom:12px;
+text-align:left;
+}
+
+/* STICKY */
+.sticky{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#2dd4bf;
+color:#000;
+text-align:center;
+padding:16px;
+font-weight:800;
+text-decoration:none;
+}
+
 @media(min-width:900px){
-.preview{grid-template-columns:1fr 1fr;}
-.grid{grid-template-columns:repeat(2,1fr);}
+.grid{grid-template-columns:repeat(3,1fr);}
+.compare{grid-template-columns:repeat(2,1fr);}
 .test-grid{grid-template-columns:repeat(3,1fr);}
 .sticky{display:none;}
-h1{font-size:48px;}
 }
+
 </style>
 </head>
 
 <body>
 
+
 <!-- HERO -->
 <section class="container">
-<h1>Controle o lucro real do seu Airbnb em minutos</h1>
 
-<!-- ALTERAÇÃO 1 (somente texto) -->
-<p>Automatize receitas, taxas e comissões num único sistema profissional.</p>
+<div class="badge">🔥 Pagamento único • Acesso vitalício</div>
 
-<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">Comprar Agora</a>
+<h1>Controle o lucro real do seu Airbnb em 5 minutos por dia</h1>
+
+<p>
+Sistema automático que calcula receitas, taxas e comissões sozinho.<br>
+Sem Excel manual. Sem fórmulas. Sem mensalidades.
+</p>
+
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
+Comprar agora por 37€
+</a>
 
 <div class="preview">
 <img src="painel.jpg">
-<img src="capa.jpg">
 </div>
+
 </section>
+
 
 
 <!-- BENEFÍCIOS -->
 <section class="container">
-<h2>Tudo automático. Sem contas manuais.</h2>
+
+<h2>Tudo automático. Zero contas manuais.</h2>
+
 <div class="grid">
 <div class="card">✔ Lucro líquido automático</div>
 <div class="card">✔ Relatórios por cidade</div>
-<div class="card">✔ Controle de comissões Airbnb/Booking</div>
+<div class="card">✔ Controle Airbnb + Booking</div>
 <div class="card">✔ Dashboard profissional</div>
-
-<!-- ALTERAÇÃO 2 (somente texto) -->
-<div class="card">✔ Acesso 100% online no navegador</div>
-
+<div class="card">✔ Google Sheets online</div>
 <div class="card">✔ Pronto em 5 minutos</div>
 </div>
+
 </section>
 
 
-<!-- PREÇO (INALTERADO) -->
+
+<!-- COMPARAÇÃO -->
 <section class="container">
+
+<h2>Por que pagar mensalidades?</h2>
+
+<div class="compare">
+
+<div class="box">
+Softwares similares<br><br>
+💸 9€ – 29€/mês<br>
+≈ 348€/ano
+</div>
+
+<div class="box highlight">
+Gestor AL Pro<br><br>
+💚 37€ pagamento único<br>
+Use para sempre
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PREÇO -->
+<section class="container">
+
 <div class="price-box">
 
-<p class="old">Software similar: 29€/mês</p>
-<p class="price">37€ pagamento único</p>
-<p>Use para sempre. Sem mensalidades.</p>
+<p class="old">Preço anual equivalente: 348€</p>
+
+<div class="price">37€</div>
+
+<p>Pagamento único • Sem mensalidades</p>
 
 <div class="timer">
 Oferta termina em <span id="countdown">15:00</span>
 </div>
 
-<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn" style="margin-top:20px;">
+<br>
+
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
 Comprar Agora
 </a>
 
-<div class="guarantee">
-🛡️ Garantia incondicional de 7 dias — teste sem risco.
-Se não gostar, devolvemos 100% do seu dinheiro.
 </div>
 
-</div>
 </section>
 
+
+
+<!-- PROVA SOCIAL -->
+<section class="container">
+
+<h2>Quem usa recomenda</h2>
+
+<div class="test-grid">
+<div class="test">⭐⭐⭐⭐⭐<br>“Descobri 300€ que estava a perder todo mês.”</div>
+<div class="test">⭐⭐⭐⭐⭐<br>“Agora sei o lucro exato de cada reserva.”</div>
+<div class="test">⭐⭐⭐⭐⭐<br>“Muito melhor que Excel manual.”</div>
+</div>
+
+</section>
+
+
+
+<!-- FAQ -->
+<section class="container">
+
+<h2>Perguntas Frequentes</h2>
+
+<details><summary>Funciona no Excel?</summary>Funciona no Google Sheets online.</details>
+<details><summary>Preciso saber fórmulas?</summary>Não. Tudo automático.</details>
+<details><summary>Posso usar para vários imóveis?</summary>Sim, ilimitado.</details>
+<details><summary>Como recebo?</summary>Download imediato após pagamento.</details>
+
+</section>
+
+
+
+<a class="sticky" href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230">
+Comprar agora por 37€
+</a>
+
+
+<script>
+let duration = 15 * 60;
+function updateTimer(){
+let m=Math.floor(duration/60);
+let s=duration%60;
+document.getElementById("countdown").innerHTML=m+":"+(s<10?"0":"")+s;
+duration--;
+if(duration<0){duration=15*60;}
+}
+setInterval(updateTimer,1000);
+</script>
+
 </body>
-</html>
+  </html>
