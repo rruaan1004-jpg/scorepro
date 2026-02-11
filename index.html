@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <title>Gestor AL Pro</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -25,15 +24,14 @@ fbq('track', 'PageView');
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:linear-gradient(135deg,#0b1624,#132f46);color:#fff;line-height:1.5;}
-.container{max-width:1100px;margin:auto;padding:50px 20px;text-align:center;}
+.container{max-width:1000px;margin:auto;padding:50px 20px;text-align:center;}
 section{margin-bottom:70px;}
 h1{font-size:34px;font-weight:800;margin-bottom:15px;}
 h2{font-size:26px;margin-bottom:25px;}
 p{opacity:.9;margin-bottom:20px;}
 .btn{background:#2dd4bf;color:#000;padding:16px 34px;border-radius:12px;font-weight:800;text-decoration:none;display:inline-block;font-size:16px;}
 .btn:hover{transform:scale(1.05);}
-.preview{display:grid;gap:25px;margin-top:25px;}
-.preview img{width:100%;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.5);}
+.image-box img{width:100%;max-width:800px;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.5);}
 .grid{display:grid;gap:15px;margin-top:25px;}
 .card{background:#14253d;padding:18px;border-radius:10px;font-weight:600;}
 .price-box{background:#14253d;padding:30px;border-radius:14px;}
@@ -46,7 +44,6 @@ p{opacity:.9;margin-bottom:20px;}
 details{background:#14253d;padding:18px;border-radius:10px;margin-bottom:12px;text-align:left;cursor:pointer;}
 .sticky{position:fixed;bottom:0;left:0;width:100%;background:#2dd4bf;color:#000;text-align:center;padding:16px;font-weight:800;text-decoration:none;z-index:999;}
 @media(min-width:900px){
-.preview{grid-template-columns:1fr 1fr;}
 .grid{grid-template-columns:repeat(2,1fr);}
 .test-grid{grid-template-columns:repeat(3,1fr);}
 .sticky{display:none;}
@@ -59,17 +56,29 @@ h1{font-size:48px;}
 
 <!-- HERO -->
 <section class="container">
-<h1>Controle o lucro real do seu Airbnb em minutos</h1>
-
-<!-- ALTERADO -->
+<h1>Controle o lucro real do seu Alojamento Local em minutos</h1>
 <p>Automatize receitas, taxas e comissões num único sistema profissional.</p>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">Comprar Agora</a>
+</section>
 
-<div class="preview">
-<img src="painel.jpg">
-<img src="capa.jpg">
+<!-- PROVA 1 -->
+<section class="container">
+<h2>Veja como uma reserva é calculada automaticamente:</h2>
+<div class="image-box">
+<img src="planilha-calculo-reserva.png" alt="Cálculo automático de reserva">
 </div>
+</section>
+
+<!-- PROVA 2 -->
+<section class="container">
+<h2>E o lucro total aparece automaticamente no Dashboard:</h2>
+<div class="image-box">
+<img src="dashboard-lucro-total.png" alt="Dashboard com lucro total">
+</div>
+
+<br>
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">Quero Organizar Meu Lucro</a>
 </section>
 
 <!-- BENEFÍCIOS -->
@@ -80,10 +89,7 @@ h1{font-size:48px;}
 <div class="card">✔ Relatórios por cidade</div>
 <div class="card">✔ Controle de comissões Airbnb/Booking</div>
 <div class="card">✔ Dashboard profissional</div>
-
-<!-- ALTERADO -->
 <div class="card">✔ Acesso 100% online no navegador</div>
-
 <div class="card">✔ Pronto em 5 minutos</div>
 </div>
 </section>
@@ -91,10 +97,7 @@ h1{font-size:48px;}
 <!-- PREÇO -->
 <section class="container">
 <div class="price-box">
-
-<!-- ALTERADO -->
 <p class="old">Softwares similares: 9,99€ – 29€/mês (≈120€–348€/ano)</p>
-
 <p class="price">37€ pagamento único</p>
 <p>Use para sempre. Sem mensalidades.</p>
 
@@ -110,7 +113,6 @@ Comprar Agora
 🛡️ Garantia incondicional de 7 dias — teste sem risco.
 Se não gostar, devolvemos 100% do seu dinheiro.
 </div>
-
 </div>
 </section>
 
@@ -151,4 +153,4 @@ setInterval(updateTimer,1000);
 </script>
 
 </body>
-</html>
+  </html>
