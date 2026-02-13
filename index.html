@@ -22,12 +22,35 @@ fbq('track', 'PageView');
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:linear-gradient(135deg,#0b1624,#132f46);color:#fff;line-height:1.6;}
-.container{max-width:1000px;margin:auto;padding:60px 20px;text-align:center;}
+
+body{
+background:linear-gradient(135deg,#0b1624,#132f46);
+color:#fff;
+line-height:1.6;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+text-align:center;
+}
+
 section{margin-bottom:80px;}
-h1{font-size:38px;font-weight:800;margin-bottom:20px;}
-h2{font-size:28px;margin-bottom:30px;}
+
+h1{
+font-size:38px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+h2{
+font-size:28px;
+margin-bottom:30px;
+}
+
 p{opacity:.9;margin-bottom:25px;}
+
 .btn{
 background:#2dd4bf;
 color:#000;
@@ -39,21 +62,76 @@ display:inline-block;
 font-size:18px;
 transition:.2s;
 }
+
 .btn:hover{transform:scale(1.05);}
+
 .image-box img{
 width:100%;
 max-width:850px;
 border-radius:16px;
 box-shadow:0 30px 70px rgba(0,0,0,.5);
 }
-.grid{display:grid;gap:18px;margin-top:30px;}
-.card{background:#14253d;padding:22px;border-radius:12px;font-weight:600;}
-.price-box{background:#14253d;padding:40px;border-radius:16px;}
+
+/* GRID */
+.grid{
+display:grid;
+gap:18px;
+margin-top:30px;
+}
+
+/* CARD AJUSTADO (ALINHAMENTO CORRIGIDO) */
+.card{
+background:#14253d;
+padding:22px;
+border-radius:12px;
+font-weight:600;
+text-align:left;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+min-height:220px;
+line-height:1.6;
+}
+
+.price-box{
+background:#14253d;
+padding:40px;
+border-radius:16px;
+}
+
 .old{text-decoration:line-through;opacity:.5;}
-.price{font-size:48px;font-weight:800;margin:15px 0;}
-.guarantee{margin-top:25px;background:#0e1f33;padding:16px;border-radius:12px;font-size:14px;opacity:.95;}
-.timer{margin-top:15px;font-weight:700;color:#ffcc00;font-size:18px;}
-details{background:#14253d;padding:20px;border-radius:12px;margin-bottom:15px;text-align:left;cursor:pointer;}
+
+.price{
+font-size:48px;
+font-weight:800;
+margin:15px 0;
+}
+
+.guarantee{
+margin-top:25px;
+background:#0e1f33;
+padding:16px;
+border-radius:12px;
+font-size:14px;
+opacity:.95;
+}
+
+.timer{
+margin-top:15px;
+font-weight:700;
+color:#ffcc00;
+font-size:18px;
+}
+
+details{
+background:#14253d;
+padding:20px;
+border-radius:12px;
+margin-bottom:15px;
+text-align:left;
+cursor:pointer;
+}
+
 .sticky{
 position:fixed;
 bottom:0;
@@ -87,14 +165,13 @@ Valor bruto não é lucro.<br>
 Depois de comissões, limpeza, taxas turísticas e impostos… quanto realmente sobra?
 <br><br>
 O <strong>Gestor AL Pro</strong> calcula tudo automaticamente e mostra o lucro real já descontado.
-Serve para Airbnb, Booking e reservas diretas.
+Sem Excel confuso. Sem contas manuais. Sem achismos.
 </p>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
 Quero Ver Meu Lucro Real
 </a>
 </section>
-
 
 <section class="container">
 <h2>O que a ferramenta faz por si:</h2>
@@ -109,14 +186,12 @@ Quero Ver Meu Lucro Real
 </div>
 </section>
 
-
 <section class="container">
 <h2>Veja como uma reserva é calculada automaticamente:</h2>
 <div class="image-box">
 <img src="planilha-calculo-reserva1.png" alt="Cálculo automático de reserva">
 </div>
 </section>
-
 
 <section class="container">
 <h2>E o lucro total aparece automaticamente no Dashboard:</h2>
@@ -131,38 +206,17 @@ Organizar Meu Alojamento Agora
 </a>
 </section>
 
-
-<section class="container">
-<h2>Antes vs Depois do Gestor AL Pro</h2>
-
-<div class="grid">
-<div class="card">
-❌ Vê apenas faturamento<br>
-❌ Não sabe o lucro real<br>
-❌ Decide no achismo
-</div>
-
-<div class="card">
-✅ Vê o lucro líquido por reserva<br>
-✅ Compara municípios e plataformas<br>
-✅ Toma decisões com números reais
-</div>
-</div>
-</section>
-
-
 <section class="container">
 <h2>Porque esta ferramenta foi criada</h2>
 
 <p>
-O Gestor AL Pro nasceu da necessidade real de entender o lucro líquido no Alojamento Local sem depender de contas manuais ou Excel confuso.
+O Gestor AL Pro nasceu da necessidade real de entender o lucro líquido no Alojamento Local sem depender de contas manuais.
 </p>
 
 <p>
-Depois de acompanhar gestores perderem margem sem perceber, esta estrutura foi criada para mostrar — de forma simples — quanto realmente sobra no fim de cada reserva.
+Foi criada para mostrar — de forma simples — quanto realmente sobra no fim de cada reserva.
 </p>
 </section>
-
 
 <section class="container">
 <div class="price-box">
@@ -196,13 +250,12 @@ Se não gostar, devolvemos 100% do seu dinheiro.
 </div>
 </section>
 
-
 <section class="container">
 <h2>Perguntas Frequentes</h2>
 
 <details>
-<summary>Funciona no Excel?</summary>
-Funciona 100% online no navegador, sem instalar programas. Pode aceder pelo computador ou telemóvel. A estrutura usa Google Sheets para garantir simplicidade e acesso imediato.
+<summary>Preciso do Excel?</summary>
+Não. Funciona diretamente no Google Sheets, gratuito e online.
 </details>
 
 <details>
