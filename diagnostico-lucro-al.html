@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Diagnóstico Express do Lucro AL</title>
+<title>Gestor AL Pro</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -22,22 +22,9 @@ fbq('track', 'PageView');
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{
-background:linear-gradient(135deg,#0b1624,#132f46);
-color:#fff;
-line-height:1.6;
-}
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:60px 20px;
-text-align:center;
-}
-
+body{background:linear-gradient(135deg,#0b1624,#132f46);color:#fff;line-height:1.6;}
+.container{max-width:1000px;margin:auto;padding:60px 20px;text-align:center;}
 section{margin-bottom:80px;}
-
 h1{font-size:38px;font-weight:800;margin-bottom:20px;}
 h2{font-size:28px;margin-bottom:30px;}
 p{opacity:.9;margin-bottom:25px;}
@@ -74,7 +61,6 @@ padding:22px;
 border-radius:12px;
 font-weight:600;
 text-align:left;
-line-height:1.6;
 }
 
 .price-box{
@@ -83,11 +69,8 @@ padding:40px;
 border-radius:16px;
 }
 
-.price{
-font-size:48px;
-font-weight:800;
-margin:15px 0;
-}
+.old{text-decoration:line-through;opacity:.5;}
+.price{font-size:48px;font-weight:800;margin:15px 0;}
 
 .guarantee{
 margin-top:25px;
@@ -96,6 +79,55 @@ padding:16px;
 border-radius:12px;
 font-size:14px;
 opacity:.95;
+}
+
+.timer{
+margin-top:15px;
+font-weight:700;
+color:#ffcc00;
+font-size:18px;
+}
+
+/* FAQ CORRIGIDO */
+.faq-wrap{
+max-width:750px;
+margin:0 auto;
+text-align:left;
+}
+
+.faq-wrap details{
+background:#14253d;
+padding:18px 20px;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.faq-wrap summary{
+font-weight:700;
+font-size:18px;
+cursor:pointer;
+list-style:none;
+}
+
+.faq-wrap summary::-webkit-details-marker{
+display:none;
+}
+
+.faq-wrap summary::before{
+content:"▶ ";
+font-size:14px;
+opacity:.8;
+}
+
+.faq-wrap details[open] summary::before{
+content:"▼ ";
+}
+
+.faq-wrap p{
+margin-top:10px;
+margin-bottom:0;
+opacity:.9;
+line-height:1.6;
 }
 
 .sticky{
@@ -124,107 +156,100 @@ h1{font-size:52px;}
 <body>
 
 <section class="container">
-<h1>Descubra em 5 minutos se o seu Alojamento Local está realmente a dar lucro — ou só faturamento</h1>
+<h1>Se não sabe o lucro líquido de cada reserva… está a gerir o seu Alojamento às cegas</h1>
 
 <p>
-Valor bruto não significa lucro.<br>
-Depois de comissões, limpeza, taxas e impostos… quanto realmente sobra?
+Valor bruto não é lucro.<br>
+Depois de comissões, limpeza, taxas turísticas e impostos… quanto realmente sobra?
 <br><br>
-Este diagnóstico rápido mostra o lucro líquido real da sua reserva — sem contas manuais.
+O <strong>Gestor AL Pro</strong> calcula tudo automaticamente e mostra o lucro real já descontado.
+Sem Excel confuso. Sem contas manuais. Sem achismos.
 </p>
 
-<a href="LINK-DO-CHECKOUT-AQUI" class="btn">
-Quero Fazer Meu Diagnóstico
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
+Quero Ver Meu Lucro Real
 </a>
 </section>
 
 <section class="container">
-<h2>O que vai receber:</h2>
-
+<h2>O que a ferramenta faz por si:</h2>
 <div class="grid">
-<div class="card">✔ Mini ferramenta para calcular o lucro líquido real</div>
-<div class="card">✔ Checklist dos custos que muitos anfitriões esquecem</div>
-<div class="card">✔ Vídeo rápido mostrando como preencher</div>
-<div class="card">✔ Resultado imediato em poucos minutos</div>
+<div class="card">✔ Calcula comissão da plataforma</div>
+<div class="card">✔ Desconta taxa turística automaticamente</div>
+<div class="card">✔ Subtrai limpeza e despesas</div>
+<div class="card">✔ Mostra lucro líquido real</div>
+<div class="card">✔ Relatórios por município</div>
+<div class="card">✔ Relatórios por plataforma</div>
 </div>
 </section>
 
 <section class="container">
-<h2>Exemplo real do cálculo:</h2>
+<h2>Veja como uma reserva é calculada automaticamente:</h2>
 <div class="image-box">
-<img src="planilha-calculo-reserva1.png" alt="Cálculo automático de lucro">
+<img src="planilha-calculo-reserva1.png" alt="Cálculo automático de reserva">
 </div>
+</section>
+
+<section class="container">
+<h2>E o lucro total aparece automaticamente no Dashboard:</h2>
+<div class="image-box">
+<img src="dashboard-lucro-total.png" alt="Dashboard com lucro total">
+</div>
+
+<br><br>
+
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
+Organizar Meu Alojamento Agora
+</a>
 </section>
 
 <section class="container">
 <div class="price-box">
-
-<p style="font-size:18px;margin-bottom:10px;">
-Não é um sistema completo.<br>
-É um diagnóstico rápido para descobrir se está a perder dinheiro sem perceber.
-</p>
-
-<p class="price">9€ pagamento único</p>
+<p class="old">Softwares similares: 9,99€ – 29€/mês</p>
+<p class="price">37€ pagamento único</p>
 <p>Sem mensalidades. Acesso imediato.</p>
 
-<a href="LINK-DO-CHECKOUT-AQUI" class="btn" style="margin-top:25px;">
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn" style="margin-top:20px;">
 Quero Descobrir Meu Lucro Real
 </a>
 
 <div class="guarantee">
 🛡️ Garantia de 7 dias — teste sem risco.
-Se não gostar, devolvemos o valor.
 </div>
-
 </div>
 </section>
 
+<!-- FAQ CORRIGIDO -->
 <section class="container">
 <h2>Perguntas Frequentes</h2>
 
-<div style="max-width:750px;margin:0 auto;text-align:left;">
+<div class="faq-wrap">
 
-<details style="margin-bottom:15px;">
-<summary style="font-weight:700;font-size:18px;cursor:pointer;">
-Preciso do Excel?
-</summary>
-<p style="margin-top:10px;opacity:.9;">
-Não. A ferramenta funciona diretamente no Google Sheets (gratuito e online). Não precisa instalar nada.
-</p>
-</details>
-
-<details style="margin-bottom:15px;">
-<summary style="font-weight:700;font-size:18px;cursor:pointer;">
-Preciso saber fórmulas?
-</summary>
-<p style="margin-top:10px;opacity:.9;">
-Não. Tudo já está automatizado. Basta preencher as reservas e o sistema calcula o resto.
-</p>
-</details>
-
-<details style="margin-bottom:15px;">
-<summary style="font-weight:700;font-size:18px;cursor:pointer;">
-Serve para vários imóveis?
-</summary>
-<p style="margin-top:10px;opacity:.9;">
-Sim. Pode controlar vários Alojamentos Locais na mesma estrutura.
-</p>
+<details>
+<summary>Preciso do Excel?</summary>
+<p>Não. Funciona direto no Google Sheets, gratuito e online.</p>
 </details>
 
 <details>
-<summary style="font-weight:700;font-size:18px;cursor:pointer;">
-Como recebo acesso?
-</summary>
-<p style="margin-top:10px;opacity:.9;">
-Após o pagamento, recebe imediatamente o link para duplicar a ferramenta na sua conta Google.
-</p>
+<summary>Preciso saber fórmulas?</summary>
+<p>Não. Tudo já está automatizado.</p>
+</details>
+
+<details>
+<summary>Isto é a versão completa?</summary>
+<p>Esta é a versão Starter, pronta para uso e já resolve o controlo do lucro real.</p>
+</details>
+
+<details>
+<summary>Como recebo acesso?</summary>
+<p>Após o pagamento, recebe o link imediatamente para duplicar na sua conta Google.</p>
 </details>
 
 </div>
 </section>
 
-<a class="sticky" href="LINK-DO-CHECKOUT-AQUI">
-Diagnóstico por 9€
+<a class="sticky" href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230">
+Quero acesso por 37€
 </a>
 
 </body>
