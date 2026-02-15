@@ -7,19 +7,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1056723816631326');
-fbq('track', 'PageView');
-</script>
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
@@ -42,6 +29,7 @@ h1{
 font-size:38px;
 font-weight:800;
 margin-bottom:20px;
+line-height:1.25;
 }
 
 h2{
@@ -49,7 +37,7 @@ font-size:28px;
 margin-bottom:30px;
 }
 
-p{opacity:.9;margin-bottom:25px;}
+p{opacity:.92;margin-bottom:25px;}
 
 .btn{
 background:#2dd4bf;
@@ -65,11 +53,13 @@ transition:.2s;
 
 .btn:hover{transform:scale(1.05);}
 
-.image-box img{
-width:100%;
-max-width:850px;
-border-radius:16px;
-box-shadow:0 30px 70px rgba(0,0,0,.5);
+.highlight-box{
+background:#14253d;
+padding:18px;
+border-radius:12px;
+margin:25px auto;
+max-width:760px;
+text-align:left;
 }
 
 .video-box{
@@ -101,6 +91,13 @@ text-align:left;
 line-height:1.6;
 }
 
+.image-box img{
+width:100%;
+max-width:850px;
+border-radius:16px;
+box-shadow:0 30px 70px rgba(0,0,0,.5);
+}
+
 .price-box{
 background:#14253d;
 padding:40px;
@@ -121,7 +118,6 @@ background:#0e1f33;
 padding:16px;
 border-radius:12px;
 font-size:14px;
-opacity:.95;
 }
 
 .timer{
@@ -167,28 +163,22 @@ h1{font-size:52px;}
 
 <section class="container">
 
-<h1>Saiba em segundos quanto realmente sobra por reserva — mesmo gerindo vários ALs em diferentes distritos</h1>
+<h1>Controle o lucro real do seu Alojamento Local — mesmo com vários imóveis e distritos diferentes</h1>
 
 <p>
-Criado para anfitriões de Alojamento Local em Portugal que querem controlar o lucro real sem depender de contas manuais.
+O Gestor AL Pro mostra automaticamente o lucro líquido de cada reserva e o resultado total do seu negócio num único dashboard.
 </p>
 
-<p>
-Airbnb em Lisboa, Booking no Algarve, VRBO no Porto… o <strong>Gestor AL Pro</strong> mostra automaticamente o lucro líquido real de cada reserva e o resultado total do seu negócio num único dashboard.
-</p>
-
-<p>
-Pare de descobrir só no fim do mês que trabalhou muito e ganhou menos do que pensava.
-</p>
-
-<div class="grid" style="margin-top:20px;">
-<div class="card">✔ Funciona em qualquer distrito de Portugal</div>
-<div class="card">✔ Airbnb, Booking e VRBO no mesmo painel</div>
-<div class="card">✔ Controle vários ALs num único dashboard</div>
-<div class="card">✔ Lucro líquido automático por reserva</div>
+<div class="highlight-box">
+<strong>Esta ferramenta foi feita para si se:</strong><br>
+• Tem calendário cheio mas nem sempre sabe quanto realmente lucra<br>
+• Gere 1 ou vários ALs em diferentes zonas de Portugal<br>
+• Usa Airbnb, Booking ou outras plataformas e quer controlar tudo num só lugar
 </div>
 
-<br>
+<p>
+Sem Excel complicado. Sem contas manuais. Sem gerir às cegas.
+</p>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
 Quero saber quanto realmente sobra por reserva
@@ -200,10 +190,7 @@ Quero saber quanto realmente sobra por reserva
 <h2>Veja em menos de 1 minuto como funciona 👇</h2>
 
 <p>
-Neste exemplo real você vai ver:
-<br>✔ uma reserva sendo preenchida
-<br>✔ o lucro calculado automaticamente
-<br>✔ vários distritos e plataformas no mesmo dashboard
+Neste exemplo você vai ver uma reserva sendo preenchida e o lucro aparecendo automaticamente no dashboard.
 </p>
 
 <div class="video-box">
@@ -214,24 +201,13 @@ allowfullscreen></iframe>
 </section>
 
 <section class="container">
-<h2>Para quem o Gestor AL Pro foi feito</h2>
-
-<div class="grid">
-<div class="card">✔ Hosts que têm 1 ou mais Alojamentos Locais</div>
-<div class="card">✔ Quem anuncia em várias plataformas</div>
-<div class="card">✔ Quem quer gerir com números reais</div>
-<div class="card">✖ Não é para quem procura apenas uma planilha grátis</div>
-</div>
-</section>
-
-<section class="container">
 <h2>O que a ferramenta faz por si:</h2>
 
 <div class="grid">
-<div class="card">✔ Calcula comissão da plataforma</div>
-<div class="card">✔ Desconta taxa turística automaticamente</div>
-<div class="card">✔ Subtrai limpeza e despesas</div>
-<div class="card">✔ Mostra lucro líquido real</div>
+<div class="card">✔ Calcula comissão das plataformas automaticamente</div>
+<div class="card">✔ Desconta taxa turística e despesas</div>
+<div class="card">✔ Mostra lucro líquido real por reserva</div>
+<div class="card">✔ Dashboard com visão total do negócio</div>
 <div class="card">✔ Relatórios por município</div>
 <div class="card">✔ Relatórios por plataforma</div>
 </div>
@@ -260,18 +236,27 @@ Quero controlar o lucro do meu AL agora
 <section class="container">
 <div class="price-box">
 
-<p class="old">Softwares similares: 9,99€ – 29€/mês (≈120€–348€/ano)</p>
+<p class="old">Softwares parecidos: 9,99€ – 29€/mês</p>
 
-<p style="font-size:18px;margin-bottom:10px;">
-Muitos anfitriões perdem 20€–50€ por mês apenas por não verem o lucro real das reservas.
+<p style="font-size:18px;">
+A maioria dos anfitriões olha faturamento… mas não sabe o lucro real.
+Uma única reserva mal calculada pode custar mais que o valor da ferramenta.
 </p>
 
-<p class="price">Acesso vitalício por apenas 37€</p>
-<p>Menos que uma noite mal precificada.</p>
-
-<p style="margin-top:15px;opacity:.9;">
-Se em 7 dias não ajudar a ver o seu lucro com mais clareza, devolvemos 100%.
+<p style="font-size:20px;margin-bottom:10px;">
+A pergunta não é quanto custa o Gestor AL Pro.<br>
+É quanto custa continuar sem saber o lucro real.
 </p>
+
+<p class="price">37€ pagamento único</p>
+<p>Sem mensalidades. Acesso vitalício.</p>
+
+<div class="highlight-box" style="text-align:left;">
+✔ Funciona em todo Portugal<br>
+✔ Airbnb + Booking + outras plataformas<br>
+✔ Controle vários ALs no mesmo dashboard<br>
+✔ Garantia de 7 dias sem risco
+</div>
 
 <div class="timer">
 Oferta termina em <span id="countdown">15:00</span>
@@ -282,7 +267,7 @@ Quero parar de perder dinheiro
 </a>
 
 <div class="guarantee">
-🛡️ Garantia incondicional de 7 dias — teste sem risco.
+🛡️ Garantia de 7 dias — se não gostar, devolvemos 100%.
 </div>
 
 </div>
@@ -295,16 +280,12 @@ Quero parar de perder dinheiro
 Não. Funciona diretamente no Google Sheets, gratuito e online.
 </details>
 
-<details><summary>Preciso saber fórmulas?</summary>
-Não. Tudo já está automatizado. Basta preencher as reservas.
-</details>
-
 <details><summary>Serve para vários imóveis?</summary>
-Sim. Pode controlar vários Alojamentos Locais na mesma estrutura.
+Sim. Pode gerir vários ALs e diferentes distritos no mesmo sistema.
 </details>
 
 <details><summary>Como recebo acesso?</summary>
-Após o pagamento, recebe imediatamente o link para duplicar a ferramenta na sua conta Google.
+Após o pagamento recebe imediatamente o link para duplicar a ferramenta.
 </details>
 
 </section>
@@ -327,4 +308,4 @@ setInterval(updateTimer,1000);
 </script>
 
 </body>
-</html>
+  </html>
