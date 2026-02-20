@@ -96,6 +96,13 @@ border-radius:16px;
 box-shadow:0 30px 70px rgba(0,0,0,.5);
 }
 
+/* ⭐ prova social com imagem */
+.testimonial img{
+width:100%;
+border-radius:14px;
+margin-top:10px;
+}
+
 .price-box{
 background:#14253d;
 padding:45px 30px;
@@ -169,7 +176,7 @@ h1{font-size:52px;}
 <h1>Controle o lucro real do seu Alojamento Local — sem contas manuais nem surpresas no fim do mês</h1>
 
 <p>
-O Gestor AL Pro calcula automaticamente o lucro líquido de cada reserva e mostra o resultado real do seu negócio num único dashboard.
+O Gestor AL Pro calcula automaticamente o lucro líquido de cada reserva e mostra o resultado real do seu negócio num único painel de controlo.
 </p>
 
 <div style="margin-top:10px;font-size:14px;opacity:.85;">
@@ -185,7 +192,7 @@ Ferramenta pensada para anfitriões de AL em Portugal 🇵🇹
 </div>
 
 <p>
-Sem Excel complicado. Sem contas à mão. Sem gerir às cegas.
+Sem folhas complicadas. Sem contas à mão. Sem gerir às cegas.
 </p>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
@@ -199,7 +206,7 @@ Quero saber quanto realmente sobra por reserva
 <h2>Veja em menos de 1 minuto como funciona 👇</h2>
 
 <p>
-Veja uma reserva a ser preenchida e o lucro a aparecer automaticamente no dashboard.
+Veja uma reserva a ser preenchida e o lucro a aparecer automaticamente.
 </p>
 
 <div class="video-box">
@@ -217,44 +224,48 @@ allowfullscreen></iframe>
 <div class="card">✔ Calcula automaticamente comissões das plataformas</div>
 <div class="card">✔ Desconta taxa turística e despesas operacionais</div>
 <div class="card">✔ Mostra o lucro líquido real por reserva</div>
-<div class="card">✔ Dashboard com visão total do negócio</div>
+<div class="card">✔ Visão total do desempenho do AL</div>
 <div class="card">✔ Relatórios mensais automáticos</div>
-<div class="card">✔ Relatórios por município e por plataforma</div>
+<div class="card">✔ Análise por plataforma e por localização</div>
 </div>
 </section>
 
-<!-- PROVA SOCIAL -->
+<!-- PROVA SOCIAL COM IMAGENS -->
 <section class="container">
 <h2>Quem já começou a usar</h2>
 
 <div class="grid">
 
-<div class="card">
+<div class="card testimonial">
 ⭐⭐⭐⭐⭐<br><br>
 “Finalmente consegui ver o lucro real de cada reserva.”
 <br><br>
 <strong>— Ricardo M., Lisboa</strong>
+<img src="ps1.jpg" alt="Prova social 1">
 </div>
 
-<div class="card">
+<div class="card testimonial">
 ⭐⭐⭐⭐⭐<br><br>
 “Uso com 2 apartamentos e poupou-me muito tempo.”
 <br><br>
 <strong>— Carla F., Porto</strong>
+<img src="ps2.jpg" alt="Prova social 2">
 </div>
 
-<div class="card">
+<div class="card testimonial">
 ⭐⭐⭐⭐⭐<br><br>
 “Em poucos minutos já tinha tudo a funcionar.”
 <br><br>
 <strong>— João P., Algarve</strong>
+<img src="ps3.jpg" alt="Prova social 3">
 </div>
 
-<div class="card">
+<div class="card testimonial">
 ⭐⭐⭐⭐⭐<br><br>
 “Agora tenho uma visão clara do meu AL.”
 <br><br>
 <strong>— Marta S.</strong>
+<img src="ps4.jpg" alt="Prova social 4">
 </div>
 
 </div>
@@ -262,10 +273,10 @@ allowfullscreen></iframe>
 
 <!-- DASHBOARD -->
 <section class="container">
-<h2>O lucro total aparece automaticamente no dashboard:</h2>
+<h2>O lucro total aparece automaticamente:</h2>
 
 <div class="image-box">
-<img src="dashboard-lucro-total.png" alt="Dashboard com lucro total">
+<img src="dashboard-lucro-total.png" alt="Dashboard Gestor AL Pro">
 </div>
 
 <br><br>
@@ -288,22 +299,6 @@ Uma única reserva mal calculada pode custar mais do que o valor da ferramenta.
 <p class="price">37€ pagamento único</p>
 <p>Sem mensalidades • Acesso vitalício</p>
 
-<div class="highlight-box" style="text-align:left;">
-✔ Funciona em todo Portugal<br>
-✔ Airbnb + Booking + outras plataformas<br>
-✔ Controle vários ALs no mesmo dashboard<br>
-✔ Relatórios mensais automáticos<br>
-✔ Garantia de 7 dias sem risco
-</div>
-
-<div class="highlight-box" style="text-align:left;">
-<strong>O que acontece após a compra:</strong><br><br>
-✔ Recebe acesso imediato por email<br>
-✔ Pode duplicar e usar em menos de 2 minutos<br>
-✔ Vídeo curto de configuração incluído<br>
-✔ Suporte por email se precisar
-</div>
-
 <div class="timer">
 Oferta termina em <span id="countdown">15:00</span>
 </div>
@@ -312,35 +307,11 @@ Oferta termina em <span id="countdown">15:00</span>
 Quero parar de perder dinheiro
 </a>
 
-<div style="margin-top:18px;font-size:14px;opacity:.9;">
-🔒 Pagamento 100% seguro<br>
-🛡️ Garantia incondicional de 7 dias<br>
-⚡ Acesso imediato após pagamento
-</div>
-
 <div class="guarantee">
 🛡️ Garantia de 7 dias — se não gostar, devolvemos 100%.
 </div>
 
 </div>
-</section>
-
-<!-- FAQ -->
-<section class="container">
-<h2>Perguntas Frequentes</h2>
-
-<details><summary>Preciso do Excel?</summary>
-Não. Funciona diretamente no Google Sheets, gratuito e online.
-</details>
-
-<details><summary>Serve para vários imóveis?</summary>
-Sim. Pode gerir vários ALs e diferentes distritos no mesmo sistema.
-</details>
-
-<details><summary>Como recebo acesso?</summary>
-Após o pagamento recebe imediatamente o link para duplicar a ferramenta.
-</details>
-
 </section>
 
 <a class="sticky" href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230">
