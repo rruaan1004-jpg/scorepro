@@ -2,21 +2,29 @@
 <html lang="pt">
 <head>
 
-<!-- META -->
+<!-- META BASE -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gestor AL Pro</title>
+<meta name="description" content="Descubra o lucro real do seu Alojamento Local em minutos com o Gestor AL Pro. Sem contas manuais.">
 
-<!-- PIXEL META -->
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="Gestor AL Pro"/>
+<meta property="og:description" content="Veja o lucro real do seu AL automaticamente."/>
+<meta property="og:type" content="website"/>
+
+<!-- PIXEL FACEBOOK -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1056723816631326');
 fbq('track', 'PageView');
@@ -27,7 +35,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1056723816631326&ev=PageView&noscript=1"/>
 </noscript>
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -48,18 +55,8 @@ text-align:center;
 
 section{margin-bottom:80px;}
 
-h1{
-font-size:40px;
-font-weight:800;
-margin-bottom:20px;
-line-height:1.2;
-}
-
-h2{
-font-size:30px;
-margin-bottom:30px;
-}
-
+h1{font-size:38px;font-weight:800;margin-bottom:20px;line-height:1.25;}
+h2{font-size:28px;margin-bottom:30px;}
 p{opacity:.92;margin-bottom:25px;}
 
 .btn{
@@ -70,21 +67,18 @@ border-radius:12px;
 font-weight:800;
 text-decoration:none;
 display:inline-block;
-font-size:20px;
+font-size:18px;
 transition:.2s;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
-
 .btn:hover{transform:scale(1.05);}
 
 .highlight-box{
 background:#14253d;
-padding:20px;
-border-radius:14px;
+padding:18px;
+border-radius:12px;
 margin:25px auto;
 max-width:100%;
 text-align:left;
-border:1px solid rgba(255,255,255,.08);
 }
 
 .video-box{
@@ -93,94 +87,62 @@ border-radius:16px;
 overflow:hidden;
 box-shadow:0 30px 70px rgba(0,0,0,.5);
 }
-
 .video-box iframe{
 width:100%;
 aspect-ratio:16/9;
 border:0;
 }
 
-.grid{
-display:grid;
-gap:18px;
-margin-top:30px;
-}
-
-.card{
-background:#14253d;
-padding:22px;
-border-radius:12px;
-font-weight:600;
-text-align:left;
-line-height:1.6;
-border:1px solid rgba(255,255,255,.06);
-}
-
-.image-box img{
+.grid{display:grid;gap:18px;margin-top:30px;}
+.grid img{
 width:100%;
-border-radius:16px;
-box-shadow:0 30px 70px rgba(0,0,0,.5);
+border-radius:12px;
 }
 
 .price-box{
 background:#14253d;
-padding:50px 30px;
-border-radius:18px;
+padding:45px 30px;
+border-radius:16px;
 width:100%;
 max-width:900px;
 margin:0 auto;
 text-align:center;
-border:1px solid rgba(255,255,255,.08);
 }
 
-.old{
+.old-price{
 text-decoration:line-through;
-opacity:.5;
-font-size:18px;
+opacity:.6;
+margin-bottom:5px;
 }
 
-.price{
-font-size:56px;
-font-weight:800;
-margin:15px 0;
-color:#2dd4bf;
-}
+.price{font-size:48px;font-weight:800;margin:10px 0;}
+
+.timer{margin-top:15px;font-weight:700;color:#ffcc00;font-size:18px;}
 
 .garantia-selo{
-margin:25px 0 10px 0;
+margin-top:20px;
+text-align:center;
 }
-
 .garantia-selo img{
-max-width:160px;
+max-width:180px;
 width:100%;
 height:auto;
-filter:drop-shadow(0 10px 25px rgba(0,0,0,.5));
 }
 
-.guarantee{
-margin-top:25px;
-background:#0e1f33;
-padding:18px;
-border-radius:12px;
-font-size:15px;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.timer{
-margin-top:18px;
-font-weight:800;
-color:#ffcc00;
-font-size:20px;
+.micro-proof{
+font-size:14px;
+opacity:.9;
+margin-top:-10px;
+margin-bottom:20px;
 }
 
 details{
 background:#14253d;
-padding:22px;
+padding:20px;
 border-radius:12px;
 margin-bottom:15px;
 text-align:left;
 cursor:pointer;
-border:1px solid rgba(255,255,255,.06);
 }
 
 .sticky{
@@ -195,20 +157,13 @@ padding:18px;
 font-weight:800;
 text-decoration:none;
 z-index:999;
-font-size:20px;
-box-shadow:0 -10px 30px rgba(0,0,0,.4);
-}
-
-.mini-proof{
-margin-top:12px;
-font-size:15px;
-opacity:.9;
+font-size:18px;
 }
 
 @media(min-width:900px){
 .grid{grid-template-columns:repeat(2,1fr);}
 .sticky{display:none;}
-h1{font-size:54px;}
+h1{font-size:52px;}
 }
 </style>
 </head>
@@ -218,15 +173,13 @@ h1{font-size:54px;}
 <!-- HERO -->
 <section class="container">
 
-<h1>Está a perder dinheiro em reservas do seu Alojamento Local sem perceber.</h1>
+<h1>Pode estar a perder dinheiro no seu Alojamento Local sem perceber.</h1>
+
+<p class="micro-proof">✔️ Já utilizado por anfitriões de AL em Portugal 🇵🇹</p>
 
 <p>
 O Gestor AL Pro calcula automaticamente o lucro líquido de cada reserva — sem contas manuais nem surpresas no fim do mês.
 </p>
-
-<div class="mini-proof">
-✔️ Já utilizado por anfitriões de AL em Portugal 🇵🇹
-</div>
 
 <div class="highlight-box">
 <strong>Esta ferramenta é para si se:</strong><br>
@@ -247,9 +200,7 @@ Quero saber quanto realmente sobra por reserva
 <h2>Veja em menos de 1 minuto como funciona 👇</h2>
 
 <div class="video-box">
-<iframe src="https://www.youtube.com/embed/iaJIvXC0JO0"
-title="Demonstração Gestor AL Pro"
-allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/iaJIvXC0JO0" allowfullscreen></iframe>
 </div>
 </section>
 
@@ -258,10 +209,10 @@ allowfullscreen></iframe>
 <h2>Quem já começou a usar</h2>
 
 <div class="grid">
-<img src="ps1.jpg" style="width:100%;border-radius:12px;">
-<img src="ps2.jpg" style="width:100%;border-radius:12px;">
-<img src="ps3.jpg" style="width:100%;border-radius:12px;">
-<img src="ps4.jpg" style="width:100%;border-radius:12px;">
+<img src="ps1.jpg">
+<img src="ps2.jpg">
+<img src="ps3.jpg">
+<img src="ps4.jpg">
 </div>
 </section>
 
@@ -269,8 +220,7 @@ allowfullscreen></iframe>
 <section class="container">
 <div class="price-box">
 
-<p class="old">Softwares semelhantes: 9,99€ – 29€/mês</p>
-
+<p class="old-price">Ferramentas semelhantes: 9,99€ – 29€/mês</p>
 <p class="price">37€ pagamento único</p>
 <p>Sem mensalidades • Acesso vitalício</p>
 
@@ -286,10 +236,6 @@ Oferta termina em <span id="countdown">15:00</span>
 Quero ver o lucro real do meu AL
 </a>
 
-<div class="guarantee">
-🛡️ Garantia de 7 dias — se não gostar, devolvemos 100%.
-</div>
-
 </div>
 </section>
 
@@ -303,6 +249,22 @@ Sim. Pode gerir vários ALs no mesmo sistema.
 
 <details><summary>Como recebo acesso?</summary>
 Após o pagamento recebe imediatamente o acesso por email.
+</details>
+
+<details><summary>Preciso instalar alguma coisa?</summary>
+Não. A ferramenta é simples de usar e funciona imediatamente.
+</details>
+
+<details><summary>Funciona para qualquer cidade de Portugal?</summary>
+Sim. O Gestor AL Pro foi pensado para anfitriões em todo o território português.
+</details>
+
+<details><summary>É difícil de usar?</summary>
+Não. Em poucos minutos já consegue visualizar o lucro real das suas reservas.
+</details>
+
+<details><summary>E se eu não gostar?</summary>
+Tem 7 dias de garantia. Se não ficar satisfeito, devolvemos 100% do valor.
 </details>
 
 </section>
