@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
+<!-- META -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gestor AL Pro</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<!-- 🔥 META PIXEL -->
+<!-- PIXEL META -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script',
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1056723816631326');
@@ -30,7 +26,9 @@ fbq('track', 'PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1056723816631326&ev=PageView&noscript=1"/>
 </noscript>
-<!-- 🔥 END PIXEL -->
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
@@ -51,14 +49,14 @@ text-align:center;
 section{margin-bottom:80px;}
 
 h1{
-font-size:38px;
+font-size:40px;
 font-weight:800;
 margin-bottom:20px;
-line-height:1.25;
+line-height:1.2;
 }
 
 h2{
-font-size:28px;
+font-size:30px;
 margin-bottom:30px;
 }
 
@@ -72,19 +70,21 @@ border-radius:12px;
 font-weight:800;
 text-decoration:none;
 display:inline-block;
-font-size:18px;
+font-size:20px;
 transition:.2s;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 .btn:hover{transform:scale(1.05);}
 
 .highlight-box{
 background:#14253d;
-padding:18px;
-border-radius:12px;
+padding:20px;
+border-radius:14px;
 margin:25px auto;
 max-width:100%;
 text-align:left;
+border:1px solid rgba(255,255,255,.08);
 }
 
 .video-box{
@@ -113,6 +113,7 @@ border-radius:12px;
 font-weight:600;
 text-align:left;
 line-height:1.6;
+border:1px solid rgba(255,255,255,.06);
 }
 
 .image-box img{
@@ -123,44 +124,63 @@ box-shadow:0 30px 70px rgba(0,0,0,.5);
 
 .price-box{
 background:#14253d;
-padding:45px 30px;
-border-radius:16px;
+padding:50px 30px;
+border-radius:18px;
 width:100%;
 max-width:900px;
 margin:0 auto;
 text-align:center;
+border:1px solid rgba(255,255,255,.08);
 }
 
-.old{text-decoration:line-through;opacity:.5;}
+.old{
+text-decoration:line-through;
+opacity:.5;
+font-size:18px;
+}
 
 .price{
-font-size:48px;
+font-size:56px;
 font-weight:800;
 margin:15px 0;
+color:#2dd4bf;
+}
+
+.garantia-selo{
+margin:25px 0 10px 0;
+}
+
+.garantia-selo img{
+max-width:160px;
+width:100%;
+height:auto;
+filter:drop-shadow(0 10px 25px rgba(0,0,0,.5));
 }
 
 .guarantee{
 margin-top:25px;
 background:#0e1f33;
-padding:16px;
+padding:18px;
 border-radius:12px;
-font-size:14px;
+font-size:15px;
+border:1px solid rgba(255,255,255,.08);
 }
 
 .timer{
-margin-top:15px;
-font-weight:700;
+margin-top:18px;
+font-weight:800;
 color:#ffcc00;
-font-size:18px;
+font-size:20px;
 }
 
 details{
 background:#14253d;
-padding:20px;
+padding:22px;
 border-radius:12px;
 margin-bottom:15px;
 text-align:left;
 cursor:pointer;
+border:1px solid rgba(255,255,255,.06);
 }
 
 .sticky{
@@ -175,33 +195,20 @@ padding:18px;
 font-weight:800;
 text-decoration:none;
 z-index:999;
-font-size:18px;
+font-size:20px;
+box-shadow:0 -10px 30px rgba(0,0,0,.4);
 }
 
 .mini-proof{
-margin-top:10px;
-font-size:14px;
+margin-top:12px;
+font-size:15px;
 opacity:.9;
-}
-
-/* 🔒 selo */
-.garantia-selo{
-margin:20px auto 10px;
-text-align:center;
-}
-
-.garantia-selo img{
-max-width:140px;
-width:100%;
-height:auto;
-display:block;
-margin:0 auto;
 }
 
 @media(min-width:900px){
 .grid{grid-template-columns:repeat(2,1fr);}
 .sticky{display:none;}
-h1{font-size:52px;}
+h1{font-size:54px;}
 }
 </style>
 </head>
@@ -262,11 +269,13 @@ allowfullscreen></iframe>
 <section class="container">
 <div class="price-box">
 
+<p class="old">Softwares semelhantes: 9,99€ – 29€/mês</p>
+
 <p class="price">37€ pagamento único</p>
 <p>Sem mensalidades • Acesso vitalício</p>
 
 <div class="garantia-selo">
-  <img src="selo-garantia-7dias.png" alt="Garantia de 7 dias ou o seu dinheiro de volta">
+<img src="selo-garantia-7dias.png" alt="Garantia de 7 dias">
 </div>
 
 <div class="timer">
