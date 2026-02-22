@@ -5,14 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gestor AL Pro</title>
 
-<!-- SEO básico -->
-<meta name="description" content="Controle o lucro real do seu Alojamento Local automaticamente. Sem contas manuais. Sem surpresas no fim do mês.">
-
-<!-- Open Graph (quando partilhar link) -->
-<meta property="og:title" content="Gestor AL Pro">
-<meta property="og:description" content="Veja quanto realmente sobra em cada reserva do seu AL.">
-<meta property="og:type" content="website">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <!-- 🔥 META PIXEL -->
@@ -20,21 +12,25 @@
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1056723816631326');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1056723816631326&ev=PageView&noscript=1"/>
 </noscript>
+<!-- 🔥 END PIXEL -->
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
@@ -135,10 +131,20 @@ margin:0 auto;
 text-align:center;
 }
 
+.old{text-decoration:line-through;opacity:.5;}
+
 .price{
 font-size:48px;
 font-weight:800;
 margin:15px 0;
+}
+
+.guarantee{
+margin-top:25px;
+background:#0e1f33;
+padding:16px;
+border-radius:12px;
+font-size:14px;
 }
 
 .timer{
@@ -178,9 +184,9 @@ font-size:14px;
 opacity:.9;
 }
 
-/* selo */
+/* 🔒 selo */
 .garantia-selo{
-margin-top:18px;
+margin:20px auto 10px;
 text-align:center;
 }
 
@@ -188,6 +194,8 @@ text-align:center;
 max-width:140px;
 width:100%;
 height:auto;
+display:block;
+margin:0 auto;
 }
 
 @media(min-width:900px){
@@ -221,9 +229,7 @@ O Gestor AL Pro calcula automaticamente o lucro líquido de cada reserva — sem
 • Quer parar de fazer contas manuais todos os meses
 </div>
 
-<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230"
-class="btn"
-onclick="fbq('track','InitiateCheckout');">
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
 Quero saber quanto realmente sobra por reserva
 </a>
 
@@ -240,6 +246,18 @@ allowfullscreen></iframe>
 </div>
 </section>
 
+<!-- PROVA SOCIAL -->
+<section class="container">
+<h2>Quem já começou a usar</h2>
+
+<div class="grid">
+<img src="ps1.jpg" style="width:100%;border-radius:12px;">
+<img src="ps2.jpg" style="width:100%;border-radius:12px;">
+<img src="ps3.jpg" style="width:100%;border-radius:12px;">
+<img src="ps4.jpg" style="width:100%;border-radius:12px;">
+</div>
+</section>
+
 <!-- PREÇO -->
 <section class="container">
 <div class="price-box">
@@ -248,26 +266,39 @@ allowfullscreen></iframe>
 <p>Sem mensalidades • Acesso vitalício</p>
 
 <div class="garantia-selo">
-<img src="selo-garantia-7%20dias.png" alt="Garantia de 7 dias">
+  <img src="selo-garantia-7dias.png" alt="Garantia de 7 dias ou o seu dinheiro de volta">
 </div>
 
 <div class="timer">
 Oferta termina em <span id="countdown">15:00</span>
 </div>
 
-<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230"
-class="btn"
-onclick="fbq('track','InitiateCheckout');"
-style="margin-top:25px;">
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn" style="margin-top:25px;">
 Quero ver o lucro real do meu AL
 </a>
+
+<div class="guarantee">
+🛡️ Garantia de 7 dias — se não gostar, devolvemos 100%.
+</div>
 
 </div>
 </section>
 
-<a class="sticky"
-href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230"
-onclick="fbq('track','InitiateCheckout');">
+<!-- FAQ -->
+<section class="container">
+<h2>Perguntas Frequentes</h2>
+
+<details><summary>Serve para vários imóveis?</summary>
+Sim. Pode gerir vários ALs no mesmo sistema.
+</details>
+
+<details><summary>Como recebo acesso?</summary>
+Após o pagamento recebe imediatamente o acesso por email.
+</details>
+
+</section>
+
+<a class="sticky" href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230">
 Quero acesso por 37€
 </a>
 
