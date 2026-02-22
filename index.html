@@ -2,7 +2,6 @@
 <html lang="pt">
 <head>
 
-<!-- META BASE -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gestor AL Pro</title>
@@ -41,81 +40,86 @@ src="https://www.facebook.com/tr?id=1056723816631326&ev=PageView&noscript=1"/>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-background:linear-gradient(135deg,#0b1624,#132f46);
+background: radial-gradient(circle at top,#162a45,#0b1624);
 color:#fff;
 line-height:1.6;
 }
 
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:0 auto;
-padding:60px 24px;
+padding:80px 24px;
 }
 
-/* HERO GRID */
-
 .hero{
-display:grid;
-grid-template-columns:1.1fr 1fr;
-gap:40px;
-align-items:center;
+text-align:center;
+padding-top:100px;
+padding-bottom:60px;
 }
 
 h1{
-font-size:46px;
+font-size:48px;
 font-weight:800;
-line-height:1.15;
-margin-bottom:20px;
+line-height:1.2;
+margin-bottom:24px;
 }
 
-.subtitle{
+.sub{
+font-size:20px;
 opacity:.9;
-margin-bottom:24px;
-font-size:18px;
+max-width:760px;
+margin:0 auto 30px auto;
 }
 
 .badge{
-opacity:.9;
 font-size:14px;
-margin-top:14px;
+opacity:.8;
+margin-bottom:20px;
 }
 
-.btn{
+.cta{
+display:inline-block;
 background:#2dd4bf;
 color:#000;
-padding:18px 34px;
-border-radius:12px;
+padding:18px 42px;
+border-radius:14px;
 font-weight:800;
 text-decoration:none;
-display:inline-block;
 font-size:18px;
-transition:.2s;
+transition:.25s;
+box-shadow:0 20px 40px rgba(45,212,191,.25);
 }
-.btn:hover{transform:scale(1.05);}
+.cta:hover{transform:translateY(-2px);}
 
-.dashboard-img{
-width:100%;
-border-radius:18px;
-box-shadow:0 40px 90px rgba(0,0,0,.55);
-}
-
-/* SECTIONS */
-
-.section{
-margin-top:90px;
+.mockup{
+margin-top:60px;
 text-align:center;
 }
-
-.section h2{
-font-size:32px;
-margin-bottom:40px;
+.mockup img{
+width:100%;
+max-width:900px;
+border-radius:18px;
+box-shadow:0 40px 90px rgba(0,0,0,.6);
 }
 
-.cards{
+.section-title{
+text-align:center;
+font-size:34px;
+font-weight:800;
+margin-bottom:18px;
+}
+
+.section-sub{
+text-align:center;
+opacity:.85;
+max-width:700px;
+margin:0 auto 50px auto;
+}
+
+.grid-3{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-margin-top:30px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:28px;
 }
 
 .card{
@@ -123,63 +127,80 @@ background:#14253d;
 padding:28px;
 border-radius:16px;
 text-align:left;
+border:1px solid rgba(255,255,255,.06);
 }
 
-/* PRICE */
+.card strong{
+display:block;
+margin-bottom:8px;
+}
 
-.price-box{
-background:#14253d;
-padding:50px 30px;
-border-radius:20px;
-max-width:600px;
-margin:0 auto;
+.pricing{
 text-align:center;
 }
 
-.price{
-font-size:52px;
-font-weight:800;
-margin:12px 0;
+.price-box{
+background:#14253d;
+border-radius:20px;
+padding:50px 30px;
+max-width:520px;
+margin:0 auto;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 30px 80px rgba(0,0,0,.5);
 }
 
-.old-price{
+.old{
+opacity:.5;
 text-decoration:line-through;
-opacity:.6;
+margin-bottom:6px;
+}
+
+.price{
+font-size:56px;
+font-weight:800;
+margin:10px 0;
+}
+
+.features{
+text-align:left;
+margin:25px 0;
+}
+
+.features div{
+margin-bottom:10px;
+opacity:.95;
 }
 
 .garantia{
-margin:20px 0;
+margin-top:18px;
 }
+
 .garantia img{
-max-width:170px;
+max-width:160px;
+}
+
+.faq{
+max-width:800px;
+margin:0 auto;
 }
 
 details{
 background:#14253d;
-padding:20px;
+padding:18px 22px;
 border-radius:12px;
 margin-bottom:14px;
-text-align:left;
 cursor:pointer;
 }
 
 footer{
-margin-top:80px;
 text-align:center;
 opacity:.7;
-padding-bottom:40px;
+padding:40px 20px;
 }
 
-/* MOBILE */
-
-@media(max-width:900px){
-.hero{
-grid-template-columns:1fr;
-}
-.cards{
-grid-template-columns:1fr;
-}
-h1{font-size:34px;}
+@media(max-width:768px){
+h1{font-size:36px;}
+.container{padding:60px 18px;}
 }
 </style>
 </head>
@@ -187,117 +208,140 @@ h1{font-size:34px;}
 <body>
 
 <!-- HERO -->
-<section class="container hero">
+<section class="hero container">
 
-<div>
+<div class="badge">🇵🇹 Feito para Alojamento Local em Portugal</div>
+
 <h1>
-Saiba exatamente quanto <span style="color:#2dd4bf;">lucro real</span> sobra no seu bolso em cada reserva
+Saiba exatamente quanto lucro sobra no seu bolso em cada reserva
 </h1>
 
-<p class="subtitle">
+<p class="sub">
 O único sistema configurado para a realidade do AL em Portugal.  
-Calcule automaticamente comissões, IVA, IRS e taxas turísticas.
+Calcule o seu lucro líquido real descontando automaticamente comissões, IVA, IRS e taxas turísticas.
 </p>
 
-<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
 Ver o lucro real das minhas reservas →
 </a>
 
-<p class="badge">✔️ Já utilizado por anfitriões de AL em Portugal 🇵🇹</p>
-</div>
-
-<div>
-<img src="dashboard-lucro-real-al.png" alt="Dashboard Gestor AL Pro" class="dashboard-img">
+<div class="mockup">
+<img src="dashboard-lucro-real-al.html.png" alt="Dashboard Gestor AL Pro">
 </div>
 
 </section>
 
 <!-- PROBLEMA -->
-<section class="container section">
-<h2>Você fatura… mas sabe quanto realmente ganha?</h2>
+<section class="container">
 
-<div class="cards">
+<h2 class="section-title">
+Você fatura, mas sabe quanto realmente ganha?
+</h2>
+
+<p class="section-sub">
+Entre comissões das plataformas, impostos e taxas municipais,
+é fácil perder a noção do lucro real.
+</p>
+
+<div class="grid-3">
+
 <div class="card">
-<strong>Lucro invisível</strong><br>
+<strong>Falta de clareza</strong>
 Tem reservas mas não sabe o lucro líquido real.
 </div>
 
 <div class="card">
-<strong>Contas confusas</strong><br>
-Perde horas em folhas de Excel ou contas de cabeça.
+<strong>Tempo perdido</strong>
+Perde horas em folhas de Excel confusas.
 </div>
 
 <div class="card">
-<strong>Insegurança fiscal</strong><br>
-Dúvidas com IRS, IVA e taxas turísticas.
+<strong>Insegurança fiscal</strong>
+Dúvidas sobre IRS, IVA e coeficientes.
 </div>
+
 </div>
 </section>
 
-<!-- DIFERENCIAIS -->
-<section class="container section">
-<h2>O que faz a diferença para anfitriões em Portugal</h2>
+<!-- COMO FUNCIONA -->
+<section class="container">
 
-<div class="cards">
+<h2 class="section-title">
+Um sistema simples de 3 passos
+</h2>
+
+<div class="grid-3">
+
 <div class="card">
-<strong>Inteligência Fiscal Integrada</strong><br>
-Cálculo automático com coeficiente IRS e IVA.
+<strong>1. Configure</strong>
+Insira taxas e regime fiscal uma única vez.
 </div>
 
 <div class="card">
-<strong>Gestão Municipal Automática</strong><br>
-Taxas turísticas por município já estruturadas.
+<strong>2. Registe</strong>
+Introduza os dados básicos da reserva.
 </div>
 
 <div class="card">
-<strong>Comparador de Plataformas</strong><br>
-Veja qual canal gera mais lucro no seu AL.
+<strong>3. Visualize</strong>
+O dashboard calcula automaticamente o lucro.
 </div>
+
 </div>
 </section>
 
 <!-- PREÇO -->
-<section class="container section">
+<section class="container pricing">
+
+<h2 class="section-title">
+Invista uma vez, lucre para sempre
+</h2>
 
 <div class="price-box">
 
-<p class="old-price">Ferramentas semelhantes: 9,99€ – 29€/mês</p>
-<p class="price">37€ pagamento único</p>
-<p>Sem mensalidades • Acesso vitalício</p>
+<div class="old">Ferramentas semelhantes: 9,99€ – 29€/mês</div>
+
+<div class="price">37€</div>
+<div>Pagamento único • Acesso vitalício</div>
+
+<div class="features">
+<div>✔ Sem mensalidades</div>
+<div>✔ Acesso vitalício</div>
+<div>✔ Atualizações incluídas</div>
+<div>✔ Dashboard automático</div>
+<div>✔ Suporte por email</div>
+</div>
+
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
+Começar agora →
+</a>
 
 <div class="garantia">
 <img src="selo-garantia-7dias.png" alt="Garantia 7 dias">
 </div>
 
-<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
-Quero ver o lucro real do meu AL
-</a>
-
 </div>
 </section>
 
 <!-- FAQ -->
-<section class="container section">
-<h2>Perguntas Frequentes</h2>
+<section class="container faq">
+
+<h2 class="section-title">Perguntas Frequentes</h2>
 
 <details><summary>Serve para vários imóveis?</summary>
-Sim. Pode gerir vários ALs.
+Sim. Pode gerir vários ALs no mesmo sistema.
 </details>
 
-<details><summary>Preciso ser expert em tecnologia?</summary>
-Não. Basta preencher as células indicadas.
+<details><summary>Preciso instalar alguma coisa?</summary>
+Não. Funciona imediatamente após o acesso.
 </details>
 
-<details><summary>Funciona no telemóvel?</summary>
-Sim, via Google Sheets.
+<details><summary>Como recebo acesso?</summary>
+O acesso chega automaticamente por email após a compra.
 </details>
 
-<details><summary>E se as leis mudarem?</summary>
-A ferramenta é configurável.
-</details>
-
-<details><summary>É apenas mais uma folha de Excel?</summary>
-Não. É um sistema estruturado para AL em Portugal.
+<details><summary>É apenas uma folha de Excel?</summary>
+Não. É um sistema estruturado para gestão real do AL.
 </details>
 
 </section>
