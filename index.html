@@ -6,7 +6,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gestor AL Pro</title>
-<meta name="description" content="Descubra o lucro real do seu Alojamento Local em minutos com o Gestor AL Pro. Sem contas manuais.">
+<meta name="description" content="Descubra o lucro real do seu Alojamento Local em minutos com o Gestor AL Pro.">
 
 <!-- OPEN GRAPH -->
 <meta property="og:title" content="Gestor AL Pro"/>
@@ -47,40 +47,44 @@ line-height:1.6;
 }
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:0 auto;
-padding:70px 20px;
-text-align:center;
+padding:60px 24px;
 }
 
-section{margin-bottom:90px;}
+/* HERO GRID */
+
+.hero{
+display:grid;
+grid-template-columns:1.1fr 1fr;
+gap:40px;
+align-items:center;
+}
 
 h1{
-font-size:52px;
+font-size:46px;
 font-weight:800;
-line-height:1.2;
+line-height:1.15;
 margin-bottom:20px;
 }
 
-h2{
-font-size:34px;
-margin-bottom:20px;
+.subtitle{
+opacity:.9;
+margin-bottom:24px;
+font-size:18px;
 }
-
-p{opacity:.92;margin-bottom:20px;}
 
 .badge{
-color:#ffd166;
-font-weight:700;
-margin-bottom:12px;
-display:inline-block;
+opacity:.9;
+font-size:14px;
+margin-top:14px;
 }
 
 .btn{
-background:#ffd166;
+background:#2dd4bf;
 color:#000;
-padding:18px 42px;
-border-radius:14px;
+padding:18px 34px;
+border-radius:12px;
 font-weight:800;
 text-decoration:none;
 display:inline-block;
@@ -89,6 +93,31 @@ transition:.2s;
 }
 .btn:hover{transform:scale(1.05);}
 
+.dashboard-img{
+width:100%;
+border-radius:18px;
+box-shadow:0 40px 90px rgba(0,0,0,.55);
+}
+
+/* SECTIONS */
+
+.section{
+margin-top:90px;
+text-align:center;
+}
+
+.section h2{
+font-size:32px;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+margin-top:30px;
+}
+
 .card{
 background:#14253d;
 padding:28px;
@@ -96,39 +125,33 @@ border-radius:16px;
 text-align:left;
 }
 
-.grid-3{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:22px;
-margin-top:40px;
-}
-
-.dashboard-img{
-width:100%;
-border-radius:18px;
-box-shadow:0 40px 90px rgba(0,0,0,.55);
-}
+/* PRICE */
 
 .price-box{
 background:#14253d;
 padding:50px 30px;
-border-radius:18px;
-max-width:520px;
+border-radius:20px;
+max-width:600px;
 margin:0 auto;
+text-align:center;
 }
 
 .price{
-font-size:54px;
+font-size:52px;
 font-weight:800;
 margin:12px 0;
+}
+
+.old-price{
+text-decoration:line-through;
+opacity:.6;
 }
 
 .garantia{
 margin:20px 0;
 }
 .garantia img{
-max-width:160px;
-width:100%;
+max-width:170px;
 }
 
 details{
@@ -141,13 +164,22 @@ cursor:pointer;
 }
 
 footer{
+margin-top:80px;
+text-align:center;
 opacity:.7;
-margin-top:60px;
-font-size:14px;
+padding-bottom:40px;
 }
 
-@media(max-width:768px){
-h1{font-size:36px;}
+/* MOBILE */
+
+@media(max-width:900px){
+.hero{
+grid-template-columns:1fr;
+}
+.cards{
+grid-template-columns:1fr;
+}
+h1{font-size:34px;}
 }
 </style>
 </head>
@@ -155,174 +187,124 @@ h1{font-size:36px;}
 <body>
 
 <!-- HERO -->
-<section class="container">
+<section class="container hero">
 
-<div class="badge">🇵🇹 Feito para Alojamento Local em Portugal</div>
-
+<div>
 <h1>
-Saiba exatamente quanto <span style="color:#ffd166;">lucro sobra</span>
-no seu bolso em cada reserva
+Saiba exatamente quanto <span style="color:#2dd4bf;">lucro real</span> sobra no seu bolso em cada reserva
 </h1>
 
-<p>
-O único sistema configurado para a realidade do AL em Portugal.
-Calcule automaticamente comissões, IVA, IRS e taxas turísticas — sem contas manuais.
+<p class="subtitle">
+O único sistema configurado para a realidade do AL em Portugal.  
+Calcule automaticamente comissões, IVA, IRS e taxas turísticas.
 </p>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
 Ver o lucro real das minhas reservas →
 </a>
 
-</section>
+<p class="badge">✔️ Já utilizado por anfitriões de AL em Portugal 🇵🇹</p>
+</div>
 
-<!-- DASHBOARD -->
-<section class="container">
-
-<h2>Veja o lucro aparecer automaticamente</h2>
-
-<img src="dashboard-lucro-real-al.html.png" class="dashboard-img" alt="Dashboard Gestor AL Pro">
-
-<p style="margin-top:20px;">
-Em segundos, identifique qual plataforma gera mais lucro no seu AL.
-</p>
+<div>
+<img src="dashboard-lucro-real-al.png" alt="Dashboard Gestor AL Pro" class="dashboard-img">
+</div>
 
 </section>
 
 <!-- PROBLEMA -->
-<section class="container">
-
-<div class="badge">O PROBLEMA</div>
+<section class="container section">
 <h2>Você fatura… mas sabe quanto realmente ganha?</h2>
 
-<div class="grid-3">
-
+<div class="cards">
 <div class="card">
-<strong>Lucro invisível</strong><br><br>
-Tem reservas mas não sabe o lucro líquido real depois das taxas.
-</div>
-
-<div class="card">
-<strong>Contas confusas</strong><br><br>
-Perde horas em Excel ou contas manuais todos os meses.
+<strong>Lucro invisível</strong><br>
+Tem reservas mas não sabe o lucro líquido real.
 </div>
 
 <div class="card">
-<strong>Insegurança fiscal</strong><br><br>
-Dúvidas com IRS, coeficiente 0.35 e impostos do AL.
-</div>
-
-</div>
-</section>
-
-<!-- SOLUÇÃO -->
-<section class="container">
-
-<div class="badge">A SOLUÇÃO</div>
-<h2>Um sistema simples de 3 passos</h2>
-
-<div class="grid-3">
-
-<div class="card">
-<strong>1. Configure</strong><br><br>
-Defina taxas e regime fiscal uma única vez.
+<strong>Contas confusas</strong><br>
+Perde horas em folhas de Excel ou contas de cabeça.
 </div>
 
 <div class="card">
-<strong>2. Registe</strong><br><br>
-Insira os dados básicos da reserva.
+<strong>Insegurança fiscal</strong><br>
+Dúvidas com IRS, IVA e taxas turísticas.
 </div>
-
-<div class="card">
-<strong>3. Visualize</strong><br><br>
-O dashboard calcula automaticamente o lucro real.
-</div>
-
 </div>
 </section>
 
 <!-- DIFERENCIAIS -->
-<section class="container">
+<section class="container section">
+<h2>O que faz a diferença para anfitriões em Portugal</h2>
 
-<div class="badge">DIFERENCIAIS</div>
-<h2>Feito especificamente para anfitriões em Portugal</h2>
-
-<div class="grid-3">
-
+<div class="cards">
 <div class="card">
-<strong>🇵🇹 Inteligência fiscal PT</strong><br><br>
-Baseado no coeficiente 0.35 e regras reais do AL.
+<strong>Inteligência Fiscal Integrada</strong><br>
+Cálculo automático com coeficiente IRS e IVA.
 </div>
 
 <div class="card">
-<strong>📊 Comparador de plataformas</strong><br><br>
-Veja se Airbnb, Booking ou VRBO dão mais lucro.
+<strong>Gestão Municipal Automática</strong><br>
+Taxas turísticas por município já estruturadas.
 </div>
 
 <div class="card">
-<strong>⚡ Métricas profissionais</strong><br><br>
-Ticket médio, RevPAR e lucro líquido automático.
+<strong>Comparador de Plataformas</strong><br>
+Veja qual canal gera mais lucro no seu AL.
 </div>
-
 </div>
 </section>
 
 <!-- PREÇO -->
-<section class="container">
-
-<div class="badge">OFERTA ESPECIAL</div>
-<h2>Invista uma vez, use para sempre</h2>
+<section class="container section">
 
 <div class="price-box">
 
-<p style="opacity:.6;text-decoration:line-through;">
-Ferramentas semelhantes: 9,99€ – 29€/mês
-</p>
-
-<div class="price">37€</div>
-<p>Pagamento único • Acesso vitalício</p>
+<p class="old-price">Ferramentas semelhantes: 9,99€ – 29€/mês</p>
+<p class="price">37€ pagamento único</p>
+<p>Sem mensalidades • Acesso vitalício</p>
 
 <div class="garantia">
 <img src="selo-garantia-7dias.png" alt="Garantia 7 dias">
 </div>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="btn">
-Começar agora →
+Quero ver o lucro real do meu AL
 </a>
 
 </div>
 </section>
 
 <!-- FAQ -->
-<section class="container">
-
-<div class="badge">PERGUNTAS FREQUENTES</div>
-<h2>Tem dúvidas? Nós respondemos.</h2>
+<section class="container section">
+<h2>Perguntas Frequentes</h2>
 
 <details><summary>Serve para vários imóveis?</summary>
-Sim. Pode gerir vários ALs no mesmo sistema.
+Sim. Pode gerir vários ALs.
 </details>
 
 <details><summary>Preciso ser expert em tecnologia?</summary>
-Não. A ferramenta foi feita para ser simples.
-</details>
-
-<details><summary>Como recebo acesso?</summary>
-Após o pagamento recebe imediatamente por email.
+Não. Basta preencher as células indicadas.
 </details>
 
 <details><summary>Funciona no telemóvel?</summary>
-Sim. Pode consultar normalmente.
+Sim, via Google Sheets.
+</details>
+
+<details><summary>E se as leis mudarem?</summary>
+A ferramenta é configurável.
 </details>
 
 <details><summary>É apenas mais uma folha de Excel?</summary>
-Não. É um sistema estruturado para análise real do AL.
+Não. É um sistema estruturado para AL em Portugal.
 </details>
 
 </section>
 
-<footer class="container">
-Gestor AL Pro Starter © 2026 — Todos os direitos reservados.
+<footer>
+Gestor AL Pro Starter © 2026
 </footer>
 
 </body>
-</html>
+  </html>
