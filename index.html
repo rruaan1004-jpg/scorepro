@@ -102,6 +102,46 @@ border-radius:18px;
 box-shadow:0 40px 90px rgba(0,0,0,.6);
 }
 
+/* ===== CARROSSEL PROVA SOCIAL (ADD-ON) ===== */
+
+.social-carousel{
+overflow:hidden;
+margin-top:40px;
+}
+
+.social-track{
+display:flex;
+gap:18px;
+animation:socialScroll 28s linear infinite;
+}
+
+.social-track img{
+height:200px;
+border-radius:14px;
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+flex-shrink:0;
+transition:transform .25s ease, filter .25s ease;
+filter:brightness(.92);
+}
+
+.social-track img:hover{
+transform:translateY(-4px) scale(1.02);
+filter:brightness(1);
+}
+
+@keyframes socialScroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+@media(max-width:768px){
+.social-track img{
+height:140px;
+}
+}
+
+/* ===== RESTANTE ===== */
+
 .section-title{
 text-align:center;
 font-size:34px;
@@ -229,6 +269,20 @@ Ver o lucro real das minhas reservas →
 <img src="dashboard-lucro-real-al.html.png" alt="Dashboard Gestor AL Pro">
 </div>
 
+<!-- ⭐ PROVAS SOCIAIS (ADICIONADO) -->
+<div class="social-carousel">
+<div class="social-track">
+<img src="ps1.jpg">
+<img src="ps2.jpg">
+<img src="ps3.jpg">
+<img src="ps4.jpg">
+<img src="ps1.jpg">
+<img src="ps2.jpg">
+<img src="ps3.jpg">
+<img src="ps4.jpg">
+</div>
+</div>
+
 </section>
 
 <!-- PROBLEMA -->
@@ -351,4 +405,4 @@ Gestor AL Pro Starter © 2026
 </footer>
 
 </body>
-  </html>
+</html>
