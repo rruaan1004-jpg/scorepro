@@ -18,7 +18,6 @@ t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init', '1056723816631326');
 fbq('track', 'PageView');
 </script>
@@ -95,7 +94,31 @@ font-size:14px;
 opacity:.85;
 }
 
-/* PROBLEMAS */
+/* PROVAS SOCIAIS */
+
+.social-carousel{
+overflow:hidden;
+margin-top:40px;
+}
+
+.social-track{
+display:flex;
+gap:18px;
+animation:socialScroll 35s linear infinite;
+}
+
+.social-track img{
+height:170px;
+border-radius:14px;
+flex-shrink:0;
+}
+
+@keyframes socialScroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* TITULOS */
 
 .section-title{
 text-align:center;
@@ -179,7 +202,7 @@ margin-top:25px;
 }
 
 .garantia img{
-max-width:180px;
+max-width:140px;
 width:100%;
 }
 
@@ -235,9 +258,21 @@ Inclui cálculo automático e relatórios mensais.
 </div>
 </div>
 
+<!-- PROVA SOCIAL -->
+<div class="social-carousel">
+<div class="social-track">
+<img src="ps1.jpg">
+<img src="ps2.jpg">
+<img src="ps3.jpg">
+<img src="ps4.jpg">
+<img src="ps1.jpg">
+<img src="ps2.jpg">
+</div>
+</div>
+
 </section>
 
-<!-- BLOCO DE DOR (QUE FALTAVA) -->
+<!-- BLOCO DE DOR -->
 <section class="container">
 
 <h2 class="section-title">
@@ -269,7 +304,34 @@ Dúvidas sobre IRS, IVA e coeficientes.
 </div>
 </section>
 
-<!-- QUEM SOU EU (NOVO BLOCO) -->
+<!-- SISTEMA 3 PASSOS -->
+<section class="container">
+
+<h2 class="section-title">
+Um sistema simples de 3 passos
+</h2>
+
+<div class="grid-3">
+
+<div class="card">
+<strong>1. Configure</strong><br>
+Insira taxas e regime fiscal uma única vez.
+</div>
+
+<div class="card">
+<strong>2. Registe</strong><br>
+Introduza os dados básicos da reserva.
+</div>
+
+<div class="card">
+<strong>3. Visualize</strong><br>
+O dashboard calcula automaticamente o lucro.
+</div>
+
+</div>
+</section>
+
+<!-- QUEM SOU EU -->
 <section class="container">
 <div class="about">
 
