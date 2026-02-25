@@ -105,8 +105,6 @@ opacity:.9;
 font-size:15px;
 }
 
-/* ===== CARROSSEL PROVA SOCIAL ===== */
-
 .social-carousel{
 overflow:hidden;
 margin-top:40px;
@@ -123,24 +121,11 @@ height:200px;
 border-radius:14px;
 box-shadow:0 20px 45px rgba(0,0,0,.45);
 flex-shrink:0;
-transition:transform .25s ease, filter .25s ease;
-filter:brightness(.92);
-}
-
-.social-track img:hover{
-transform:translateY(-4px) scale(1.02);
-filter:brightness(1);
 }
 
 @keyframes socialScroll{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
-}
-
-@media(max-width:768px){
-.social-track img{
-height:140px;
-}
 }
 
 .section-title{
@@ -167,18 +152,10 @@ gap:28px;
 background:#14253d;
 padding:28px;
 border-radius:16px;
-text-align:left;
 border:1px solid rgba(255,255,255,.06);
 }
 
-.card strong{
-display:block;
-margin-bottom:8px;
-}
-
-.pricing{
-text-align:center;
-}
+.pricing{text-align:center;}
 
 .price-box{
 background:#14253d;
@@ -187,44 +164,15 @@ padding:50px 30px;
 max-width:520px;
 margin:0 auto;
 border:1px solid rgba(255,255,255,.08);
-box-shadow:0 30px 80px rgba(0,0,0,.5);
 }
 
-.old{
-opacity:.5;
-text-decoration:line-through;
-margin-bottom:6px;
-}
+.old{opacity:.5;text-decoration:line-through;margin-bottom:6px;}
+.price{font-size:56px;font-weight:800;margin:10px 0;}
 
-.price{
-font-size:56px;
-font-weight:800;
-margin:10px 0;
-}
+.features{margin:25px 0;text-align:left;}
+.features div{margin-bottom:10px;}
 
-.features{
-text-align:left;
-margin:25px 0;
-}
-
-.features div{
-margin-bottom:10px;
-opacity:.95;
-}
-
-.garantia{
-margin-top:18px;
-}
-
-.garantia img{
-max-width:160px;
-}
-
-.faq{
-max-width:800px;
-margin:0 auto;
-}
-
+.faq{max-width:800px;margin:0 auto;}
 details{
 background:#14253d;
 padding:18px 22px;
@@ -233,16 +181,7 @@ margin-bottom:14px;
 cursor:pointer;
 }
 
-footer{
-text-align:center;
-opacity:.7;
-padding:40px 20px;
-}
-
-@media(max-width:768px){
-h1{font-size:36px;}
-.container{padding:60px 18px;}
-}
+footer{text-align:center;opacity:.7;padding:40px 20px;}
 </style>
 </head>
 
@@ -270,7 +209,6 @@ Comprar acesso vitalício →
 <div class="mockup-note">Inclui cálculo de taxas de limpeza e relatórios mensais automáticos.</div>
 </div>
 
-<!-- ⭐ PROVAS SOCIAIS -->
 <div class="social-carousel">
 <div class="social-track">
 <img src="ps1.jpg">
@@ -297,21 +235,19 @@ Entre comissões das plataformas, impostos e taxas municipais,
 </p>
 
 <div class="grid-3">
-<div class="card">
-<strong>Falta de clareza</strong>
-Tem reservas mas não sabe o lucro líquido real.
+<div class="card"><strong>Falta de clareza</strong>Tem reservas mas não sabe o lucro líquido real.</div>
+<div class="card"><strong>Tempo perdido</strong>Perde horas em folhas de Excel confusas.</div>
+<div class="card"><strong>Insegurança fiscal</strong>Dúvidas sobre IRS, IVA e coeficientes.</div>
 </div>
+</section>
 
-<div class="card">
-<strong>Tempo perdido</strong>
-Perde horas em folhas de Excel confusas.
-</div>
-
-<div class="card">
-<strong>Insegurança fiscal</strong>
-Dúvidas sobre IRS, IVA e coeficientes.
-</div>
-</div>
+<!-- 🔥 QUEM SOU EU (ADICIONADO) -->
+<section class="container">
+<h2 class="section-title">Quem criou o Gestor AL Pro</h2>
+<p class="section-sub">
+Depois de gerir Alojamento Local e perceber que muitos anfitriões faturavam bem mas não sabiam o lucro real,
+criei o Gestor AL Pro para simplificar esse controlo de forma clara e rápida — sem Excel confuso.
+</p>
 </section>
 
 <!-- PREÇO -->
