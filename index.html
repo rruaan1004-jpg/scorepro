@@ -31,16 +31,10 @@ body{
 background: radial-gradient(circle at top,#162a45,#0b1624);
 color:#fff;
 line-height:1.6;
-overflow-x:hidden; /* 🔧 impede layout estourar */
+overflow-x:hidden;
 }
 
-.container{
-max-width:1100px;
-margin:0 auto;
-padding:80px 24px;
-}
-
-/* ===== CONTADOR URGÊNCIA ===== */
+/* 🔴 BANNER URGÊNCIA */
 .urgency-bar{
 position:fixed;
 top:0;
@@ -50,38 +44,44 @@ background:#ff4d4d;
 color:#fff;
 text-align:center;
 font-weight:700;
-padding:8px;
+padding:8px 10px;
 z-index:9999;
 font-size:14px;
 }
 
-/* ===== NOTIFICAÇÃO DE COMPRA ===== */
-.fake-proof{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#14253d;
-padding:12px 16px;
-border-radius:10px;
-font-size:13px;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
-z-index:9999;
-opacity:0;
-transform:translateY(20px);
-transition:.4s;
+body.has-bar .hero{padding-top:120px;}
+
+.container{
+max-width:1100px;
+margin:0 auto;
+padding:80px 24px;
 }
 
-.fake-proof.show{
-opacity:1;
-transform:translateY(0);
+.hero{
+text-align:center;
+padding-top:80px;
+padding-bottom:40px;
 }
 
-/* ===== RESTO DO SEU CSS (INTACTO) ===== */
+h1{
+font-size:42px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:24px;
+}
 
-.hero{text-align:center;padding-top:100px;padding-bottom:40px;}
-h1{font-size:42px;font-weight:800;line-height:1.2;margin-bottom:24px;}
-.sub{font-size:18px;opacity:.9;max-width:760px;margin:0 auto 30px auto;}
-.badge{font-size:14px;opacity:.8;margin-bottom:20px;}
+.sub{
+font-size:18px;
+opacity:.9;
+max-width:760px;
+margin:0 auto 30px auto;
+}
+
+.badge{
+font-size:14px;
+opacity:.8;
+margin-bottom:20px;
+}
 
 .cta{
 display:inline-block;
@@ -95,6 +95,7 @@ font-size:18px;
 margin-top:10px;
 }
 
+/* KIT CONFIANÇA */
 .trust{
 margin-top:14px;
 font-size:14px;
@@ -111,9 +112,7 @@ padding:6px 10px;
 border-radius:8px;
 }
 
-.mockup{margin-top:50px;text-align:center;}
-.mockup img{width:100%;max-width:700px;border-radius:16px;}
-
+/* EXEMPLO REAL */
 .real-example{
 margin-top:40px;
 background:#0f2136;
@@ -148,17 +147,49 @@ margin-top:6px;
 .example-negative{color:#ff6b6b;}
 .example-positive{color:#2dd4bf;}
 
-.social-carousel{overflow:hidden;margin-top:40px;}
-.social-track{display:flex;gap:18px;animation:socialScroll 35s linear infinite;}
-.social-track img{height:170px;border-radius:14px;flex-shrink:0;}
+.example-note{
+margin-top:14px;
+font-size:13px;
+opacity:.75;
+}
+
+/* PROVAS SOCIAIS */
+.social-carousel{
+overflow:hidden;
+margin-top:40px;
+}
+
+.social-track{
+display:flex;
+gap:18px;
+animation:socialScroll 35s linear infinite;
+}
+
+.social-track img{
+height:170px;
+border-radius:14px;
+flex-shrink:0;
+max-width:100%;
+}
 
 @keyframes socialScroll{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
 }
 
-.section-title{text-align:center;font-size:32px;font-weight:800;margin-bottom:16px;}
-.section-sub{text-align:center;opacity:.85;max-width:700px;margin:0 auto 40px auto;}
+.section-title{
+text-align:center;
+font-size:32px;
+font-weight:800;
+margin-bottom:16px;
+}
+
+.section-sub{
+text-align:center;
+opacity:.85;
+max-width:700px;
+margin:0 auto 40px auto;
+}
 
 .grid-3{
 display:grid;
@@ -181,6 +212,12 @@ max-width:900px;
 margin:0 auto;
 }
 
+.about h3{
+font-size:28px;
+margin-bottom:16px;
+text-align:center;
+}
+
 .price-box{
 background:#14253d;
 border-radius:20px;
@@ -190,37 +227,79 @@ margin:0 auto;
 text-align:center;
 }
 
-.price{font-size:54px;font-weight:800;margin:10px 0;}
-.old{opacity:.5;text-decoration:line-through;}
+.price{
+font-size:54px;
+font-weight:800;
+margin:10px 0;
+}
 
-.features{text-align:left;margin:25px 0;}
-.features div{margin-bottom:8px;}
+.old{
+opacity:.5;
+text-decoration:line-through;
+}
 
-.garantia{text-align:center;margin-top:25px;}
-.garantia img{max-width:140px;width:100%;}
+.features{
+text-align:left;
+margin:25px 0;
+}
 
-.faq{max-width:800px;margin:0 auto;}
-details{background:#14253d;padding:16px 20px;border-radius:10px;margin-bottom:12px;}
+.features div{
+margin-bottom:8px;
+}
 
-footer{text-align:center;opacity:.7;padding:40px 20px;}
+.garantia{
+text-align:center;
+margin-top:25px;
+}
+
+.garantia img{
+max-width:140px;
+width:100%;
+}
+
+.faq{
+max-width:800px;
+margin:0 auto;
+}
+
+details{
+background:#14253d;
+padding:16px 20px;
+border-radius:10px;
+margin-bottom:12px;
+}
+
+footer{
+text-align:center;
+opacity:.7;
+padding:40px 20px;
+}
+
+/* 🔔 POPUP SOCIAL */
+.social-proof{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#0f2136;
+padding:12px 16px;
+border-radius:12px;
+font-size:14px;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+z-index:9999;
+display:none;
+}
 </style>
 </head>
 
-<body>
+<body class="has-bar">
 
-<!-- 🔥 BARRA DE URGÊNCIA -->
+<!-- 🔴 BARRA URGÊNCIA -->
 <div class="urgency-bar">
-🔥 Oferta de fundador termina em <span id="countdown">14:59</span>
+⚠️ Oferta termina em <span id="countdown">15:00</span>
 </div>
-
-<!-- 🔥 POPUP DE COMPRA -->
-<div class="fake-proof" id="proofBox">
-👤 Ricardo de Lisboa acabou de comprar
-</div>
-
-<!-- ===== SEU CONTEÚDO ORIGINAL INTACTO ===== -->
 
 <section class="hero container">
+
 <div class="badge">🇵🇹 Feito para Alojamento Local em Portugal</div>
 
 <h1>
@@ -243,8 +322,12 @@ Comprar acesso vitalício →
 
 <div class="mockup">
 <img src="exemplo-calculo-al-gestor-pro.jpg" alt="Dashboard Gestor AL Pro">
+<div class="mockup-note">
+Inclui cálculo automático e relatórios mensais.
+</div>
 </div>
 
+<!-- EXEMPLO REAL -->
 <div class="real-example">
 <h3>Exemplo real de uma reserva</h3>
 <div class="example-grid">
@@ -261,6 +344,9 @@ Comprar acesso vitalício →
 <div class="example-value example-positive">63€</div>
 </div>
 </div>
+<div class="example-note">
+Simulação baseada em AL típico em Portugal.
+</div>
 </div>
 
 <div class="social-carousel">
@@ -273,33 +359,121 @@ Comprar acesso vitalício →
 <img src="ps2.jpg">
 </div>
 </div>
+
 </section>
 
-<!-- ===== FAQ GARANTIDO ===== -->
+<!-- BLOCO DE DOR -->
+<section class="container">
+<h2 class="section-title">
+Você fatura, mas sabe quanto realmente ganha?
+</h2>
+<p class="section-sub">
+Entre comissões das plataformas, impostos e taxas municipais,
+é fácil perder a noção do lucro real.
+</p>
+<div class="grid-3">
+<div class="card">
+<strong>Falta de clareza</strong><br>
+Tem reservas mas não sabe o lucro líquido real.
+</div>
+<div class="card">
+<strong>Tempo perdido</strong><br>
+Perde horas a fazer contas manuais.
+</div>
+<div class="card">
+<strong>Insegurança fiscal</strong><br>
+Dúvidas sobre IRS, IVA e coeficientes.
+</div>
+</div>
+</section>
 
+<!-- SISTEMA 3 PASSOS -->
+<section class="container">
+<h2 class="section-title">
+Um sistema simples de 3 passos
+</h2>
+<div class="grid-3">
+<div class="card">
+<strong>1. Configure</strong><br>
+Insira taxas e regime fiscal uma única vez.
+</div>
+<div class="card">
+<strong>2. Registe</strong><br>
+Introduza os dados básicos da reserva.
+</div>
+<div class="card">
+<strong>3. Visualize</strong><br>
+O dashboard calcula automaticamente o lucro.
+</div>
+</div>
+</section>
+
+<!-- QUEM SOU EU -->
+<section class="container">
+<div class="about">
+<h3>Quem criou o Gestor AL Pro</h3>
+<p>
+Eu também tenho Alojamento Local e passei exatamente pelo mesmo problema:
+via dinheiro entrar… mas no fim do mês não sabia o lucro real.
+</p>
+<br>
+<p>
+Depois de perder horas a fazer contas manuais e perceber que muitos gestores de AL
+estavam na mesma situação, criei o Gestor AL Pro para ter
+clareza real dos números em minutos.
+</p>
+<br>
+<p><strong>Hoje a ferramenta faz automaticamente o que antes levava horas.</strong></p>
+</div>
+</section>
+
+<!-- PREÇO -->
+<section class="container">
+<div class="price-box">
+<div class="old">Ferramentas semelhantes: 9,99€ – 29€/mês</div>
+<div class="price">27€</div>
+<div>Pagamento único • Acesso vitalício</div>
+<div class="features">
+<div>✔ Sem mensalidades</div>
+<div>✔ Acesso vitalício</div>
+<div>✔ Atualizações incluídas</div>
+<div>✔ Dashboard automático</div>
+<div>✔ Relatórios mensais</div>
+<div>✔ Suporte por email</div>
+</div>
+<a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
+Comprar agora por 27€
+</a>
+<div class="trust">
+<span>🔒 Pagamento seguro</span>
+<span>⚡ Acesso imediato</span>
+<span>🛡️ Garantia de 7 dias</span>
+</div>
+<div class="garantia">
+<img src="selo-garantia-7dias.png" alt="Garantia 7 dias">
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
 <section class="container faq">
 <h2 class="section-title">Perguntas Frequentes</h2>
-
 <details>
 <summary>Serve para o meu Alojamento Local?</summary>
 Sim. O Gestor AL Pro foi feito especificamente para AL em Portugal.
 </details>
-
 <details>
 <summary>É complicado de usar?</summary>
 Não. A configuração inicial leva poucos minutos.
 </details>
-
 <details>
 <summary>Funciona para vários imóveis?</summary>
 Sim. Pode gerir múltiplos AL no mesmo sistema.
 </details>
-
 <details>
 <summary>Como recebo acesso após a compra?</summary>
 O acesso é enviado automaticamente para o seu email.
 </details>
-
 <details>
 <summary>E se não fizer sentido para mim?</summary>
 Tem 7 dias de garantia incondicional.
@@ -310,27 +484,37 @@ Tem 7 dias de garantia incondicional.
 Gestor AL Pro Starter © 2026
 </footer>
 
+<!-- 🔔 POPUP -->
+<div class="social-proof" id="proofBox">
+🔥 <span id="buyerName">Ana</span> acabou de comprar
+</div>
+
 <script>
-// ===== CONTADOR =====
-let time = 15 * 60;
+/* CONTADOR */
+let time=900;
+const el=document.getElementById("countdown");
 setInterval(()=>{
-const m = Math.floor(time/60);
-const s = time%60;
-document.getElementById("countdown").innerHTML =
-`${m}:${s.toString().padStart(2,'0')}`;
-if(time>0) time--;
+time--;
+let m=Math.floor(time/60);
+let s=time%60;
+el.textContent=`${m}:${s.toString().padStart(2,'0')}`;
+if(time<=0) time=900;
 },1000);
 
-// ===== POPUP COMPRAS =====
-const names=["João","Ricardo","Marta","Sofia","Carlos","Ana"];
-setInterval(()=>{
+/* POPUP SOCIAL */
+const names=["Ana","João","Carlos","Mariana","Pedro","Rita","Bruno","Lucas","Fernanda"];
 const box=document.getElementById("proofBox");
-const name=names[Math.floor(Math.random()*names.length)];
-box.innerHTML=`👤 ${name} de Portugal acabou de comprar`;
-box.classList.add("show");
-setTimeout(()=>box.classList.remove("show"),4000);
-},9000);
+const nameEl=document.getElementById("buyerName");
+
+function showProof(){
+nameEl.textContent=names[Math.floor(Math.random()*names.length)];
+box.style.display="block";
+setTimeout(()=>box.style.display="none",4000);
+}
+
+setInterval(showProof,9000);
+setTimeout(showProof,4000);
 </script>
 
 </body>
-</html>
+  </html>
