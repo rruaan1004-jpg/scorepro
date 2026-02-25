@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-
-<meta charset="UTF-8"/>
+<!DOCTYPE html><html lang="pt">
+<head><meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gestor AL Pro</title>
 <meta name="description" content="Descubra o lucro real do seu Alojamento Local em minutos com o Gestor AL Pro.">
@@ -29,6 +26,11 @@ fbq('init', '1056723816631326');
 fbq('track', 'PageView');
 </script>
 
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1056723816631326&ev=PageView&noscript=1"/>
+</noscript>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -40,8 +42,6 @@ color:#fff;
 line-height:1.6;
 }
 
-/* ===== LAYOUT ===== */
-
 .container{
 max-width:1100px;
 margin:0 auto;
@@ -50,21 +50,15 @@ padding:80px 24px;
 
 .hero{
 text-align:center;
-padding-top:90px;
+padding-top:100px;
 padding-bottom:60px;
-}
-
-.badge{
-font-size:13px;
-opacity:.85;
-margin-bottom:18px;
 }
 
 h1{
 font-size:48px;
 font-weight:800;
-line-height:1.15;
-margin-bottom:22px;
+line-height:1.2;
+margin-bottom:24px;
 }
 
 .sub{
@@ -74,13 +68,17 @@ max-width:760px;
 margin:0 auto 30px auto;
 }
 
-/* ===== CTA ===== */
+.badge{
+font-size:14px;
+opacity:.8;
+margin-bottom:20px;
+}
 
 .cta{
 display:inline-block;
 background:#2dd4bf;
 color:#000;
-padding:18px 44px;
+padding:18px 42px;
 border-radius:14px;
 font-weight:800;
 text-decoration:none;
@@ -90,16 +88,13 @@ box-shadow:0 20px 40px rgba(45,212,191,.25);
 }
 .cta:hover{transform:translateY(-2px);}
 
-/* ===== MOCKUP ===== */
-
 .mockup{
-margin-top:55px;
+margin-top:60px;
 text-align:center;
 }
-
 .mockup img{
 width:100%;
-max-width:920px;
+max-width:900px;
 border-radius:18px;
 box-shadow:0 40px 90px rgba(0,0,0,.6);
 }
@@ -110,24 +105,43 @@ opacity:.9;
 font-size:15px;
 }
 
-/* ===== PROVAS SOCIAIS ===== */
+/* ===== CARROSSEL PROVA SOCIAL ===== */
 
-.social-proof{
-margin-top:45px;
+.social-carousel{
+overflow:hidden;
+margin-top:40px;
+}
+
+.social-track{
 display:flex;
-gap:16px;
-justify-content:center;
-flex-wrap:wrap;
+gap:18px;
+animation:socialScroll 28s linear infinite;
 }
 
-.social-proof img{
-width:150px;
-border-radius:12px;
-box-shadow:0 18px 40px rgba(0,0,0,.45);
-opacity:.95;
+.social-track img{
+height:200px;
+border-radius:14px;
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+flex-shrink:0;
+transition:transform .25s ease, filter .25s ease;
+filter:brightness(.92);
 }
 
-/* ===== SEÇÕES ===== */
+.social-track img:hover{
+transform:translateY(-4px) scale(1.02);
+filter:brightness(1);
+}
+
+@keyframes socialScroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+@media(max-width:768px){
+.social-track img{
+height:140px;
+}
+}
 
 .section-title{
 text-align:center;
@@ -146,12 +160,12 @@ margin:0 auto 50px auto;
 .grid-3{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:26px;
+gap:28px;
 }
 
 .card{
 background:#14253d;
-padding:26px;
+padding:28px;
 border-radius:16px;
 text-align:left;
 border:1px solid rgba(255,255,255,.06);
@@ -162,17 +176,18 @@ display:block;
 margin-bottom:8px;
 }
 
-/* ===== PREÇO ===== */
+.pricing{
+text-align:center;
+}
 
 .price-box{
 background:#14253d;
-border-radius:22px;
+border-radius:20px;
 padding:50px 30px;
 max-width:520px;
 margin:0 auto;
 border:1px solid rgba(255,255,255,.08);
 box-shadow:0 30px 80px rgba(0,0,0,.5);
-text-align:center;
 }
 
 .old{
@@ -185,7 +200,6 @@ margin-bottom:6px;
 font-size:56px;
 font-weight:800;
 margin:10px 0;
-color:#2dd4bf;
 }
 
 .features{
@@ -198,12 +212,13 @@ margin-bottom:10px;
 opacity:.95;
 }
 
-.garantia img{
-max-width:150px;
-margin-top:16px;
+.garantia{
+margin-top:18px;
 }
 
-/* ===== FAQ ===== */
+.garantia img{
+max-width:160px;
+}
 
 .faq{
 max-width:800px;
@@ -218,8 +233,6 @@ margin-bottom:14px;
 cursor:pointer;
 }
 
-/* ===== FOOTER ===== */
-
 footer{
 text-align:center;
 opacity:.7;
@@ -227,9 +240,8 @@ padding:40px 20px;
 }
 
 @media(max-width:768px){
-h1{font-size:34px;}
+h1{font-size:36px;}
 .container{padding:60px 18px;}
-.social-proof img{width:120px;}
 }
 </style>
 </head>
@@ -246,40 +258,41 @@ Descubra quanto dinheiro o seu AL pode estar a deixar na mesa em cada reserva
 </h1>
 
 <p class="sub">
-O Gestor AL Pro calcula automaticamente o lucro líquido real já com comissões,
-taxas de limpeza, IVA, IRS e taxas municipais.
+O Gestor AL Pro calcula automaticamente o seu lucro líquido real já com comissões das plataformas, taxas de limpeza, IVA, IRS e taxas municipais — sem folhas de Excel complicadas.
 </p>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
-Comprar agora por 27€
+Ver quanto realmente sobra no meu AL →
 </a>
 
 <div class="mockup">
-<img src="mockup-dashboard.png" alt="Dashboard Gestor AL Pro">
-<div class="mockup-note">
-Inclui cálculo automático e relatórios mensais.
-</div>
+<img src="exemplo-calculo-al-gestor-pro.jpg" alt="Dashboard Gestor AL Pro">
+<div class="mockup-note">Inclui cálculo de taxas de limpeza e relatórios mensais automáticos.</div>
 </div>
 
-<!-- PROVAS SOCIAIS -->
-<div class="social-proof">
+<!-- ⭐ PROVAS SOCIAIS -->
+<div class="social-carousel">
+<div class="social-track">
 <img src="ps1.jpg">
 <img src="ps2.jpg">
 <img src="ps3.jpg">
 <img src="ps4.jpg">
+<img src="ps1.jpg">
+<img src="ps2.jpg">
+<img src="ps3.jpg">
+<img src="ps4.jpg">
+</div>
 </div>
 
 </section>
 
 <!-- PROBLEMA -->
 <section class="container">
-
 <h2 class="section-title">
 Você fatura, mas sabe quanto realmente ganha?
 </h2>
-
 <p class="section-sub">
-Entre comissões das plataformas, impostos e taxas,
+Entre comissões das plataformas, impostos e taxas municipais,
 é fácil perder a noção do lucro real.
 </p>
 
@@ -296,43 +309,68 @@ Perde horas em folhas de Excel confusas.
 
 <div class="card">
 <strong>Insegurança fiscal</strong>
-Dúvidas sobre IVA, IRS e coeficientes.
+Dúvidas sobre IRS, IVA e coeficientes.
 </div>
+</div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="container">
+<h2 class="section-title">
+Um sistema simples de 3 passos
+</h2>
+
+<div class="grid-3">
+<div class="card">
+<strong>1. Configure</strong>
+Insira taxas e regime fiscal uma única vez.
 </div>
 
+<div class="card">
+<strong>2. Registe</strong>
+Introduza os dados básicos da reserva.
+</div>
+
+<div class="card">
+<strong>3. Visualize</strong>
+O dashboard calcula automaticamente o lucro.
+</div>
+</div>
 </section>
 
 <!-- PREÇO -->
-<section class="container">
+<section class="container pricing">
+<h2 class="section-title">
+Invista uma vez, lucre para sempre
+</h2>
 
 <div class="price-box">
-
-<div class="old">Preço normal: 37€</div>
-<div class="price">27€</div>
-<div>Oferta fundador • Acesso vitalício</div>
+<div class="old">Ferramentas semelhantes: 9,99€ – 29€/mês</div>
+<div class="price">37€</div>
+<div>Pagamento único • Acesso vitalício</div>
 
 <div class="features">
 <div>✔ Sem mensalidades</div>
+<div>✔ Acesso vitalício</div>
+<div>✔ Atualizações incluídas</div>
 <div>✔ Dashboard automático</div>
-<div>✔ Cálculo de taxas de limpeza</div>
-<div>✔ Relatórios mensais</div>
+<div>✔ Cálculo automático das taxas de limpeza</div>
+<div>✔ Relatórios mensais de desempenho</div>
 <div>✔ Suporte por email</div>
 </div>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
-Comprar agora por 27€
+Começar agora →
 </a>
 
 <div class="garantia">
 <img src="selo-garantia-7dias.png" alt="Garantia 7 dias">
 </div>
-
 </div>
 </section>
 
 <!-- FAQ -->
 <section class="container faq">
-
 <h2 class="section-title">Perguntas Frequentes</h2>
 
 <details><summary>Serve para vários imóveis?</summary>
@@ -350,11 +388,10 @@ O acesso chega automaticamente por email após a compra.
 <details><summary>É apenas uma folha de Excel?</summary>
 Não. É um sistema estruturado para gestão real do AL.
 </details>
-
 </section>
 
 <footer>
-Gestor AL Pro © 2026
+Gestor AL Pro Starter © 2026
 </footer>
 
 </body>
