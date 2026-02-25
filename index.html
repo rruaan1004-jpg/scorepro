@@ -1,5 +1,8 @@
-<!DOCTYPE html><html lang="pt">
-<head><meta charset="UTF-8"/>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gestor AL Pro</title>
 <meta name="description" content="Descubra o lucro real do seu Alojamento Local em minutos com o Gestor AL Pro.">
@@ -54,6 +57,23 @@ padding-top:100px;
 padding-bottom:60px;
 }
 
+.badge{
+font-size:14px;
+opacity:.85;
+margin-bottom:14px;
+}
+
+.founder-badge{
+display:inline-block;
+background:#22c55e;
+color:#002;
+padding:6px 14px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+margin-bottom:22px;
+}
+
 h1{
 font-size:48px;
 font-weight:800;
@@ -66,12 +86,6 @@ font-size:20px;
 opacity:.9;
 max-width:760px;
 margin:0 auto 30px auto;
-}
-
-.badge{
-font-size:14px;
-opacity:.8;
-margin-bottom:20px;
 }
 
 .cta{
@@ -98,18 +112,17 @@ max-width:900px;
 border-radius:18px;
 box-shadow:0 40px 90px rgba(0,0,0,.6);
 }
-
 .mockup-note{
 margin-top:14px;
 opacity:.9;
 font-size:15px;
 }
 
-/* ===== CARROSSEL PROVA SOCIAL ===== */
+/* SOCIAL */
 
 .social-carousel{
 overflow:hidden;
-margin-top:40px;
+margin-top:50px;
 }
 
 .social-track{
@@ -119,17 +132,10 @@ animation:socialScroll 28s linear infinite;
 }
 
 .social-track img{
-height:200px;
+height:190px;
 border-radius:14px;
 box-shadow:0 20px 45px rgba(0,0,0,.45);
 flex-shrink:0;
-transition:transform .25s ease, filter .25s ease;
-filter:brightness(.92);
-}
-
-.social-track img:hover{
-transform:translateY(-4px) scale(1.02);
-filter:brightness(1);
 }
 
 @keyframes socialScroll{
@@ -137,11 +143,7 @@ filter:brightness(1);
 100%{transform:translateX(-50%);}
 }
 
-@media(max-width:768px){
-.social-track img{
-height:140px;
-}
-}
+/* SEÇÕES */
 
 .section-title{
 text-align:center;
@@ -171,14 +173,7 @@ text-align:left;
 border:1px solid rgba(255,255,255,.06);
 }
 
-.card strong{
-display:block;
-margin-bottom:8px;
-}
-
-.pricing{
-text-align:center;
-}
+.pricing{text-align:center;}
 
 .price-box{
 background:#14253d;
@@ -202,23 +197,21 @@ font-weight:800;
 margin:10px 0;
 }
 
+.price-founder{
+font-size:16px;
+color:#22c55e;
+font-weight:700;
+margin-bottom:8px;
+}
+
 .features{
 text-align:left;
 margin:25px 0;
 }
 
-.features div{
-margin-bottom:10px;
-opacity:.95;
-}
+.features div{margin-bottom:10px;}
 
-.garantia{
-margin-top:18px;
-}
-
-.garantia img{
-max-width:160px;
-}
+.garantia img{max-width:160px;}
 
 .faq{
 max-width:800px;
@@ -240,8 +233,9 @@ padding:40px 20px;
 }
 
 @media(max-width:768px){
-h1{font-size:36px;}
+h1{font-size:34px;}
 .container{padding:60px 18px;}
+.social-track img{height:140px;}
 }
 </style>
 </head>
@@ -252,146 +246,74 @@ h1{font-size:36px;}
 <section class="hero container">
 
 <div class="badge">🇵🇹 Feito para Alojamento Local em Portugal</div>
+<div class="founder-badge">🔥 Preço fundador por tempo limitado</div>
 
 <h1>
 Descubra quanto dinheiro o seu AL pode estar a deixar na mesa em cada reserva
 </h1>
 
 <p class="sub">
-O Gestor AL Pro calcula automaticamente o seu lucro líquido real já com comissões das plataformas, taxas de limpeza, IVA, IRS e taxas municipais — sem folhas de Excel complicadas.
+O Gestor AL Pro calcula automaticamente o lucro líquido real com comissões, taxas de limpeza, IVA, IRS e taxas municipais — sem Excel confuso.
 </p>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
-Ver quanto realmente sobra no meu AL →
+Comprar acesso vitalício →
 </a>
 
 <div class="mockup">
 <img src="exemplo-calculo-al-gestor-pro.jpg" alt="Dashboard Gestor AL Pro">
-<div class="mockup-note">Inclui cálculo de taxas de limpeza e relatórios mensais automáticos.</div>
+<div class="mockup-note">
+Inclui cálculo automático de taxas de limpeza e relatórios mensais.
+</div>
 </div>
 
-<!-- ⭐ PROVAS SOCIAIS -->
+<!-- PROVAS SOCIAIS -->
 <div class="social-carousel">
 <div class="social-track">
 <img src="ps1.jpg">
 <img src="ps2.jpg">
 <img src="ps3.jpg">
 <img src="ps4.jpg">
-<img src="ps1.jpg">
-<img src="ps2.jpg">
-<img src="ps3.jpg">
-<img src="ps4.jpg">
 </div>
 </div>
 
-</section>
-
-<!-- PROBLEMA -->
-<section class="container">
-<h2 class="section-title">
-Você fatura, mas sabe quanto realmente ganha?
-</h2>
-<p class="section-sub">
-Entre comissões das plataformas, impostos e taxas municipais,
-é fácil perder a noção do lucro real.
-</p>
-
-<div class="grid-3">
-<div class="card">
-<strong>Falta de clareza</strong>
-Tem reservas mas não sabe o lucro líquido real.
-</div>
-
-<div class="card">
-<strong>Tempo perdido</strong>
-Perde horas em folhas de Excel confusas.
-</div>
-
-<div class="card">
-<strong>Insegurança fiscal</strong>
-Dúvidas sobre IRS, IVA e coeficientes.
-</div>
-</div>
-</section>
-
-<!-- COMO FUNCIONA -->
-<section class="container">
-<h2 class="section-title">
-Um sistema simples de 3 passos
-</h2>
-
-<div class="grid-3">
-<div class="card">
-<strong>1. Configure</strong>
-Insira taxas e regime fiscal uma única vez.
-</div>
-
-<div class="card">
-<strong>2. Registe</strong>
-Introduza os dados básicos da reserva.
-</div>
-
-<div class="card">
-<strong>3. Visualize</strong>
-O dashboard calcula automaticamente o lucro.
-</div>
-</div>
 </section>
 
 <!-- PREÇO -->
 <section class="container pricing">
+
 <h2 class="section-title">
-Invista uma vez, lucre para sempre
+Invista uma vez, use para sempre
 </h2>
 
 <div class="price-box">
+
 <div class="old">Ferramentas semelhantes: 9,99€ – 29€/mês</div>
-<div class="price">37€</div>
+<div class="price-founder">Preço fundador</div>
+<div class="price">27€</div>
 <div>Pagamento único • Acesso vitalício</div>
 
 <div class="features">
 <div>✔ Sem mensalidades</div>
-<div>✔ Acesso vitalício</div>
-<div>✔ Atualizações incluídas</div>
 <div>✔ Dashboard automático</div>
-<div>✔ Cálculo automático das taxas de limpeza</div>
-<div>✔ Relatórios mensais de desempenho</div>
-<div>✔ Suporte por email</div>
+<div>✔ Cálculo das taxas de limpeza</div>
+<div>✔ Relatórios mensais</div>
+<div>✔ Atualizações incluídas</div>
 </div>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
-Começar agora →
+Garantir acesso fundador →
 </a>
 
 <div class="garantia">
 <img src="selo-garantia-7dias.png" alt="Garantia 7 dias">
 </div>
+
 </div>
 </section>
 
-<!-- FAQ -->
-<section class="container faq">
-<h2 class="section-title">Perguntas Frequentes</h2>
-
-<details><summary>Serve para vários imóveis?</summary>
-Sim. Pode gerir vários ALs no mesmo sistema.
-</details>
-
-<details><summary>Preciso instalar alguma coisa?</summary>
-Não. Funciona imediatamente após o acesso.
-</details>
-
-<details><summary>Como recebo acesso?</summary>
-O acesso chega automaticamente por email após a compra.
-</details>
-
-<details><summary>É apenas uma folha de Excel?</summary>
-Não. É um sistema estruturado para gestão real do AL.
-</details>
-</section>
-
 <footer>
-Gestor AL Pro Starter © 2026
+Gestor AL Pro © 2026
 </footer>
 
 </body>
