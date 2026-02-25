@@ -29,11 +29,6 @@ fbq('init', '1056723816631326');
 fbq('track', 'PageView');
 </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1056723816631326&ev=PageView&noscript=1"/>
-</noscript>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -45,6 +40,8 @@ color:#fff;
 line-height:1.6;
 }
 
+/* ===== LAYOUT ===== */
+
 .container{
 max-width:1100px;
 margin:0 auto;
@@ -53,32 +50,21 @@ padding:80px 24px;
 
 .hero{
 text-align:center;
-padding-top:100px;
+padding-top:90px;
 padding-bottom:60px;
 }
 
 .badge{
-font-size:14px;
-opacity:.85;
-margin-bottom:14px;
-}
-
-.founder-badge{
-display:inline-block;
-background:#22c55e;
-color:#002;
-padding:6px 14px;
-border-radius:999px;
 font-size:13px;
-font-weight:700;
-margin-bottom:22px;
+opacity:.85;
+margin-bottom:18px;
 }
 
 h1{
 font-size:48px;
 font-weight:800;
-line-height:1.2;
-margin-bottom:24px;
+line-height:1.15;
+margin-bottom:22px;
 }
 
 .sub{
@@ -88,11 +74,13 @@ max-width:760px;
 margin:0 auto 30px auto;
 }
 
+/* ===== CTA ===== */
+
 .cta{
 display:inline-block;
 background:#2dd4bf;
 color:#000;
-padding:18px 42px;
+padding:18px 44px;
 border-radius:14px;
 font-weight:800;
 text-decoration:none;
@@ -102,48 +90,44 @@ box-shadow:0 20px 40px rgba(45,212,191,.25);
 }
 .cta:hover{transform:translateY(-2px);}
 
+/* ===== MOCKUP ===== */
+
 .mockup{
-margin-top:60px;
+margin-top:55px;
 text-align:center;
 }
+
 .mockup img{
 width:100%;
-max-width:900px;
+max-width:920px;
 border-radius:18px;
 box-shadow:0 40px 90px rgba(0,0,0,.6);
 }
+
 .mockup-note{
 margin-top:14px;
 opacity:.9;
 font-size:15px;
 }
 
-/* SOCIAL */
+/* ===== PROVAS SOCIAIS ===== */
 
-.social-carousel{
-overflow:hidden;
-margin-top:50px;
-}
-
-.social-track{
+.social-proof{
+margin-top:45px;
 display:flex;
-gap:18px;
-animation:socialScroll 28s linear infinite;
+gap:16px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
-.social-track img{
-height:190px;
-border-radius:14px;
-box-shadow:0 20px 45px rgba(0,0,0,.45);
-flex-shrink:0;
+.social-proof img{
+width:150px;
+border-radius:12px;
+box-shadow:0 18px 40px rgba(0,0,0,.45);
+opacity:.95;
 }
 
-@keyframes socialScroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-}
-
-/* SEÇÕES */
+/* ===== SEÇÕES ===== */
 
 .section-title{
 text-align:center;
@@ -162,27 +146,33 @@ margin:0 auto 50px auto;
 .grid-3{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:28px;
+gap:26px;
 }
 
 .card{
 background:#14253d;
-padding:28px;
+padding:26px;
 border-radius:16px;
 text-align:left;
 border:1px solid rgba(255,255,255,.06);
 }
 
-.pricing{text-align:center;}
+.card strong{
+display:block;
+margin-bottom:8px;
+}
+
+/* ===== PREÇO ===== */
 
 .price-box{
 background:#14253d;
-border-radius:20px;
+border-radius:22px;
 padding:50px 30px;
 max-width:520px;
 margin:0 auto;
 border:1px solid rgba(255,255,255,.08);
 box-shadow:0 30px 80px rgba(0,0,0,.5);
+text-align:center;
 }
 
 .old{
@@ -195,13 +185,7 @@ margin-bottom:6px;
 font-size:56px;
 font-weight:800;
 margin:10px 0;
-}
-
-.price-founder{
-font-size:16px;
-color:#22c55e;
-font-weight:700;
-margin-bottom:8px;
+color:#2dd4bf;
 }
 
 .features{
@@ -209,9 +193,17 @@ text-align:left;
 margin:25px 0;
 }
 
-.features div{margin-bottom:10px;}
+.features div{
+margin-bottom:10px;
+opacity:.95;
+}
 
-.garantia img{max-width:160px;}
+.garantia img{
+max-width:150px;
+margin-top:16px;
+}
+
+/* ===== FAQ ===== */
 
 .faq{
 max-width:800px;
@@ -226,6 +218,8 @@ margin-bottom:14px;
 cursor:pointer;
 }
 
+/* ===== FOOTER ===== */
+
 footer{
 text-align:center;
 opacity:.7;
@@ -235,7 +229,7 @@ padding:40px 20px;
 @media(max-width:768px){
 h1{font-size:34px;}
 .container{padding:60px 18px;}
-.social-track img{height:140px;}
+.social-proof img{width:120px;}
 }
 </style>
 </head>
@@ -246,63 +240,87 @@ h1{font-size:34px;}
 <section class="hero container">
 
 <div class="badge">🇵🇹 Feito para Alojamento Local em Portugal</div>
-<div class="founder-badge">🔥 Preço fundador por tempo limitado</div>
 
 <h1>
 Descubra quanto dinheiro o seu AL pode estar a deixar na mesa em cada reserva
 </h1>
 
 <p class="sub">
-O Gestor AL Pro calcula automaticamente o lucro líquido real com comissões, taxas de limpeza, IVA, IRS e taxas municipais — sem Excel confuso.
+O Gestor AL Pro calcula automaticamente o lucro líquido real já com comissões,
+taxas de limpeza, IVA, IRS e taxas municipais.
 </p>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
-Comprar acesso vitalício →
+Comprar agora por 27€
 </a>
 
 <div class="mockup">
-<img src="exemplo-calculo-al-gestor-pro.jpg" alt="Dashboard Gestor AL Pro">
+<img src="mockup-dashboard.png" alt="Dashboard Gestor AL Pro">
 <div class="mockup-note">
-Inclui cálculo automático de taxas de limpeza e relatórios mensais.
+Inclui cálculo automático e relatórios mensais.
 </div>
 </div>
 
 <!-- PROVAS SOCIAIS -->
-<div class="social-carousel">
-<div class="social-track">
+<div class="social-proof">
 <img src="ps1.jpg">
 <img src="ps2.jpg">
 <img src="ps3.jpg">
 <img src="ps4.jpg">
+</div>
+
+</section>
+
+<!-- PROBLEMA -->
+<section class="container">
+
+<h2 class="section-title">
+Você fatura, mas sabe quanto realmente ganha?
+</h2>
+
+<p class="section-sub">
+Entre comissões das plataformas, impostos e taxas,
+é fácil perder a noção do lucro real.
+</p>
+
+<div class="grid-3">
+<div class="card">
+<strong>Falta de clareza</strong>
+Tem reservas mas não sabe o lucro líquido real.
+</div>
+
+<div class="card">
+<strong>Tempo perdido</strong>
+Perde horas em folhas de Excel confusas.
+</div>
+
+<div class="card">
+<strong>Insegurança fiscal</strong>
+Dúvidas sobre IVA, IRS e coeficientes.
 </div>
 </div>
 
 </section>
 
 <!-- PREÇO -->
-<section class="container pricing">
-
-<h2 class="section-title">
-Invista uma vez, use para sempre
-</h2>
+<section class="container">
 
 <div class="price-box">
 
-<div class="old">Ferramentas semelhantes: 9,99€ – 29€/mês</div>
-<div class="price-founder">Preço fundador</div>
+<div class="old">Preço normal: 37€</div>
 <div class="price">27€</div>
-<div>Pagamento único • Acesso vitalício</div>
+<div>Oferta fundador • Acesso vitalício</div>
 
 <div class="features">
 <div>✔ Sem mensalidades</div>
 <div>✔ Dashboard automático</div>
-<div>✔ Cálculo das taxas de limpeza</div>
+<div>✔ Cálculo de taxas de limpeza</div>
 <div>✔ Relatórios mensais</div>
-<div>✔ Atualizações incluídas</div>
+<div>✔ Suporte por email</div>
 </div>
 
 <a href="https://pay.hotmart.com/M104320817Y?off=2farskj8&bid=1770754747230" class="cta">
-Garantir acesso fundador →
+Comprar agora por 27€
 </a>
 
 <div class="garantia">
@@ -310,6 +328,29 @@ Garantir acesso fundador →
 </div>
 
 </div>
+</section>
+
+<!-- FAQ -->
+<section class="container faq">
+
+<h2 class="section-title">Perguntas Frequentes</h2>
+
+<details><summary>Serve para vários imóveis?</summary>
+Sim. Pode gerir vários ALs no mesmo sistema.
+</details>
+
+<details><summary>Preciso instalar alguma coisa?</summary>
+Não. Funciona imediatamente após o acesso.
+</details>
+
+<details><summary>Como recebo acesso?</summary>
+O acesso chega automaticamente por email após a compra.
+</details>
+
+<details><summary>É apenas uma folha de Excel?</summary>
+Não. É um sistema estruturado para gestão real do AL.
+</details>
+
 </section>
 
 <footer>
