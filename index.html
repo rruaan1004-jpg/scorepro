@@ -33,7 +33,7 @@ color:#fff;
 line-height:1.6;
 }
 
-/* 🔥 URGÊNCIA */
+/* ===== BARRA URGÊNCIA ===== */
 .urgency-bar{
 position:fixed;
 top:0;
@@ -48,35 +48,6 @@ z-index:9999;
 font-size:14px;
 }
 
-/* 👀 pessoas vendo */
-.viewing-now{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#14253d;
-padding:10px 14px;
-border-radius:10px;
-font-size:13px;
-opacity:.95;
-z-index:9999;
-}
-
-/* 🛒 popup compra */
-.purchase-popup{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#14253d;
-padding:12px 16px;
-border-radius:12px;
-font-size:13px;
-display:none;
-z-index:9999;
-max-width:260px;
-}
-
-/* resto do seu CSS ORIGINAL */
-
 .container{
 max-width:1100px;
 margin:0 auto;
@@ -85,7 +56,7 @@ padding:80px 24px;
 
 .hero{
 text-align:center;
-padding-top:80px;
+padding-top:120px;
 padding-bottom:40px;
 }
 
@@ -299,27 +270,31 @@ text-align:center;
 opacity:.7;
 padding:40px 20px;
 }
+
+/* ===== POPUPS ===== */
+.fake-viewers,
+.fake-sale{
+position:fixed;
+left:20px;
+background:#0f2136;
+padding:12px 16px;
+border-radius:10px;
+font-size:13px;
+z-index:9999;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.fake-viewers{bottom:20px;}
+.fake-sale{bottom:70px;}
 </style>
 </head>
 
 <body>
 
-<!-- 🔥 URGÊNCIA -->
+<!-- ===== BARRA URGÊNCIA ===== -->
 <div class="urgency-bar">
 ⚠️ Oferta termina em <span id="countdown">15:00</span>
 </div>
-
-<!-- 👀 vendo agora -->
-<div class="viewing-now">
-👀 <span id="viewers">27</span> pessoas estão vendo agora
-</div>
-
-<!-- 🛒 popup -->
-<div class="purchase-popup" id="popup">
-<strong id="buyer"></strong> acabou de comprar
-</div>
-
-<!-- ================= SEU HTML CONTINUA INTACTO ================= -->
 
 <section class="hero container">
 
@@ -350,34 +325,25 @@ Inclui cálculo automático e relatórios mensais.
 </div>
 </div>
 
-<!-- EXEMPLO REAL CORRIGIDO -->
 <div class="real-example">
-
 <h3>Exemplo real de uma reserva</h3>
-
 <div class="example-grid">
-
 <div class="example-item">
 <span>Valor da reserva</span>
 <div class="example-value">120€</div>
 </div>
-
 <div class="example-item">
 <span>Comissões + impostos</span>
 <div class="example-value example-negative">-57€</div>
 </div>
-
 <div class="example-item">
 <span>Lucro líquido real</span>
 <div class="example-value example-positive">63€</div>
 </div>
-
 </div>
-
 <div class="example-note">
 Simulação baseada em AL típico em Portugal.
 </div>
-
 </div>
 
 <div class="social-carousel">
@@ -393,35 +359,70 @@ Simulação baseada em AL típico em Portugal.
 
 </section>
 
-<!-- (todo o resto da sua página permanece igual) -->
+<!-- ===== RESTO DA SUA PÁGINA FOI PRESERVADO ===== -->
 
+<section class="container faq">
+<h2 class="section-title">Perguntas Frequentes</h2>
+<details>
+<summary>Serve para o meu Alojamento Local?</summary>
+Sim. O Gestor AL Pro foi feito especificamente para AL em Portugal.
+</details>
+<details>
+<summary>É complicado de usar?</summary>
+Não. A configuração inicial leva poucos minutos.
+</details>
+<details>
+<summary>Funciona para vários imóveis?</summary>
+Sim. Pode gerir múltiplos AL no mesmo sistema.
+</details>
+<details>
+<summary>Como recebo acesso após a compra?</summary>
+O acesso é enviado automaticamente para o seu email.
+</details>
+<details>
+<summary>E se não fizer sentido para mim?</summary>
+Tem 7 dias de garantia incondicional.
+</details>
+</section>
+
+<footer>
+Gestor AL Pro Starter © 2026
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
 <script>
-/* countdown */
-let time=15*60;
+// countdown
+let time=900;
 setInterval(()=>{
 let m=Math.floor(time/60);
 let s=time%60;
-document.getElementById('countdown').innerText=
-String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
-if(time>0) time--;
+document.getElementById("countdown").innerHTML=
+String(m).padStart(2,'0')+":"+String(s).padStart(2,'0');
+if(time>0)time--;
 },1000);
 
-/* viewers fake */
-setInterval(()=>{
-document.getElementById('viewers').innerText=
-Math.floor(Math.random()*18)+18;
-},4000);
+// viewers fake
+function updateViewers(){
+let n=Math.floor(Math.random()*12)+28;
+document.getElementById("viewers").innerText=n;
+}
+setInterval(updateViewers,5000);
 
-/* popup compras */
-const names=["João","Maria","Carlos","Ana","Pedro","Rafael","Bruno","Mariana"];
+// sale popup
+const names=["João","Maria","Carlos","Ana","Pedro","Rita"];
 setInterval(()=>{
-const p=document.getElementById('popup');
-document.getElementById('buyer').innerText=
+document.getElementById("buyer").innerText=
 names[Math.floor(Math.random()*names.length)];
-p.style.display='block';
-setTimeout(()=>p.style.display='none',4000);
-},9000);
+},8000);
 </script>
 
+<div class="fake-viewers">
+👀 <span id="viewers">34</span> pessoas estão vendo agora
+</div>
+
+<div class="fake-sale">
+🔥 <span id="buyer">João</span> acabou de comprar
+</div>
+
 </body>
-</html>
+  </html>
