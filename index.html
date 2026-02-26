@@ -25,15 +25,13 @@ fbq('track', 'PageView');
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-  
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-background: radial-gradient(circle at top,#162a45,#0b1624);
+background:linear-gradient(180deg,#0b1220 0%,#0f172a 100%);
 color:#fff;
 line-height:1.6;
 overflow-x:hidden;
-  
 }
 
 /* 🔴 BANNER URGÊNCIA */
@@ -49,6 +47,7 @@ font-weight:700;
 padding:8px 10px;
 z-index:9999;
 font-size:14px;
+box-shadow:0 4px 14px rgba(0,0,0,.25);
 }
 
 body.has-bar .hero{padding-top:120px;}
@@ -63,6 +62,13 @@ padding:80px 24px;
 text-align:center;
 padding-top:80px;
 padding-bottom:40px;
+}
+
+/* 🔥 QUEBRA VISUAL ENTRE BLOCOS */
+section.container:nth-of-type(even){
+background:rgba(255,255,255,0.02);
+border-top:1px solid rgba(255,255,255,.04);
+border-bottom:1px solid rgba(255,255,255,.04);
 }
 
 h1{
@@ -95,11 +101,20 @@ font-weight:800;
 text-decoration:none;
 font-size:18px;
 margin-top:10px;
+transition:all .25s ease;
+box-shadow:0 10px 25px rgba(45,212,191,.25);
+}
+
+/* ✨ ANIMAÇÃO CTA */
+.cta:hover{
+transform:translateY(-2px) scale(1.04);
+box-shadow:0 18px 40px rgba(45,212,191,.35);
 }
 
 /* KIT CONFIANÇA */
 .trust{
-margin-top:14px;
+margin-top:16px;
+margin-bottom:28px;
 font-size:14px;
 opacity:.9;
 display:flex;
@@ -112,6 +127,29 @@ justify-content:center;
 background:rgba(255,255,255,.06);
 padding:6px 10px;
 border-radius:8px;
+backdrop-filter:blur(4px);
+}
+
+/* MOCKUP */
+.mockup{
+margin-top:40px;
+text-align:center;
+}
+
+.mockup img{
+width:100%;
+max-width:700px;
+height:auto;
+display:block;
+margin:0 auto;
+border-radius:16px;
+box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.mockup-note{
+margin-top:12px;
+font-size:14px;
+opacity:.85;
 }
 
 /* EXEMPLO REAL */
@@ -204,6 +242,12 @@ background:#14253d;
 padding:24px;
 border-radius:14px;
 border:1px solid rgba(255,255,255,.06);
+transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 40px rgba(0,0,0,.35);
 }
 
 .about{
@@ -227,6 +271,7 @@ padding:40px 30px;
 max-width:480px;
 margin:0 auto;
 text-align:center;
+box-shadow:0 30px 80px rgba(0,0,0,.45);
 }
 
 .price{
@@ -289,40 +334,7 @@ font-size:14px;
 box-shadow:0 10px 25px rgba(0,0,0,.4);
 z-index:9999;
 display:none;
-  
-} /* 🔧 FIX IMAGEM DASHBOARD */
-.mockup img{
-  width:100%;
-  max-width:100%;
-  height:auto;
-  display:block;
-  margin:0 auto;
-  border-radius:14px;
 }
-
-img{
-  max-width:100%;
-  height:auto;
-}
-  img{
-  max-width:100%;
-  height:auto;
-}
-
-/* 🔧 RESPIRO HERO (corrige botões colados) */
-.hero .cta{
-  margin-bottom:28px;
-}
-
-.trust{
-  margin-top:16px;
-  margin-bottom:28px;
-}
-
-.mockup{
-  margin-top:40px;
-  }
-
 </style>
 </head>
 
@@ -458,7 +470,7 @@ estavam na mesma situação, criei o Gestor AL Pro para ter
 clareza real dos números em minutos.
 </p>
 <br>
-<p><strong>Hoje a ferramenta faz automaticamente o que antes levava horas.</strong></p>
+<p><strong>Hoje o sistema faz automaticamente o que antes levava horas.</strong></p>
 </div>
 </section>
 
@@ -525,7 +537,6 @@ Gestor AL Pro Starter © 2026
 </div>
 
 <script>
-/* CONTADOR */
 let time=900;
 const el=document.getElementById("countdown");
 setInterval(()=>{
@@ -536,7 +547,6 @@ el.textContent=`${m}:${s.toString().padStart(2,'0')}`;
 if(time<=0) time=900;
 },1000);
 
-/* POPUP SOCIAL */
 const names=["Ana","João","Carlos","Mariana","Pedro","Rita","Bruno","Lucas","Fernanda"];
 const box=document.getElementById("proofBox");
 const nameEl=document.getElementById("buyerName");
