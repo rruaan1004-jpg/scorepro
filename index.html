@@ -305,6 +305,119 @@ box-shadow:0 10px 25px rgba(0,0,0,.4);
 z-index:9999;
 display:none;
 }
+  /* =========================
+   CORREÇÃO GLOBAL DE ESPAÇOS
+========================= */
+
+section.container{
+  padding: 64px 20px;
+  margin: 0 auto;
+}
+
+@media (max-width:768px){
+  section.container{
+    padding: 48px 16px;
+  }
+}
+
+/* remove buracos entre seções */
+section.container + section.container{
+  margin-top: 0;
+}
+
+/* =========================
+   PROVAS SOCIAIS — CORREÇÃO
+========================= */
+
+.social-carousel{
+  width:100%;
+  overflow:hidden;
+  margin-top:32px;
+}
+
+.social-track{
+  display:flex;
+  gap:16px;
+  animation: scrollSocial 28s linear infinite;
+  width:max-content;
+}
+
+.social-track img{
+  width:260px;
+  max-width:80vw;
+  height:auto;
+  border-radius:14px;
+  flex-shrink:0;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+/* animação suave */
+@keyframes scrollSocial{
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-50%); }
+}
+
+/* =========================
+   HERO / BLOCOS MAIS JUSTOS
+========================= */
+
+.hero{
+  padding-top:110px;
+  padding-bottom:80px;
+}
+
+.section-title{
+  margin-bottom:12px;
+}
+
+.section-sub{
+  margin-bottom:28px;
+  opacity:.85;
+}
+
+/* =========================
+   CTA MAIS FORTE
+========================= */
+
+.cta-button{
+  display:inline-block;
+  padding:18px 32px;
+  border-radius:14px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s ease;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+
+/* =========================
+   GARANTIA BLOCO AJUSTE
+========================= */
+
+.garantia-box{
+  text-align:center;
+  padding:56px 24px;
+}
+
+/* =========================
+   MOBILE FINO
+========================= */
+
+@media (max-width:480px){
+
+  .social-track img{
+    width:220px;
+  }
+
+  .hero{
+    padding-top:96px;
+    padding-bottom:64px;
+  }
+
+  }
 </style>
 </head>
 
