@@ -29,15 +29,15 @@ fbq('track', 'PageView');
 
 body{
 background:
-radial-gradient(circle at 20% 0%, #1e293b 0%, transparent 40%),
-radial-gradient(circle at 80% 100%, #0f766e 0%, transparent 40%),
-linear-gradient(180deg,#020617 0%,#0b1220 100%);
+radial-gradient(circle at 20% 10%, #1a2a44 0%, transparent 40%),
+radial-gradient(circle at 80% 90%, #0f766e 0%, transparent 40%),
+linear-gradient(180deg,#0b1220 0%,#020617 100%);
 color:#fff;
 line-height:1.6;
 overflow-x:hidden;
 }
 
-/* 🔴 URGÊNCIA */
+/* URGENCY */
 .urgency-bar{
 position:fixed;
 top:0;
@@ -47,14 +47,13 @@ background:#ef4444;
 color:#fff;
 text-align:center;
 font-weight:700;
-padding:10px 10px;
+padding:8px 10px;
 z-index:9999;
 font-size:14px;
-box-shadow:0 6px 20px rgba(0,0,0,.35);
-letter-spacing:.3px;
+box-shadow:0 4px 14px rgba(0,0,0,.25);
 }
 
-body.has-bar .hero{padding-top:130px;}
+body.has-bar .hero{padding-top:120px;}
 
 .container{
 max-width:1100px;
@@ -62,66 +61,56 @@ margin:0 auto;
 padding:80px 24px;
 }
 
-.hero{
-text-align:center;
-padding-bottom:40px;
-}
+.hero{text-align:center;padding-bottom:40px;}
 
-/* ✨ QUEBRA VISUAL MAIS FORTE */
+/* SECTION BREAK */
 section.container:nth-of-type(even){
-background:linear-gradient(180deg,rgba(15,23,42,.65),rgba(2,6,23,.65));
+background:rgba(255,255,255,0.03);
 backdrop-filter:blur(6px);
-border-top:1px solid rgba(255,255,255,.06);
-border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-/* HEADLINE NOVA (MAIS FORTE) */
+/* HEADLINE NOVA */
 h1{
-font-size:46px;
+font-size:44px;
 font-weight:800;
-line-height:1.1;
+line-height:1.15;
 margin-bottom:24px;
-letter-spacing:-0.6px;
+letter-spacing:-0.5px;
 }
 
-/* SUB */
 .sub{
-font-size:19px;
-opacity:.92;
+font-size:18px;
+opacity:.9;
 max-width:760px;
-margin:0 auto 34px auto;
+margin:0 auto 30px auto;
 }
 
-.badge{
-font-size:14px;
-opacity:.85;
-margin-bottom:22px;
-}
+.badge{font-size:14px;opacity:.8;margin-bottom:20px;}
 
-/* CTA MAIS MODERNO */
+/* CTA MODERNO */
 .cta{
 display:inline-block;
-background:linear-gradient(135deg,#2dd4bf,#22c55e);
+background:linear-gradient(135deg,#34d399,#22c55e);
 color:#022c22;
-padding:18px 42px;
+padding:18px 40px;
 border-radius:14px;
 font-weight:800;
 text-decoration:none;
 font-size:19px;
 margin-top:10px;
-transition:all .25s ease;
-box-shadow:0 20px 50px rgba(34,197,94,.25);
+transition:.25s;
+box-shadow:0 20px 50px rgba(34,197,94,.35);
 }
 
 .cta:hover{
 transform:translateY(-3px) scale(1.05);
-box-shadow:0 30px 80px rgba(34,197,94,.35);
+box-shadow:0 30px 70px rgba(34,197,94,.45);
 }
 
 /* TRUST */
 .trust{
-margin-top:18px;
-margin-bottom:32px;
+margin-top:16px;
+margin-bottom:28px;
 font-size:14px;
 display:flex;
 flex-wrap:wrap;
@@ -131,186 +120,131 @@ justify-content:center;
 
 .trust span{
 background:rgba(255,255,255,.08);
-padding:7px 14px;
+padding:7px 12px;
 border-radius:999px;
 }
 
 /* MOCKUP */
-.mockup{
-margin-top:44px;
-text-align:center;
-}
+.mockup{margin-top:40px;text-align:center;}
 
 .mockup img{
 width:100%;
 max-width:720px;
 border-radius:18px;
-box-shadow:0 35px 90px rgba(0,0,0,.6);
+box-shadow:0 30px 80px rgba(0,0,0,.55);
 }
 
-.mockup-note{
-margin-top:14px;
-font-size:14px;
-opacity:.85;
-}
+.mockup-note{margin-top:12px;font-size:14px;opacity:.85;}
 
-/* EXEMPLO */
+/* EXAMPLE */
 .real-example{
-margin-top:56px;
-background:linear-gradient(180deg,#0f2136,#0b1624);
-border-radius:20px;
-padding:34px;
-max-width:660px;
+margin-top:50px;
+background:rgba(15,33,54,.6);
+border-radius:18px;
+padding:30px;
+max-width:640px;
 margin-left:auto;
 margin-right:auto;
 text-align:center;
-border:1px solid rgba(255,255,255,.10);
-box-shadow:0 30px 80px rgba(0,0,0,.45);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
 }
 
 .example-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:18px;
-margin-top:22px;
+gap:16px;
+margin-top:18px;
 }
 
 .example-item{
-background:#14253d;
-padding:20px;
-border-radius:16px;
+background:rgba(20,37,61,.7);
+padding:18px;
+border-radius:14px;
 }
 
-.example-value{
-font-size:26px;
-font-weight:800;
-margin-top:6px;
-}
-
-.example-negative{color:#ff6b6b;}
+.example-value{font-size:24px;font-weight:800;margin-top:6px;}
+.example-negative{color:#f87171;}
 .example-positive{color:#34d399;}
 
-.example-note{
-margin-top:16px;
-font-size:13px;
-opacity:.75;
-}
+.example-note{margin-top:14px;font-size:13px;opacity:.75;}
 
 /* SOCIAL */
-.social-carousel{
-overflow:hidden;
-margin-top:56px;
-}
-
-.social-track{
-display:flex;
-gap:18px;
-animation:socialScroll 35s linear infinite;
-}
-
-.social-track img{
-height:170px;
-border-radius:14px;
-flex-shrink:0;
-}
+.social-carousel{overflow:hidden;margin-top:50px;}
+.social-track{display:flex;gap:18px;animation:socialScroll 35s linear infinite;}
+.social-track img{height:170px;border-radius:14px;flex-shrink:0;}
 
 @keyframes socialScroll{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
 }
 
-/* TITLES */
-.section-title{
-text-align:center;
-font-size:36px;
-font-weight:800;
-margin-bottom:16px;
-}
-
-.section-sub{
-text-align:center;
-opacity:.85;
-max-width:700px;
-margin:0 auto 40px auto;
-}
+.section-title{text-align:center;font-size:34px;font-weight:800;margin-bottom:16px;}
+.section-sub{text-align:center;opacity:.85;max-width:700px;margin:0 auto 40px auto;}
 
 .grid-3{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:26px;
+gap:24px;
 }
 
 /* CARDS */
 .card{
-background:linear-gradient(180deg,#14253d,#101a2c);
-padding:28px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.10);
+background:rgba(20,37,61,.6);
+padding:26px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(8px);
 transition:.25s;
 }
 
 .card:hover{
 transform:translateY(-6px);
-box-shadow:0 25px 70px rgba(0,0,0,.55);
+box-shadow:0 20px 60px rgba(0,0,0,.45);
 }
 
 /* ABOUT */
 .about{
-background:linear-gradient(180deg,#0f2136,#0b1624);
-border-radius:24px;
-padding:48px;
+background:rgba(15,33,54,.6);
+border-radius:22px;
+padding:44px;
 max-width:900px;
 margin:0 auto;
+backdrop-filter:blur(10px);
 }
 
 /* PRICE */
 .price-box{
-background:linear-gradient(180deg,#14253d,#0f1b2d);
-border-radius:24px;
-padding:48px 34px;
+background:rgba(20,37,61,.7);
+border-radius:22px;
+padding:44px 32px;
 max-width:520px;
 margin:0 auto;
 text-align:center;
-box-shadow:0 45px 120px rgba(0,0,0,.6);
+box-shadow:0 40px 100px rgba(0,0,0,.55);
+backdrop-filter:blur(10px);
 }
 
-.price{
-font-size:58px;
-font-weight:800;
-margin:10px 0;
-}
+.price{font-size:56px;font-weight:800;margin:10px 0;}
+.old{opacity:.5;text-decoration:line-through;}
 
-.old{
-opacity:.5;
-text-decoration:line-through;
-}
-
-.features{
-text-align:left;
-margin:28px 0;
-}
-
+.features{text-align:left;margin:25px 0;}
 .features div{margin-bottom:8px;}
 
-.garantia{
-text-align:center;
-margin-top:25px;
-}
-
-.garantia img{
-max-width:140px;
-width:100%;
-}
+.garantia{text-align:center;margin-top:25px;}
+.garantia img{max-width:140px;width:100%;}
 
 /* FAQ */
 .faq{max-width:800px;margin:0 auto;}
 
 details{
-background:#14253d;
+background:rgba(20,37,61,.7);
 padding:18px 22px;
 border-radius:12px;
 margin-bottom:14px;
 }
+
+footer{text-align:center;opacity:.7;padding:40px 20px;}
 
 /* POPUP */
 .social-proof{
@@ -339,10 +273,10 @@ display:none;
 <div class="badge">🇵🇹 Feito para Alojamento Local em Portugal</div>
 
 <h1>
-Descubra o lucro REAL do seu Alojamento Local antes que ele evapore nas taxas.
+Saiba o lucro REAL do seu Alojamento Local antes que as taxas comam sua margem.
 </h1>
 
-<p class="sub">
+  <p class="sub">
 O Gestor AL Pro mostra automaticamente quanto realmente sobra em cada reserva — já com comissões, impostos e taxas.
 </p>
 
@@ -397,6 +331,7 @@ Simulação baseada em AL típico em Portugal.
 </div>
 
 </section>
+
 <!-- BLOCO DE DOR -->
 <section class="container">
 <h2 class="section-title">
