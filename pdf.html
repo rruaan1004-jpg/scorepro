@@ -10,97 +10,105 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f7fa;
-  color: #1a1a1a;
-  line-height: 1.5;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
 }
 
-/* container com margens seguras */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 80px 20px 100px;
+/* CARD CENTRAL */
+.card {
+  background: #ffffff;
+  max-width: 720px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 48px 28px 44px;
   text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
 }
 
-/* badge topo */
+/* BADGE */
 .badge {
   display: inline-block;
   background: #eef2ff;
   color: #3730a3;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 999px;
   font-size: 14px;
-  margin-bottom: 24px;
   font-weight: bold;
+  margin-bottom: 22px;
 }
 
-/* headline */
+/* HEADLINE */
 h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 18px;
+  color: #0f172a;
   line-height: 1.2;
 }
 
-/* subtítulo */
+/* SUB */
 .sub {
   font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
+  color: #475569;
+  margin-bottom: 28px;
 }
 
-/* provas */
+/* TRUST */
 .trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
-  margin-bottom: 40px;
-  font-size: 15px;
+  margin-bottom: 34px;
+  font-size: 14px;
   color: #166534;
 }
 
-/* botão */
+/* BOTÃO */
 .cta {
   display: inline-block;
-  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
-  padding: 18px 32px;
+  padding: 18px 34px;
   border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.25s;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.35);
 }
 
 .cta:hover {
-  background: #1d4ed8;
   transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(37,99,235,0.45);
 }
 
-/* imagem */
+/* MOCKUP */
 .mockup {
-  margin-top: 50px;
+  margin-top: 42px;
 }
 
 .mockup img {
   max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.18);
 }
 
-/* responsivo */
+/* RESPONSIVO */
 @media (max-width: 600px) {
   h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
-  .container {
-    padding: 60px 16px 80px;
+  .card {
+    padding: 36px 20px;
   }
 }
 </style>
@@ -108,35 +116,35 @@ h1 {
 
 <body>
 
-<section class="container">
+<div class="card">
 
-<div class="badge">🇵🇹 Material gratuito para Alojamento Local</div>
+  <div class="badge">🇵🇹 Material gratuito para Alojamento Local</div>
 
-<h1>
-Descubra onde o dinheiro do seu Alojamento Local está a escapar
-</h1>
+  <h1>
+    Descubra onde o dinheiro do seu Alojamento Local está a escapar
+  </h1>
 
-<p class="sub">
-Baixe gratuitamente o Guia Rápido de Perdas no AL e veja, em minutos,
-onde comissões, impostos e taxas estão a reduzir o seu lucro real.
-</p>
+  <p class="sub">
+    Baixe gratuitamente o Guia Rápido de Perdas no AL e veja, em minutos,
+    onde comissões, impostos e taxas estão a reduzir o seu lucro real.
+  </p>
 
-<div class="trust">
-<span>✔ Leitura em 5 minutos</span>
-<span>✔ Feito para AL em Portugal</span>
-<span>✔ Acesso imediato após envio</span>
+  <div class="trust">
+    <span>✔ Leitura em 5 minutos</span>
+    <span>✔ Feito para AL em Portugal</span>
+    <span>✔ Acesso imediato após envio</span>
+  </div>
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDfrsCBHAg4PTpN4CefCfEniP9m0ovcuyn__Ngt1ZQ3OxB5g/viewform?usp=header"
+     class="cta" target="_blank">
+     Quero receber o guia gratuito →
+  </a>
+
+  <div class="mockup">
+    <img src="capa.jpg" alt="Guia de perdas no alojamento local">
+  </div>
+
 </div>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeDfrsCBHAg4PTpN4CefCfEniP9m0ovcuyn__Ngt1ZQ3OxB5g/viewform?usp=header" 
-   class="cta" target="_blank">
-Quero receber o guia gratuito →
-</a>
-
-<div class="mockup">
-<img src="capa.jpg" alt="Guia de perdas no alojamento local">
-</div>
-
-</section>
 
 </body>
 </html>
