@@ -3,126 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guia enviado com sucesso</title>
+<title>Seu guia está pronto</title>
 
 <style>
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f7fb;
-  color: #1f2937;
-  line-height: 1.5;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #0f172a;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
+/* CARD CENTRAL */
 .card {
-  background: white;
+  background: #ffffff;
+  max-width: 640px;
+  width: 100%;
   border-radius: 16px;
-  padding: 40px 24px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 40px 28px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
 }
 
+/* BADGE */
 .badge {
   display: inline-block;
-  background: #e6f4ea;
-  color: #137333;
-  padding: 6px 12px;
+  background: #dcfce7;
+  color: #166534;
+  padding: 6px 14px;
   border-radius: 999px;
   font-size: 14px;
+  font-weight: bold;
   margin-bottom: 16px;
 }
 
+/* TÍTULO */
 h1 {
   font-size: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  color: #0f172a;
 }
 
+/* TEXTO */
 .sub {
-  font-size: 18px;
-  color: #4b5563;
+  color: #475569;
+  font-size: 17px;
   margin-bottom: 28px;
 }
 
-.btn {
+/* BOTÃO PRINCIPAL */
+.btn-primary {
   display: inline-block;
-  background: #2563eb;
-  color: white;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
   padding: 16px 28px;
   border-radius: 10px;
-  text-decoration: none;
   font-weight: bold;
-  margin: 10px;
-  transition: 0.2s;
+  text-decoration: none;
+  font-size: 17px;
+  margin-bottom: 28px;
+  transition: 0.25s;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.35);
 }
 
-.btn:hover {
-  background: #1e4ed8;
-  transform: translateY(-1px);
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(37,99,235,0.45);
 }
 
+/* BLOCO DE TRANSIÇÃO */
+.bridge {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 22px;
+  margin: 18px 0 24px 0;
+  font-size: 16px;
+  color: #334155;
+  line-height: 1.5;
+}
+
+/* BOTÃO PRODUTO */
 .btn-secondary {
-  background: #111827;
+  display: inline-block;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 15px 26px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.25s;
 }
 
 .btn-secondary:hover {
-  background: #000;
+  background: #020617;
+  transform: translateY(-2px);
 }
 
-.note {
-  margin-top: 24px;
-  font-size: 14px;
-  color: #6b7280;
+/* RODAPÉ */
+.footer {
+  margin-top: 22px;
+  font-size: 13px;
+  color: #64748b;
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <div class="card">
+<div class="card">
 
-    <div class="badge">✅ Acesso liberado</div>
+  <div class="badge">✅ Acesso liberado</div>
 
-    <h1>Seu guia está pronto</h1>
+  <h1>Seu guia está pronto</h1>
 
-    <p class="sub">
-      Clique no botão abaixo para acessar o Guia Rápido de Perdas no AL.
-    </p>
+  <p class="sub">
+    Clique no botão abaixo para acessar o Guia Rápido de Perdas no AL.
+  </p>
 
-    <!-- BOTÃO DO PDF -->
-    <a href="https://drive.google.com/file/d/1wmp0znu0WKH9PlA2qaN05mnxJ48Qm9Ks/view?usp=sharing"
-       class="btn"
-       target="_blank">
-       📥 Baixar guia agora
-    </a>
+  <!-- BOTÃO PDF -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDfrsCBHAg4PTpN4CefCfEniP9m0ovcuyn__Ngt1ZQ3OxB5g/viewform?usp=header " target="_blank" class="btn-primary">
+    📥 Baixar guia agora
+  </a>
 
-    <p class="sub" style="margin-top:30px;">
-      ⚠️ Se você quer parar de perder dinheiro no AL, veja como o Gestor AL Pro automatiza seus números:
-    </p>
-
-    <!-- BOTÃO CHECKOUT -->
-    <a href="https://pay.hotmart.com/M104320817Y"
-       class="btn btn-secondary"
-       target="_blank">
-       🚀 Conhecer o Gestor AL Pro
-    </a>
-
-    <div class="note">
-      Dica: salve o guia no seu dispositivo para consultar depois.
-    </div>
-
+  <!-- PONTE DE VENDA -->
+  <div class="bridge">
+    ⚠️ A maioria dos gestores de AL só percebe as perdas quando já é tarde.<br><br>
+    O <strong>Gestor AL Pro</strong> mostra automaticamente onde o seu lucro está a escapar — antes que isso pese no seu bolso.
   </div>
+
+  <!-- BOTÃO PRODUTO -->
+  <a href="https://pay.hotmart.com/M104320817Y" target="_blank" class="btn-secondary">
+    🚀 Ver como recuperar meu lucro
+  </a>
+
+  <div class="footer">
+    Dica: salve o guia no seu dispositivo para consultar depois.
+  </div>
+
 </div>
 
 </body>
