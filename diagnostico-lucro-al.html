@@ -1,4 +1,114 @@
-<section class="hero container">
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Rápido de Perdas no AL</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+/* container com margens seguras */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 100px;
+  text-align: center;
+}
+
+/* badge topo */
+.badge {
+  display: inline-block;
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+/* headline */
+h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* subtítulo */
+.sub {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* provas */
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 15px;
+  color: #166534;
+}
+
+/* botão */
+.cta {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 18px 32px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.cta:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* imagem */
+.mockup {
+  margin-top: 50px;
+}
+
+.mockup img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* responsivo */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 60px 16px 80px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="container">
 
 <div class="badge">🇵🇹 Material gratuito para Alojamento Local</div>
 
@@ -14,15 +124,19 @@ onde comissões, impostos e taxas estão a reduzir o seu lucro real.
 <div class="trust">
 <span>✔ Leitura em 5 minutos</span>
 <span>✔ Feito para AL em Portugal</span>
-<span>✔ Acesso imediato</span>
+<span>✔ Acesso imediato após envio</span>
 </div>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeDfrsCBHAg4PTpN4CefCfEniP9m0ovcuyn__Ngt1ZQ3OxB5g/viewform" class="cta" target="_blank">
-Baixar guia gratuito →
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeDfrsCBHAg4PTpN4CefCfEniP9m0ovcuyn__Ngt1ZQ3OxB5g/viewform?usp=header" 
+   class="cta" target="_blank">
+Quero receber o guia gratuito →
 </a>
 
 <div class="mockup">
-<img src="mockup-guia-perdas.png" alt="Guia de perdas no alojamento local">
+<img src="capa.jpg" alt="Guia de perdas no alojamento local">
 </div>
 
 </section>
+
+</body>
+</html>
