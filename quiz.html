@@ -1,284 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Diagnóstico do Score</title>
-
-<!-- PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;
-n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s);
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','898113899383416');
-fbq('track','PageView');
-</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia enviado com sucesso</title>
 
 <style>
-*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-
-body{
-margin:0;
-background:linear-gradient(135deg,#0a0f18,#111827);
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-padding:15px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.card{
-max-width:420px;
-width:100%;
-background:#161b25;
-padding:26px;
-border-radius:20px;
-box-shadow:0 25px 70px rgba(0,0,0,.6);
-text-align:center;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+  line-height: 1.5;
 }
 
-h1{font-size:20px;margin-bottom:6px}
-
-.sub{
-font-size:13px;
-opacity:.7;
-margin-bottom:18px;
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.online{
-font-size:12px;
-color:#00ff9d;
-margin-bottom:8px;
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-.progress{
-height:6px;
-background:#2a3142;
-border-radius:10px;
-overflow:hidden;
-margin-bottom:18px;
+.badge {
+  display: inline-block;
+  background: #e6f4ea;
+  color: #137333;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 16px;
 }
 
-.fill{
-height:100%;
-width:0%;
-background:#ff2f75;
-transition:.3s;
+h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
 }
 
-.question{
-min-height:55px;
-font-size:16px;
-margin-bottom:12px;
+.sub {
+  font-size: 18px;
+  color: #4b5563;
+  margin-bottom: 28px;
 }
 
-.options button{
-width:100%;
-padding:14px;
-margin:6px 0;
-border:none;
-border-radius:12px;
-background:#242c3a;
-color:#fff;
-cursor:pointer;
-font-weight:bold;
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 16px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
+  transition: 0.2s;
 }
 
-.loading{
-display:none;
-font-size:15px;
-padding:30px 0;
-opacity:.9;
+.btn:hover {
+  background: #1e4ed8;
+  transform: translateY(-1px);
 }
 
-.result{display:none}
-
-.score{
-font-size:46px;
-font-weight:bold;
-color:#ff2f75;
-margin:10px 0;
+.btn-secondary {
+  background: #111827;
 }
 
-.leadInput{
-width:100%;
-padding:14px;
-border-radius:12px;
-border:none;
-margin-top:10px;
-font-size:16px;
+.btn-secondary:hover {
+  background: #000;
 }
 
-.cta{
-width:100%;
-padding:16px;
-border:none;
-border-radius:14px;
-background:#ff2f75;
-color:#fff;
-font-weight:bold;
-margin-top:12px;
-cursor:pointer;
-font-size:15px;
-}
-
-.small{
-font-size:12px;
-opacity:.6;
-margin-top:8px;
+.note {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #6b7280;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
+  <div class="card">
 
-<div class="online">🔥 23 pessoas fazendo agora</div>
+    <div class="badge">✅ Acesso liberado</div>
 
-<h1>Diagnóstico gratuito do seu Score</h1>
-<div class="sub">Responda 4 perguntas rápidas</div>
+    <h1>Seu guia está pronto</h1>
 
-<div class="progress"><div class="fill" id="fill"></div></div>
+    <p class="sub">
+      Clique no botão abaixo para acessar o Guia Rápido de Perdas no AL.
+    </p>
 
-<!-- QUIZ -->
-<div id="quizBox">
-  <div class="question" id="question"></div>
-  <div class="options" id="options"></div>
+    <!-- BOTÃO DO PDF -->
+    <a href="https://drive.google.com/file/d/1wmp0znu0WKH9PlA2qaN05mnxJ48Qm9Ks/view?usp=sharing"
+       class="btn"
+       target="_blank">
+       📥 Baixar guia agora
+    </a>
+
+    <p class="sub" style="margin-top:30px;">
+      ⚠️ Se você quer parar de perder dinheiro no AL, veja como o Gestor AL Pro automatiza seus números:
+    </p>
+
+    <!-- BOTÃO CHECKOUT -->
+    <a href="https://pay.hotmart.com/M104320817Y"
+       class="btn btn-secondary"
+       target="_blank">
+       🚀 Conhecer o Gestor AL Pro
+    </a>
+
+    <div class="note">
+      Dica: salve o guia no seu dispositivo para consultar depois.
+    </div>
+
+  </div>
 </div>
-
-<!-- LOADING -->
-<div id="loadingBox" class="loading">
-🔍 Analisando seu perfil financeiro...  
-<br><br>
-Isso pode levar alguns segundos
-</div>
-
-<!-- RESULTADO + LEAD -->
-<div id="resultBox" class="result">
-
-<h1>⚠️ Encontramos problemas no seu score</h1>
-
-<div class="score" id="score">420</div>
-
-<p>
-Identificamos fatores que podem estar travando seu crédito.<br>
-Receba o plano completo no WhatsApp.
-</p>
-
-<form id="leadForm" action="https://formspree.io/f/xkozeqqq" method="POST">
-
-<input
-type="tel"
-name="whatsapp"
-placeholder="Digite seu WhatsApp com DDD"
-class="leadInput"
-required
-/>
-
-<button class="cta" type="submit">
-👉 VER PLANO COMPLETO AGORA
-</button>
-
-</form>
-
-<div class="small">
-Sem spam • acesso imediato
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-const link="https://metodozeroexposicao.com";
-
-const questions=[
-"Seu crédito já foi negado?",
-"Tem dificuldade para conseguir limite?",
-"Possui dívidas atrasadas?",
-"Quer aumentar seu score rápido?"
-];
-
-let step=0;
-let score=380;
-
-const q=document.getElementById("question");
-const op=document.getElementById("options");
-const fill=document.getElementById("fill");
-
-function show(){
-q.innerText=questions[step];
-op.innerHTML="";
-
-["Sim","Não","Talvez"].forEach(t=>{
-let b=document.createElement("button");
-b.innerText=t;
-b.onclick=next;
-op.appendChild(b);
-});
-}
-
-function next(){
-score+=Math.floor(Math.random()*40)+25;
-step++;
-fill.style.width=(step/questions.length*100)+"%";
-
-if(step<questions.length) show();
-else finish();
-}
-
-function finish(){
-
-document.getElementById("quizBox").style.display="none";
-document.getElementById("loadingBox").style.display="block";
-
-setTimeout(()=>{
-document.getElementById("loadingBox").style.display="none";
-document.getElementById("resultBox").style.display="block";
-document.getElementById("score").innerText=score;
-},1500);
-
-}
-
-/* ENVIA + PIXEL + REDIRECIONA */
-document.getElementById("leadForm").addEventListener("submit", function(e){
-e.preventDefault();
-
-const form=this;
-
-fetch(form.action,{
-method:"POST",
-body:new FormData(form),
-headers:{'Accept':'application/json'}
-}).then(()=>{
-
-if(typeof fbq!=="undefined"){
-fbq('track','Lead');
-}
-
-setTimeout(()=>{
-window.location.href=link;
-},600);
-
-});
-});
-
-show();
-
-</script>
 
 </body>
 </html>
