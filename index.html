@@ -462,30 +462,35 @@ section.container + section.container{
   padding:18px 36px;
   font-size:18px;
   border-radius:10px;
-  margin-top:10px;
+  margin-top:8px;
 }
 
 .pricing-guarantee{
   margin-top:16px;
   font-size:13px;
   opacity:.7;
-  .bullets{
+.bullets{
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 12px;
   padding: 16px 22px;
-  margin: 24px auto 32px auto;
+  margin: 26px auto 36px auto;
   max-width: 520px;
 
-  /* 👇 chave do alinhamento */
-  text-align: left;
   display: block;
+  text-align: left;
+
+  /* 👇 trava o alinhamento */
+  width: fit-content;
 }
 
 .bullets p{
   margin: 8px 0;
   font-size: 15px;
   line-height: 1.5;
+
+  /* 👇 ESTA LINHA É A CHAVE */
+  text-align: left;
 }
 }
 
