@@ -1,182 +1,362 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seu guia está pronto</title>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+<title>O Fim da Compulsão Alimentar</title>
 
-fbq('init', '1056723816631326');
-fbq('track', 'PageView');
-fbq('track', 'Lead'); // 🔥 evento principal
-</script>
-
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1056723816631326&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  color: #0f172a;
+body{
+font-family:'Poppins',sans-serif;
+background:#F5F1E8;
+color:#333;
+line-height:1.6;
 }
 
-/* CARD CENTRAL */
-.card {
-  background: #ffffff;
-  max-width: 640px;
-  width: 100%;
-  border-radius: 16px;
-  padding: 40px 28px;
-  text-align: center;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
 }
 
-/* BADGE */
-.badge {
-  display: inline-block;
-  background: #dcfce7;
-  color: #166534;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 16px;
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+padding-top:60px;
 }
 
-/* TÍTULO */
-h1 {
-  font-size: 32px;
-  margin-bottom: 14px;
-  color: #0f172a;
+.hero-text{
+max-width:520px;
 }
 
-/* TEXTO */
-.sub {
-  color: #475569;
-  font-size: 17px;
-  margin-bottom: 28px;
+.hero h1{
+font-size:42px;
+color:#2e4d2c;
+font-weight:700;
 }
 
-/* BOTÃO PRINCIPAL */
-.btn-primary {
-  display: inline-block;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #ffffff;
-  padding: 16px 28px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 17px;
-  margin-bottom: 28px;
-  transition: 0.25s;
-  box-shadow: 0 10px 25px rgba(37,99,235,0.35);
+.hero p{
+font-size:18px;
+margin-top:20px;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(37,99,235,0.45);
+.cta{
+display:inline-block;
+margin-top:30px;
+padding:16px 32px;
+background:#4E6A50;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
 }
 
-/* BLOCO DE TRANSIÇÃO */
-.bridge {
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 22px;
-  margin: 18px 0 24px 0;
-  font-size: 16px;
-  color: #334155;
-  line-height: 1.5;
+.cta:hover{
+background:#3c5840;
 }
 
-/* BOTÃO PRODUTO */
-.btn-secondary {
-  display: inline-block;
-  background: #0f172a;
-  color: #ffffff;
-  padding: 15px 26px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.25s;
+.hero img{
+width:300px;
 }
 
-.btn-secondary:hover {
-  background: #020617;
-  transform: translateY(-2px);
+.section{
+padding:60px 0;
 }
 
-/* RODAPÉ */
-.footer {
-  margin-top: 22px;
-  font-size: 13px;
-  color: #64748b;
+.section-title{
+text-align:center;
+font-size:32px;
+color:#2e4d2c;
+margin-bottom:40px;
 }
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.product{
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.product img{
+width:260px;
+}
+
+.bonus{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.testimonial{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+font-size:15px;
+}
+
+.price-box{
+background:white;
+padding:50px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 8px 22px rgba(0,0,0,0.1);
+}
+
+.old-price{
+text-decoration:line-through;
+color:#888;
+}
+
+.new-price{
+font-size:38px;
+color:#2e4d2c;
+font-weight:700;
+margin:10px 0;
+}
+
+.guarantee{
+background:#e9efe7;
+padding:40px;
+border-radius:10px;
+text-align:center;
+}
+
+.faq{
+max-width:800px;
+margin:auto;
+}
+
+.faq-item{
+background:white;
+padding:20px;
+border-radius:8px;
+margin-top:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.footer{
+text-align:center;
+padding:40px;
+font-size:13px;
+color:#777;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="card">
 
-  <div class="badge">✅ Acesso liberado</div>
+<div class="container hero">
 
-  <h1>Seu guia está pronto</h1>
+<div class="hero-text">
 
-  <p class="sub">
-    Clique no botão abaixo para acessar o Guia Rápido de Perdas no AL.
-  </p>
+<h1>Como Parar de Comer por Ansiedade e Recuperar o Controle Sobre a Comida</h1>
 
-  <!-- BOTÃO PDF -->
-  <a href="https://drive.google.com/file/d/1wmp0znu0WKH9PlA2qaN05mnxJ48Qm9Ks/view" target="_blank" class="btn-primary">
-    📥 Baixar guia agora
-  </a>
+<p>
+Descubra estratégias práticas que ajudam você a controlar a compulsão alimentar, reduzir ataques à geladeira e reconstruir uma relação saudável com a comida.
+</p>
 
-  <!-- PONTE DE VENDA -->
-  <div class="bridge">
-    ⚠️ A maioria dos gestores de AL só percebe as perdas quando já é tarde.<br><br>
-    O <strong>Gestor AL Pro</strong> mostra automaticamente onde o seu lucro está a escapar — antes que isso pese no seu bolso.
-  </div>
-
-  <!-- BOTÃO PRODUTO -->
-  <a href="https://pay.hotmart.com/M104320817Y" target="_blank" class="btn-secondary">
-    🚀 Ver como recuperar meu lucro
-  </a>
-
-  <div class="footer">
-    Dica: salve o guia no seu dispositivo para consultar depois.
-  </div>
+<a class="cta" href="SEU_LINK_DA_HOTMART">Quero Recuperar o Controle</a>
 
 </div>
+
+<img src="https://i.imgur.com/Z7AzH2c.png">
+
+</div>
+
+
+<div class="container section">
+
+<h2 class="section-title">Você se identifica com isso?</h2>
+
+<div class="grid">
+
+<div class="card">Você promete controlar a alimentação, mas acaba comendo sem fome.</div>
+
+<div class="card">Ataques à geladeira à noite que parecem impossíveis de controlar.</div>
+
+<div class="card">Comer para aliviar ansiedade, stress ou emoções.</div>
+
+<div class="card">Sentir culpa depois de comer demais.</div>
+
+</div>
+
+</div>
+
+
+<div class="container section">
+
+<h2 class="section-title">Por que isso acontece?</h2>
+
+<div class="card" style="max-width:700px;margin:auto;text-align:center">
+
+<p>
+A compulsão alimentar muitas vezes não tem relação com fome física, mas com emoções, hábitos e respostas automáticas do cérebro ao stress.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="container section product">
+
+<img src="https://i.imgur.com/Z7AzH2c.png">
+
+<div>
+
+<h2>O que você vai receber</h2>
+
+<ul style="margin-top:15px">
+
+<li>Ebook: O Fim da Compulsão Alimentar</li>
+<li>Bônus: Checklist Anti-Compulsão</li>
+<li>Bônus: Guia para Controlar Ansiedade</li>
+<li>Bônus: Plano Alimentar Anti-Compulsão</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="container section">
+
+<h2 class="section-title">Bônus Exclusivos</h2>
+
+<div class="grid">
+
+<div class="bonus">Checklist diário para ajudar a manter o controle alimentar.</div>
+
+<div class="bonus">Guia prático para controlar ansiedade sem recorrer à comida.</div>
+
+<div class="bonus">Plano alimentar simples para reduzir impulsos alimentares.</div>
+
+</div>
+
+</div>
+
+
+<div class="container section">
+
+<h2 class="section-title">O que algumas pessoas estão dizendo</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+“Comecei a aplicar as dicas e já senti diferença.”
+</div>
+
+<div class="testimonial">
+“Me ajudou a entender meus gatilhos emocionais.”
+</div>
+
+<div class="testimonial">
+“Material simples e fácil de aplicar.”
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container section">
+
+<div class="price-box">
+
+<p class="old-price">Valor total: 47€</p>
+
+<p class="new-price">Hoje apenas 12,90€</p>
+
+<a class="cta" href="SEU_LINK_DA_HOTMART">Quero Começar Agora</a>
+
+</div>
+
+</div>
+
+
+<div class="container section">
+
+<div class="guarantee">
+
+<h2>Garantia de 7 dias</h2>
+
+<p>
+Se o material não ajudar você a entender melhor sua relação com a comida, basta solicitar reembolso dentro de 7 dias.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="container section faq">
+
+<h2 class="section-title">Perguntas Frequentes</h2>
+
+<div class="faq-item">
+<strong>Como recebo o material?</strong><br>
+Após a compra você recebe acesso imediato ao conteúdo digital.
+</div>
+
+<div class="faq-item">
+<strong>Preciso fazer dieta?</strong><br>
+Não necessariamente. O conteúdo ensina estratégias comportamentais.
+</div>
+
+<div class="faq-item">
+<strong>Quanto tempo leva para ver resultados?</strong><br>
+Muitas pessoas percebem mudanças nos primeiros dias ao aplicar as estratégias.
+</div>
+
+</div>
+
+
+<div class="footer">
+
+© 2026 - Todos os direitos reservados
+
+</div>
+
 
 </body>
 </html>
